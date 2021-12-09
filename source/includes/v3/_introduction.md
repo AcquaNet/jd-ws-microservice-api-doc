@@ -1,10 +1,10 @@
 # Introduction #
 
-Introduced in WooCommerce 2.1, the REST API allows WooCommerce data to be created, read, updated, and deleted using JSON format.
+Introduced in JD Atina Rest API, the JDE Atina Rest API allows JDE Web Services to be invoked using JSON format.
 
 ## Requirements ##
 
-You must be using WooCommerce 2.1 or newer and the REST API must be enabled under `WooCommerce > Settings`. You must enable pretty permalinks in `Settings > Permalinks` (default permalinks will not work).
+You must be using JD Atina Web Sevices Microservices 1.0.0 or newer.
 
 <aside class="notice">
 	Endpoints may be improved with each release of WooCommerce, so we always recommend keeping WooCommerce up to date to reflect this documentation.
@@ -16,13 +16,10 @@ The current API version is `v3` which takes a first-order position in endpoints.
 
 | API Version |          WooCommerce          |
 | ----------- | ----------------------------- |
-| `v1`        | 2.1.x, 2.2.x, 2.3.x and 2.4.x |
-| `v2`        | 2.2.x, 2.3.x and 2.4.x        |
-| `v3`        | 2.4.x, 2.5.x                  |
+| `v1`        | 1.0.0                         |
 
-The `v1` and `v2` APIs will be removed in future versions.
 
-### What's changed in v3? ###
+### What's changed in v1? ###
 
 * v3 implements full basic authentication ([conforms to the Basic auth spec)](http://tools.ietf.org/html/rfc2617)).
 * v3 fixes the OAuth implementation to be compliant with the [Oauth 1.0a specs](http://tools.ietf.org/html/rfc5849).
@@ -33,22 +30,6 @@ The `v1` and `v2` APIs will be removed in future versions.
 * v3 includes category thumbnails with requests for `product/categories`.
 * v3 can auto generate passwords for new customers if the "automatically generate customer password" option is enabled.
 
-
-### Differences between v1 and v2 ###
-
-* v1 supports XML response format, v2 only supports JSON.
-* v1 does not support creating or updating (with the exception of order status) any resources, v2 supports full create/read/update/delete for all endpoints.
-* v1 does not include order item meta, v2 includes full order item meta (with an optional `filter` parameter to include protected order item meta)
-* v1 does not include any endpoints for listing a customer's available downloads, v2 includes the `GET /customer/{id}/downloads` endpoint.
-* v1 includes an endpoint for listing notes for an order, v2 includes full create/read/update/delete endpoints.
-* v1 does not include any endpoints for listing product categories, v2 includes two endpoints for product categories (`GET /products/categories` and `GET /products/categories/{id}`).
-* v1 does not include any endpoints for getting valid order statuses, v2 includes an endpoint for listing valid order statuses (`GET /orders/statuses`).
-* v2 supports the core features added in WooCommerce 2.2, primarily order refunds (via the `/orders/refunds` endpoint) and Webhooks (via the `/webhooks`).
-
-### API Docs for past versions ###
-
-* [WooCommerce REST API v1 docs](v1.html)
-* [WooCommerce REST API v2 docs](v2.html)
 
 ## Schema ##
 
