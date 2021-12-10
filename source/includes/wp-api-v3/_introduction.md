@@ -80,13 +80,27 @@ The following implementation steps need to be performed before working with JD W
 * Install Mulesoft JDE WS Community Edition Connector 3.
 
 
-## Requirements ##
+## Requirements to consume Web Services using JD Atina WS Microservices ##
 
-To use the latest version of the JD Atina REST WS API you must be using:
+To use the latest version of the JD Atina REST WS API you will need:
 
-* JD Atina Web Services Microservices 1.0.0+.
+* JD Atina Web Services Microservices 1.0.0+ running.
+* Oracle JD Edwards EnterpriseOne HTML Client credential: User, Pasword, Environment and Role.
 * You may access the API over either HTTP or HTTPS, but *HTTPS is recommended where possible*.
 
+
+## Requirements to install JD Atina WS Microservices ##
+
+* Oracle JD Edwards EnterpriseOne Server Manager credential: jde admin user, Pasword and url for Server Manager Ex. http://server:8999/manage/
+
+* Following folder inside JDE Deployment Server:
+
+** //Deplo/E920/MISC
+** //Deplo/E920/system/Classes
+** //Deplo/E920/system/JAS/webclient.ear/webclient.war/WEB-INF/lib
+** //Deplo/E920/DV920/java/sbfjars
+
+* [Docker](  https://docs.docker.com/get-docker/ "Docker"). JD Atina Web Service Microserver run under Docker container.
 
 ## Request/Response Format ##
 
