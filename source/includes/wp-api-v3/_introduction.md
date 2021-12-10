@@ -367,14 +367,18 @@ java -jar jd-create-jar-files-1.0.0-jar-with-dependencies.jar -r /root/.m2/repos
 </pre>
 <p>&nbsp;<br></p>
 
+
 ### JD Atina Generate Jars Files Tool - Using Docker instead of Java Application ###
 
+
 <pre class="center-column">
-docker run --rm -v /tmp/build_jde_libs:/tmp/build_jde_libs/ -i --name jd-create-jar-files 92455890/jd-create-jar-files:1.0.0
+docker run --rm -v /tmp/build_jde_libs:/tmp/build_jde_libs/ \
+	-i --name jd-create-jar-files 92455890/jd-create-jar-files:1.0.0
 </pre>
 <p>&nbsp;<br></p>
 
 ### Reviewing Output ###
+
 
 <pre class="center-column">
 ------------------------------------------------------------------------
@@ -394,6 +398,7 @@ build_jde_libs
       └─ StdWebService-1.0.0.jar
 </pre>
 <p>&nbsp;<br></p>
+
 
 ## Deploy artifact to Local Repository - Optional ##
 
