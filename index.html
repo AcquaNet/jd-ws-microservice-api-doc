@@ -215,7 +215,7 @@
   color: #f92672;
 }
     </style>
-    <link href="stylesheets/screen-d8fb4806.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/screen-458396f8.css" rel="stylesheet" media="screen" />
     <link href="stylesheets/print-c427a123.css" rel="stylesheet" media="print" />
       <script src="javascripts/all_nosearch-c275c2f6.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -554,45 +554,11 @@ Web Service Microservice using this guide: <a href="https://docs.oracle.com/cd/E
 <p>It will require openjdk 8 installed.</p>
 
 <p>Download <a href="http://157.245.236.175:8081/artifactory/libs-release-local/com/atina/jd-create-ini-files/1.0.0/jd-create-ini-files-1.0.0-jar-with-dependencies.jar">JD Atina Generate Configuration Files</a> - latest release:</p>
-<div class="highlight"><pre class="highlight shell"><code>Folder : /tmp/build_jde_libs/JPS920 has been created
 
-Authenticating : http://server-manager:8999/manage
-
-
-</code></pre></div>
-<p>Run JD atina Generate Ini Files Tool using this command line:</p>
-
-<div class="api-endpoint">
-    <div class="endpoint-data"> 
-        <h6>java -jar jd-create-ini-files-1.0.0-jar-with-dependencies.jar [OPTIONS]<br>
-        OPTIONS<br>
-        Options category 'startup':<br>
-        --debug [-d] (a string; default: "N")<br>
-        Debug Option<br>
-        --environment [-e] (a string; default: "")<br>
-        JDE Environment<br>
-        --password [-p] (a string; default: "")<br>
-        JDE Password for Enterprise Server Manager<br>
-        --server [-s] (a string; default: "")<br>
-        JDE URL of Server Manager<br>
-        --user [-u] (a string; default: "")<br>
-        JDE User for Enterprise Server Manager</h6> 
-    </div>
-</div> 
-
-<p>Usage Example:</p>
-
-<div class="api-endpoint">
-    <div class="endpoint-data"> 
-        <h6>java -jar jd-create-ini-files-1.0.0-jar-with-dependencies.jar[OPTIONS]</h6>
-        -u jde_admin<br>
-        -p XXXXXXX<br>
-        -s http://server-manager:8999/manage<br>
-        -e JDV920</h6> 
-    </div>
-</div> 
- 
-<h3 id='jd-atina-generate-configuration-files-tool-using-docker-instead-of-java-app'>JD Atina Generate Configuration Files Tool - Using Docker instead of Java App</h3>
+<div class="center-column"></div>
+<div class="highlight"><pre class="highlight shell tab-shell"><code>curl http://157.245.236.175:8081/artifactory/libs-release-local/com/atina/jd-create-ini-files/1.0.0/jd-create-ini-files-1.0.0-jar-with-dependencies.jar /
+    <span class="nt">--output</span> jd-create-ini-files-1.0.0-jar-with-dependencies.jar
+</code></pre></div><h3 id='jd-atina-generate-configuration-files-tool-using-docker-instead-of-java-app'>JD Atina Generate Configuration Files Tool - Using Docker instead of Java App</h3>
 <p>Usage Example:</p>
 
 <div class="api-endpoint">
