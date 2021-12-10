@@ -147,10 +147,14 @@ It will require openjdk 8 installed.
 
 Download [JD Atina Generate Configuration Files](http://157.245.236.175:8081/artifactory/libs-release-local/com/atina/jd-create-ini-files/1.0.0/jd-create-ini-files-1.0.0-jar-with-dependencies.jar) - latest release:
 
+
 <pre class="center-column">
 curl http://157.245.236.175:8081/artifactory/libs-release-local/com/atina/jd-create-ini-files/1.0.0/jd-create-ini-files-1.0.0-jar-with-dependencies.jar \
 --output jd-create-ini-files-1.0.0-jar-with-dependencies.jar
-</pre><br>
+</pre>
+<p><br></p>
+
+<aside class="notice">Smartsheet has custom error codes to help you troubleshoot issues. See the <a href="#complete-error-code-list">Complete Error Code List.</a></aside>
 
 Run jd-create-ini-files command:
 
@@ -169,7 +173,8 @@ Options category 'startup':
     JDE URL of Server Manager
   --user [-u] (a string; default: "")
     JDE User for Enterprise Server Manager
-</pre><br>
+</pre>
+
 
 Usage Exampes
 
