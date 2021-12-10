@@ -581,7 +581,7 @@ Options category 'startup':
     JDE User for Enterprise Server Manager
 </pre>
 
-<p><br>AAAAAAAA<br></p>
+<p><br> <br></p>
  
 
 <p>Usage Exampes</p>
@@ -594,9 +594,7 @@ java -jar jd-create-ini-files-1.0.0-jar-with-dependencies.jar \
 -e JDV920
 </pre>
 
-<p><br></p>
-
-<p><br></p>
+<p><br> <br></p>
  
 <h3 id='jd-atina-generate-configuration-files-tool-using-docker-instead-of-java-app'>JD Atina Generate Configuration Files Tool - Using Docker instead of Java App</h3>
 <p>Usage Example:</p>
@@ -607,7 +605,7 @@ docker run --rm -v /tmp/build_jde_libs:/tmp/build_jde_libs/ -i \
 jde_admin jde_password JPS920 http://servermanager.com:8999/manage
 </pre>
 
-<p><br></p>
+<p><br> <br></p>
 <h4 id='reviewing-output'>Reviewing Output</h4>
 <pre class="center-column">
 Folder : /tmp/build_jde_libs/JPS920 has been created
@@ -644,30 +642,37 @@ GENERATION SUCESSS
 ------------------------------------------------------------------------
 </pre>
 
-<p><br></p>
-
-<p><br></p>
+<p><br> <br></p>
 
 <p>It will create the following files:</p>
 
-<p><pre class="center-column"> 
-<code>shell
+<pre class="center-column"> 
 build_jde_libs
       ├─ settings.xml
       ├─ JPS920
       ├─────├─ jdbj.ini
       ├─────├─ jdeinterop.ini
       └─────└─ jdelog.properties            
-</code>
-</pre><br></p>
+</pre>
+
+<p><br> <br></p>
 
 <p>Adding manually &quot;tnsnames.ora&quot; for Oracle RDBMS based installations only.</p>
 
-<p>Edit jdeinterop.ini and change the following values</p>
-<div class="highlight"><pre class="highlight shell tab-shell"><code><span class="o">[</span>DNS_SERVERS]
-JDE-ENT<span class="o">=</span>2.2.2.2
-JDE-SQL<span class="o">=</span>1.1.1.1           
-</code></pre></div><h3 id='jd-atina-generate-jars-files-tool'>JD Atina Generate Jars Files Tool</h3><h2 id='request-response-format'>Request/Response Format</h2>
+<p>Edit jdeinterop.ini to set correct server IP&#39;s:</p>
+
+<pre class="center-column"> 
+[DNS_SERVERS]
+JDE-ENT=2.2.2.2
+JDE-SQL=1.1.1.1           
+</pre>
+
+<p><br> <br></p>
+<h3 id='jd-atina-generate-jars-files-tool'>JD Atina Generate Jars Files Tool</h3>
+<p>This tool will generate all jars files need it by JD Web Service Microservice.</p>
+
+<p>![JD Atina Services(images/atina_main-235ead5b.png)</p>
+<h2 id='request-response-format'>Request/Response Format</h2>
 <p>The default response format is JSON. Requests with a message-body use plain JSON to set or update resource attributes. Successful requests will return a <code>200 OK</code> HTTP status.</p>
 
 <p>Some general information about responses:</p>
