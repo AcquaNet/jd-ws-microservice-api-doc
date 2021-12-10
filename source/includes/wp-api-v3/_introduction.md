@@ -95,15 +95,12 @@ To use the latest version of the JD Atina REST WS API you will need:
 
 * Following folder inside JDE Deployment Server:
 
-| Folder                      | Comment                                                    |
-|-----------------------------|-------------------------------------------------------------|
-| `//Deplo/E920/MISC`                                               | JDBC Drivers          |
-| `//Deplo/E920/system/Classes`                                     | JDE jars files        |
-| `//Deplo/E920/system/JAS/webclient.ear/webclient.war/WEB-INF/lib` | JDE Client HTTP       |
-| `//Deplo/E920/DV920/java/sbfjars`                                 | JDE WS                |
+    * `//Deplo/E920/MISC`
+    * `//Deplo/E920/system/Classes`
+    * `//Deplo/E920/system/JAS/webclient.ear/webclient.war/WEB-INF/lib`
+	* `//Deplo/E920/DV920/java/sbfjars`
 
-
-* [Docker](  https://docs.docker.com/get-docker/ "Docker"). JD Atina Web Service Microserver run under Docker container.
+* [Docker](https://docs.docker.com/get-docker/ "Docker"). JD Atina Web Service Microserver run under Docker container.
 
 ## Addionals Prerequisites to use JD Generate Configuration Files and JD Generate Jars Files Tools ##
 
@@ -111,11 +108,12 @@ To use the latest version of the JD Atina REST WS API you will need:
 
 * Apache Maven 3.8.1+
 
-> ![Tip](images/note-icon.png) 
+<aside class="notice">
     Verify Maven is using the Java you expect
     If you have multiple JDK’s installed it is not certain Maven will pick up the expected java and you could end up with unexpected results. 
     You can verify which JDK Maven uses by running mvn --version.
-
+</aside>
+  
 ## JD Atina Additional Tools ##
 
 Use the following tools to start the configuration process.
@@ -139,24 +137,25 @@ It takes all information from JDE Enterprise Server Manager using REST API for S
 
 The tooll will require to select the HTML Client instance according to your environment.
 
-> ![Tip](images/note-icon.png) 
+<aside class="notice">
     At the end of this process, We recommend review jdeinterop.ini and jdbj.ini files before deploy it on JD Atina
-    Web Service Microservice using this guide: * Understanding jdeinterop.ini File
-
-#### Using JAVA APP #### 	
+    Web Service Microservice using this guide: [Understanding jdeinterop.ini File](https://docs.oracle.com/cd/E24705_01/doc.91/e24221/jdeinterop_java.htm#EOTCN00333) * 
+</aside>
+ 
+### JD Atina Generate Configuration Files Tool - Using JAVA APP ###
 
 It will require openjdk 8 installed.
 
 Download <a href="http://157.245.236.175:8081/artifactory/libs-release-local/com/atina/jd-create-ini-files/1.0.0/jd-create-ini-files-1.0.0-jar-with-dependencies.jar">JD Atina Generate Configuration Files</a> - latest release:
 
-```shell
+```
 curl http://157.245.236.175:8081/artifactory/libs-release-local/com/atina/jd-create-ini-files/1.0.0/jd-create-ini-files-1.0.0-jar-with-dependencies.jar \
 	--output jd-create-ini-files-1.0.0-jar-with-dependencies.jar
 ```
  
 Run JD atina Generate Ini Files Tool using this command line:
 
-```shell
+```
   java -jar jd-create-ini-files-1.0.0-jar-with-dependencies.jar [OPTIONS]
 
   OPTIONS:                                                                       
@@ -175,7 +174,7 @@ Options category 'startup':
 
 Usage Example:
 
-```shell
+```
 java -jar jd-create-ini-files-1.0.0-jar-with-dependencies.jar \
  -u jde_admin \
  -p XXXXXXX \ 
@@ -183,11 +182,11 @@ java -jar jd-create-ini-files-1.0.0-jar-with-dependencies.jar \
  -e JDV920
 ```
 
-#### Using Docker instead of Java App####
-
+### JD Atina Generate Configuration Files Tool - Using Docker instead of Java App ###
+ 
 Usage Example:
 
-```shell
+```
 docker run --rm -v /tmp/build_jde_libs:/tmp/build_jde_libs/ -i --name jd-create-ini-files 92455890/jd-create-ini-files:1.0.0 jde_admin jde_password JPS920 http://servermanager.com:8999/manage
 ```
 
