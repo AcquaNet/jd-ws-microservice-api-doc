@@ -95,10 +95,13 @@ To use the latest version of the JD Atina REST WS API you will need:
 
 * Following folder inside JDE Deployment Server:
 
--- //Deplo/E920/MISC
--- //Deplo/E920/system/Classes
--- //Deplo/E920/system/JAS/webclient.ear/webclient.war/WEB-INF/lib
--- //Deplo/E920/DV920/java/sbfjars
+| Folder                      | Comment                                                    |
+|-----------------------------|-------------------------------------------------------------|
+| `//Deplo/E920/MISC`                                               | JDBC Drivers          |
+| `//Deplo/E920/system/Classes`                                     | JDE jars files        |
+| `//Deplo/E920/system/JAS/webclient.ear/webclient.war/WEB-INF/lib` | JDE Client HTTP       |
+| `//Deplo/E920/DV920/java/sbfjars`                                 | JDE WS                |
+
 
 * [Docker](  https://docs.docker.com/get-docker/ "Docker"). JD Atina Web Service Microserver run under Docker container.
 
