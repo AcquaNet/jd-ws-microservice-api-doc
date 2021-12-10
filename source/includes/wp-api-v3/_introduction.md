@@ -109,11 +109,9 @@ To use the latest version of the JD Atina REST WS API you will need:
 
 * Apache Maven 3.8.1+
 
-<aside class="notice">
-    Verify Maven is using the Java you expect
-    If you have multiple JDK’s installed it is not certain Maven will pick up the expected java and you could end up with unexpected results. 
-    You can verify which JDK Maven uses by running mvn --version.
-</aside>
+![JD Atina Configuration Tool](images/note-icon.png) Verify Maven is using the Java you expect
+If you have multiple JDK’s installed it is not certain Maven will pick up the expected java and you could end up with unexpected results. 
+You can verify which JDK Maven uses by running mvn --version.
   
 ## JD Atina Additional Tools ##
 
@@ -138,9 +136,7 @@ It takes all information from JDE Enterprise Server Manager using REST API for S
 
 The tooll will require to select the HTML Client instance according to your environment.
 
-![JD Atina Configuration Tool](images/note-icon.png)
-
-At the end of this process, We recommend review jdeinterop.ini and jdbj.ini files before deploy it on JD Atina
+![JD Atina Configuration Tool](images/note-icon.png) At the end of this process, We recommend review jdeinterop.ini and jdbj.ini files before deploy it on JD Atina
 Web Service Microservice using this guide: [Understanding jdeinterop.ini File](https://docs.oracle.com/cd/E24705_01/doc.91/e24221/jdeinterop_java.htm#EOTCN00333)
 	 
 	 
