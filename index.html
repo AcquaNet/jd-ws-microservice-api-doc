@@ -265,6 +265,9 @@
                     <a href="#requirements-to-install-jd-atina-ws-microservices" class="toc-h2 toc-link" data-title="Requirements to install JD Atina WS Microservices">Requirements to install JD Atina WS Microservices</a>
                   </li>
                   <li>
+                    <a href="#addionals-prerequisites-to-use-jd-generate-configuration-files-and-jd-generate-jars-files-tools" class="toc-h2 toc-link" data-title="Addionals Prerequisites to use JD Generate Configuration Files and JD Generate Jars Files Tools">Addionals Prerequisites to use JD Generate Configuration Files and JD Generate Jars Files Tools</a>
+                  </li>
+                  <li>
                     <a href="#request-response-format" class="toc-h2 toc-link" data-title="Request/Response Format">Request/Response Format</a>
                   </li>
                   <li>
@@ -527,6 +530,18 @@
 <ul>
 <li><a href="https://docs.docker.com/get-docker/" title="Docker">Docker</a>. JD Atina Web Service Microserver run under Docker container.</li>
 </ul>
+<h2 id='addionals-prerequisites-to-use-jd-generate-configuration-files-and-jd-generate-jars-files-tools'>Addionals Prerequisites to use JD Generate Configuration Files and JD Generate Jars Files Tools</h2>
+<ul>
+<li><p>JDK 8 installed with JAVA_HOME configured appropriately (It not requires for docker version)</p></li>
+<li><p>Apache Maven 3.8.1+</p></li>
+</ul>
+
+<blockquote>
+<p><img src="images/note-icon-bd30f485.png" alt="Tip" /> 
+    Verify Maven is using the Java you expect
+    If you have multiple JDK’s installed it is not certain Maven will pick up the expected java and you could end up with unexpected results. 
+    You can verify which JDK Maven uses by running mvn --version.</p>
+</blockquote>
 <h2 id='request-response-format'>Request/Response Format</h2>
 <p>The default response format is JSON. Requests with a message-body use plain JSON to set or update resource attributes. Successful requests will return a <code>200 OK</code> HTTP status.</p>
 
