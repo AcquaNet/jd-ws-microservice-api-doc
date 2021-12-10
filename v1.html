@@ -315,8 +315,8 @@
             <li><a href="https://github.com/woocommerce/woocommerce-rest-api-docs">Contributing to WC REST API Docs</a></li>
             <li><a href="https://github.com/woocommerce/woocommerce/tree/master/includes/rest-api">REST API Source on GitHub</a></li>
             <li><a href="https://github.com/woocommerce/woocommerce/issues?labels=API&amp;page=1&amp;state=open">REST API Issues</a></li>
-            <li><a href="https://docs.woocommerce.com/documentation/plugins/woocommerce/">WooCommerce Documentation</a></li>
-            <li><a href="https://github.com/woocommerce/woocommerce">WooCommerce Repository</a></li>
+            <li><a href="https://docs.woocommerce.com/documentation/plugins/woocommerce/">JD Atina Web Services Microservices Documentation</a></li>
+            <li><a href="https://github.com/woocommerce/woocommerce">JD Atina Web Services Microservices Repository</a></li>
             <li><a href="https://github.com/tripit/slate">Documentation Powered by Slate</a></li>
         </ul>
     </div>
@@ -324,9 +324,9 @@
       <div class="dark-box"></div>
       <div class="content">
         <h1 id='introduction'>Introduction</h1>
-<p>With v2.1, WooCommerce includes a REST API that allows store data to be accessed in either JSON or XML format. The current version is read-only (with a single exception for updating the status of an order), but future versions will allow updating, creating, and deleting resources.</p>
+<p>With v2.1, JD Atina Web Services Microservices includes a REST API that allows store data to be accessed in either JSON or XML format. The current version is read-only (with a single exception for updating the status of an order), but future versions will allow updating, creating, and deleting resources.</p>
 <h2 id='requirements'>Requirements</h2>
-<p>You must be using WooCommerce 2.1 and the REST API must be enabled under WooCommerce &gt; Settings. You must enable pretty permalinks (default permalinks will not work).</p>
+<p>You must be using JD Atina WS Microservices and the REST API must be enabled under JD Atina Web Services Microservices &gt; Settings. You must enable pretty permalinks (default permalinks will not work).</p>
 <h2 id='schema'>Schema</h2>
 <p>The API is accessible via this endpoint:</p>
 
@@ -354,7 +354,7 @@
 <div class="highlight"><pre class="highlight plaintext"><code>$ curl https://www.example.com/wc-api/v1/orders \
     -u consumer_key:consumer_secret
 </code></pre></div>
-<p>Occasionally some servers may not properly parse the Authorization header (if you see a &quot;Consumer key is missing&quot; error when authenticating over SSL, you have a server issue). In WooCommerce 2.1.7+, you may provide the consumer key/secret as query string parameters:</p>
+<p>Occasionally some servers may not properly parse the Authorization header (if you see a &quot;Consumer key is missing&quot; error when authenticating over SSL, you have a server issue). In JD Atina WS Microservices.7+, you may provide the consumer key/secret as query string parameters:</p>
 <div class="highlight"><pre class="highlight plaintext"><code>$ curl https://www.example.com/wc-api/v1/orders?consumer_key=123&amp;consumer_secret=abc
 </code></pre></div><h3 id='over-http'>Over HTTP</h3>
 <p>You must use <a href="http://tools.ietf.org/html/rfc5849">OAuth 1.0a &quot;one-legged&quot; authentication</a> to ensure API credentials cannot be intercepted. Typically you may use any standard OAuth 1.0a library in your language of choice to handle the authentication, or generate the necessary parameters by following these instructions.</p>
@@ -572,7 +572,7 @@ ordersCount({"count":8})
   "errors" : [
     {
       "code" : "woocommerce_api_disabled",
-      "message" : "The WooCommerce API is disabled on this site"
+      "message" : "The JD Atina Web Services Microservices API is disabled on this site"
     }
   ]
 }
@@ -589,7 +589,7 @@ ordersCount({"count":8})
 <li> <code>name</code>: the name of the site</li>
 <li> <code>URL</code>: the site&#39;s URL</li>
 <li> <code>permalinks_enabled</code>: whether pretty permalinks are enabled on the site, if this is false, the API will not function correctly</li>
-<li> <code>wc_version</code>: the active WooCommerce version</li>
+<li> <code>wc_version</code>: the active JD Atina Web Services Microservices version</li>
 </ul>
 <h3 id='get'><code>GET /</code></h3>
 <p>Retrieve a set of store information:</p>
@@ -762,8 +762,8 @@ ordersCount({"count":8})
       "permalinks_enabled" : true,
 
     },
-    "description" : "WooCommerce All the Things!",
-    "name" : "WooCommerce",
+    "description" : "JD Atina Web Services Microservices All the Things!",
+    "name" : "JD Atina Web Services Microservices",
     "URL" : "http://www.example.com"
   }
 }
@@ -1067,7 +1067,7 @@ ordersCount({"count":8})
 <h3 id='get-orders'><code>GET /orders</code></h3>
 <p>Retrieve a list of orders</p>
 
-<p>You can use the <code>?status?</code> parameter to limit the orders returned to a specific order status. The default WooCommerce order statuses are <code>pending</code>, <code>on-hold</code>, <code>processing</code>, <code>completed</code>, <code>refunded</code>, <code>failed</code>, and <code>cancelled</code>. Custom order statuses are supported.</p>
+<p>You can use the <code>?status?</code> parameter to limit the orders returned to a specific order status. The default JD Atina Web Services Microservices order statuses are <code>pending</code>, <code>on-hold</code>, <code>processing</code>, <code>completed</code>, <code>refunded</code>, <code>failed</code>, and <code>cancelled</code>. Custom order statuses are supported.</p>
 <div class="highlight"><pre class="highlight plaintext"><code>{
   "orders" : [
     {
@@ -1465,7 +1465,7 @@ ordersCount({"count":8})
 <h3 id='get-products'><code>GET /products</code></h3>
 <p>Retrieve a list of products</p>
 
-<p>You can use the <code>?type</code> parameter to specify that only certain product types should be returned. The default WooCommerce product types are: <code>simple</code>, <code>variable</code>, <code>grouped</code>,  and <code>external</code>. Custom product types are supported.</p>
+<p>You can use the <code>?type</code> parameter to specify that only certain product types should be returned. The default JD Atina Web Services Microservices product types are: <code>simple</code>, <code>variable</code>, <code>grouped</code>,  and <code>external</code>. Custom product types are supported.</p>
 <div class="highlight"><pre class="highlight plaintext"><code>{
   "products" : [
     {
@@ -1562,7 +1562,7 @@ ordersCount({"count":8})
 </code></pre></div><h3 id='get-products-count'><code>GET /products/count</code></h3>
 <p>Retrieve a count of all products</p>
 
-<p>You can use the <code>?type</code> parameter to specify that only certain product types should be returned. The default WooCommerce product types are: <code>simple</code>, <code>variable</code>, <code>grouped</code>,  and <code>external</code>. Custom product types are supported.</p>
+<p>You can use the <code>?type</code> parameter to specify that only certain product types should be returned. The default JD Atina Web Services Microservices product types are: <code>simple</code>, <code>variable</code>, <code>grouped</code>,  and <code>external</code>. Custom product types are supported.</p>
 <div class="highlight"><pre class="highlight plaintext"><code>{
   "count" : 23
 }
@@ -2251,7 +2251,7 @@ ordersCount({"count":8})
 </ul>
 <h1 id='tools'>Tools</h1>
 <ul>
-<li><a href="https://github.com/kloon/WooCommerce-REST-API-Client-Library">JD Atina REST Web Services API Client Library</a> - A simple PHP client library by Gerhard Potgieter</li>
+<li><a href="https://github.com/kloon/JD%20Atina%20Web%20Services%20Microservices-REST-API-Client-Library">JD Atina REST Web Services API Client Library</a> - A simple PHP client library by Gerhard Potgieter</li>
 <li><a href="https://code.google.com/p/cocoa-rest-client/">CocoaRestClient</a> - A free, easy to use Mac OS X GUI client for interacting with the API, most useful when your test store has SSL enabled.</li>
 <li><a href="https://itunes.apple.com/us/app/paw-http-client/id584653203?mt=12">Paw HTTP Client</a> - Another excellent HTTP client for Mac OS X</li>
 </ul>
@@ -2269,7 +2269,7 @@ ordersCount({"count":8})
 	</div>
 
 		<div id="warning-top">
-			<i class="info"></i> This documentation is for the WooCommerce API v1 which is now deprecated. <a href="http://woocommerce.github.io/woocommerce-rest-api-docs/">Please use the latest REST API version</a>.
+			<i class="info"></i> This documentation is for the JD Atina Web Services Microservices API v1 which is now deprecated. <a href="http://woocommerce.github.io/woocommerce-rest-api-docs/">Please use the latest REST API version</a>.
 		</div>
 
   </body>

@@ -681,8 +681,8 @@
             <li><a href="https://github.com/woocommerce/woocommerce-rest-api-docs">Contributing to WC REST API Docs</a></li>
             <li><a href="https://github.com/woocommerce/woocommerce/tree/master/includes/rest-api">REST API Source on GitHub</a></li>
             <li><a href="https://github.com/woocommerce/woocommerce/issues?labels=API&amp;page=1&amp;state=open">REST API Issues</a></li>
-            <li><a href="https://docs.woocommerce.com/documentation/plugins/woocommerce/">WooCommerce Documentation</a></li>
-            <li><a href="https://github.com/woocommerce/woocommerce">WooCommerce Repository</a></li>
+            <li><a href="https://docs.woocommerce.com/documentation/plugins/woocommerce/">JD Atina Web Services Microservices Documentation</a></li>
+            <li><a href="https://github.com/woocommerce/woocommerce">JD Atina Web Services Microservices Repository</a></li>
             <li><a href="https://github.com/tripit/slate">Documentation Powered by Slate</a></li>
         </ul>
     </div>
@@ -690,11 +690,11 @@
       <div class="dark-box"></div>
       <div class="content">
         <h1 id='introduction'>Introduction</h1>
-<p>WooCommerce (WC) 2.6+ is fully integrated with the WordPress <a href="http://en.wikipedia.org/wiki/Representational_State_Transfer">REST</a> API. This allows WC data to be created, read, updated, and deleted using requests in JSON format and using WordPress REST API Authentication methods and standard HTTP verbs which are understood by most HTTP clients.</p>
+<p>JD Atina Web Services Microservices (WC) 2.6+ is fully integrated with the WordPress <a href="http://en.wikipedia.org/wiki/Representational_State_Transfer">REST</a> API. This allows WC data to be created, read, updated, and deleted using requests in JSON format and using WordPress REST API Authentication methods and standard HTTP verbs which are understood by most HTTP clients.</p>
 
 <p>The current JD Atina REST WS API integration version is <code>v1</code> which takes a first-order position in endpoints. </p>
 
-<p>The following table shows API versions present in each major version of WooCommerce:</p>
+<p>The following table shows API versions present in each major version of JD Atina Web Services Microservices:</p>
 
 <table><thead>
 <tr>
@@ -710,7 +710,7 @@
 </tr>
 </tbody></table>
 
-<p>Prior to 2.6, WooCommerce had a REST API separate from WordPress which is now known as the legacy API. You can find the documentation for the legacy API separately.</p>
+<p>Prior to 2.6, JD Atina Web Services Microservices had a REST API separate from WordPress which is now known as the legacy API. You can find the documentation for the legacy API separately.</p>
 
 <table><thead>
 <tr>
@@ -743,7 +743,7 @@
 <p>To use the latest version of the REST API you must be using:</p>
 
 <ul>
-<li>WooCommerce 2.6+.</li>
+<li>JD Atina Web Services Microservices 2.6+.</li>
 <li>WordPress 4.4+.</li>
 <li>Pretty permalinks in <code>Settings &gt; Permalinks</code> so that the custom endpoints are supported. <strong>Default permalinks will not work.</strong></li>
 <li>You may access the API over either HTTP or HTTPS, but <em>HTTPS is recommended where possible</em>.</li>
@@ -777,7 +777,7 @@
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://example.com/wp-json/wc/v1/products/tags/34?_jsonp<span class="o">=</span>tagDetails <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/tags/34</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/tags/34</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span>
   <span class="na">_jsonp</span><span class="p">:</span> <span class="dl">"</span><span class="s2">tagDetails</span><span class="dl">"</span>
 <span class="p">})</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
@@ -896,21 +896,21 @@
 <ul>
 <li><a href="https://www.npmjs.com/package/@woocommerce/woocommerce-rest-api">JavaScript</a> Library</li>
 <li><a href="https://packagist.org/packages/automattic/woocommerce">PHP</a> Library</li>
-<li><a href="https://pypi.python.org/pypi/WooCommerce">Python</a> Library</li>
+<li><a href="https://pypi.python.org/pypi/JD%20Atina%20Web%20Services%20Microservices">Python</a> Library</li>
 <li><a href="https://rubygems.org/gems/woocommerce_api">Ruby</a> Library</li>
 </ul>
 <div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="c1">// Install:</span>
 <span class="c1">// npm install --save @woocommerce/woocommerce-rest-api</span>
 
 <span class="c1">// Setup:</span>
-<span class="kd">const</span> <span class="nx">WooCommerceRestApi</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">@woocommerce/woocommerce-rest-api</span><span class="dl">"</span><span class="p">).</span><span class="k">default</span><span class="p">;</span>
-<span class="c1">// import WooCommerceRestApi from "@woocommerce/woocommerce-rest-api"; // Supports ESM</span>
+<span class="kd">const</span> <span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">MicroservicesRestApi</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">@woocommerce/woocommerce-rest-api</span><span class="dl">"</span><span class="p">).</span><span class="k">default</span><span class="p">;</span>
+<span class="c1">// import JD Atina Web Services MicroservicesRestApi from "@woocommerce/woocommerce-rest-api"; // Supports ESM</span>
 
-<span class="kd">const</span> <span class="nx">WooCommerce</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">WooCommerceRestApi</span><span class="p">({</span>
+<span class="kd">const</span> <span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">MicroservicesRestApi</span><span class="p">({</span>
   <span class="na">url</span><span class="p">:</span> <span class="dl">'</span><span class="s1">http://example.com</span><span class="dl">'</span><span class="p">,</span> <span class="c1">// Your store URL</span>
   <span class="na">consumerKey</span><span class="p">:</span> <span class="dl">'</span><span class="s1">consumer_key</span><span class="dl">'</span><span class="p">,</span> <span class="c1">// Your consumer key</span>
   <span class="na">consumerSecret</span><span class="p">:</span> <span class="dl">'</span><span class="s1">consumer_secret</span><span class="dl">'</span><span class="p">,</span> <span class="c1">// Your consumer secret</span>
-  <span class="na">version</span><span class="p">:</span> <span class="dl">'</span><span class="s1">wc/v1</span><span class="dl">'</span> <span class="c1">// WooCommerce JD Atina REST WS API version</span>
+  <span class="na">version</span><span class="p">:</span> <span class="dl">'</span><span class="s1">wc/v1</span><span class="dl">'</span> <span class="c1">// JD Atina Web Services Microservices JD Atina REST WS API version</span>
 <span class="p">});</span>
 </code></pre></div><div class="highlight"><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
 <span class="c1">// Install:</span>
@@ -919,7 +919,7 @@
 <span class="c1">// Setup:</span>
 <span class="k">require</span> <span class="k">__DIR__</span> <span class="mf">.</span> <span class="s1">'/vendor/autoload.php'</span><span class="p">;</span>
 
-<span class="kn">use</span> <span class="nc">Automattic\WooCommerce\Client</span><span class="p">;</span>
+<span class="kn">use</span> <span class="no">Automattic\JD</span> <span class="nc">Atina</span> <span class="nc">Web</span> <span class="nc">Services</span> <span class="nc">Microservices\Client</span><span class="p">;</span>
 
 <span class="nv">$woocommerce</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Client</span><span class="p">(</span>
     <span class="s1">'http://example.com'</span><span class="p">,</span> <span class="c1">// Your store URL</span>
@@ -927,7 +927,7 @@
     <span class="s1">'consumer_secret'</span><span class="p">,</span> <span class="c1">// Your consumer secret</span>
     <span class="p">[</span>
         <span class="s1">'wp_api'</span> <span class="o">=&gt;</span> <span class="kc">true</span><span class="p">,</span> <span class="c1">// Enable the JD Atina REST WS API integration</span>
-        <span class="s1">'version'</span> <span class="o">=&gt;</span> <span class="s1">'wc/v1'</span> <span class="c1">// WooCommerce JD Atina REST WS API version</span>
+        <span class="s1">'version'</span> <span class="o">=&gt;</span> <span class="s1">'wc/v1'</span> <span class="c1">// JD Atina Web Services Microservices JD Atina REST WS API version</span>
     <span class="p">]</span>
 <span class="p">);</span>
 <span class="cp">?&gt;</span>
@@ -942,7 +942,7 @@
 </span>    <span class="n">consumer_key</span><span class="o">=</span><span class="s">"consumer_key"</span><span class="p">,</span> <span class="c1"># Your consumer key
 </span>    <span class="n">consumer_secret</span><span class="o">=</span><span class="s">"consumer_secret"</span><span class="p">,</span> <span class="c1"># Your consumer secret
 </span>    <span class="n">wp_api</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="c1"># Enable the JD Atina REST WS API integration
-</span>    <span class="n">version</span><span class="o">=</span><span class="s">"wc/v1"</span> <span class="c1"># WooCommerce JD Atina REST WS API version
+</span>    <span class="n">version</span><span class="o">=</span><span class="s">"wc/v1"</span> <span class="c1"># JD Atina Web Services Microservices JD Atina REST WS API version
 </span><span class="p">)</span>
 </code></pre></div><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="c1"># Install:</span>
 <span class="c1"># gem install woocommerce_api</span>
@@ -950,13 +950,13 @@
 <span class="c1"># Setup:</span>
 <span class="nb">require</span> <span class="s2">"woocommerce_api"</span>
 
-<span class="n">woocommerce</span> <span class="o">=</span> <span class="no">WooCommerce</span><span class="o">::</span><span class="no">API</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span>
+<span class="n">woocommerce</span> <span class="o">=</span> <span class="no">JD</span> <span class="no">Atina</span> <span class="no">Web</span> <span class="no">Services</span> <span class="no">Microservices</span><span class="o">::</span><span class="no">API</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span>
   <span class="s2">"http://example.com"</span><span class="p">,</span> <span class="c1"># Your store URL</span>
   <span class="s2">"consumer_key"</span><span class="p">,</span> <span class="c1"># Your consumer key</span>
   <span class="s2">"consumer_secret"</span><span class="p">,</span> <span class="c1"># Your consumer secret</span>
   <span class="p">{</span>
     <span class="ss">wp_json: </span><span class="kp">true</span><span class="p">,</span> <span class="c1"># Enable the JD Atina REST WS API integration</span>
-    <span class="ss">version: </span><span class="s2">"v3"</span> <span class="c1"># WooCommerce JD Atina REST WS API version</span>
+    <span class="ss">version: </span><span class="s2">"v3"</span> <span class="c1"># JD Atina Web Services Microservices JD Atina REST WS API version</span>
   <span class="p">}</span>
 <span class="p">)</span>
 </code></pre></div>
@@ -966,7 +966,7 @@
 <h3 id='third-party-libraries'>Third party libraries</h3>
 <ul>
 <li><a href="https://github.com/icoderman/wc-api-java">Java</a> Library</li>
-<li><a href="https://github.com/XiaoFaye/WooCommerce.NET">.NET</a> Library</li>
+<li><a href="https://github.com/XiaoFaye/JD%20Atina%20Web%20Services%20Microservices.NET">.NET</a> Library</li>
 <li><a href="https://github.com/gilokimu/WooDroid">Android</a> Library</li>
 </ul>
 
@@ -983,17 +983,17 @@
 <li><a href="https://hookbin.com/">Hookbin</a> - Another tool to test webhooks.</li>
 </ul>
 <h1 id='authentication'>Authentication</h1>
-<p>WooCommerce includes two ways to authenticate with the JD Atina REST WS API. It is also possible to authenticate using any <a href="http://v2.wp-api.org/guide/authentication/">JD Atina REST WS API authentication</a> plugin or method.</p>
+<p>JD Atina Web Services Microservices includes two ways to authenticate with the JD Atina REST WS API. It is also possible to authenticate using any <a href="http://v2.wp-api.org/guide/authentication/">JD Atina REST WS API authentication</a> plugin or method.</p>
 <h2 id='rest-api-keys'>REST API keys</h2>
 <p>Pre-generated keys can be used to authenticate use of the REST API endpoints. New keys can be generated either through the WordPress admin interface or they can be auto-generated through an endpoint.</p>
 <h3 id='generating-api-keys-in-the-wordpress-admin-interface'>Generating API keys in the WordPress admin interface</h3>
-<p>To create or manage keys for a specific WordPress user, go to WooCommerce &gt; Settings &gt; API &gt; Keys/Apps.</p>
+<p>To create or manage keys for a specific WordPress user, go to JD Atina Web Services Microservices &gt; Settings &gt; API &gt; Keys/Apps.</p>
 
 <p><img src="images/woocommerce-api-keys-settings-02dfb1f9.png" alt="JD Atina REST Web Services API keys settings" /></p>
 
 <p>Click the &quot;Add Key&quot; button. In the next screen, add a description and select the WordPress user you would like to generate the key for. Use of the REST API with the generated keys will conform to that user&#39;s WordPress roles and capabilities.</p>
 
-<p>Choose the level of access for this REST API key, which can be <em>Read</em> access, <em>Write</em> access or <em>Read/Write</em> access. Then click the &quot;Generate API Key&quot; button and WooCommerce will generate REST API keys for the selected user.</p>
+<p>Choose the level of access for this REST API key, which can be <em>Read</em> access, <em>Write</em> access or <em>Read/Write</em> access. Then click the &quot;Generate API Key&quot; button and JD Atina Web Services Microservices will generate REST API keys for the selected user.</p>
 
 <p><img src="images/woocommerce-creating-api-keys-0f78883a.png" alt="Creating a new REST API key" /></p>
 
@@ -1001,7 +1001,7 @@
 
 <p><img src="images/woocommerce-api-key-generated-9004dc03.png" alt="Generated REST API key" /></p>
 <h3 id='auto-generating-api-keys-using-our-application-authentication-endpoint'>Auto generating API keys using our Application Authentication Endpoint</h3>
-<p>This endpoint can be used by any APP to <em>allow users to generate API keys</em> for your APP. This makes integration with WooCommerce API easier because the user only needs to grant access to your APP via a URL. After being redirected back to your APP, the API keys will be sent back in a separate POST request.</p>
+<p>This endpoint can be used by any APP to <em>allow users to generate API keys</em> for your APP. This makes integration with JD Atina Web Services Microservices API easier because the user only needs to grant access to your APP via a URL. After being redirected back to your APP, the API keys will be sent back in a separate POST request.</p>
 
 <p>The following image illustrates how this works:</p>
 
@@ -1145,10 +1145,10 @@
 </blockquote>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://www.example.com/wp-json/wc/v1/orders <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">WooCommerceRestApi</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">@woocommerce/woocommerce-rest-api</span><span class="dl">"</span><span class="p">).</span><span class="k">default</span><span class="p">;</span>
-<span class="c1">// import WooCommerceRestApi from "@woocommerce/woocommerce-rest-api"; // Supports ESM</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">MicroservicesRestApi</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">@woocommerce/woocommerce-rest-api</span><span class="dl">"</span><span class="p">).</span><span class="k">default</span><span class="p">;</span>
+<span class="c1">// import JD Atina Web Services MicroservicesRestApi from "@woocommerce/woocommerce-rest-api"; // Supports ESM</span>
 
-<span class="kd">const</span> <span class="nx">WooCommerce</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">WooCommerceRestApi</span><span class="p">({</span>
+<span class="kd">const</span> <span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">MicroservicesRestApi</span><span class="p">({</span>
   <span class="na">url</span><span class="p">:</span> <span class="dl">"</span><span class="s2">https://example.com</span><span class="dl">"</span><span class="p">,</span>
   <span class="na">consumerKey</span><span class="p">:</span> <span class="dl">"</span><span class="s2">consumer_key</span><span class="dl">"</span><span class="p">,</span>
   <span class="na">consumerSecret</span><span class="p">:</span> <span class="dl">"</span><span class="s2">consumer_secret</span><span class="dl">"</span><span class="p">,</span>
@@ -1157,7 +1157,7 @@
 </code></pre></div><div class="highlight"><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
 <span class="k">require</span> <span class="k">__DIR__</span> <span class="mf">.</span> <span class="s1">'/vendor/autoload.php'</span><span class="p">;</span>
 
-<span class="kn">use</span> <span class="nc">Automattic\WooCommerce\Client</span><span class="p">;</span>
+<span class="kn">use</span> <span class="no">Automattic\JD</span> <span class="nc">Atina</span> <span class="nc">Web</span> <span class="nc">Services</span> <span class="nc">Microservices\Client</span><span class="p">;</span>
 
 <span class="nv">$woocommerce</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Client</span><span class="p">(</span>
     <span class="s1">'https://example.com'</span><span class="p">,</span>
@@ -1180,7 +1180,7 @@
 <span class="p">)</span>
 </code></pre></div><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s2">"woocommerce_api"</span>
 
-<span class="n">woocommerce</span> <span class="o">=</span> <span class="no">WooCommerce</span><span class="o">::</span><span class="no">API</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span>
+<span class="n">woocommerce</span> <span class="o">=</span> <span class="no">JD</span> <span class="no">Atina</span> <span class="no">Web</span> <span class="no">Services</span> <span class="no">Microservices</span><span class="o">::</span><span class="no">API</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span>
   <span class="s2">"https://example.com"</span><span class="p">,</span>
   <span class="s2">"consumer_key"</span><span class="p">,</span>
   <span class="s2">"consumer_secret"</span><span class="p">,</span>
@@ -1196,10 +1196,10 @@
 <p>Example for servers that not properly parse the Authorization header:</p>
 </blockquote>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://www.example.com/wp-json/wc/v1/orders?consumer_key<span class="o">=</span>123&amp;consumer_secret<span class="o">=</span>abc
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">WooCommerceRestApi</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">@woocommerce/woocommerce-rest-api</span><span class="dl">"</span><span class="p">).</span><span class="k">default</span><span class="p">;</span>
-<span class="c1">// import WooCommerceRestApi from "@woocommerce/woocommerce-rest-api"; // Supports ESM</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">MicroservicesRestApi</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">@woocommerce/woocommerce-rest-api</span><span class="dl">"</span><span class="p">).</span><span class="k">default</span><span class="p">;</span>
+<span class="c1">// import JD Atina Web Services MicroservicesRestApi from "@woocommerce/woocommerce-rest-api"; // Supports ESM</span>
 
-<span class="kd">const</span> <span class="nx">WooCommerce</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">WooCommerceRestApi</span><span class="p">({</span>
+<span class="kd">const</span> <span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">MicroservicesRestApi</span><span class="p">({</span>
   <span class="na">url</span><span class="p">:</span> <span class="dl">"</span><span class="s2">https://example.com</span><span class="dl">"</span><span class="p">,</span>
   <span class="na">consumerKey</span><span class="p">:</span> <span class="dl">"</span><span class="s2">consumer_key</span><span class="dl">"</span><span class="p">,</span>
   <span class="na">consumerSecret</span><span class="p">:</span> <span class="dl">"</span><span class="s2">consumer_secret</span><span class="dl">"</span><span class="p">,</span>
@@ -1209,7 +1209,7 @@
 </code></pre></div><div class="highlight"><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
 <span class="k">require</span> <span class="k">__DIR__</span> <span class="mf">.</span> <span class="s1">'/vendor/autoload.php'</span><span class="p">;</span>
 
-<span class="kn">use</span> <span class="nc">Automattic\WooCommerce\Client</span><span class="p">;</span>
+<span class="kn">use</span> <span class="no">Automattic\JD</span> <span class="nc">Atina</span> <span class="nc">Web</span> <span class="nc">Services</span> <span class="nc">Microservices\Client</span><span class="p">;</span>
 
 <span class="nv">$woocommerce</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Client</span><span class="p">(</span>
     <span class="s1">'https://example.com'</span><span class="p">,</span>
@@ -1234,7 +1234,7 @@
 <span class="p">)</span>
 </code></pre></div><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s2">"woocommerce_api"</span>
 
-<span class="n">woocommerce</span> <span class="o">=</span> <span class="no">WooCommerce</span><span class="o">::</span><span class="no">API</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span>
+<span class="n">woocommerce</span> <span class="o">=</span> <span class="no">JD</span> <span class="no">Atina</span> <span class="no">Web</span> <span class="no">Services</span> <span class="no">Microservices</span><span class="o">::</span><span class="no">API</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span>
   <span class="s2">"https://example.com"</span><span class="p">,</span>
   <span class="s2">"consumer_key"</span><span class="p">,</span>
   <span class="s2">"consumer_secret"</span><span class="p">,</span>
@@ -1313,7 +1313,7 @@
 <li>You must use the store URL provided by the index when forming the base string used for the signature, as this is what the server will use. (e.g. if the store URL includes a <code>www</code> sub-domain, you should use it for requests)</li>
 <li>Note that the request body is <em>not</em> signed as per the OAuth spec.</li>
 <li>If including parameters in your request, it saves a lot of trouble if you can order your items alphabetically.</li>
-<li>Authorization header is supported starting WooCommerce 3.0.</li>
+<li>Authorization header is supported starting JD Atina Web Services Microservices 3.0.</li>
 </ul>
 <h1 id='index'>Index</h1>
 <p>By default, the API provides information about all available endpoints on the site. Authentication is not required to access the API index.</p>
@@ -1325,7 +1325,7 @@
     </div>
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://example.com/wp-json/wc/v1
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">""</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">""</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -6073,7 +6073,7 @@
   <span class="na">minimum_amount</span><span class="p">:</span> <span class="dl">"</span><span class="s2">100.00</span><span class="dl">"</span>
 <span class="p">};</span>
 
-<span class="nx">WooCommerce</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">coupons</span><span class="dl">"</span><span class="p">)</span>
+<span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">coupons</span><span class="dl">"</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -6165,7 +6165,7 @@
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://example.com/wp-json/wc/v1/coupons/113 <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">coupons/113</span><span class="dl">"</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">coupons/113</span><span class="dl">"</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -6227,7 +6227,7 @@
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://example.com/wp-json/wc/v1/coupons <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">coupons</span><span class="dl">"</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">coupons</span><span class="dl">"</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -6405,7 +6405,7 @@
   <span class="na">amount</span><span class="p">:</span> <span class="mi">5</span>
 <span class="p">};</span>
 
-<span class="nx">WooCommerce</span><span class="p">.</span><span class="nx">put</span><span class="p">(</span><span class="dl">"</span><span class="s2">coupons/113</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
+<span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="nx">put</span><span class="p">(</span><span class="dl">"</span><span class="s2">coupons/113</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -6481,7 +6481,7 @@
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-X</span> DELETE https://example.com/wp-json/wc/v1/coupons/113?force<span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="dl">"</span><span class="s2">coupons/113</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="dl">"</span><span class="s2">coupons/113</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span>
   <span class="na">force</span><span class="p">:</span> <span class="kc">true</span>
 <span class="p">})</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
@@ -6623,7 +6623,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
   <span class="p">]</span>
 <span class="p">};</span>
 
-<span class="nx">WooCommerce</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">"</span><span class="s2">customers/batch</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
+<span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">"</span><span class="s2">customers/batch</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -7176,7 +7176,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
   <span class="p">}</span>
 <span class="p">};</span>
 
-<span class="nx">WooCommerce</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">"</span><span class="s2">customers</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
+<span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">"</span><span class="s2">customers</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -7348,7 +7348,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://example.com/wp-json/wc/v1/customers/2 <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">customers/2</span><span class="dl">"</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">customers/2</span><span class="dl">"</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -7425,7 +7425,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://example.com/wp-json/wc/v1/customers <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">customers</span><span class="dl">"</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">customers</span><span class="dl">"</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -7640,7 +7640,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
   <span class="p">}</span>
 <span class="p">};</span>
 
-<span class="nx">WooCommerce</span><span class="p">.</span><span class="nx">put</span><span class="p">(</span><span class="dl">"</span><span class="s2">customers/2</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
+<span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="nx">put</span><span class="p">(</span><span class="dl">"</span><span class="s2">customers/2</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -7749,7 +7749,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-X</span> DELETE https://example.com/wp-json/wc/v1/customers/2?force<span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="dl">"</span><span class="s2">customers/2</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="dl">"</span><span class="s2">customers/2</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span>
   <span class="na">force</span><span class="p">:</span> <span class="kc">true</span>
 <span class="p">})</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
@@ -7998,7 +7998,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
   <span class="p">]</span>
 <span class="p">};</span>
 
-<span class="nx">WooCommerce</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">"</span><span class="s2">customers/batch</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
+<span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">"</span><span class="s2">customers/batch</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -8469,7 +8469,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://example.com/wp-json/wc/v1/customers/2/downloads <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">customers/2/downloads</span><span class="dl">"</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">customers/2/downloads</span><span class="dl">"</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -8613,7 +8613,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
 <tr>
 <td><code>version</code></td>
 <td>string</td>
-<td>Version of WooCommerce when the order was made. <i class="label label-info">read-only</i></td>
+<td>Version of JD Atina Web Services Microservices when the order was made. <i class="label label-info">read-only</i></td>
 </tr>
 <tr>
 <td><code>prices_include_tax</code></td>
@@ -9132,7 +9132,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
   <span class="p">]</span>
 <span class="p">};</span>
 
-<span class="nx">WooCommerce</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">"</span><span class="s2">orders</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
+<span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">"</span><span class="s2">orders</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -9439,7 +9439,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://example.com/wp-json/wc/v1/orders/154 <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">orders/154</span><span class="dl">"</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">orders/154</span><span class="dl">"</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -9620,7 +9620,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://example.com/wp-json/wc/v1/orders <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">orders</span><span class="dl">"</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">orders</span><span class="dl">"</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -9984,7 +9984,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
   <span class="na">status</span><span class="p">:</span> <span class="dl">"</span><span class="s2">completed</span><span class="dl">"</span>
 <span class="p">};</span>
 
-<span class="nx">WooCommerce</span><span class="p">.</span><span class="nx">put</span><span class="p">(</span><span class="dl">"</span><span class="s2">orders/154</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
+<span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="nx">put</span><span class="p">(</span><span class="dl">"</span><span class="s2">orders/154</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -10165,7 +10165,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-X</span> DELETE https://example.com/wp-json/wc/v1/orders/154?force<span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="dl">"</span><span class="s2">orders/154</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="dl">"</span><span class="s2">orders/154</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span>
   <span class="na">force</span><span class="p">:</span> <span class="kc">true</span>
 <span class="p">})</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
@@ -10568,7 +10568,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
   <span class="p">]</span>
 <span class="p">};</span>
 
-<span class="nx">WooCommerce</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">"</span><span class="s2">orders/batch</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
+<span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">"</span><span class="s2">orders/batch</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -11563,7 +11563,7 @@ Order notes are added by administrators and programmatically to store data about
   <span class="na">note</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Order ok!!!</span><span class="dl">"</span>
 <span class="p">};</span>
 
-<span class="nx">WooCommerce</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">"</span><span class="s2">orders/645/notes</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
+<span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">"</span><span class="s2">orders/645/notes</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -11625,7 +11625,7 @@ Order notes are added by administrators and programmatically to store data about
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://example.com/wp-json/wc/v1/orders/645/notes/51 <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">orders/645/notes/51</span><span class="dl">"</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">orders/645/notes/51</span><span class="dl">"</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -11673,7 +11673,7 @@ Order notes are added by administrators and programmatically to store data about
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://example.com/wp-json/wc/v1/orders/645/notes <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">orders/645/notes</span><span class="dl">"</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">orders/645/notes</span><span class="dl">"</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -11746,7 +11746,7 @@ Order notes are added by administrators and programmatically to store data about
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-X</span> DELETE https://example.com/wp-json/wc/v1/orders/645/notes/51?force<span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="dl">"</span><span class="s2">orders/645/notes/51</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="dl">"</span><span class="s2">orders/645/notes/51</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span>
   <span class="na">force</span><span class="p">:</span> <span class="kc">true</span>
 <span class="p">})</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
@@ -11933,7 +11933,7 @@ Order notes are added by administrators and programmatically to store data about
   <span class="na">amount</span><span class="p">:</span> <span class="dl">"</span><span class="s2">10</span><span class="dl">"</span>
 <span class="p">};</span>
 
-<span class="nx">WooCommerce</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">"</span><span class="s2">orders/116/refunds</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
+<span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">"</span><span class="s2">orders/116/refunds</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -11996,7 +11996,7 @@ Order notes are added by administrators and programmatically to store data about
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://example.com/wp-json/wc/v1/orders/116/refunds/150 <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">orders/116/refunds/150</span><span class="dl">"</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">orders/116/refunds/150</span><span class="dl">"</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -12059,7 +12059,7 @@ Order notes are added by administrators and programmatically to store data about
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://example.com/wp-json/wc/v1/orders/116/refunds <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">orders/116/refunds</span><span class="dl">"</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">orders/116/refunds</span><span class="dl">"</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -12220,7 +12220,7 @@ Order notes are added by administrators and programmatically to store data about
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-X</span> DELETE https://example.com/wp-json/wc/v1/orders/116/refunds/150?force<span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="dl">"</span><span class="s2">orders/116/refunds/150</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="dl">"</span><span class="s2">orders/116/refunds/150</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span>
   <span class="na">force</span><span class="p">:</span> <span class="kc">true</span>
 <span class="p">})</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
@@ -13053,7 +13053,7 @@ Order notes are added by administrators and programmatically to store data about
   <span class="p">]</span>
 <span class="p">};</span>
 
-<span class="nx">WooCommerce</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">"</span><span class="s2">products</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
+<span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">"</span><span class="s2">products</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -13472,7 +13472,7 @@ Order notes are added by administrators and programmatically to store data about
   <span class="p">]</span>
 <span class="p">};</span>
 
-<span class="nx">WooCommerce</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">"</span><span class="s2">products</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
+<span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">"</span><span class="s2">products</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -14098,7 +14098,7 @@ Order notes are added by administrators and programmatically to store data about
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://example.com/wp-json/wc/v1/products/162 <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/162</span><span class="dl">"</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/162</span><span class="dl">"</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -14232,7 +14232,7 @@ Order notes are added by administrators and programmatically to store data about
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://example.com/wp-json/wc/v1/products <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">products</span><span class="dl">"</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">products</span><span class="dl">"</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -14769,7 +14769,7 @@ Order notes are added by administrators and programmatically to store data about
   <span class="na">regular_price</span><span class="p">:</span> <span class="dl">"</span><span class="s2">24.54</span><span class="dl">"</span>
 <span class="p">};</span>
 
-<span class="nx">WooCommerce</span><span class="p">.</span><span class="nx">put</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/162</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
+<span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="nx">put</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/162</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -14917,7 +14917,7 @@ Order notes are added by administrators and programmatically to store data about
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-X</span> DELETE https://example.com/wp-json/wc/v1/products/162?force<span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/162</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/162</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span>
   <span class="na">force</span><span class="p">:</span> <span class="kc">true</span>
 <span class="p">})</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
@@ -15221,7 +15221,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
   <span class="p">]</span>
 <span class="p">};</span>
 
-<span class="nx">WooCommerce</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/batch</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
+<span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/batch</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -16089,7 +16089,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://example.com/wp-json/wc/v1/products/162/reviews/9 <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/162/reviews/9</span><span class="dl">"</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/162/reviews/9</span><span class="dl">"</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -16179,7 +16179,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://example.com/wp-json/wc/v1/products/162/reviews <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/162/reviews</span><span class="dl">"</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/162/reviews</span><span class="dl">"</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -16315,7 +16315,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
   <span class="na">has_archives</span><span class="p">:</span> <span class="kc">true</span>
 <span class="p">};</span>
 
-<span class="nx">WooCommerce</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/attributes</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
+<span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/attributes</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -16386,7 +16386,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://example.com/wp-json/wc/v1/products/attributes/1 <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/attributes/1</span><span class="dl">"</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/attributes/1</span><span class="dl">"</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -16431,7 +16431,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://example.com/wp-json/wc/v1/products/attributes <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/attributes</span><span class="dl">"</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/attributes</span><span class="dl">"</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -16506,7 +16506,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
   <span class="na">order_by</span><span class="p">:</span> <span class="dl">"</span><span class="s2">name</span><span class="dl">"</span>
 <span class="p">};</span>
 
-<span class="nx">WooCommerce</span><span class="p">.</span><span class="nx">put</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/attributes/1</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
+<span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="nx">put</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/attributes/1</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -16569,7 +16569,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
 </aside>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-X</span> DELETE https://example.com/wp-json/wc/v1/products/attributes/1?force<span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/attributes/1</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/attributes/1</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span>
   <span class="na">force</span><span class="p">:</span> <span class="kc">true</span>
 <span class="p">})</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
@@ -16674,7 +16674,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
   <span class="p">]</span>
 <span class="p">};</span>
 
-<span class="nx">WooCommerce</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/attributes/batch</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
+<span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/attributes/batch</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -16898,7 +16898,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
   <span class="na">name</span><span class="p">:</span> <span class="dl">"</span><span class="s2">XXS</span><span class="dl">"</span>
 <span class="p">};</span>
 
-<span class="nx">WooCommerce</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/attributes/2/terms</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
+<span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/attributes/2/terms</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -16957,7 +16957,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://example.com/wp-json/wc/v1/products/attributes/2/terms/23 <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/attributes/2/terms/23</span><span class="dl">"</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/attributes/2/terms/23</span><span class="dl">"</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -17002,7 +17002,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://example.com/wp-json/wc/v1/products/attributes/2/terms <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/attributes/2/terms</span><span class="dl">"</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/attributes/2/terms</span><span class="dl">"</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -17246,7 +17246,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
   <span class="na">name</span><span class="p">:</span> <span class="dl">"</span><span class="s2">XXS</span><span class="dl">"</span>
 <span class="p">};</span>
 
-<span class="nx">WooCommerce</span><span class="p">.</span><span class="nx">put</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/attributes/2/terms/23</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
+<span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="nx">put</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/attributes/2/terms/23</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -17305,7 +17305,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-X</span> DELETE https://example.com/wp-json/wc/v1/products/attributes/2/terms/23?force<span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/attributes/2/terms/23</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/attributes/2/terms/23</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span>
   <span class="na">force</span><span class="p">:</span> <span class="kc">true</span>
 <span class="p">})</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
@@ -17412,7 +17412,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
   <span class="p">]</span>
 <span class="p">};</span>
 
-<span class="nx">WooCommerce</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/attributes/2/terms/batch</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
+<span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/attributes/2/terms/batch</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -17723,7 +17723,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
   <span class="p">}</span>
 <span class="p">};</span>
 
-<span class="nx">WooCommerce</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/categories</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
+<span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/categories</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -17801,7 +17801,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://example.com/wp-json/wc/v1/products/categories/9 <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/categories/9</span><span class="dl">"</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/categories/9</span><span class="dl">"</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -17856,7 +17856,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://example.com/wp-json/wc/v1/products/categories <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/categories</span><span class="dl">"</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/categories</span><span class="dl">"</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -18148,7 +18148,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
   <span class="na">description</span><span class="p">:</span> <span class="dl">"</span><span class="s2">All kinds of clothes.</span><span class="dl">"</span>
 <span class="p">};</span>
 
-<span class="nx">WooCommerce</span><span class="p">.</span><span class="nx">put</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/categories/9</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
+<span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="nx">put</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/categories/9</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -18217,7 +18217,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-X</span> DELETE https://example.com/wp-json/wc/v1/products/categories/9?force<span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/categories/9</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/categories/9</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span>
   <span class="na">force</span><span class="p">:</span> <span class="kc">true</span>
 <span class="p">})</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
@@ -18334,7 +18334,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
   <span class="p">]</span>
 <span class="p">};</span>
 
-<span class="nx">WooCommerce</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/categories/batch</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
+<span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/categories/batch</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -18605,7 +18605,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
   <span class="na">name</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Priority</span><span class="dl">"</span>
 <span class="p">};</span>
 
-<span class="nx">WooCommerce</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/shipping_classes</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
+<span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/shipping_classes</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -18663,7 +18663,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://example.com/wp-json/wc/v1/products/shipping_classes/32 <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/shipping_classes/32</span><span class="dl">"</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/shipping_classes/32</span><span class="dl">"</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -18707,7 +18707,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://example.com/wp-json/wc/v1/products/shipping_classes <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/shipping_classes</span><span class="dl">"</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/shipping_classes</span><span class="dl">"</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -18844,7 +18844,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
   <span class="na">description</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Priority mail.</span><span class="dl">"</span>
 <span class="p">};</span>
 
-<span class="nx">WooCommerce</span><span class="p">.</span><span class="nx">put</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/shipping_classes/32</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
+<span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="nx">put</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/shipping_classes/32</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -18902,7 +18902,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-X</span> DELETE https://example.com/wp-json/wc/v1/products/shipping_classes/32?force<span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/shipping_classes/32</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/shipping_classes/32</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span>
   <span class="na">force</span><span class="p">:</span> <span class="kc">true</span>
 <span class="p">})</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
@@ -19006,7 +19006,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
   <span class="p">]</span>
 <span class="p">};</span>
 
-<span class="nx">WooCommerce</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/shipping_classes/batch</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
+<span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/shipping_classes/batch</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -19225,7 +19225,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
   <span class="na">name</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Leather Shoes</span><span class="dl">"</span>
 <span class="p">};</span>
 
-<span class="nx">WooCommerce</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/tags</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
+<span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/tags</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -19283,7 +19283,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://example.com/wp-json/wc/v1/products/tags/34 <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/tags/34</span><span class="dl">"</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/tags/34</span><span class="dl">"</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -19327,7 +19327,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://example.com/wp-json/wc/v1/products/tags <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/tags</span><span class="dl">"</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/tags</span><span class="dl">"</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -19464,7 +19464,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
   <span class="na">description</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Genuine leather.</span><span class="dl">"</span>
 <span class="p">};</span>
 
-<span class="nx">WooCommerce</span><span class="p">.</span><span class="nx">put</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/tags/34</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
+<span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="nx">put</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/tags/34</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -19522,7 +19522,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-X</span> DELETE https://example.com/wp-json/wc/v1/products/tags/34?force<span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/tags/34</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/tags/34</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span>
   <span class="na">force</span><span class="p">:</span> <span class="kc">true</span>
 <span class="p">})</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
@@ -19626,7 +19626,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
   <span class="p">]</span>
 <span class="p">};</span>
 
-<span class="nx">WooCommerce</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/tags/batch</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
+<span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/tags/batch</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -19799,7 +19799,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://example.com/wp-json/wc/v1/reports <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">reports</span><span class="dl">"</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">reports</span><span class="dl">"</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -19858,7 +19858,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://example.com/wp-json/wc/v1/reports/sales?date_min<span class="o">=</span>2016-05-03&amp;date_max<span class="o">=</span>2016-05-04 <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">reports/sales</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">reports/sales</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span>
   <span class="na">date_min</span><span class="p">:</span> <span class="dl">"</span><span class="s2">2016-05-03</span><span class="dl">"</span><span class="p">,</span>
   <span class="na">date_max</span><span class="p">:</span> <span class="dl">"</span><span class="s2">2016-05-04</span><span class="dl">"</span>
 <span class="p">})</span>
@@ -20033,7 +20033,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://example.com/wp-json/wc/v1/reports/top_sellers?period<span class="o">=</span>last_month <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">reports/top_sellers</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">reports/top_sellers</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span>
   <span class="na">period</span><span class="p">:</span> <span class="dl">"</span><span class="s2">last_month</span><span class="dl">"</span><span class="p">,</span>
 <span class="p">})</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
@@ -20246,7 +20246,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
   <span class="na">shipping</span><span class="p">:</span> <span class="kc">false</span>
 <span class="p">};</span>
 
-<span class="nx">WooCommerce</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">"</span><span class="s2">taxes</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
+<span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">"</span><span class="s2">taxes</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -20323,7 +20323,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://example.com/wp-json/wc/v1/taxes/72 <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">taxes/72</span><span class="dl">"</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">taxes/72</span><span class="dl">"</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -20374,7 +20374,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://example.com/wp-json/wc/v1/taxes <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">taxes</span><span class="dl">"</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">taxes</span><span class="dl">"</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -20713,7 +20713,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
   <span class="na">name</span><span class="p">:</span> <span class="dl">"</span><span class="s2">US Tax</span><span class="dl">"</span>
 <span class="p">};</span>
 
-<span class="nx">WooCommerce</span><span class="p">.</span><span class="nx">put</span><span class="p">(</span><span class="dl">"</span><span class="s2">taxes/72</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
+<span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="nx">put</span><span class="p">(</span><span class="dl">"</span><span class="s2">taxes/72</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -20778,7 +20778,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-X</span> DELETE https://example.com/wp-json/wc/v1/taxes/72?force<span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="dl">"</span><span class="s2">taxes/72</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="dl">"</span><span class="s2">taxes/72</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span>
   <span class="na">force</span><span class="p">:</span> <span class="kc">true</span>
 <span class="p">})</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
@@ -21631,7 +21631,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
   <span class="p">]</span>
 <span class="p">};</span>
 
-<span class="nx">WooCommerce</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">"</span><span class="s2">taxes/batch</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
+<span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">"</span><span class="s2">taxes/batch</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -24106,7 +24106,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
   <span class="na">name</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Zero Rate</span><span class="dl">"</span>
 <span class="p">};</span>
 
-<span class="nx">WooCommerce</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">"</span><span class="s2">taxes/classes</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
+<span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">"</span><span class="s2">taxes/classes</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -24156,7 +24156,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://example.com/wp-json/wc/v1/taxes/classes <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">taxes/classes</span><span class="dl">"</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">taxes/classes</span><span class="dl">"</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -24220,7 +24220,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-X</span> DELETE https://example.com/wp-json/wc/v1/taxes/classes/zero-rate?force<span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="dl">"</span><span class="s2">taxes/classes/zero-rate</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="dl">"</span><span class="s2">taxes/classes/zero-rate</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span>
   <span class="na">force</span><span class="p">:</span> <span class="kc">true</span>
 <span class="p">})</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
@@ -24264,7 +24264,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
 <h1 id='webhooks'>Webhooks</h1>
 <p>The webhooks API allows you to create, view, update, and delete individual, or a batch, of webhooks.</p>
 
-<p>Webhooks can be managed via the WooCommerce settings screen or by using the REST API endpoints. The <code>WC_Webhook</code> class manages all data storage and retrieval of the webhook custom post type, as well as enqueuing webhook actions and processing/delivering/logging webhooks. On <code>woocommerce_init</code>, active webhooks are loaded.</p>
+<p>Webhooks can be managed via the JD Atina Web Services Microservices settings screen or by using the REST API endpoints. The <code>WC_Webhook</code> class manages all data storage and retrieval of the webhook custom post type, as well as enqueuing webhook actions and processing/delivering/logging webhooks. On <code>woocommerce_init</code>, active webhooks are loaded.</p>
 
 <p>Each webhook has:</p>
 
@@ -24316,7 +24316,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
 
 <p>Delivery logs can be fetched through the REST API endpoint or in code using <code>WC_Webhook::get_delivery_logs()</code>.</p>
 <h3 id='visual-interface'>Visual interface</h3>
-<p>You can find the Webhooks interface going to &quot;WooCommerce&quot; &gt; &quot;Settings&quot; &gt; &quot;API&quot; &gt; &quot;Webhooks&quot;, see our <a href="https://docs.woocommerce.com/document/webhooks/">Visual Webhooks docs</a> for more details.</p>
+<p>You can find the Webhooks interface going to &quot;JD Atina Web Services Microservices&quot; &gt; &quot;Settings&quot; &gt; &quot;API&quot; &gt; &quot;Webhooks&quot;, see our <a href="https://docs.woocommerce.com/document/webhooks/">Visual Webhooks docs</a> for more details.</p>
 <h2 id='webhook-properties'>Webhook properties</h2>
 <table><thead>
 <tr>
@@ -24358,7 +24358,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
 <tr>
 <td><code>hooks</code></td>
 <td>array</td>
-<td>WooCommerce action names associated with the webhook. <i class="label label-info">read-only</i></td>
+<td>JD Atina Web Services Microservices action names associated with the webhook. <i class="label label-info">read-only</i></td>
 </tr>
 <tr>
 <td><code>delivery_url</code></td>
@@ -24456,7 +24456,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
 <tr>
 <td><code>User-Agent</code></td>
 <td>string</td>
-<td>The request user agent, default is &quot;WooCommerce/{version} Hookshot (WordPress/{version})&quot;. <i class="label label-info">read-only</i></td>
+<td>The request user agent, default is &quot;JD Atina Web Services Microservices/{version} Hookshot (WordPress/{version})&quot;. <i class="label label-info">read-only</i></td>
 </tr>
 <tr>
 <td><code>Content-Type</code></td>
@@ -24517,7 +24517,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
   <span class="na">delivery_url</span><span class="p">:</span> <span class="dl">"</span><span class="s2">http://requestb.in/1g0sxmo1</span><span class="dl">"</span>
 <span class="p">};</span>
 
-<span class="nx">WooCommerce</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">"</span><span class="s2">webhooks</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
+<span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">"</span><span class="s2">webhooks</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -24591,7 +24591,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://example.com/wp-json/wc/v1/webhooks/142 <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">webhooks/142</span><span class="dl">"</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">webhooks/142</span><span class="dl">"</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -24645,7 +24645,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://example.com/wp-json/wc/v1/webhooks <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">webhooks</span><span class="dl">"</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">webhooks</span><span class="dl">"</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -24811,7 +24811,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
   <span class="na">status</span><span class="p">:</span> <span class="dl">"</span><span class="s2">paused</span><span class="dl">"</span>
 <span class="p">}</span>
 
-<span class="nx">WooCommerce</span><span class="p">.</span><span class="nx">put</span><span class="p">(</span><span class="dl">"</span><span class="s2">webhooks/142</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
+<span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="nx">put</span><span class="p">(</span><span class="dl">"</span><span class="s2">webhooks/142</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -24879,7 +24879,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-X</span> DELETE https://example.com/wp-json/wc/v1/webhooks/142 <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="dl">"</span><span class="s2">webhooks/142</span><span class="dl">"</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="dl">"</span><span class="s2">webhooks/142</span><span class="dl">"</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -24987,7 +24987,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
   <span class="p">]</span>
 <span class="p">};</span>
 
-<span class="nx">WooCommerce</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">"</span><span class="s2">webhooks/batch</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
+<span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">"</span><span class="s2">webhooks/batch</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -25155,7 +25155,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://example.com/wp-json/wc/v1/webhooks/142/deliveries/54 <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">webhooks/142/deliveries/54</span><span class="dl">"</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">webhooks/142/deliveries/54</span><span class="dl">"</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -25176,7 +25176,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
   </span><span class="nl">"request_method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"POST"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"request_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://requestb.in/1g0sxmo1"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"request_headers"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"User-Agent"</span><span class="p">:</span><span class="w"> </span><span class="s2">"WooCommerce/2.6.0 Hookshot (WordPress/4.5.2)"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"User-Agent"</span><span class="p">:</span><span class="w"> </span><span class="s2">"JD Atina Web Services Microservices/2.6.0 Hookshot (WordPress/4.5.2)"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"Content-Type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"application/json"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"X-WC-Webhook-Source"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://example.com/"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"X-WC-Webhook-Topic"</span><span class="p">:</span><span class="w"> </span><span class="s2">"order.updated"</span><span class="p">,</span><span class="w">
@@ -25233,7 +25233,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://example.com/wp-json/wc/v1/webhooks/142/deliveries <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">webhooks/142/deliveries</span><span class="dl">"</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">webhooks/142/deliveries</span><span class="dl">"</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">})</span>
@@ -25255,7 +25255,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
     </span><span class="nl">"request_method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"POST"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"request_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://requestb.in/1g0sxmo1"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"request_headers"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"User-Agent"</span><span class="p">:</span><span class="w"> </span><span class="s2">"WooCommerce/2.6.0 Hookshot (WordPress/4.5.2)"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"User-Agent"</span><span class="p">:</span><span class="w"> </span><span class="s2">"JD Atina Web Services Microservices/2.6.0 Hookshot (WordPress/4.5.2)"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"Content-Type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"application/json"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"X-WC-Webhook-Source"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://example.com/"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"X-WC-Webhook-Topic"</span><span class="p">:</span><span class="w"> </span><span class="s2">"order.updated"</span><span class="p">,</span><span class="w">
@@ -25304,7 +25304,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
     </span><span class="nl">"request_method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"POST"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"request_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://requestb.in/1g0sxmo1"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"request_headers"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"User-Agent"</span><span class="p">:</span><span class="w"> </span><span class="s2">"WooCommerce/2.6.0 Hookshot (WordPress/4.5.2)"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"User-Agent"</span><span class="p">:</span><span class="w"> </span><span class="s2">"JD Atina Web Services Microservices/2.6.0 Hookshot (WordPress/4.5.2)"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"Content-Type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"application/json"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"X-WC-Webhook-Source"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://example.com/"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"X-WC-Webhook-Topic"</span><span class="p">:</span><span class="w"> </span><span class="s2">"order.updated"</span><span class="p">,</span><span class="w">
@@ -25361,7 +25361,7 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
 	</div>
 
 		<div id="warning-top">
-			<i class="info"></i> This documentation is for the JD Atina REST Web Services API v1 which is deprecated since WooCommerce 3.0. <a href="http://woocommerce.github.io/woocommerce-rest-api-docs/">Please use the latest REST API version</a>.
+			<i class="info"></i> This documentation is for the JD Atina REST Web Services API v1 which is deprecated since JD Atina Web Services Microservices 3.0. <a href="http://woocommerce.github.io/woocommerce-rest-api-docs/">Please use the latest REST API version</a>.
 		</div>
 
   </body>

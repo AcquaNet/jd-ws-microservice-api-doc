@@ -514,8 +514,8 @@
             <li><a href="https://github.com/woocommerce/woocommerce-rest-api-docs">Contributing to WC REST API Docs</a></li>
             <li><a href="https://github.com/woocommerce/woocommerce/tree/master/includes/rest-api">REST API Source on GitHub</a></li>
             <li><a href="https://github.com/woocommerce/woocommerce/issues?labels=API&amp;page=1&amp;state=open">REST API Issues</a></li>
-            <li><a href="https://docs.woocommerce.com/documentation/plugins/woocommerce/">WooCommerce Documentation</a></li>
-            <li><a href="https://github.com/woocommerce/woocommerce">WooCommerce Repository</a></li>
+            <li><a href="https://docs.woocommerce.com/documentation/plugins/woocommerce/">JD Atina Web Services Microservices Documentation</a></li>
+            <li><a href="https://github.com/woocommerce/woocommerce">JD Atina Web Services Microservices Repository</a></li>
             <li><a href="https://github.com/tripit/slate">Documentation Powered by Slate</a></li>
         </ul>
     </div>
@@ -523,22 +523,22 @@
       <div class="dark-box"></div>
       <div class="content">
         <h1 id='introduction'>Introduction</h1>
-<p>Introduced in WooCommerce 2.1, the REST API allows store data to be created, read, updated, and deleted using the JSON format.</p>
+<p>Introduced in JD Atina WS Microservices, the REST API allows store data to be created, read, updated, and deleted using the JSON format.</p>
 <h2 id='requirements'>Requirements</h2>
-<p>You must be using WooCommerce 2.1 or newer and the REST API must be enabled under <code>WooCommerce &gt; Settings</code>. You must enable pretty permalinks, as default permalinks will not work.</p>
+<p>You must be using JD Atina WS Microservices or newer and the REST API must be enabled under <code>JD Atina Web Services Microservices &gt; Settings</code>. You must enable pretty permalinks, as default permalinks will not work.</p>
 
 <aside class="notice">
-Many endpoints were improving with new versions of WooCommerce, so we always recommend keeping your WooCommerce updated to work properly with this documentation.
+Many endpoints were improving with new versions of JD Atina Web Services Microservices, so we always recommend keeping your JD Atina Web Services Microservices updated to work properly with this documentation.
 </aside>
 <h2 id='version'>Version</h2>
 <p>The current API version is <code>v3</code> which takes a first-order position in endpoints.</p>
 
-<p>Check the API versions present in every version of WooCommerce:</p>
+<p>Check the API versions present in every version of JD Atina Web Services Microservices:</p>
 
 <table><thead>
 <tr>
 <th>API Version</th>
-<th>WooCommerce</th>
+<th>JD Atina Web Services Microservices</th>
 </tr>
 </thead><tbody>
 <tr>
@@ -565,7 +565,7 @@ Many endpoints were improving with new versions of WooCommerce, so we always rec
 <li>v1 includes an endpoint for listing notes for an order, v2 includes full create/read/update/delete endpoints.</li>
 <li>v1 does not include any endpoints for listing product categories, v2 includes two endpoints for product categories (<code>GET /products/categories</code> and <code>GET /products/categories/{id}</code>).</li>
 <li>v1 does not include any endpoints for getting valid order statuses, v2 includes an endpoint for listing valid order statuses (<code>GET /orders/statuses</code>).</li>
-<li>v2 supports the core features added in WooCommerce 2.2, primarily order refunds (via the <code>/orders/refunds</code> endpoint) and Webhooks (via the <code>/webhooks</code>).</li>
+<li>v2 supports the core features added in JD Atina Web Services Microservices 2.2, primarily order refunds (via the <code>/orders/refunds</code> endpoint) and Webhooks (via the <code>/webhooks</code>).</li>
 </ul>
 <h3 id='differences-between-v3-and-old-versions'>Differences between v3 and old versions</h3>
 <ul>
@@ -663,7 +663,7 @@ Many endpoints were improving with new versions of WooCommerce, so we always rec
 <li>You must use the store URL provided by the index when forming the base string used for the signature, as this is what the server will use. (e.g. if the store URL includes a <code>www</code> sub-domain, you should use it for requests)</li>
 <li>Note that the request body is <em>not</em> signed as per the OAuth spec.</li>
 <li>If including parameters in your request, it saves a lot of trouble if you can order your items alphabetically.</li>
-<li>Authorization header is supported starting WooCommerce 3.0.</li>
+<li>Authorization header is supported starting JD Atina Web Services Microservices 3.0.</li>
 </ul>
 <h2 id='parameters'>Parameters</h2>
 <p>All endpoints accept optional parameters which can be passed as an HTTP query string parameter, e.g. <code>GET /orders?status=completed</code>. There are common parameters and endpoint-specific parameters which are documented along with that endpoint.</p>
@@ -985,7 +985,7 @@ Many endpoints were improving with new versions of WooCommerce, so we always rec
 <h2 id='official-libraries'>Official Libraries</h2>
 <ul>
 <li><a href="https://www.npmjs.com/package/woocommerce-api">Node.js</a></li>
-<li><a href="https://pypi.python.org/pypi/WooCommerce">Python</a></li>
+<li><a href="https://pypi.python.org/pypi/JD%20Atina%20Web%20Services%20Microservices">Python</a></li>
 <li><a href="https://packagist.org/packages/woothemes/woocommerce-api">PHP</a></li>
 <li><a href="https://rubygems.org/gems/woocommerce_api">Ruby</a></li>
 </ul>
@@ -993,13 +993,13 @@ Many endpoints were improving with new versions of WooCommerce, so we always rec
 <span class="c1">// npm install --save woocommerce-api</span>
 
 <span class="c1">// Setup:</span>
-<span class="kd">var</span> <span class="nx">WooCommerceAPI</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">woocommerce-api</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">MicroservicesAPI</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">woocommerce-api</span><span class="dl">'</span><span class="p">);</span>
 
-<span class="kd">var</span> <span class="nx">WooCommerce</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">WooCommerceAPI</span><span class="p">({</span>
+<span class="kd">var</span> <span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">MicroservicesAPI</span><span class="p">({</span>
   <span class="na">url</span><span class="p">:</span> <span class="dl">'</span><span class="s1">http://example.com</span><span class="dl">'</span><span class="p">,</span> <span class="c1">// Your store URL</span>
   <span class="na">consumerKey</span><span class="p">:</span> <span class="dl">'</span><span class="s1">consumer_key</span><span class="dl">'</span><span class="p">,</span> <span class="c1">// Your consumer key</span>
   <span class="na">consumerSecret</span><span class="p">:</span> <span class="dl">'</span><span class="s1">consumer_secret</span><span class="dl">'</span><span class="p">,</span> <span class="c1">// Your consumer secret</span>
-  <span class="na">version</span><span class="p">:</span> <span class="dl">'</span><span class="s1">v2</span><span class="dl">'</span> <span class="c1">// WooCommerce API version</span>
+  <span class="na">version</span><span class="p">:</span> <span class="dl">'</span><span class="s1">v2</span><span class="dl">'</span> <span class="c1">// JD Atina Web Services Microservices API version</span>
 <span class="p">});</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="c1"># Install:
 # pip install woocommerce
@@ -1032,7 +1032,7 @@ Many endpoints were improving with new versions of WooCommerce, so we always rec
 <span class="c1"># Setup:</span>
 <span class="nb">require</span> <span class="s2">"woocommerce_api"</span>
 
-<span class="n">woocommerce</span> <span class="o">=</span> <span class="no">WooCommerce</span><span class="o">::</span><span class="no">API</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span>
+<span class="n">woocommerce</span> <span class="o">=</span> <span class="no">JD</span> <span class="no">Atina</span> <span class="no">Web</span> <span class="no">Services</span> <span class="no">Microservices</span><span class="o">::</span><span class="no">API</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span>
   <span class="s2">"http://example.com"</span><span class="p">,</span>
   <span class="s2">"consumer_key"</span><span class="p">,</span>
   <span class="s2">"consumer_secret"</span><span class="p">,</span>
@@ -1061,7 +1061,7 @@ Many endpoints were improving with new versions of WooCommerce, so we always rec
   </span><span class="nl">"errors"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
       </span><span class="nl">"code"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"woocommerce_api_disabled"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"message"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"The WooCommerce API is disabled on this site"</span><span class="w">
+      </span><span class="nl">"message"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"The JD Atina Web Services Microservices API is disabled on this site"</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
@@ -1091,7 +1091,7 @@ Many endpoints were improving with new versions of WooCommerce, so we always rec
 <tr>
 <td><code>wc_version</code></td>
 <td>string</td>
-<td>The active WooCommerce version</td>
+<td>The active JD Atina Web Services Microservices version</td>
 </tr>
 <tr>
 <td><code>routes</code></td>
@@ -1101,7 +1101,7 @@ Many endpoints were improving with new versions of WooCommerce, so we always rec
 <tr>
 <td><code>meta</code></td>
 <td>array</td>
-<td>A list of WooCommerce settings used in the API. See <a href="#meta-properties">Meta Properties</a></td>
+<td>A list of JD Atina Web Services Microservices settings used in the API. See <a href="#meta-properties">Meta Properties</a></td>
 </tr>
 </tbody></table>
 <h3 id='meta-properties'>Meta Properties</h3>
@@ -1194,7 +1194,7 @@ Many endpoints were improving with new versions of WooCommerce, so we always rec
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://example.com/wc-api/v2 <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">''</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">''</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="k">print</span><span class="p">(</span><span class="n">wcapi</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">""</span><span class="p">).</span><span class="n">json</span><span class="p">())</span>
@@ -1226,7 +1226,7 @@ Many endpoints were improving with new versions of WooCommerce, so we always rec
             </span><span class="nl">"timezone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"America/Sao_Paulo"</span><span class="p">,</span><span class="w">
             </span><span class="nl">"weight_unit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"lbs"</span><span class="w">
         </span><span class="p">},</span><span class="w">
-        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"WooCommerce Dev"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"JD Atina Web Services Microservices Dev"</span><span class="p">,</span><span class="w">
         </span><span class="nl">"routes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
             </span><span class="nl">"/"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
                 </span><span class="nl">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -1783,7 +1783,7 @@ Many endpoints were improving with new versions of WooCommerce, so we always rec
   <span class="p">}</span>
 <span class="p">};</span>
 
-<span class="nx">WooCommerce</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">'</span><span class="s1">coupons</span><span class="dl">'</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+<span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">'</span><span class="s1">coupons</span><span class="dl">'</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
@@ -1908,7 +1908,7 @@ Many endpoints were improving with new versions of WooCommerce, so we always rec
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://example.com/wc-api/v2/coupons/529 <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">coupons/529</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">coupons/529</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="k">print</span><span class="p">(</span><span class="n">wcapi</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">"coupons/529"</span><span class="p">).</span><span class="n">json</span><span class="p">())</span>
@@ -1955,7 +1955,7 @@ Many endpoints were improving with new versions of WooCommerce, so we always rec
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://example.com/wc-api/v2/coupons <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">coupons</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">coupons</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="k">print</span><span class="p">(</span><span class="n">wcapi</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">"coupons"</span><span class="p">).</span><span class="n">json</span><span class="p">())</span>
@@ -2064,7 +2064,7 @@ Many endpoints were improving with new versions of WooCommerce, so we always rec
   <span class="p">}</span>
 <span class="p">};</span>
 
-<span class="nx">WooCommerce</span><span class="p">.</span><span class="nx">put</span><span class="p">(</span><span class="dl">'</span><span class="s1">coupons/529</span><span class="dl">'</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+<span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="nx">put</span><span class="p">(</span><span class="dl">'</span><span class="s1">coupons/529</span><span class="dl">'</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
@@ -2131,7 +2131,7 @@ Many endpoints were improving with new versions of WooCommerce, so we always rec
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-X</span> DELETE https://example.com/wc-api/v2/coupons/529/?force<span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="dl">'</span><span class="s1">coupons/529/?force=true</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="dl">'</span><span class="s1">coupons/529/?force=true</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="k">print</span><span class="p">(</span><span class="n">wcapi</span><span class="p">.</span><span class="n">delete</span><span class="p">(</span><span class="s">"coupons/529"</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span><span class="s">"force"</span><span class="p">:</span> <span class="bp">True</span><span class="p">}).</span><span class="n">json</span><span class="p">())</span>
@@ -2169,7 +2169,7 @@ Many endpoints were improving with new versions of WooCommerce, so we always rec
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://example.com/wc-api/v2/coupons/count <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">coupons/count</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">coupons/count</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="k">print</span><span class="p">(</span><span class="n">wcapi</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">"coupons/count"</span><span class="p">).</span><span class="n">json</span><span class="p">())</span>
@@ -2458,7 +2458,7 @@ Many endpoints were improving with new versions of WooCommerce, so we always rec
   <span class="p">}</span>
 <span class="p">};</span>
 
-<span class="nx">WooCommerce</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">'</span><span class="s1">customers</span><span class="dl">'</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+<span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">'</span><span class="s1">customers</span><span class="dl">'</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
@@ -2626,7 +2626,7 @@ Many endpoints were improving with new versions of WooCommerce, so we always rec
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://example.com/wc-api/v2/customers/2 <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">customers/2</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">customers/2</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="k">print</span><span class="p">(</span><span class="n">wcapi</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">"customers/2"</span><span class="p">).</span><span class="n">json</span><span class="p">())</span>
@@ -2686,7 +2686,7 @@ Many endpoints were improving with new versions of WooCommerce, so we always rec
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://example.com/wc-api/v2/customers <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">customers</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">customers</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="k">print</span><span class="p">(</span><span class="n">wcapi</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">"customers"</span><span class="p">).</span><span class="n">json</span><span class="p">())</span>
@@ -2823,7 +2823,7 @@ Many endpoints were improving with new versions of WooCommerce, so we always rec
   <span class="p">}</span>
 <span class="p">};</span>
 
-<span class="nx">WooCommerce</span><span class="p">.</span><span class="nx">put</span><span class="p">(</span><span class="dl">'</span><span class="s1">customers/2</span><span class="dl">'</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+<span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="nx">put</span><span class="p">(</span><span class="dl">'</span><span class="s1">customers/2</span><span class="dl">'</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
@@ -2921,7 +2921,7 @@ Many endpoints were improving with new versions of WooCommerce, so we always rec
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-X</span> DELETE https://example.com/wc-api/v2/customers/2 <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="dl">'</span><span class="s1">customers/2</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="dl">'</span><span class="s1">customers/2</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="k">print</span><span class="p">(</span><span class="n">wcapi</span><span class="p">.</span><span class="n">delete</span><span class="p">(</span><span class="s">"customers/2"</span><span class="p">).</span><span class="n">json</span><span class="p">())</span>
@@ -2945,7 +2945,7 @@ Many endpoints were improving with new versions of WooCommerce, so we always rec
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://example.com/wc-api/v2/customers/2/orders <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">customers/2/orders</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">customers/2/orders</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="k">print</span><span class="p">(</span><span class="n">wcapi</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">"customers/2/orders"</span><span class="p">).</span><span class="n">json</span><span class="p">())</span>
@@ -3090,7 +3090,7 @@ Many endpoints were improving with new versions of WooCommerce, so we always rec
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://example.com/wc-api/v2/customers/2/downloads <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">customers/2/downloads</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">customers/2/downloads</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="k">print</span><span class="p">(</span><span class="n">wcapi</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">"customers/2/downloads"</span><span class="p">).</span><span class="n">json</span><span class="p">())</span>
@@ -3183,7 +3183,7 @@ Many endpoints were improving with new versions of WooCommerce, so we always rec
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://example.com/wc-api/v2/customers/count <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">customers/count</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">customers/count</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="k">print</span><span class="p">(</span><span class="n">wcapi</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">"customers/count"</span><span class="p">).</span><span class="n">json</span><span class="p">())</span>
@@ -3750,7 +3750,7 @@ Many endpoints were improving with new versions of WooCommerce, so we always rec
   <span class="p">}</span>
 <span class="p">};</span>
 
-<span class="nx">WooCommerce</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">'</span><span class="s1">orders</span><span class="dl">'</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+<span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">'</span><span class="s1">orders</span><span class="dl">'</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
@@ -4087,7 +4087,7 @@ Many endpoints were improving with new versions of WooCommerce, so we always rec
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://example.com/wc-api/v2/orders/645 <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">orders/645</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">orders/645</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="k">print</span><span class="p">(</span><span class="n">wcapi</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">"orders/645"</span><span class="p">).</span><span class="n">json</span><span class="p">())</span>
@@ -4263,7 +4263,7 @@ Many endpoints were improving with new versions of WooCommerce, so we always rec
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://example.com/wc-api/v2/orders <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">orders</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">orders</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="k">print</span><span class="p">(</span><span class="n">wcapi</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">"orders"</span><span class="p">).</span><span class="n">json</span><span class="p">())</span>
@@ -4614,7 +4614,7 @@ Many endpoints were improving with new versions of WooCommerce, so we always rec
   <span class="p">}</span>
 <span class="p">};</span>
 
-<span class="nx">WooCommerce</span><span class="p">.</span><span class="nx">put</span><span class="p">(</span><span class="dl">'</span><span class="s1">orders/645</span><span class="dl">'</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+<span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="nx">put</span><span class="p">(</span><span class="dl">'</span><span class="s1">orders/645</span><span class="dl">'</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
@@ -4810,7 +4810,7 @@ Many endpoints were improving with new versions of WooCommerce, so we always rec
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-X</span> DELETE https://example.com/wc-api/v2/orders/645/?force<span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="dl">'</span><span class="s1">orders/645/?force=true</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="dl">'</span><span class="s1">orders/645/?force=true</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="k">print</span><span class="p">(</span><span class="n">wcapi</span><span class="p">.</span><span class="n">delete</span><span class="p">(</span><span class="s">"orders/645/"</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span><span class="s">"force"</span><span class="p">:</span> <span class="bp">True</span><span class="p">}).</span><span class="n">json</span><span class="p">())</span>
@@ -4848,7 +4848,7 @@ Many endpoints were improving with new versions of WooCommerce, so we always rec
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://example.com/wc-api/v2/orders/count <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">orders/count</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">orders/count</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="k">print</span><span class="p">(</span><span class="n">wcapi</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">"orders/count"</span><span class="p">).</span><span class="n">json</span><span class="p">())</span>
@@ -4886,7 +4886,7 @@ Many endpoints were improving with new versions of WooCommerce, so we always rec
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://example.com/wc-api/v2/orders/statuses <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">orders/statuses</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">orders/statuses</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="k">print</span><span class="p">(</span><span class="n">wcapi</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">"orders/statuses"</span><span class="p">).</span><span class="n">json</span><span class="p">())</span>
@@ -4930,7 +4930,7 @@ Many endpoints were improving with new versions of WooCommerce, so we always rec
   <span class="p">}</span>
 <span class="p">};</span>
 
-<span class="nx">WooCommerce</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">'</span><span class="s1">orders/645/notes</span><span class="dl">'</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+<span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">'</span><span class="s1">orders/645/notes</span><span class="dl">'</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
@@ -5008,7 +5008,7 @@ Many endpoints were improving with new versions of WooCommerce, so we always rec
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://example.com/wc-api/v2/orders/645/notes/416 <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">orders/645/notes/416</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">orders/645/notes/416</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="k">print</span><span class="p">(</span><span class="n">wcapi</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">"orders/645/notes/416"</span><span class="p">).</span><span class="n">json</span><span class="p">())</span>
@@ -5041,7 +5041,7 @@ Many endpoints were improving with new versions of WooCommerce, so we always rec
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://example.com/wc-api/v2/orders/645/notes <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">orders/645/notes</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">orders/645/notes</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="k">print</span><span class="p">(</span><span class="n">wcapi</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">"orders/645/notes"</span><span class="p">).</span><span class="n">json</span><span class="p">())</span>
@@ -5106,7 +5106,7 @@ Many endpoints were improving with new versions of WooCommerce, so we always rec
   <span class="p">}</span>
 <span class="p">};</span>
 
-<span class="nx">WooCommerce</span><span class="p">.</span><span class="nx">put</span><span class="p">(</span><span class="dl">'</span><span class="s1">orders/645/notes/416</span><span class="dl">'</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+<span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="nx">put</span><span class="p">(</span><span class="dl">'</span><span class="s1">orders/645/notes/416</span><span class="dl">'</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
@@ -5159,7 +5159,7 @@ Many endpoints were improving with new versions of WooCommerce, so we always rec
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-X</span> DELETE https://example.com/wc-api/v2/orders/645/notes/416 <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="dl">'</span><span class="s1">orders/645/notes/416</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="dl">'</span><span class="s1">orders/645/notes/416</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="k">print</span><span class="p">(</span><span class="n">wcapi</span><span class="p">.</span><span class="n">delete</span><span class="p">(</span><span class="s">"orders/645/notes/416"</span><span class="p">).</span><span class="n">json</span><span class="p">())</span>
@@ -5195,7 +5195,7 @@ Many endpoints were improving with new versions of WooCommerce, so we always rec
   <span class="p">}</span>
 <span class="p">};</span>
 
-<span class="nx">WooCommerce</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">'</span><span class="s1">orders/645/refunds</span><span class="dl">'</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+<span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">'</span><span class="s1">orders/645/refunds</span><span class="dl">'</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
@@ -5279,7 +5279,7 @@ Many endpoints were improving with new versions of WooCommerce, so we always rec
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://example.com/wc-api/v2/orders/645/refunds/649 <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">orders/645/refunds/649</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">orders/645/refunds/649</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="k">print</span><span class="p">(</span><span class="n">wcapi</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">"orders/645/refunds/649"</span><span class="p">).</span><span class="n">json</span><span class="p">())</span>
@@ -5313,7 +5313,7 @@ Many endpoints were improving with new versions of WooCommerce, so we always rec
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://example.com/wc-api/v2/orders/645/refunds <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">orders/645/refunds</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">orders/645/refunds</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="k">print</span><span class="p">(</span><span class="n">wcapi</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">"orders/645/refunds"</span><span class="p">).</span><span class="n">json</span><span class="p">())</span>
@@ -5397,7 +5397,7 @@ Many endpoints were improving with new versions of WooCommerce, so we always rec
   <span class="p">}</span>
 <span class="p">};</span>
 
-<span class="nx">WooCommerce</span><span class="p">.</span><span class="nx">put</span><span class="p">(</span><span class="dl">'</span><span class="s1">orders/645/refunds/649</span><span class="dl">'</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+<span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="nx">put</span><span class="p">(</span><span class="dl">'</span><span class="s1">orders/645/refunds/649</span><span class="dl">'</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
@@ -5451,7 +5451,7 @@ Many endpoints were improving with new versions of WooCommerce, so we always rec
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-X</span> DELETE https://example.com/wc-api/v2/orders/645/refunds/649 <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="dl">'</span><span class="s1">orders/645/refunds/649</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="dl">'</span><span class="s1">orders/645/refunds/649</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="k">print</span><span class="p">(</span><span class="n">wcapi</span><span class="p">.</span><span class="n">delete</span><span class="p">(</span><span class="s">"orders/645/refunds/649"</span><span class="p">).</span><span class="n">json</span><span class="p">())</span>
@@ -5497,7 +5497,7 @@ Many endpoints were improving with new versions of WooCommerce, so we always rec
 <tr>
 <td><code>type</code></td>
 <td>string</td>
-<td>Product type. By default in WooCommerce the following types are available: <code>simple</code>, <code>grouped</code>, <code>external</code>, <code>variable</code>. Default is <code>simple</code></td>
+<td>Product type. By default in JD Atina Web Services Microservices the following types are available: <code>simple</code>, <code>grouped</code>, <code>external</code>, <code>variable</code>. Default is <code>simple</code></td>
 </tr>
 <tr>
 <td><code>status</code></td>
@@ -5737,7 +5737,7 @@ Many endpoints were improving with new versions of WooCommerce, so we always rec
 <tr>
 <td><code>attributes</code></td>
 <td>array</td>
-<td>List of product attributes. See <a href="#attributes-properties">Attributes Properties</a>. Note: the attribute must be registered in WooCommerce before.</td>
+<td>List of product attributes. See <a href="#attributes-properties">Attributes Properties</a>. Note: the attribute must be registered in JD Atina Web Services Microservices before.</td>
 </tr>
 <tr>
 <td><code>default_attributes</code></td>
@@ -6182,7 +6182,7 @@ Many endpoints were improving with new versions of WooCommerce, so we always rec
   <span class="p">}</span>
 <span class="p">};</span>
 
-<span class="nx">WooCommerce</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">'</span><span class="s1">products</span><span class="dl">'</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+<span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">'</span><span class="s1">products</span><span class="dl">'</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
@@ -6535,7 +6535,7 @@ Many endpoints were improving with new versions of WooCommerce, so we always rec
   <span class="p">}</span>
 <span class="p">};</span>
 
-<span class="nx">WooCommerce</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">'</span><span class="s1">products</span><span class="dl">'</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+<span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">'</span><span class="s1">products</span><span class="dl">'</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
@@ -7048,7 +7048,7 @@ Many endpoints were improving with new versions of WooCommerce, so we always rec
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://example.com/wc-api/v2/products/546 <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">products/546</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">products/546</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="k">print</span><span class="p">(</span><span class="n">wcapi</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">"products/546"</span><span class="p">).</span><span class="n">json</span><span class="p">())</span>
@@ -7162,7 +7162,7 @@ Many endpoints were improving with new versions of WooCommerce, so we always rec
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://example.com/wc-api/v2/products <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">products</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">products</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="k">print</span><span class="p">(</span><span class="n">wcapi</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">"products"</span><span class="p">).</span><span class="n">json</span><span class="p">())</span>
@@ -7540,7 +7540,7 @@ Many endpoints were improving with new versions of WooCommerce, so we always rec
   <span class="p">}</span>
 <span class="p">};</span>
 
-<span class="nx">WooCommerce</span><span class="p">.</span><span class="nx">put</span><span class="p">(</span><span class="dl">'</span><span class="s1">products/546</span><span class="dl">'</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+<span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="nx">put</span><span class="p">(</span><span class="dl">'</span><span class="s1">products/546</span><span class="dl">'</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
@@ -7674,7 +7674,7 @@ Many endpoints were improving with new versions of WooCommerce, so we always rec
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-X</span> DELETE https://example.com/wc-api/v2/products/546/?force<span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="dl">'</span><span class="s1">products/546/?force=true</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="dl">'</span><span class="s1">products/546/?force=true</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="k">print</span><span class="p">(</span><span class="n">wcapi</span><span class="p">.</span><span class="n">delete</span><span class="p">(</span><span class="s">"products/546/"</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span><span class="s">"force"</span><span class="p">:</span> <span class="bp">True</span><span class="p">}).</span><span class="n">json</span><span class="p">())</span>
@@ -7712,7 +7712,7 @@ Many endpoints were improving with new versions of WooCommerce, so we always rec
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://example.com/wc-api/v2/products/count <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">products/count</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">products/count</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="k">print</span><span class="p">(</span><span class="n">wcapi</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">"products/count"</span><span class="p">).</span><span class="n">json</span><span class="p">())</span>
@@ -7753,7 +7753,7 @@ Many endpoints were improving with new versions of WooCommerce, so we always rec
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://example.com/wc-api/v2/products/546/reviews <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">products/546/reviews</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">products/546/reviews</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="k">print</span><span class="p">(</span><span class="n">wcapi</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">"products/546/reviews"</span><span class="p">).</span><span class="n">json</span><span class="p">())</span>
@@ -7833,7 +7833,7 @@ Many endpoints were improving with new versions of WooCommerce, so we always rec
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://example.com/wc-api/v2/products/categories/9 <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">products/categories/9</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">products/categories/9</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="k">print</span><span class="p">(</span><span class="n">wcapi</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">"products/categories/9"</span><span class="p">).</span><span class="n">json</span><span class="p">())</span>
@@ -7913,7 +7913,7 @@ Many endpoints were improving with new versions of WooCommerce, so we always rec
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://example.com/wc-api/v3/products/categories <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">products/categories</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">products/categories</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="k">print</span><span class="p">(</span><span class="n">wcapi</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">"products/categories"</span><span class="p">).</span><span class="n">json</span><span class="p">())</span>
@@ -8040,7 +8040,7 @@ Many endpoints were improving with new versions of WooCommerce, so we always rec
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://example.com/wc-api/v2/reports <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">reports</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">reports</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="k">print</span><span class="p">(</span><span class="n">wcapi</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">"reports"</span><span class="p">).</span><span class="n">json</span><span class="p">())</span>
@@ -8067,7 +8067,7 @@ Many endpoints were improving with new versions of WooCommerce, so we always rec
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://example.com/wc-api/v2/reports/sales?filter[date_min]<span class="o">=</span>2015-01-18&amp;filter[date_max]<span class="o">=</span>2015-01-21 <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">reports/sales?filter[date_min]=2015-01-18&amp;filter[date_max]=2015-01-21</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">reports/sales?filter[date_min]=2015-01-18&amp;filter[date_max]=2015-01-21</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="k">print</span><span class="p">(</span><span class="n">wcapi</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">"reports/sales?filter[date_min]=2015-01-18&amp;filter[date_max]=2015-01-21"</span><span class="p">).</span><span class="n">json</span><span class="p">())</span>
@@ -8148,7 +8148,7 @@ Many endpoints were improving with new versions of WooCommerce, so we always rec
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://example.com/wc-api/v2/reports/sales/top_sellers?filter[period]<span class="o">=</span>last_month <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">reports/sales/top_sellers?filter[period]=last_month</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">reports/sales/top_sellers?filter[period]=last_month</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="k">print</span><span class="p">(</span><span class="n">wcapi</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">"reports/sales/top_sellers?filter[period]=last_month"</span><span class="p">).</span><span class="n">json</span><span class="p">())</span>
@@ -8258,7 +8258,7 @@ Many endpoints were improving with new versions of WooCommerce, so we always rec
 <tr>
 <td><code>hooks</code></td>
 <td>array</td>
-<td>WooCommerce action names associated with the webhook <i class="label label-info">read-only</i></td>
+<td>JD Atina Web Services Microservices action names associated with the webhook <i class="label label-info">read-only</i></td>
 </tr>
 <tr>
 <td><code>delivery_url</code></td>
@@ -8356,7 +8356,7 @@ Many endpoints were improving with new versions of WooCommerce, so we always rec
 <tr>
 <td><code>User-Agent</code></td>
 <td>string</td>
-<td>The request user agent, defaults to &quot;WooCommerce/{version} Hookshot (WordPress/{version})&quot;</td>
+<td>The request user agent, defaults to &quot;JD Atina Web Services Microservices/{version} Hookshot (WordPress/{version})&quot;</td>
 </tr>
 <tr>
 <td><code>Content-Type</code></td>
@@ -8423,7 +8423,7 @@ Many endpoints were improving with new versions of WooCommerce, so we always rec
   <span class="p">}</span>
 <span class="p">};</span>
 
-<span class="nx">WooCommerce</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">'</span><span class="s1">webhooks</span><span class="dl">'</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+<span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">'</span><span class="s1">webhooks</span><span class="dl">'</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
@@ -8489,7 +8489,7 @@ Many endpoints were improving with new versions of WooCommerce, so we always rec
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://example.com/wc-api/v2/webhooks/535 <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">webhooks/535</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">webhooks/535</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="k">print</span><span class="p">(</span><span class="n">wcapi</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">"webhooks/535"</span><span class="p">).</span><span class="n">json</span><span class="p">())</span>
@@ -8526,7 +8526,7 @@ Many endpoints were improving with new versions of WooCommerce, so we always rec
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://example.com/wc-api/v2/webhooks <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">webhooks</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">webhooks</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="k">print</span><span class="p">(</span><span class="n">wcapi</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">"webhooks"</span><span class="p">).</span><span class="n">json</span><span class="p">())</span>
@@ -8607,7 +8607,7 @@ Many endpoints were improving with new versions of WooCommerce, so we always rec
   <span class="p">}</span>
 <span class="p">}</span>
 
-<span class="nx">WooCommerce</span><span class="p">.</span><span class="nx">put</span><span class="p">(</span><span class="dl">'</span><span class="s1">webhooks/535</span><span class="dl">'</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+<span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="nx">put</span><span class="p">(</span><span class="dl">'</span><span class="s1">webhooks/535</span><span class="dl">'</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
@@ -8664,7 +8664,7 @@ Many endpoints were improving with new versions of WooCommerce, so we always rec
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-X</span> DELETE https://example.com/wc-api/v2/webhooks/535 <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="dl">'</span><span class="s1">webhooks/535</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="dl">'</span><span class="s1">webhooks/535</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="k">print</span><span class="p">(</span><span class="n">wcapi</span><span class="p">.</span><span class="n">delete</span><span class="p">(</span><span class="s">"webhooks/535"</span><span class="p">).</span><span class="n">json</span><span class="p">())</span>
@@ -8688,7 +8688,7 @@ Many endpoints were improving with new versions of WooCommerce, so we always rec
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://example.com/wc-api/v2/webhooks/count <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">webhooks/count</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">webhooks/count</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="k">print</span><span class="p">(</span><span class="n">wcapi</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">"webhooks/count"</span><span class="p">).</span><span class="n">json</span><span class="p">())</span>
@@ -8726,7 +8726,7 @@ Many endpoints were improving with new versions of WooCommerce, so we always rec
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://example.com/wc-api/v2/webhooks/535/deliveries/378 <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">webhooks/535/deliveries/378</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">webhooks/535/deliveries/378</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="k">print</span><span class="p">(</span><span class="n">wcapi</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">"webhooks/535/deliveries/378"</span><span class="p">).</span><span class="n">json</span><span class="p">())</span>
@@ -8744,7 +8744,7 @@ Many endpoints were improving with new versions of WooCommerce, so we always rec
     </span><span class="nl">"request_method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"POST"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"request_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://requestb.in/125q7ns1"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"request_headers"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"User-Agent"</span><span class="p">:</span><span class="w"> </span><span class="s2">"WooCommerce/2.3.0 Hookshot (WordPress/4.1)"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"User-Agent"</span><span class="p">:</span><span class="w"> </span><span class="s2">"JD Atina Web Services Microservices/2.3.0 Hookshot (WordPress/4.1)"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"Content-Type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"application/json"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"X-WC-Webhook-Topic"</span><span class="p">:</span><span class="w"> </span><span class="s2">"action.woocommerce_add_to_cart"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"X-WC-Webhook-Resource"</span><span class="p">:</span><span class="w"> </span><span class="s2">"action"</span><span class="p">,</span><span class="w">
@@ -8784,7 +8784,7 @@ Many endpoints were improving with new versions of WooCommerce, so we always rec
 </div>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://example.com/wc-api/v2/webhooks/535/deliveries <span class="se">\</span>
     <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">WooCommerce</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">webhooks/535/deliveries</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">webhooks/535/deliveries</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="k">print</span><span class="p">(</span><span class="n">wcapi</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">"webhooks/535/deliveries"</span><span class="p">).</span><span class="n">json</span><span class="p">())</span>
@@ -8803,7 +8803,7 @@ Many endpoints were improving with new versions of WooCommerce, so we always rec
       </span><span class="nl">"request_method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"POST"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"request_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://requestb.in/125q7ns1"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"request_headers"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"User-Agent"</span><span class="p">:</span><span class="w"> </span><span class="s2">"WooCommerce/2.3.0 Hookshot (WordPress/4.1)"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"User-Agent"</span><span class="p">:</span><span class="w"> </span><span class="s2">"JD Atina Web Services Microservices/2.3.0 Hookshot (WordPress/4.1)"</span><span class="p">,</span><span class="w">
         </span><span class="nl">"Content-Type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"application/json"</span><span class="p">,</span><span class="w">
         </span><span class="nl">"X-WC-Webhook-Topic"</span><span class="p">:</span><span class="w"> </span><span class="s2">"action.woocommerce_add_to_cart"</span><span class="p">,</span><span class="w">
         </span><span class="nl">"X-WC-Webhook-Resource"</span><span class="p">:</span><span class="w"> </span><span class="s2">"action"</span><span class="p">,</span><span class="w">
@@ -8834,7 +8834,7 @@ Many endpoints were improving with new versions of WooCommerce, so we always rec
       </span><span class="nl">"request_method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"POST"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"request_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://requestb.in/125q7ns1"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"request_headers"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"User-Agent"</span><span class="p">:</span><span class="w"> </span><span class="s2">"WooCommerce/2.3.0 Hookshot (WordPress/4.1)"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"User-Agent"</span><span class="p">:</span><span class="w"> </span><span class="s2">"JD Atina Web Services Microservices/2.3.0 Hookshot (WordPress/4.1)"</span><span class="p">,</span><span class="w">
         </span><span class="nl">"Content-Type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"application/json"</span><span class="p">,</span><span class="w">
         </span><span class="nl">"X-WC-Webhook-Topic"</span><span class="p">:</span><span class="w"> </span><span class="s2">"action.woocommerce_add_to_cart"</span><span class="p">,</span><span class="w">
         </span><span class="nl">"X-WC-Webhook-Resource"</span><span class="p">:</span><span class="w"> </span><span class="s2">"action"</span><span class="p">,</span><span class="w">
@@ -8874,7 +8874,7 @@ Many endpoints were improving with new versions of WooCommerce, so we always rec
 	</div>
 
 		<div id="warning-top">
-			<i class="info"></i> This documentation is for the WooCommerce API v2 which is now deprecated. <a href="http://woocommerce.github.io/woocommerce-rest-api-docs/">Please use the latest REST API version</a>.
+			<i class="info"></i> This documentation is for the JD Atina Web Services Microservices API v2 which is now deprecated. <a href="http://woocommerce.github.io/woocommerce-rest-api-docs/">Please use the latest REST API version</a>.
 		</div>
 
   </body>
