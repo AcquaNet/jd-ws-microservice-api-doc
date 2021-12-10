@@ -146,13 +146,10 @@ It will require openjdk 8 installed.
 
 Download [JD Atina Generate Configuration Files](http://157.245.236.175:8081/artifactory/libs-release-local/com/atina/jd-create-ini-files/1.0.0/jd-create-ini-files-1.0.0-jar-with-dependencies.jar) - latest release:
 
-<div class="center-column"></div>
-```shell
+<pre class="center-column">
 curl http://157.245.236.175:8081/artifactory/libs-release-local/com/atina/jd-create-ini-files/1.0.0/jd-create-ini-files-1.0.0-jar-with-dependencies.jar /
 	--output jd-create-ini-files-1.0.0-jar-with-dependencies.jar
-```
-
-
+</pre>
 
  
 
