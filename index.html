@@ -262,16 +262,16 @@
                     <a href="#implementations" class="toc-h2 toc-link" data-title="Implementations">Implementations</a>
                   </li>
                   <li>
-                    <a href="#requirements-to-consume-web-services-using-jd-atina-ws-microservices" class="toc-h2 toc-link" data-title="Requirements to consume Web Services using JD Atina WS Microservices">Requirements to consume Web Services using JD Atina WS Microservices</a>
-                  </li>
-                  <li>
-                    <a href="#requirements-to-install-jd-atina-ws-microservices" class="toc-h2 toc-link" data-title="Requirements to install JD Atina WS Microservices">Requirements to install JD Atina WS Microservices</a>
-                  </li>
-                  <li>
-                    <a href="#addionals-prerequisites-to-use-jd-generate-configuration-files-and-jd-generate-jars-files-tools" class="toc-h2 toc-link" data-title="Addionals Prerequisites to use JD Generate Configuration Files and JD Generate Jars Files Tools">Addionals Prerequisites to use JD Generate Configuration Files and JD Generate Jars Files Tools</a>
+                    <a href="#requirements" class="toc-h2 toc-link" data-title="Requirements">Requirements</a>
                   </li>
                   <li>
                     <a href="#jd-atina-additional-tools" class="toc-h2 toc-link" data-title="JD Atina Additional Tools">JD Atina Additional Tools</a>
+                  </li>
+                  <li>
+                    <a href="#jd-atina-generate-configuration-files-tool" class="toc-h2 toc-link" data-title="JD Atina Generate Configuration Files Tool">JD Atina Generate Configuration Files Tool</a>
+                  </li>
+                  <li>
+                    <a href="#jd-atina-generate-jars-files-tool" class="toc-h2 toc-link" data-title="JD Atina Generate Jars Files Tool">JD Atina Generate Jars Files Tool</a>
                   </li>
                   <li>
                     <a href="#deploy-artifact-to-local-repository-optional" class="toc-h2 toc-link" data-title="Deploy artifact to Local Repository - Optional">Deploy artifact to Local Repository - Optional</a>
@@ -281,6 +281,9 @@
                   </li>
                   <li>
                     <a href="#jde-check-jd-microservice-executing-a-web-service" class="toc-h2 toc-link" data-title="JDE Check JD Microservice executing a Web Service">JDE Check JD Microservice executing a Web Service</a>
+                  </li>
+                  <li>
+                    <a href="#install-mulesoft-jd-atiba-ws-ce-connector-mule-3" class="toc-h2 toc-link" data-title="Install Mulesoft JD Atiba WS CE Connector Mule 3">Install Mulesoft JD Atiba WS CE Connector Mule 3</a>
                   </li>
                   <li>
                     <a href="#request-response-format" class="toc-h2 toc-link" data-title="Request/Response Format">Request/Response Format</a>
@@ -504,7 +507,7 @@
 <li><p>Start JD Web Services Microservice / JDE Rest API Microservice</p></li>
 <li><p>Install Mulesoft JDE WS Community Edition Connector 3.</p></li>
 </ul>
-<h2 id='requirements-to-consume-web-services-using-jd-atina-ws-microservices'>Requirements to consume Web Services using JD Atina WS Microservices</h2>
+<h2 id='requirements'>Requirements</h2><h3 id='requirements-to-consume-web-services-using-jd-atina-ws-microservices'>Requirements to consume Web Services using JD Atina WS Microservices</h3>
 <p>To use the latest version of the JD Atina REST WS API you will need:</p>
 
 <ul>
@@ -512,7 +515,7 @@
 <li>Oracle JD Edwards EnterpriseOne HTML Client credential: User, Pasword, Environment and Role.</li>
 <li>You may access the API over either HTTP or HTTPS, but <em>HTTPS is recommended where possible</em>.</li>
 </ul>
-<h2 id='requirements-to-install-jd-atina-ws-microservices'>Requirements to install JD Atina WS Microservices</h2>
+<h3 id='requirements-to-install-jd-atina-ws-microservices'>Requirements to install JD Atina WS Microservices</h3>
 <ul>
 <li><p>Oracle JD Edwards EnterpriseOne Server Manager credential: jde admin user, Pasword and url for Server Manager Ex. http://server:8999/manage/</p></li>
 <li><p><a href="https://docs.docker.com/get-docker/" title="Docker">Docker</a>. JD Atina Web Service Microserver run under Docker container.</p></li>
@@ -525,7 +528,7 @@
 <li><code>//Deplo/E920/DV920/java/sbfjars</code></li>
 </ul></li>
 </ul>
-<h2 id='addionals-prerequisites-to-use-jd-generate-configuration-files-and-jd-generate-jars-files-tools'>Addionals Prerequisites to use JD Generate Configuration Files and JD Generate Jars Files Tools</h2>
+<h3 id='addionals-requirements-to-use-jd-generate-configuration-files-and-jd-generate-jars-files-tools'>Addionals Requirements to use JD Generate Configuration Files and JD Generate Jars Files Tools</h3>
 <ul>
 <li><p>JDK 8 installed with JAVA_HOME configured appropriately (It not requires for docker version)</p></li>
 <li><p>Apache Maven 3.8.1+</p></li>
@@ -536,7 +539,12 @@ If you have multiple JDK’s installed it is not certain Maven will pick up the 
 You can verify which JDK Maven uses by running mvn --version.</p>
 <h2 id='jd-atina-additional-tools'>JD Atina Additional Tools</h2>
 <p>Use the following tools to start the configuration process.</p>
-<h3 id='jd-atina-generate-configuration-files-tool'>JD Atina Generate Configuration Files Tool</h3>
+
+<ul>
+<li>JD Atina Generate Configuration Files Tool</li>
+<li>JD Atina Generate Jars Files Tool</li>
+</ul>
+<h2 id='jd-atina-generate-configuration-files-tool'>JD Atina Generate Configuration Files Tool</h2>
 <p>JD WS Microservice needs the following ini files according to your environment:</p>
 
 <ul>
@@ -679,14 +687,12 @@ JDE-SQL=1.1.1.1
 </pre>
 
 <p>&nbsp;<br></p>
-<h3 id='jd-atina-generate-jars-files-tool'>JD Atina Generate Jars Files Tool</h3>
+<h2 id='jd-atina-generate-jars-files-tool'>JD Atina Generate Jars Files Tool</h2>
 <p>This tool will generate all jars files need it by JD Web Service Microservice.</p>
 
 <p><img src="images/atina_jar_tool-366f85db.png" alt="JD Atina Generate Jars Files" /></p>
 
-<ul>
-<li>Preparing folders</li>
-</ul>
+<p><strong>Preparing folders</strong></p>
 
 <p>Create folder with the following structure under <strong>/tmp/build_jde_libs</strong>:</p>
 
@@ -1138,8 +1144,7 @@ Usage: java -jar jd-check-microservice OPTIONS
     JDE Environment
   --role [-r] (a string; default: "")
     JDE Role
-  --serverName [-s] (a string; default: "")
-    JD Micreserver Name or IP
+  --serverName [-s] (a string; default: "")JD Micreserver Name or IP
   --serverPort [-p] (a string; default: "")
     JD Micreserver Port
   --addressbookno [-a] (a string; default: "")
@@ -1175,6 +1180,26 @@ User User: JDE in environment JDV920 with *ALL disconnected. Current session ID 
 </pre>
 
 <p>&nbsp;<br></p>
+<h2 id='install-mulesoft-jd-atiba-ws-ce-connector-mule-3'>Install Mulesoft JD Atiba WS CE Connector Mule 3</h2>
+<p>The Atina JDE Web Service Connector CE provides interoperability with Oracle’s JD Edwards EnterpriseOne™ it allow consume all JDE Web Services published</p>
+<h3 id='download'>Download</h3>
+<p>Download <a href="http://157.245.236.175:8081/artifactory/libs-release/com/atina/jd-atina-connector/1.0.0/jd-atina-connector-1.0.0.zip">JD Atina Web Service Connector CE</a> - latest release:</p>
+
+<pre class="center-column">
+curl  http://157.245.236.175:8081/artifactory/libs-release/com/atina/jd-atina-connector/1.0.0/jd-atina-connector-1.0.0.zip -o jd-atina-connector-1.0.0.zip
+</pre>
+
+<p>&nbsp;<br></p>
+<h3 id='installation-2'>Installation</h3>
+<p>Install From the Studio Help Menu:</p>
+
+<ul>
+<li><p>Click Help &gt; Install New Software.</p></li>
+<li><p>Click Add &gt; Then, click Archive.. and select jd-atina-connector-1.0.0.zip downloaded</p></li>
+<li><p>Expand a Community Category and click the checkbox for the connector to install.</p></li>
+<li><p>Click Next, Next, I accept the terms of the license agreement, Finish, and restart Studio when prompted.</p></li>
+<li><p>From a Mule Project in Studio, search for the connector and drag it to the Canvas.</p></li>
+</ul>
 <h2 id='request-response-format'>Request/Response Format</h2>
 <p>The default response format is JSON. Requests with a message-body use plain JSON to set or update resource attributes. Successful requests will return a <code>200 OK</code> HTTP status.</p>
 
