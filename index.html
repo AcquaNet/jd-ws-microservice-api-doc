@@ -274,12 +274,6 @@
                     <a href="#jd-atina-additional-tools" class="toc-h2 toc-link" data-title="JD Atina Additional Tools">JD Atina Additional Tools</a>
                   </li>
                   <li>
-                    <a href="#generation-sucesss" class="toc-h2 toc-link" data-title="GENERATION SUCESSS">GENERATION SUCESSS</a>
-                  </li>
-                  <li>
-                    <a href="#file-tmp-build_jde_libs-settings-xml-generated" class="toc-h2 toc-link" data-title=" File: \tmp\build_jde_libs\settings.xml generated"> File: \tmp\build_jde_libs\settings.xml generated</a>
-                  </li>
-                  <li>
                     <a href="#request-response-format" class="toc-h2 toc-link" data-title="Request/Response Format">Request/Response Format</a>
                   </li>
                   <li>
@@ -587,9 +581,10 @@ Options category 'startup':
     JDE User for Enterprise Server Manager
 </pre>
 
-<p><br></p>
+<p><br><br></p>
 
-<p>Usage Exampes</p>
+<p><hr>
+Usage Exampes</p>
 
 <pre class="center-column">
 java -jar jd-create-ini-files-1.0.0-jar-with-dependencies.jar \
@@ -600,25 +595,29 @@ java -jar jd-create-ini-files-1.0.0-jar-with-dependencies.jar \
 </pre>
 
 <p><br></p>
- 
+
+<p><br></p>
+
+<p><hr></p>
 <h3 id='jd-atina-generate-configuration-files-tool-using-docker-instead-of-java-app'>JD Atina Generate Configuration Files Tool - Using Docker instead of Java App</h3>
 <p>Usage Example:</p>
 
-<p><pre class="center-column">
-docker run --rm -v /tmp/build_jde_libs:/tmp/build_jde_libs/ \
--i \
+<pre class="center-column">
+docker run --rm -v /tmp/build_jde_libs:/tmp/build_jde_libs/ -i \
 --name jd-create-ini-files 92455890/jd-create-ini-files:1.0.0 \
 jde_admin jde_password JPS920 http://servermanager.com:8999/manage
-</pre><br></p>
+</pre>
+
+<p><br></p>
 <h4 id='reviewing-output'>Reviewing Output</h4>
-<p><pre class="center-column">
-Folder : /tmp/build_jde_libs/JPS920 has been created</p>
+<pre class="center-column">
+Folder : /tmp/build_jde_libs/JPS920 has been created
 
-<p>Authenticating : http://server-manager:8999/manage
+Authenticating : http://server-manager:8999/manage
          Cookie: 044GXl43PnHkTe1L3AMc/siNkFOIoll+S4ngsdGnNkS7Qg=MDA5MDE1MDE1amRlX2FkbWluMTM0LjIwOS4yMTEuMjQ4MTM0LjIwOS4yMTEuMjQ4MTYzNzYwNzAxMTIzOQ==
-Getting Server Groups : http://server-manager:8999/manage</p>
+Getting Server Groups : http://server-manager:8999/manage
 
-<p>Select HTML Instance for environment JPS920:
+Select HTML Instance for environment JPS920:
 0 - alpha_db
 1 - alpha_dep
 2 - alpha_dv920
@@ -626,23 +625,29 @@ Getting Server Groups : http://server-manager:8999/manage</p>
 4 - html_ps920
 Q - Quit
 4
-Option Selected: 4</p>
+Option Selected: 4
 
-<p>JDE Instance selected: html_ps920</p>
+JDE Instance selected: html_ps920
 
-<p>Getting Instance Values: http://server-manager:8999/manage for Instance Name &#39;html_ps920&#39;
+Getting Instance Values: http://server-manager:8999/manage for Instance Name 'html_ps920'
  Processing File: jdbj.ini
  Processing File: jdeinterop.ini
  Processing File: jdelog.properties
- Processing File: settings.xml</p>
+ Processing File: settings.xml
 
-<hr>
-<h2 id='generation-sucesss'>GENERATION SUCESSS</h2>
-<p>File: \tmp\build_jde_libs\JPS920\jdbj.ini generated
+------------------------------------------------------------------------
+GENERATION SUCESSS
+------------------------------------------------------------------------
+ File: \tmp\build_jde_libs\JPS920\jdbj.ini generated
  File: \tmp\build_jde_libs\JPS920\jdeinterop.ini generated
- File: \tmp\build_jde_libs\JPS920\jdelog.properties generated</p>
-<h2 id='file-tmp-build_jde_libs-settings-xml-generated'> File: \tmp\build_jde_libs\settings.xml generated</h2>
-<p></pre><br></p>
+ File: \tmp\build_jde_libs\JPS920\jdelog.properties generated
+ File: \tmp\build_jde_libs\settings.xml generated
+------------------------------------------------------------------------
+</pre>
+
+<p><br></p>
+
+<p><br></p>
 
 <p>It will create the following files:</p>
 
