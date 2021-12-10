@@ -551,38 +551,32 @@ Web Service Microservice using this guide: <a href="https://docs.oracle.com/cd/E
 
 <p>Download <a href="http://157.245.236.175:8081/artifactory/libs-release-local/com/atina/jd-create-ini-files/1.0.0/jd-create-ini-files-1.0.0-jar-with-dependencies.jar">JD Atina Generate Configuration Files</a> - latest release:</p>
 
-<blockquote>
-<p>curl http://157.245.236.175:8081/artifactory/libs-release-local/com/atina/jd-create-ini-files/1.0.0/jd-create-ini-files-1.0.0-jar-with-dependencies.jar --output jd-create-ini-files-1.0.0-jar-with-dependencies.jar</p>
-</blockquote>
+<p><code>curl http://157.245.236.175:8081/artifactory/libs-release-local/com/atina/jd-create-ini-files/1.0.0/jd-create-ini-files-1.0.0-jar-with-dependencies.jar --output jd-create-ini-files-1.0.0-jar-with-dependencies.jar</code></p>
 
 <p>Run JD atina Generate Ini Files Tool using this command line:</p>
 
-<blockquote>
-<p>java -jar jd-create-ini-files-1.0.0-jar-with-dependencies.jar [OPTIONS]</p>
-
-<p>OPTIONS:<br>
-Options category &#39;startup&#39;:
-  --debug <a href="a%20string;%20default:" title="N">-d</a>
-    Debug Option
-  --environment <a href="a%20string;%20default:">-e</a>
-    JDE Environment
-  --password <a href="a%20string;%20default:">-p</a>
-    JDE Password for Enterprise Server Manager
-  --server <a href="a%20string;%20default:">-s</a>
-    JDE URL of Server Manager
-  --user <a href="a%20string;%20default:">-u</a>
-    JDE User for Enterprise Server Manager</p>
-</blockquote>
+<p><code>java -jar jd-create-ini-files-1.0.0-jar-with-dependencies.jar [OPTIONS]</code>
+`<code>
+</code> OPTIONS:       <code>
+</code> Options category &#39;startup&#39;:<code>
+</code>   --debug <a href="a%20string;%20default:" title="N">-d</a><code>
+</code>     Debug Option<code>
+</code>   --environment <a href="a%20string;%20default:">-e</a><code>
+</code>     JDE Environment<code>
+</code>   --password <a href="a%20string;%20default:">-p</a><code>
+</code>     JDE Password for Enterprise Server Manager<code>
+</code>   --server <a href="a%20string;%20default:">-s</a><code>
+</code>     JDE URL of Server Manager<code>
+</code>   --user <a href="a%20string;%20default:">-u</a><code>
+</code>     JDE User for Enterprise Server Manager`</p>
 
 <p>Usage Example:</p>
 
-<blockquote>
-<p>java -jar jd-create-ini-files-1.0.0-jar-with-dependencies.jar \
- -u jde_admin \
- -p XXXXXXX \ 
- -s http://server-manager:8999/manage \
- -e JDV920</p>
-</blockquote>
+<p><code>java -jar jd-create-ini-files-1.0.0-jar-with-dependencies.jar \</code>
+<code>-u jde_admin \</code>
+<code>-p XXXXXXX \</code>
+<code>-s http://server-manager:8999/manage \</code>
+<code>-e JDV920</code></p>
 <h3 id='jd-atina-generate-configuration-files-tool-using-docker-instead-of-java-app'>JD Atina Generate Configuration Files Tool - Using Docker instead of Java App</h3>
 <p>Usage Example:</p>
 <div class="highlight"><pre class="highlight plaintext"><code>docker run --rm -v /tmp/build_jde_libs:/tmp/build_jde_libs/ -i --name jd-create-ini-files 92455890/jd-create-ini-files:1.0.0 jde_admin jde_password JPS920 http://servermanager.com:8999/manage
