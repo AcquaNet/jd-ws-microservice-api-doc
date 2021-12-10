@@ -231,7 +231,7 @@
     </script>
   </head>
 
-  <body class="index" data-languages="[]">
+  <body class="index" data-languages="[&quot;shell&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -242,6 +242,9 @@
       <a href="#" class="logo">
         <img src="images/logo-231c82b7.png" alt="" />
       </a>
+        <div class="lang-selector">
+              <a href="#" data-language-name="shell">cURL</a>
+        </div>
       <ul id="toc" class="toc-list-h1">
           <li>
             <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
@@ -551,15 +554,12 @@ Web Service Microservice using this guide: <a href="https://docs.oracle.com/cd/E
 <p>It will require openjdk 8 installed.</p>
 
 <p>Download <a href="http://157.245.236.175:8081/artifactory/libs-release-local/com/atina/jd-create-ini-files/1.0.0/jd-create-ini-files-1.0.0-jar-with-dependencies.jar">JD Atina Generate Configuration Files</a> - latest release:</p>
+<div class="highlight"><pre class="highlight shell"><code>Folder : /tmp/build_jde_libs/JPS920 has been created
 
-<div class="api-endpoint">
-    <div class="endpoint-data"> 
-        <h6>curl http://157.245.236.175:8081/artifactory/libs-release-local/com/atina/jd-create-ini-files/1.0.0/jd-create-ini-files-1.0.0-jar-with-dependencies.jar<br>
-        --output jd-create-ini-files-1.0.0-jar-with-dependencies.jar</h6>
-    </div>
-</div>
-  
+Authenticating : http://server-manager:8999/manage
 
+
+</code></pre></div>
 <p>Run JD atina Generate Ini Files Tool using this command line:</p>
 
 <div class="api-endpoint">
@@ -15762,6 +15762,9 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
 
       </div>
       <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="shell">cURL</a>
+          </div>
       </div>
 	</div>
 
