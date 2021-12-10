@@ -93,13 +93,13 @@ To use the latest version of the JD Atina REST WS API you will need:
 
 * Oracle JD Edwards EnterpriseOne Server Manager credential: jde admin user, Pasword and url for Server Manager Ex. http://server:8999/manage/
 
+
 * Following folder inside JDE Deployment Server:
 
-    * //Deplo/E920/MISC
-    * //Deplo/E920/system/Classes
-    * //Deplo/E920/system/JAS/webclient.ear/webclient.war/WEB-INF/lib
-	* //Deplo/E920/DV920/java/sbfjars
-
+    * `//Deplo/E920/MISC`
+    * `//Deplo/E920/system/Classes`
+    * `//Deplo/E920/system/JAS/webclient.ear/webclient.war/WEB-INF/lib`
+	* `//Deplo/E920/DV920/java/sbfjars`
 
 * [Docker](https://docs.docker.com/get-docker/ "Docker"). JD Atina Web Service Microserver run under Docker container.
 
