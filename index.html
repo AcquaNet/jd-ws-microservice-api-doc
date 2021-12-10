@@ -268,6 +268,9 @@
                     <a href="#addionals-prerequisites-to-use-jd-generate-configuration-files-and-jd-generate-jars-files-tools" class="toc-h2 toc-link" data-title="Addionals Prerequisites to use JD Generate Configuration Files and JD Generate Jars Files Tools">Addionals Prerequisites to use JD Generate Configuration Files and JD Generate Jars Files Tools</a>
                   </li>
                   <li>
+                    <a href="#jd-atina-additional-tools" class="toc-h2 toc-link" data-title="JD Atina Additional Tools">JD Atina Additional Tools</a>
+                  </li>
+                  <li>
                     <a href="#request-response-format" class="toc-h2 toc-link" data-title="Request/Response Format">Request/Response Format</a>
                   </li>
                   <li>
@@ -426,9 +429,9 @@
 <p>We provide additional tools to allow:</p>
 
 <ul>
-<li>JD Atina Generate Configuration Files.</li>
-<li>Generate Jars Files Tools.</li>
-<li>Test Connections Tool.</li>
+<li>JD Atina Generate Configuration Files Tool.</li>
+<li>JD Atina Generate Jars Files Tool.</li>
+<li>JD Atina Test Connections Tool.</li>
 </ul>
 
 <p><img src="images/atina_tools-0ff69a29.png" alt="JD Atina settings" /></p>
@@ -542,7 +545,114 @@
     If you have multiple JDK’s installed it is not certain Maven will pick up the expected java and you could end up with unexpected results. 
     You can verify which JDK Maven uses by running mvn --version.</p>
 </blockquote>
-<h2 id='request-response-format'>Request/Response Format</h2>
+<h2 id='jd-atina-additional-tools'>JD Atina Additional Tools</h2>
+<p>Use the following tools to start the configuration process.</p>
+<h3 id='jd-atina-generate-configuration-files-tool'>JD Atina Generate Configuration Files Tool</h3>
+<p>JD WS Microservice needs the following ini files according to your environment:</p>
+
+<ul>
+<li>jdbj.ini</li>
+<li>jdeinterop.ini</li>
+<li>jdelog.properties</li>
+<li>tnsnames.ora&quot; (for Oracle RDBMS based installations only)</li>
+</ul>
+
+<p><img src="images/atina_ini_config_tool-6f696a07.png" alt="JD Atina Configuration Tool" /></p>
+
+<p>You can configure it manually following JDE manuals or you can use this tools to help you.</p>
+
+<p>This tool help to you to generate a base ini files.</p>
+
+<p>It takes all information from JDE Enterprise Server Manager using REST API for Server Manager</p>
+
+<p>The tooll will require to select the HTML Client instance according to your environment.</p>
+
+<blockquote>
+<p><img src="images/note-icon-bd30f485.png" alt="Tip" /> 
+    At the end of this process, We recommend review jdeinterop.ini and jdbj.ini files before deploy it on JD Atina
+    Web Service Microservice using this guide: * Understanding jdeinterop.ini File</p>
+</blockquote>
+<h4 id='using-java-app'>Using JAVA APP ####</h4>
+<p>It will require openjdk 8 installed.</p>
+
+<p>Download <a href="http://157.245.236.175:8081/artifactory/libs-release-local/com/atina/jd-create-ini-files/1.0.0/jd-create-ini-files-1.0.0-jar-with-dependencies.jar">JD Atina Generate Configuration Files</a> - latest release:</p>
+<div class="highlight"><pre class="highlight shell tab-shell"><code>curl http://157.245.236.175:8081/artifactory/libs-release-local/com/atina/jd-create-ini-files/1.0.0/jd-create-ini-files-1.0.0-jar-with-dependencies.jar <span class="se">\</span>
+    <span class="nt">--output</span> jd-create-ini-files-1.0.0-jar-with-dependencies.jar
+</code></pre></div>
+<p>Run JD atina Generate Ini Files Tool using this command line:</p>
+<div class="highlight"><pre class="highlight shell tab-shell"><code>  java <span class="nt">-jar</span> jd-create-ini-files-1.0.0-jar-with-dependencies.jar <span class="o">[</span>OPTIONS]
+
+  OPTIONS:                                                                       
+Options category <span class="s1">'startup'</span>:
+  <span class="nt">--debug</span> <span class="o">[</span><span class="nt">-d</span><span class="o">]</span> <span class="o">(</span>a string<span class="p">;</span> default: <span class="s2">"N"</span><span class="o">)</span>
+    Debug Option
+  <span class="nt">--environment</span> <span class="o">[</span><span class="nt">-e</span><span class="o">]</span> <span class="o">(</span>a string<span class="p">;</span> default: <span class="s2">""</span><span class="o">)</span>
+    JDE Environment
+  <span class="nt">--password</span> <span class="o">[</span><span class="nt">-p</span><span class="o">]</span> <span class="o">(</span>a string<span class="p">;</span> default: <span class="s2">""</span><span class="o">)</span>
+    JDE Password <span class="k">for </span>Enterprise Server Manager
+  <span class="nt">--server</span> <span class="o">[</span><span class="nt">-s</span><span class="o">]</span> <span class="o">(</span>a string<span class="p">;</span> default: <span class="s2">""</span><span class="o">)</span>
+    JDE URL of Server Manager
+  <span class="nt">--user</span> <span class="o">[</span><span class="nt">-u</span><span class="o">]</span> <span class="o">(</span>a string<span class="p">;</span> default: <span class="s2">""</span><span class="o">)</span>
+    JDE User <span class="k">for </span>Enterprise Server Manager
+</code></pre></div>
+<p>Usage Example:</p>
+<div class="highlight"><pre class="highlight shell tab-shell"><code>java <span class="nt">-jar</span> jd-create-ini-files-1.0.0-jar-with-dependencies.jar <span class="se">\</span>
+ <span class="nt">-u</span> jde_admin <span class="se">\</span>
+ <span class="nt">-p</span> XXXXXXX <span class="se">\ </span>
+ <span class="nt">-s</span> http://server-manager:8999/manage <span class="se">\</span>
+ <span class="nt">-e</span> JDV920
+</code></pre></div><h4 id='using-docker-instead-of-java-app'>Using Docker instead of Java App</h4>
+<p>Usage Example:</p>
+<div class="highlight"><pre class="highlight shell tab-shell"><code>docker run <span class="nt">--rm</span> <span class="nt">-v</span> /tmp/build_jde_libs:/tmp/build_jde_libs/ <span class="nt">-i</span> <span class="nt">--name</span> jd-create-ini-files 92455890/jd-create-ini-files:1.0.0 jde_admin jde_password JPS920 http://servermanager.com:8999/manage
+</code></pre></div><h4 id='reviewing-output'>Reviewing Output</h4><div class="highlight"><pre class="highlight shell tab-shell"><code>Folder : /tmp/build_jde_libs/JPS920 has been created
+
+Authenticating : http://server-manager:8999/manage
+         Cookie: 044GXl43PnHkTe1L3AMc/siNkFOIoll+S4ngsdGnNkS7Qg<span class="o">=</span><span class="nv">MDA5MDE1MDE1amRlX2FkbWluMTM0LjIwOS4yMTEuMjQ4MTM0LjIwOS4yMTEuMjQ4MTYzNzYwNzAxMTIzOQ</span><span class="o">==</span>
+Getting Server Groups : http://server-manager:8999/manage
+
+Select HTML Instance <span class="k">for </span>environment JPS920:
+0 - alpha_db
+1 - alpha_dep
+2 - alpha_dv920
+3 - alpha_ent
+4 - html_ps920
+Q - Quit
+4
+Option Selected: 4
+
+JDE Instance selected: html_ps920
+
+Getting Instance Values: http://server-manager:8999/manage <span class="k">for </span>Instance Name <span class="s1">'html_ps920'</span>
+ Processing File: jdbj.ini
+ Processing File: jdeinterop.ini
+ Processing File: jdelog.properties
+ Processing File: settings.xml
+
+<span class="nt">------------------------------------------------------------------------</span>
+GENERATION SUCESSS
+<span class="nt">------------------------------------------------------------------------</span>
+ File: <span class="se">\t</span>mp<span class="se">\b</span>uild_jde_libs<span class="se">\J</span>PS920<span class="se">\j</span>dbj.ini generated
+ File: <span class="se">\t</span>mp<span class="se">\b</span>uild_jde_libs<span class="se">\J</span>PS920<span class="se">\j</span>deinterop.ini generated
+ File: <span class="se">\t</span>mp<span class="se">\b</span>uild_jde_libs<span class="se">\J</span>PS920<span class="se">\j</span>delog.properties generated
+ File: <span class="se">\t</span>mp<span class="se">\b</span>uild_jde_libs<span class="se">\s</span>ettings.xml generated
+<span class="nt">------------------------------------------------------------------------</span>
+
+</code></pre></div>
+<p>It will create the following files:</p>
+<div class="highlight"><pre class="highlight shell tab-shell"><code>build_jde_libs
+      ├─ settings.xml
+      ├─ JPS920
+      ├─────├─ jdbj.ini
+      ├─────├─ jdeinterop.ini
+      └─────└─ jdelog.properties            
+</code></pre></div>
+<p>Adding manually &quot;tnsnames.ora&quot; for Oracle RDBMS based installations only.</p>
+
+<p>Edit jdeinterop.ini and change the following values</p>
+<div class="highlight"><pre class="highlight shell tab-shell"><code><span class="o">[</span>DNS_SERVERS]
+JDE-ENT<span class="o">=</span>2.2.2.2
+JDE-SQL<span class="o">=</span>1.1.1.1           
+</code></pre></div><h3 id='jd-atina-generate-jars-files-tool'>JD Atina Generate Jars Files Tool</h3><h2 id='request-response-format'>Request/Response Format</h2>
 <p>The default response format is JSON. Requests with a message-body use plain JSON to set or update resource attributes. Successful requests will return a <code>200 OK</code> HTTP status.</p>
 
 <p>Some general information about responses:</p>
