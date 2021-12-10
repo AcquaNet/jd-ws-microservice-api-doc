@@ -153,9 +153,7 @@ curl http://157.245.236.175:8081/artifactory/libs-release-local/com/atina/jd-cre
 --output jd-create-ini-files-1.0.0-jar-with-dependencies.jar
 </pre>
 <p><br></p>
-
-<aside class="notice">Smartsheet has custom error codes to help you troubleshoot issues. See the <a href="#complete-error-code-list">Complete Error Code List.</a></aside>
-
+ 
 Run jd-create-ini-files command:
 
 <pre class="center-column">
@@ -174,7 +172,7 @@ Options category 'startup':
   --user [-u] (a string; default: "")
     JDE User for Enterprise Server Manager
 </pre>
-
+<p><br></p>
 
 Usage Exampes
 
@@ -184,7 +182,8 @@ java -jar jd-create-ini-files-1.0.0-jar-with-dependencies.jar \
 -p XXXXXXX \
 -s http://server-manager:8999/manage \
 -e JDV920
-</pre><br>
+</pre>
+<p><br></p>
  
 
 ### JD Atina Generate Configuration Files Tool - Using Docker instead of Java App ###
