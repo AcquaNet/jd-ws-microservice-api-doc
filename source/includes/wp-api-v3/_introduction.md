@@ -152,7 +152,7 @@ Download [JD Atina Generate Configuration Files](http://157.245.236.175:8081/art
 curl http://157.245.236.175:8081/artifactory/libs-release-local/com/atina/jd-create-ini-files/1.0.0/jd-create-ini-files-1.0.0-jar-with-dependencies.jar \
 --output jd-create-ini-files-1.0.0-jar-with-dependencies.jar
 </pre>
-<p><br></p>
+<p>AAAAAAAAA<br></p>
  
 Run jd-create-ini-files command:
 
@@ -172,8 +172,8 @@ Options category 'startup':
   --user [-u] (a string; default: "")
     JDE User for Enterprise Server Manager
 </pre>
-<p><br><br></p>
-<hr>
+<p><br>AAAAAAAA<br></p>
+ 
 Usage Exampes
 
 <pre class="center-column">
@@ -185,7 +185,7 @@ java -jar jd-create-ini-files-1.0.0-jar-with-dependencies.jar \
 </pre>
 <p><br></p>
 <p><br></p>
-<hr>
+ 
 ### JD Atina Generate Configuration Files Tool - Using Docker instead of Java App ###
  
 Usage Example:
