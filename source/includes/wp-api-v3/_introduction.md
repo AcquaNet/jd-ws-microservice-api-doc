@@ -172,7 +172,7 @@ Options category 'startup':
   --user [-u] (a string; default: "")
     JDE User for Enterprise Server Manager
 </pre>
-<p><br>AAAAAAAA<br></p>
+<p><br> <br></p>
  
 Usage Exampes
 
@@ -183,8 +183,7 @@ java -jar jd-create-ini-files-1.0.0-jar-with-dependencies.jar \
 -s http://server-manager:8999/manage \
 -e JDV920
 </pre>
-<p><br></p>
-<p><br></p>
+<p><br> <br></p>
  
 ### JD Atina Generate Configuration Files Tool - Using Docker instead of Java App ###
  
@@ -195,7 +194,7 @@ docker run --rm -v /tmp/build_jde_libs:/tmp/build_jde_libs/ -i \
 --name jd-create-ini-files 92455890/jd-create-ini-files:1.0.0 \
 jde_admin jde_password JPS920 http://servermanager.com:8999/manage
 </pre>
-<p><br></p>
+<p><br> <br></p>
 
 
 #### Reviewing Output ####
@@ -235,34 +234,41 @@ GENERATION SUCESSS
  File: \tmp\build_jde_libs\settings.xml generated
 ------------------------------------------------------------------------
 </pre>
-<p><br></p>
-<p><br></p>
+<p><br> <br></p>
+
 It will create the following files:
 
 <pre class="center-column"> 
-```shell
 build_jde_libs
       ├─ settings.xml
       ├─ JPS920
       ├─────├─ jdbj.ini
       ├─────├─ jdeinterop.ini
       └─────└─ jdelog.properties            
-```
-</pre><br>
-
+</pre>
+<p><br> <br></p>
 
 
 Adding manually "tnsnames.ora" for Oracle RDBMS based installations only.
 
-Edit jdeinterop.ini and change the following values
+Edit jdeinterop.ini to set correct server IP's:
 
-```shell
+<pre class="center-column"> 
 [DNS_SERVERS]
 JDE-ENT=2.2.2.2
 JDE-SQL=1.1.1.1           
-```
+</pre>
+<p><br> <br></p>
+
 
 ### JD Atina Generate Jars Files Tool ###
+
+This tool will generate all jars files need it by JD Web Service Microservice.
+
+
+![JD Atina Services(images/atina_main.png)
+
+
 
 
 ## Request/Response Format ##
