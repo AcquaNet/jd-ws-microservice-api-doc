@@ -228,7 +228,7 @@
     </script>
   </head>
 
-  <body class="index" data-languages="[&quot;shell&quot;,&quot;javascript&quot;,&quot;php&quot;,&quot;python&quot;,&quot;ruby&quot;]">
+  <body class="index" data-languages="[&quot;shell&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -241,10 +241,6 @@
       </a>
         <div class="lang-selector">
               <a href="#" data-language-name="shell">cURL</a>
-              <a href="#" data-language-name="javascript">Node.js</a>
-              <a href="#" data-language-name="php">PHP</a>
-              <a href="#" data-language-name="python">Python</a>
-              <a href="#" data-language-name="ruby">Ruby</a>
         </div>
       <ul id="toc" class="toc-list-h1">
           <li>
@@ -263,7 +259,10 @@
                     <a href="#implementations" class="toc-h2 toc-link" data-title="Implementations">Implementations</a>
                   </li>
                   <li>
-                    <a href="#requirements" class="toc-h2 toc-link" data-title="Requirements">Requirements</a>
+                    <a href="#requirements-to-consume-web-services-using-jd-atina-ws-microservices" class="toc-h2 toc-link" data-title="Requirements to consume Web Services using JD Atina WS Microservices">Requirements to consume Web Services using JD Atina WS Microservices</a>
+                  </li>
+                  <li>
+                    <a href="#requirements-to-install-jd-atina-ws-microservices" class="toc-h2 toc-link" data-title="Requirements to install JD Atina WS Microservices">Requirements to install JD Atina WS Microservices</a>
                   </li>
                   <li>
                     <a href="#request-response-format" class="toc-h2 toc-link" data-title="Request/Response Format">Request/Response Format</a>
@@ -487,12 +486,27 @@
 <li><p>Start JD Web Services Microservice / JDE Rest API Microservice</p></li>
 <li><p>Install Mulesoft JDE WS Community Edition Connector 3.</p></li>
 </ul>
-<h2 id='requirements'>Requirements</h2>
-<p>To use the latest version of the JD Atina REST WS API you must be using:</p>
+<h2 id='requirements-to-consume-web-services-using-jd-atina-ws-microservices'>Requirements to consume Web Services using JD Atina WS Microservices</h2>
+<p>To use the latest version of the JD Atina REST WS API you will need:</p>
 
 <ul>
-<li>JD Atina Web Services Microservices 1.0.0+.</li>
+<li>JD Atina Web Services Microservices 1.0.0+ running.</li>
+<li>Oracle JD Edwards EnterpriseOne HTML Client credential: User, Pasword, Environment and Role.</li>
 <li>You may access the API over either HTTP or HTTPS, but <em>HTTPS is recommended where possible</em>.</li>
+</ul>
+<h2 id='requirements-to-install-jd-atina-ws-microservices'>Requirements to install JD Atina WS Microservices</h2>
+<ul>
+<li><p>Oracle JD Edwards EnterpriseOne Server Manager credential: jde admin user, Pasword and url for Server Manager Ex. http://server:8999/manage/</p></li>
+<li><p>Following folder inside JDE Deployment Server:</p></li>
+</ul>
+
+<p>** //Deplo/E920/MISC
+** //Deplo/E920/system/Classes
+** //Deplo/E920/system/JAS/webclient.ear/webclient.war/WEB-INF/lib
+** //Deplo/E920/DV920/java/sbfjars</p>
+
+<ul>
+<li><a href="https://docs.docker.com/get-docker/" title="Docker">Docker</a>. JD Atina Web Service Microserver run under Docker container.</li>
 </ul>
 <h2 id='request-response-format'>Request/Response Format</h2>
 <p>The default response format is JSON. Requests with a message-body use plain JSON to set or update resource attributes. Successful requests will return a <code>200 OK</code> HTTP status.</p>
@@ -15607,10 +15621,6 @@ Note: By default it's limited to up to 100 objects to be created, updated or del
       <div class="dark-box">
           <div class="lang-selector">
                 <a href="#" data-language-name="shell">cURL</a>
-                <a href="#" data-language-name="javascript">Node.js</a>
-                <a href="#" data-language-name="php">PHP</a>
-                <a href="#" data-language-name="python">Python</a>
-                <a href="#" data-language-name="ruby">Ruby</a>
           </div>
       </div>
 	</div>
