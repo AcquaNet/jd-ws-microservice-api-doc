@@ -1,6 +1,9 @@
 ---
 title: JD Atina REST Web Services API Documentation - JD Atina REST WS API v3
 
+language_tabs:
+  - shell: cURL
+
 toc_footers:
   - <a href="https://github.com/AcquaNet/jd-ws-microservice-api-doc/issues?labels=bug&amp;page=1&amp;state=open">REST API Issues</a>
   - <a href="https://github.com/AcquaNet/jd-ws-microservice-ws">JDE Web Services Repository</a>

@@ -144,14 +144,17 @@ Web Service Microservice using this guide: [Understanding jdeinterop.ini File](h
 
 It will require openjdk 8 installed.
 
+ 
 Download [JD Atina Generate Configuration Files](http://157.245.236.175:8081/artifactory/libs-release-local/com/atina/jd-create-ini-files/1.0.0/jd-create-ini-files-1.0.0-jar-with-dependencies.jar) - latest release:
 
-<div class="api-endpoint">
-	<div class="endpoint-data"> 
-		<h6>curl http://157.245.236.175:8081/artifactory/libs-release-local/com/atina/jd-create-ini-files/1.0.0/jd-create-ini-files-1.0.0-jar-with-dependencies.jar<br>
-		--output jd-create-ini-files-1.0.0-jar-with-dependencies.jar</h6>
-	</div>
-</div>
+
+```bash
+Folder : /tmp/build_jde_libs/JPS920 has been created
+
+Authenticating : http://server-manager:8999/manage
+ 
+
+```
   
 Run JD atina Generate Ini Files Tool using this command line:
 
