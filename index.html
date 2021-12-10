@@ -598,13 +598,15 @@ docker run --rm -v /tmp/build_jde_libs:/tmp/build_jde_libs/ \
 jde_admin jde_password JPS920 http://servermanager.com:8999/manage
 </pre>
  
-<h4 id='reviewing-output'>Reviewing Output</h4><div class="highlight"><pre class="highlight shell tab-shell"><code>Folder : /tmp/build_jde_libs/JPS920 has been created
+<h4 id='reviewing-output'>Reviewing Output</h4>
+<pre class="center-column">
+Folder : /tmp/build_jde_libs/JPS920 has been created
 
 Authenticating : http://server-manager:8999/manage
-         Cookie: 044GXl43PnHkTe1L3AMc/siNkFOIoll+S4ngsdGnNkS7Qg<span class="o">=</span><span class="nv">MDA5MDE1MDE1amRlX2FkbWluMTM0LjIwOS4yMTEuMjQ4MTM0LjIwOS4yMTEuMjQ4MTYzNzYwNzAxMTIzOQ</span><span class="o">==</span>
+         Cookie: 044GXl43PnHkTe1L3AMc/siNkFOIoll+S4ngsdGnNkS7Qg=MDA5MDE1MDE1amRlX2FkbWluMTM0LjIwOS4yMTEuMjQ4MTM0LjIwOS4yMTEuMjQ4MTYzNzYwNzAxMTIzOQ==
 Getting Server Groups : http://server-manager:8999/manage
 
-Select HTML Instance <span class="k">for </span>environment JPS920:
+Select HTML Instance for environment JPS920:
 0 - alpha_db
 1 - alpha_dep
 2 - alpha_dv920
@@ -616,30 +618,36 @@ Option Selected: 4
 
 JDE Instance selected: html_ps920
 
-Getting Instance Values: http://server-manager:8999/manage <span class="k">for </span>Instance Name <span class="s1">'html_ps920'</span>
+Getting Instance Values: http://server-manager:8999/manage for Instance Name 'html_ps920'
  Processing File: jdbj.ini
  Processing File: jdeinterop.ini
  Processing File: jdelog.properties
  Processing File: settings.xml
 
-<span class="nt">------------------------------------------------------------------------</span>
+------------------------------------------------------------------------
 GENERATION SUCESSS
-<span class="nt">------------------------------------------------------------------------</span>
- File: <span class="se">\t</span>mp<span class="se">\b</span>uild_jde_libs<span class="se">\J</span>PS920<span class="se">\j</span>dbj.ini generated
- File: <span class="se">\t</span>mp<span class="se">\b</span>uild_jde_libs<span class="se">\J</span>PS920<span class="se">\j</span>deinterop.ini generated
- File: <span class="se">\t</span>mp<span class="se">\b</span>uild_jde_libs<span class="se">\J</span>PS920<span class="se">\j</span>delog.properties generated
- File: <span class="se">\t</span>mp<span class="se">\b</span>uild_jde_libs<span class="se">\s</span>ettings.xml generated
-<span class="nt">------------------------------------------------------------------------</span>
+------------------------------------------------------------------------
+ File: \tmp\build_jde_libs\JPS920\jdbj.ini generated
+ File: \tmp\build_jde_libs\JPS920\jdeinterop.ini generated
+ File: \tmp\build_jde_libs\JPS920\jdelog.properties generated
+ File: \tmp\build_jde_libs\settings.xml generated
+------------------------------------------------------------------------
+</pre>
+  
 
-</code></pre></div>
 <p>It will create the following files:</p>
-<div class="highlight"><pre class="highlight shell tab-shell"><code>build_jde_libs
+
+<pre class="center-column"> 
+```shell
+build_jde_libs
       ├─ settings.xml
       ├─ JPS920
       ├─────├─ jdbj.ini
       ├─────├─ jdeinterop.ini
       └─────└─ jdelog.properties            
-</code></pre></div>
+```
+</pre>
+
 <p>Adding manually &quot;tnsnames.ora&quot; for Oracle RDBMS based installations only.</p>
 
 <p>Edit jdeinterop.ini and change the following values</p>
