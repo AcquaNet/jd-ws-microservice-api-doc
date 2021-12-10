@@ -274,6 +274,12 @@
                     <a href="#jd-atina-additional-tools" class="toc-h2 toc-link" data-title="JD Atina Additional Tools">JD Atina Additional Tools</a>
                   </li>
                   <li>
+                    <a href="#deploy-artifact-to-local-repository-optional" class="toc-h2 toc-link" data-title="Deploy artifact to Local Repository - Optional">Deploy artifact to Local Repository - Optional</a>
+                  </li>
+                  <li>
+                    <a href="#start-jd-web-services-microservice-jde-rest-api-microservice" class="toc-h2 toc-link" data-title="Start JD Web Services Microservice / JDE Rest API Microservice">Start JD Web Services Microservice / JDE Rest API Microservice</a>
+                  </li>
+                  <li>
                     <a href="#request-response-format" class="toc-h2 toc-link" data-title="Request/Response Format">Request/Response Format</a>
                   </li>
                   <li>
@@ -427,7 +433,7 @@
 
 <p>For other third-party software the user can use a simple https connectors.</p>
 
-<p>![JD Atina Services(images/atina_main-235ead5b.png)</p>
+<p><img src="images/atina_main-235ead5b.png" alt="JD Atina Services" /></p>
 
 <p>We provide additional tools to allow:</p>
 
@@ -552,7 +558,7 @@ Web Service Microservice using this guide: <a href="https://docs.oracle.com/cd/E
 <h3 id='jd-atina-generate-configuration-files-tool-using-java-app'>JD Atina Generate Configuration Files Tool - Using JAVA APP</h3>
 <p>It will require openjdk 8 installed.</p>
 
-<p>Download <a href="http://157.245.236.175:8081/artifactory/libs-release-local/com/atina/jd-create-ini-files/1.0.0/jd-create-ini-files-1.0.0-jar-with-dependencies.jar">JD Atina Generate Configuration Files</a> - latest release:</p>
+<p>Download <a href="http://157.245.236.175:8081/artifactory/libs-release-local/com/atina/jd-create-ini-files/1.0.0/jd-create-ini-files-1.0.0-jar-with-dependencies.jar">JD Atina Generate Configuration Files Tool</a> - latest release:</p>
 
 <pre class="center-column">
 curl http://157.245.236.175:8081/artifactory/libs-release-local/com/atina/jd-create-ini-files/1.0.0/jd-create-ini-files-1.0.0-jar-with-dependencies.jar \
@@ -596,7 +602,7 @@ java -jar jd-create-ini-files-1.0.0-jar-with-dependencies.jar \
 
 <p><br> <br></p>
  
-<h3 id='jd-atina-generate-configuration-files-tool-using-docker-instead-of-java-app'>JD Atina Generate Configuration Files Tool - Using Docker instead of Java App</h3>
+<h3 id='jd-atina-generate-configuration-files-tool-using-docker-instead-of-java-application'>JD Atina Generate Configuration Files Tool - Using Docker instead of Java Application</h3>
 <p>Usage Example:</p>
 
 <pre class="center-column">
@@ -606,7 +612,9 @@ jde_admin jde_password JPS920 http://servermanager.com:8999/manage
 </pre>
 
 <p>&nbsp;<br></p>
-<h4 id='reviewing-output'>Reviewing Output</h4>
+
+<p>&nbsp;<br></p>
+<h3 id='reviewing-output'>Reviewing Output</h3>
 <pre class="center-column">
 Folder : /tmp/build_jde_libs/JPS920 has been created
 
@@ -671,8 +679,200 @@ JDE-SQL=1.1.1.1
 <h3 id='jd-atina-generate-jars-files-tool'>JD Atina Generate Jars Files Tool</h3>
 <p>This tool will generate all jars files need it by JD Web Service Microservice.</p>
 
-<p>![JD Atina Services(images/atina_jar_tool-366f85db.png)</p>
-<h2 id='request-response-format'>Request/Response Format</h2>
+<p><img src="images/atina_jar_tool-366f85db.png" alt="JD Atina Generate Jars Files" /></p>
+
+<ul>
+<li>Preparing folders</li>
+</ul>
+
+<p>Create folder with the following structure under <strong>/tmp/build_jde_libs</strong>:</p>
+
+<pre class="center-column"> 
+tmp
+└─build_jde_libs
+      ├─ JDBC_Vendor_Drivers
+      └─ system
+         │─ Classes 
+         │─ JAS    
+         └─ WS            
+</pre>
+
+<p>&nbsp;<br></p>
+
+<ul>
+<li>Copy files from JDE Deploment Server to the corresponding folders</li>
+</ul>
+
+<table><thead>
+<tr>
+<th>Destination</th>
+<th>Source</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>/tmp</td>
+<td></td>
+</tr>
+<tr>
+<td>/tmp/build_jde_libs</td>
+<td></td>
+</tr>
+<tr>
+<td>-&gt;/JDBC_Vendor_Drivers</td>
+<td>//Deployment Server/E920/MISC/*</td>
+</tr>
+<tr>
+<td>-&gt;/system/Classes</td>
+<td>//Deployment Server/E920/system/Classes*</td>
+</tr>
+<tr>
+<td>-&gt;/system/JAS</td>
+<td>//Deployment Server/E920/system/JAS/webclient.ear/webclient.war/WEB-INF/lib/*</td>
+</tr>
+<tr>
+<td>-&gt;/system/WS</td>
+<td>//Deployment Server/E920\DV920/java/sbfjars/*</td>
+</tr>
+</tbody></table>
+
+<ul>
+<li>Define local Repository (localRepo option).</li>
+</ul>
+
+<p>This option is required to run this tool using JAVA apps locally.</p>
+
+<p>Running this command you can get where the curret local repository is defined:</p>
+
+<pre class="center-column"> 
+mvn help:evaluate -Dexpression=settings.localRepository     
+</pre>
+
+<p>&nbsp;<br></p>
+
+<p>In this output we see /root/.m2/repository</p>
+
+<pre class="center-column"> 
+[INFO]
+[INFO] ------------------< org.apache.maven:standalone-pom >-------------------
+[INFO] Building Maven Stub Project (No POM) 1
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO]
+[INFO] --- maven-help-plugin:3.2.0:evaluate (default-cli) @ standalone-pom ---
+[INFO] No artifact parameter specified, using 'org.apache.maven:standalone-pom:pom:1' as project.
+[INFO]
+/root/.m2/repository  <==  ****** THIS IS THE VALUE REQUIRED *******
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.301 s
+[INFO] Finished at: 2021-11-22T20:31:42Z
+[INFO] ------------------------------------------------------------------------     
+</pre>
+
+<p>&nbsp;<br></p>
+<h3 id='jd-atina-generate-jars-files-tool-using-java-application'>JD Atina Generate Jars Files Tool - Using Java Application</h3>
+<p>It will require openjdk 8 installed.</p>
+
+<p>Download <a href="http://157.245.236.175:8081/artifactory/libs-release-local/com/atina/jd-create-jar-files/1.0.0/jd-create-jar-files-1.0.0-jar-with-dependencies.jar">JD Atina Generate Jars Files Tool</a> - latest release:</p>
+
+<pre class="center-column"> 
+curl http://157.245.236.175:8081/artifactory/libs-release-local/com/atina/jd-create-jar-files/1.0.0/jd-create-jar-files-1.0.0-jar-with-dependencies.jar \
+--output jd-create-jar-files-1.0.0-jar-with-dependencies.jar     
+</pre>
+
+<p>&nbsp;<br></p>
+
+<p>Run jd-create-ini-files command:</p>
+
+<pre class="center-column">
+Usage: java -jar jd-create-jar-files-1.0.0-jar-with-dependencies.jar OPTIONS
+
+Options category 'startup':
+  --accion [-a] (a string; default: "3")
+    Accion: 1: Generate JDE Bundle 2: Build WS 3: Both
+  --clean [-c] (a string; default: "Y")
+    clean
+  --jdbcDriver [-j] (a string; default: "/tmp/build_jde_libs/JDBC_Vendor_Drivers")
+    Enter JDBC Driver Folder
+  --jdeInstallPath [-i] (a string; default: "/tmp/build_jde_libs/")
+    Enter JDE Path installed
+  --localRepo [-r] (a string; default: "")
+    Enter Maven Local Repo
+  --settings [-s] (a string; default: "/tmp/build_jde_libs/settings.xml")
+    settings.xml to use Ex. /apache-maven-3.8.1/conf/settings.xml
+  --version [-o] (a string; default: "1.0.0")
+    Enter Version
+</pre>
+
+<p>&nbsp;<br></p>
+ 
+
+<p>Usage Exampes</p>
+
+<pre class="center-column">
+java -jar jd-create-jar-files-1.0.0-jar-with-dependencies.jar -r /root/.m2/repository
+</pre>
+
+<p>&nbsp;<br></p>
+<h3 id='jd-atina-generate-jars-files-tool-using-docker-instead-of-java-application'>JD Atina Generate Jars Files Tool - Using Docker instead of Java Application</h3>
+<pre class="center-column">
+docker run --rm -v /tmp/build_jde_libs:/tmp/build_jde_libs/ -i --name jd-create-jar-files 92455890/jd-create-jar-files:1.0.0
+</pre>
+
+<p>&nbsp;<br></p>
+<h3 id='reviewing-output-2'>Reviewing Output</h3>
+<pre class="center-column">
+------------------------------------------------------------------------
+GENERATION SUCESSS
+------------------------------------------------------------------------
+JDE Library bundle has been copied to: /tmp/build_jde_libs/jde-lib-wrapped-1.0.0.jar
+JDE WS has been copied to: /tmp/build_jde_libs/StdWebService-1.0.0.jar
+------------------------------------------------------------------------
+</pre>
+
+<p>&nbsp;<br></p>
+
+<p>It will create the following files:</p>
+
+<pre class="center-column">
+build_jde_libs
+      ├─ jde-lib-wrapped-1.0.0.jar
+      └─ StdWebService-1.0.0.jar
+</pre>
+
+<p>&nbsp;<br></p>
+<h2 id='deploy-artifact-to-local-repository-optional'>Deploy artifact to Local Repository - Optional</h2>
+<p>This optional. 
+At startup, JD Microservice has the option to get these libraries from an internal repository.</p>
+
+<p>In case you want to use a local repository, exectute the following command:</p>
+
+<pre class="center-column">
+mvn deploy:deploy-file \
+    -DgroupId=com.jdedwards \
+    -DartifactId=jde-lib-wrapped \
+    -Dversion=1.0.0 \
+    -DrepositoryId=repo-central \
+    -Dpackaging=jar \
+    -Dfile=\tmp\build_jde_libs\jde-lib-wrapped-1.0.0.jar \
+    -Durl=http://localrepo:8081/artifactory/libs-release
+</pre>
+
+<p>&nbsp;<br></p>
+
+<pre class="center-column">
+mvn deploy:deploy-file \
+    -DgroupId=com.jdedwards \
+    -DartifactId=StdWebService \
+    -Dversion=1.0.0 \
+    -DrepositoryId=repo-central \
+    -Dpackaging=jar \
+    -Dfile=\tmp\build_jde_libs\StdWebService-1.0.0.jar \
+    -Durl=http://localrepo:8081/artifactory/libs-release
+</pre>
+
+<p>&nbsp;<br></p>
+<h2 id='start-jd-web-services-microservice-jde-rest-api-microservice'>Start JD Web Services Microservice / JDE Rest API Microservice</h2><h3 id='installation'>Installation</h3><h2 id='request-response-format'>Request/Response Format</h2>
 <p>The default response format is JSON. Requests with a message-body use plain JSON to set or update resource attributes. Successful requests will return a <code>200 OK</code> HTTP status.</p>
 
 <p>Some general information about responses:</p>
