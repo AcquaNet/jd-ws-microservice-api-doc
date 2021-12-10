@@ -105,6 +105,18 @@ To use the latest version of the JD Atina REST WS API you will need:
 
 * [Docker](  https://docs.docker.com/get-docker/ "Docker"). JD Atina Web Service Microserver run under Docker container.
 
+## Addionals Prerequisites to use JD Generate Configuration Files and JD Generate Jars Files Tools ##
+
+* JDK 8 installed with JAVA_HOME configured appropriately (It not requires for docker version)
+
+* Apache Maven 3.8.1+
+
+> ![Tip](images/note-icon.png) 
+    Verify Maven is using the Java you expect
+    If you have multiple JDK’s installed it is not certain Maven will pick up the expected java and you could end up with unexpected results. 
+    You can verify which JDK Maven uses by running mvn --version.
+
+
 ## Request/Response Format ##
 
 The default response format is JSON. Requests with a message-body use plain JSON to set or update resource attributes. Successful requests will return a `200 OK` HTTP status.
