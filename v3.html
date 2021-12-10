@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>JD ATINA REST API Documentation v1</title>
+    <title>JD Atina REST Web Services API Documentation v3</title>
 
     <link rel="icon" href="images/favicon-32x32-41be71e3.png" sizes="32x32" />
     <link rel="icon" href="images/favicon-192x192-04eabf77.png" sizes="192x192" />
@@ -223,7 +223,7 @@
       gtag('js', new Date());
 
       gtag('config', 'G-8KCYZ2CYMS', {
-        'content_group' : 'WooCommerce REST API Docs',
+        'content_group' : 'JD Atina REST Web Services API Docs',
       });
     </script>
   </head>
@@ -714,6 +714,11 @@
           </li>
       </ul>
         <ul class="toc-footer">
+            <li><a href="https://github.com/woocommerce/woocommerce-rest-api-docs">Contributing to WC REST API Docs</a></li>
+            <li><a href="https://github.com/woocommerce/woocommerce/tree/master/includes/rest-api">REST API Source on GitHub</a></li>
+            <li><a href="https://github.com/woocommerce/woocommerce/issues?labels=API&amp;page=1&amp;state=open">REST API Issues</a></li>
+            <li><a href="https://docs.woocommerce.com/documentation/plugins/woocommerce/">WooCommerce Documentation</a></li>
+            <li><a href="https://github.com/woocommerce/woocommerce">WooCommerce Repository</a></li>
             <li><a href="https://github.com/tripit/slate">Documentation Powered by Slate</a></li>
         </ul>
     </div>
@@ -721,9 +726,9 @@
       <div class="dark-box"></div>
       <div class="content">
         <h1 id='introduction'>Introduction</h1>
-<p>Introduced in JD Atina Rest API, the JDE Atina Rest API allows JDE Web Services to be invoked using JSON format.</p>
+<p>Introduced in WooCommerce 2.1, the REST API allows WooCommerce data to be created, read, updated, and deleted using JSON format.</p>
 <h2 id='requirements'>Requirements</h2>
-<p>You must be using JD Atina Web Sevices Microservices 1.0.0 or newer.</p>
+<p>You must be using WooCommerce 2.1 or newer and the REST API must be enabled under <code>WooCommerce &gt; Settings</code>. You must enable pretty permalinks in <code>Settings &gt; Permalinks</code> (default permalinks will not work).</p>
 
 <aside class="notice">
     Endpoints may be improved with each release of WooCommerce, so we always recommend keeping WooCommerce up to date to reflect this documentation.
@@ -739,10 +744,20 @@
 </thead><tbody>
 <tr>
 <td><code>v1</code></td>
-<td>1.0.0</td>
+<td>2.1.x, 2.2.x, 2.3.x and 2.4.x</td>
+</tr>
+<tr>
+<td><code>v2</code></td>
+<td>2.2.x, 2.3.x and 2.4.x</td>
+</tr>
+<tr>
+<td><code>v3</code></td>
+<td>2.4.x, 2.5.x</td>
 </tr>
 </tbody></table>
-<h3 id='what-39-s-changed-in-v1'>What&#39;s changed in v1?</h3>
+
+<p>The <code>v1</code> and <code>v2</code> APIs will be removed in future versions.</p>
+<h3 id='what-39-s-changed-in-v3'>What&#39;s changed in v3?</h3>
 <ul>
 <li>v3 implements full basic authentication (<a href="http://tools.ietf.org/html/rfc2617">conforms to the Basic auth spec)</a>).</li>
 <li>v3 fixes the OAuth implementation to be compliant with the <a href="http://tools.ietf.org/html/rfc5849">Oauth 1.0a specs</a>.</li>
@@ -752,6 +767,22 @@
 <li>v3 deprecated the product/sku/&lt;id&gt; endpoint (because a SKU can be generated with any character and there is a filter, <code>filter[sku]</code>, that covers this use case).</li>
 <li>v3 includes category thumbnails with requests for <code>product/categories</code>.</li>
 <li>v3 can auto generate passwords for new customers if the &quot;automatically generate customer password&quot; option is enabled.</li>
+</ul>
+<h3 id='differences-between-v1-and-v2'>Differences between v1 and v2</h3>
+<ul>
+<li>v1 supports XML response format, v2 only supports JSON.</li>
+<li>v1 does not support creating or updating (with the exception of order status) any resources, v2 supports full create/read/update/delete for all endpoints.</li>
+<li>v1 does not include order item meta, v2 includes full order item meta (with an optional <code>filter</code> parameter to include protected order item meta)</li>
+<li>v1 does not include any endpoints for listing a customer&#39;s available downloads, v2 includes the <code>GET /customer/{id}/downloads</code> endpoint.</li>
+<li>v1 includes an endpoint for listing notes for an order, v2 includes full create/read/update/delete endpoints.</li>
+<li>v1 does not include any endpoints for listing product categories, v2 includes two endpoints for product categories (<code>GET /products/categories</code> and <code>GET /products/categories/{id}</code>).</li>
+<li>v1 does not include any endpoints for getting valid order statuses, v2 includes an endpoint for listing valid order statuses (<code>GET /orders/statuses</code>).</li>
+<li>v2 supports the core features added in WooCommerce 2.2, primarily order refunds (via the <code>/orders/refunds</code> endpoint) and Webhooks (via the <code>/webhooks</code>).</li>
+</ul>
+<h3 id='api-docs-for-past-versions'>API Docs for past versions</h3>
+<ul>
+<li><a href="v1.html">JD Atina REST Web Services API v1 docs</a></li>
+<li><a href="v2.html">JD Atina REST Web Services API v2 docs</a></li>
 </ul>
 <h2 id='schema'>Schema</h2>
 <p>The API is accessible via this endpoint:</p>
@@ -15776,7 +15807,7 @@
 <p><img src="images/woocommerce-auth-endpoint-flow-f04049df.png" alt="Authentication Endpoint flow" /></p>
 
 <aside class="warning">
-    Note that this endpoint works exclusively for users to generate API keys and facilitate integration between the WooCommerce REST API and an application. In no way is this endpoint proposed to be used as login method for customers.
+    Note that this endpoint works exclusively for users to generate API keys and facilitate integration between the JD Atina REST Web Services API and an application. In no way is this endpoint proposed to be used as login method for customers.
 </aside>
 <h2 id='url-parameters'>URL parameters</h2>
 <table><thead>
@@ -15903,7 +15934,7 @@
 <li><code>success</code> sends <code>0</code> if the user denied, or <code>1</code> if authenticated successfully.</li>
 <li>Use <code>user_id</code> to identify the user when redirected back to the (<code>return_url</code>) and also remember to save the API Keys when your <code>callback_url</code> is posted to after auth.</li>
 <li>The auth endpoint will send the API Keys in JSON format to the <code>callback_url</code>, so it&#39;s important to remember that some languages such as PHP will not display it inside the <code>$_POST</code> global variable, in PHP you can access it using <code>$HTTP_RAW_POST_DATA</code> (for old PHP versions) or <code>file_get_contents(&#39;php://input&#39;);</code>.</li>
-<li>This authentication endpoint is used only to make easy integration with WooCommerce REST API. THIS NOT INTENDED TO BE USED AS A LOGIN ENDPOINT FOR CUSTOMERS!</li>
+<li>This authentication endpoint is used only to make easy integration with JD Atina REST Web Services API. THIS NOT INTENDED TO BE USED AS A LOGIN ENDPOINT FOR CUSTOMERS!</li>
 </ul>
 
       </div>
@@ -15919,7 +15950,7 @@
 	</div>
 
 		<div id="warning-top">
-			<i class="info"></i> This documentation is for the JD ATINA REST API v1 API which is now deprecated. <a href="http://woocommerce.github.io/woocommerce-rest-api-docs/">Please use the latest REST API version</a>.
+			<i class="info"></i> This documentation is for the WooCommerce API v3 API which is now deprecated. <a href="http://woocommerce.github.io/woocommerce-rest-api-docs/">Please use the latest REST API version</a>.
 		</div>
 
   </body>
