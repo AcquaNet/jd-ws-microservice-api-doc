@@ -144,50 +144,16 @@ Web Service Microservice using this guide: [Understanding jdeinterop.ini File](h
 
 It will require openjdk 8 installed.
 
- 
 Download [JD Atina Generate Configuration Files](http://157.245.236.175:8081/artifactory/libs-release-local/com/atina/jd-create-ini-files/1.0.0/jd-create-ini-files-1.0.0-jar-with-dependencies.jar) - latest release:
 
-
-```bash
-Folder : /tmp/build_jde_libs/JPS920 has been created
-
-Authenticating : http://server-manager:8999/manage
- 
-
+<div class="center-column"></div>
+```shell
+curl http://157.245.236.175:8081/artifactory/libs-release-local/com/atina/jd-create-ini-files/1.0.0/jd-create-ini-files-1.0.0-jar-with-dependencies.jar /
+	--output jd-create-ini-files-1.0.0-jar-with-dependencies.jar
 ```
-  
-Run JD atina Generate Ini Files Tool using this command line:
-
-<div class="api-endpoint">
-	<div class="endpoint-data"> 
-		<h6>java -jar jd-create-ini-files-1.0.0-jar-with-dependencies.jar [OPTIONS]<br>
-		OPTIONS<br>
-		Options category 'startup':<br>
-		--debug [-d] (a string; default: "N")<br>
-		Debug Option<br>
-		--environment [-e] (a string; default: "")<br>
-		JDE Environment<br>
-		--password [-p] (a string; default: "")<br>
-		JDE Password for Enterprise Server Manager<br>
-		--server [-s] (a string; default: "")<br>
-		JDE URL of Server Manager<br>
-		--user [-u] (a string; default: "")<br>
-		JDE User for Enterprise Server Manager</h6> 
-	</div>
-</div> 
 
 
-Usage Example:
 
-<div class="api-endpoint">
-	<div class="endpoint-data"> 
-		<h6>java -jar jd-create-ini-files-1.0.0-jar-with-dependencies.jar[OPTIONS]</h6>
-		-u jde_admin<br>
-		-p XXXXXXX<br>
-		-s http://server-manager:8999/manage<br>
-		-e JDV920</h6> 
-	</div>
-</div> 
  
 
 ### JD Atina Generate Configuration Files Tool - Using Docker instead of Java App ###
