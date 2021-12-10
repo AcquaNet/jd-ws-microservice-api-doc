@@ -146,34 +146,34 @@ It will require openjdk 8 installed.
 
 Download [JD Atina Generate Configuration Files](http://157.245.236.175:8081/artifactory/libs-release-local/com/atina/jd-create-ini-files/1.0.0/jd-create-ini-files-1.0.0-jar-with-dependencies.jar) - latest release:
 
-> curl http://157.245.236.175:8081/artifactory/libs-release-local/com/atina/jd-create-ini-files/1.0.0/jd-create-ini-files-1.0.0-jar-with-dependencies.jar --output jd-create-ini-files-1.0.0-jar-with-dependencies.jar
- 
+`curl http://157.245.236.175:8081/artifactory/libs-release-local/com/atina/jd-create-ini-files/1.0.0/jd-create-ini-files-1.0.0-jar-with-dependencies.jar --output jd-create-ini-files-1.0.0-jar-with-dependencies.jar`
+
  
 Run JD atina Generate Ini Files Tool using this command line:
 
-> java -jar jd-create-ini-files-1.0.0-jar-with-dependencies.jar [OPTIONS]
-> 
-> OPTIONS:                                                                       
-> Options category 'startup':
->   --debug [-d] (a string; default: "N")
->     Debug Option
->   --environment [-e] (a string; default: "")
->     JDE Environment
->   --password [-p] (a string; default: "")
->     JDE Password for Enterprise Server Manager
->   --server [-s] (a string; default: "")
->     JDE URL of Server Manager
->   --user [-u] (a string; default: "")
->     JDE User for Enterprise Server Manager
+`java -jar jd-create-ini-files-1.0.0-jar-with-dependencies.jar [OPTIONS]`
+``
+` OPTIONS:       `                                                                
+` Options category 'startup':`
+`   --debug [-d] (a string; default: "N")`
+`     Debug Option`
+`   --environment [-e] (a string; default: "")`
+`     JDE Environment`
+`   --password [-p] (a string; default: "")`
+`     JDE Password for Enterprise Server Manager`
+`   --server [-s] (a string; default: "")`
+`     JDE URL of Server Manager`
+`   --user [-u] (a string; default: "")`
+`     JDE User for Enterprise Server Manager`
 
 
 Usage Example:
 
-> java -jar jd-create-ini-files-1.0.0-jar-with-dependencies.jar \
->  -u jde_admin \
->  -p XXXXXXX \ 
->  -s http://server-manager:8999/manage \
->  -e JDV920
+` java -jar jd-create-ini-files-1.0.0-jar-with-dependencies.jar \`
+`  -u jde_admin \`
+`  -p XXXXXXX \ `
+`  -s http://server-manager:8999/manage \`
+`  -e JDV920`
 
 
 ### JD Atina Generate Configuration Files Tool - Using Docker instead of Java App ###
