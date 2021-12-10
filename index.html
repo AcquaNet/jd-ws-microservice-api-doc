@@ -509,7 +509,8 @@
 <li><code>//Deplo/E920/MISC</code></li>
 <li><code>//Deplo/E920/system/Classes</code></li>
 <li><code>//Deplo/E920/system/JAS/webclient.ear/webclient.war/WEB-INF/lib</code></li>
-<li><code>//Deplo/E920/DV920/java/sbfjars</code></li>
+<li><code>//Deplo/E920/DV920/java/sbfjars</code>
+<br></li>
 </ul></li>
 <li><p><a href="https://docs.docker.com/get-docker/" title="Docker">Docker</a>. JD Atina Web Service Microserver run under Docker container.</p></li>
 </ul>
@@ -553,46 +554,55 @@ Web Service Microservice using this guide: <a href="https://docs.oracle.com/cd/E
 
 <div class="api-endpoint">
     <div class="endpoint-data"> 
-        <h6>curl http://157.245.236.175:8081/artifactory/libs-release-local/com/atina/jd-create-ini-files/1.0.0/jd-create-ini-files-1.0.0-jar-with-dependencies.jar --output jd-create-ini-files-1.0.0-jar-with-dependencies.jar</h6>
+        <h6>curl http://157.245.236.175:8081/artifactory/libs-release-local/com/atina/jd-create-ini-files/1.0.0/jd-create-ini-files-1.0.0-jar-with-dependencies.jar <br>  --output jd-create-ini-files-1.0.0-jar-with-dependencies.jar</h6>
     </div>
 </div>
- 
-
-<div class="api-endpoint">
-    <div class="endpoint-data"> 
-        <h6>java -jar jd-create-ini-files-1.0.0-jar-with-dependencies.jar [OPTIONS]<br>AAAAA</h6>
-    </div>
-</div> 
- 
+  
 
 <p>Run JD atina Generate Ini Files Tool using this command line:</p>
 
-<p><code>java -jar jd-create-ini-files-1.0.0-jar-with-dependencies.jar [OPTIONS]</code>
-`<code>
-</code> OPTIONS:       <code>
-</code> Options category &#39;startup&#39;:<code>
-</code>   --debug <a href="a%20string;%20default:" title="N">-d</a><code>
-</code>     Debug Option<code>
-</code>   --environment <a href="a%20string;%20default:">-e</a><code>
-</code>     JDE Environment<code>
-</code>   --password <a href="a%20string;%20default:">-p</a><code>
-</code>     JDE Password for Enterprise Server Manager<code>
-</code>   --server <a href="a%20string;%20default:">-s</a><code>
-</code>     JDE URL of Server Manager<code>
-</code>   --user <a href="a%20string;%20default:">-u</a><code>
-</code>     JDE User for Enterprise Server Manager`</p>
+<div class="api-endpoint">
+    <div class="endpoint-data"> 
+        <h6>java -jar jd-create-ini-files-1.0.0-jar-with-dependencies.jar [OPTIONS]</h6>
+        <h6>OPTIONS</h6>
+        <h6>Options category 'startup':</h6>
+        <h6>--debug [-d] (a string; default: "N")</h6>
+        <h6>Debug Option</h6>
+        <h6>--environment [-e] (a string; default: "")</h6>
+        <h6>JDE Environment</h6>
+        <h6>--password [-p] (a string; default: "")</h6>
+        <h6>JDE Password for Enterprise Server Manager</h6>
+        <h6>--server [-s] (a string; default: "")</h6>
+        <h6>JDE URL of Server Manager</h6>
+        <h6>--user [-u] (a string; default: "")</h6>
+        <h6>JDE User for Enterprise Server Manager</h6>
+    </div>
+</div> 
 
 <p>Usage Example:</p>
 
-<p><code>java -jar jd-create-ini-files-1.0.0-jar-with-dependencies.jar \</code>
-<code>-u jde_admin \</code>
-<code>-p XXXXXXX \</code>
-<code>-s http://server-manager:8999/manage \</code>
-<code>-e JDV920</code></p>
+<div class="api-endpoint">
+    <div class="endpoint-data"> 
+        <h6>java -jar jd-create-ini-files-1.0.0-jar-with-dependencies.jar[OPTIONS]</h6>
+        <h6>-u jde_admin</h6>
+        <h6>-p XXXXXXX</h6>
+        <h6>-s http://server-manager:8999/manage</h6>
+        <h6>-e JDV920</h6> 
+    </div>
+</div> 
+ 
 <h3 id='jd-atina-generate-configuration-files-tool-using-docker-instead-of-java-app'>JD Atina Generate Configuration Files Tool - Using Docker instead of Java App</h3>
 <p>Usage Example:</p>
-<div class="highlight"><pre class="highlight plaintext"><code>docker run --rm -v /tmp/build_jde_libs:/tmp/build_jde_libs/ -i --name jd-create-ini-files 92455890/jd-create-ini-files:1.0.0 jde_admin jde_password JPS920 http://servermanager.com:8999/manage
-</code></pre></div><h4 id='reviewing-output'>Reviewing Output</h4><div class="highlight"><pre class="highlight shell tab-shell"><code>Folder : /tmp/build_jde_libs/JPS920 has been created
+
+<div class="api-endpoint">
+    <div class="endpoint-data"> 
+        <h6>docker run --rm -v /tmp/build_jde_libs:/tmp/build_jde_libs/[OPTIONS]</h6>
+        <h6>-i</h6>
+        <h6>--name jd-create-ini-files</h6>
+        <h6>jde_admin jde_password JPS920 http://servermanager.com:8999/manage</h6> 
+    </div>
+</div> 
+<h4 id='reviewing-output'>Reviewing Output</h4><div class="highlight"><pre class="highlight shell tab-shell"><code>Folder : /tmp/build_jde_libs/JPS920 has been created
 
 Authenticating : http://server-manager:8999/manage
          Cookie: 044GXl43PnHkTe1L3AMc/siNkFOIoll+S4ngsdGnNkS7Qg<span class="o">=</span><span class="nv">MDA5MDE1MDE1amRlX2FkbWluMTM0LjIwOS4yMTEuMjQ4MTM0LjIwOS4yMTEuMjQ4MTYzNzYwNzAxMTIzOQ</span><span class="o">==</span>
