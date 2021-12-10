@@ -150,7 +150,7 @@ Download [JD Atina Generate Configuration Files](http://157.245.236.175:8081/art
 <pre class="center-column">
 curl http://157.245.236.175:8081/artifactory/libs-release-local/com/atina/jd-create-ini-files/1.0.0/jd-create-ini-files-1.0.0-jar-with-dependencies.jar \
 --output jd-create-ini-files-1.0.0-jar-with-dependencies.jar
-</pre>
+</pre><br>
 
 Run jd-create-ini-files command:
 
@@ -169,7 +169,7 @@ Options category 'startup':
     JDE URL of Server Manager
   --user [-u] (a string; default: "")
     JDE User for Enterprise Server Manager
-</pre>
+</pre><br>
 
 Usage Exampes
 
@@ -179,7 +179,7 @@ java -jar jd-create-ini-files-1.0.0-jar-with-dependencies.jar \
 -p XXXXXXX \
 -s http://server-manager:8999/manage \
 -e JDV920
-</pre>
+</pre><br>
  
 
 ### JD Atina Generate Configuration Files Tool - Using Docker instead of Java App ###
@@ -191,8 +191,8 @@ docker run --rm -v /tmp/build_jde_libs:/tmp/build_jde_libs/ \
 -i \
 --name jd-create-ini-files 92455890/jd-create-ini-files:1.0.0 \
 jde_admin jde_password JPS920 http://servermanager.com:8999/manage
-</pre>
- 
+</pre><br>
+
 
 #### Reviewing Output ####
 
@@ -230,7 +230,7 @@ GENERATION SUCESSS
  File: \tmp\build_jde_libs\JPS920\jdelog.properties generated
  File: \tmp\build_jde_libs\settings.xml generated
 ------------------------------------------------------------------------
-</pre>
+</pre><br>
   
 It will create the following files:
 
@@ -243,7 +243,7 @@ build_jde_libs
       ├─────├─ jdeinterop.ini
       └─────└─ jdelog.properties            
 ```
-</pre>
+</pre><br>
 
 
 
