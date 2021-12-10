@@ -100,7 +100,7 @@ To use the latest version of the JD Atina REST WS API you will need:
     * `//Deplo/E920/system/Classes`
     * `//Deplo/E920/system/JAS/webclient.ear/webclient.war/WEB-INF/lib`
     * `//Deplo/E920/DV920/java/sbfjars`
-
+<br>
 * [Docker](https://docs.docker.com/get-docker/ "Docker"). JD Atina Web Service Microserver run under Docker container.
 
 ## Addionals Prerequisites to use JD Generate Configuration Files and JD Generate Jars Files Tools ##
@@ -148,50 +148,57 @@ Download [JD Atina Generate Configuration Files](http://157.245.236.175:8081/art
 
 <div class="api-endpoint">
 	<div class="endpoint-data"> 
-		<h6>curl http://157.245.236.175:8081/artifactory/libs-release-local/com/atina/jd-create-ini-files/1.0.0/jd-create-ini-files-1.0.0-jar-with-dependencies.jar --output jd-create-ini-files-1.0.0-jar-with-dependencies.jar</h6>
+		<h6>curl http://157.245.236.175:8081/artifactory/libs-release-local/com/atina/jd-create-ini-files/1.0.0/jd-create-ini-files-1.0.0-jar-with-dependencies.jar <br>  --output jd-create-ini-files-1.0.0-jar-with-dependencies.jar</h6>
 	</div>
 </div>
- 
-<div class="api-endpoint">
-	<div class="endpoint-data"> 
-		<h6>java -jar jd-create-ini-files-1.0.0-jar-with-dependencies.jar [OPTIONS]<br>AAAAA</h6>
-	</div>
-</div> 
- 
+  
 Run JD atina Generate Ini Files Tool using this command line:
 
-`java -jar jd-create-ini-files-1.0.0-jar-with-dependencies.jar [OPTIONS]`
-``
-` OPTIONS:       `                                                                
-` Options category 'startup':`
-`   --debug [-d] (a string; default: "N")`
-`     Debug Option`
-`   --environment [-e] (a string; default: "")`
-`     JDE Environment`
-`   --password [-p] (a string; default: "")`
-`     JDE Password for Enterprise Server Manager`
-`   --server [-s] (a string; default: "")`
-`     JDE URL of Server Manager`
-`   --user [-u] (a string; default: "")`
-`     JDE User for Enterprise Server Manager`
+<div class="api-endpoint">
+	<div class="endpoint-data"> 
+		<h6>java -jar jd-create-ini-files-1.0.0-jar-with-dependencies.jar [OPTIONS]</h6>
+		<h6>OPTIONS</h6>
+		<h6>Options category 'startup':</h6>
+		<h6>--debug [-d] (a string; default: "N")</h6>
+		<h6>Debug Option</h6>
+		<h6>--environment [-e] (a string; default: "")</h6>
+		<h6>JDE Environment</h6>
+		<h6>--password [-p] (a string; default: "")</h6>
+		<h6>JDE Password for Enterprise Server Manager</h6>
+		<h6>--server [-s] (a string; default: "")</h6>
+		<h6>JDE URL of Server Manager</h6>
+		<h6>--user [-u] (a string; default: "")</h6>
+		<h6>JDE User for Enterprise Server Manager</h6>
+	</div>
+</div> 
 
 
 Usage Example:
 
-` java -jar jd-create-ini-files-1.0.0-jar-with-dependencies.jar \`
-`  -u jde_admin \`
-`  -p XXXXXXX \ `
-`  -s http://server-manager:8999/manage \`
-`  -e JDV920`
-
+<div class="api-endpoint">
+	<div class="endpoint-data"> 
+		<h6>java -jar jd-create-ini-files-1.0.0-jar-with-dependencies.jar[OPTIONS]</h6>
+		<h6>-u jde_admin</h6>
+		<h6>-p XXXXXXX</h6>
+		<h6>-s http://server-manager:8999/manage</h6>
+		<h6>-e JDV920</h6> 
+	</div>
+</div> 
+ 
 
 ### JD Atina Generate Configuration Files Tool - Using Docker instead of Java App ###
  
 Usage Example:
+ 
+<div class="api-endpoint">
+	<div class="endpoint-data"> 
+		<h6>docker run --rm -v /tmp/build_jde_libs:/tmp/build_jde_libs/[OPTIONS]</h6>
+		<h6>-i</h6>
+		<h6>--name jd-create-ini-files</h6>
+		<h6>jde_admin jde_password JPS920 http://servermanager.com:8999/manage</h6> 
+	</div>
+</div> 
 
-```
-docker run --rm -v /tmp/build_jde_libs:/tmp/build_jde_libs/ -i --name jd-create-ini-files 92455890/jd-create-ini-files:1.0.0 jde_admin jde_password JPS920 http://servermanager.com:8999/manage
-```
 
 #### Reviewing Output ####
 
