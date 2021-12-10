@@ -196,7 +196,8 @@ jde_admin jde_password JPS920 http://servermanager.com:8999/manage
 
 #### Reviewing Output ####
 
-```shell
+
+<pre class="center-column">
 Folder : /tmp/build_jde_libs/JPS920 has been created
 
 Authenticating : http://server-manager:8999/manage
@@ -229,11 +230,11 @@ GENERATION SUCESSS
  File: \tmp\build_jde_libs\JPS920\jdelog.properties generated
  File: \tmp\build_jde_libs\settings.xml generated
 ------------------------------------------------------------------------
-
-```
-
+</pre>
+  
 It will create the following files:
 
+<pre class="center-column"> 
 ```shell
 build_jde_libs
       ├─ settings.xml
@@ -242,6 +243,9 @@ build_jde_libs
       ├─────├─ jdeinterop.ini
       └─────└─ jdelog.properties            
 ```
+</pre>
+
+
 
 Adding manually "tnsnames.ora" for Oracle RDBMS based installations only.
 
