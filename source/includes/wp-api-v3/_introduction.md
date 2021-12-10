@@ -172,8 +172,8 @@ Options category 'startup':
   --user [-u] (a string; default: "")
     JDE User for Enterprise Server Manager
 </pre>
-<p><br></p>
-
+<p><br><br></p>
+<hr>
 Usage Exampes
 
 <pre class="center-column">
@@ -184,18 +184,18 @@ java -jar jd-create-ini-files-1.0.0-jar-with-dependencies.jar \
 -e JDV920
 </pre>
 <p><br></p>
- 
-
+<p><br></p>
+<hr>
 ### JD Atina Generate Configuration Files Tool - Using Docker instead of Java App ###
  
 Usage Example:
 
 <pre class="center-column">
-docker run --rm -v /tmp/build_jde_libs:/tmp/build_jde_libs/ \
--i \
+docker run --rm -v /tmp/build_jde_libs:/tmp/build_jde_libs/ -i \
 --name jd-create-ini-files 92455890/jd-create-ini-files:1.0.0 \
 jde_admin jde_password JPS920 http://servermanager.com:8999/manage
-</pre><br>
+</pre>
+<p><br></p>
 
 
 #### Reviewing Output ####
@@ -234,8 +234,9 @@ GENERATION SUCESSS
  File: \tmp\build_jde_libs\JPS920\jdelog.properties generated
  File: \tmp\build_jde_libs\settings.xml generated
 ------------------------------------------------------------------------
-</pre><br>
-  
+</pre>
+<p><br></p>
+<p><br></p>
 It will create the following files:
 
 <pre class="center-column"> 
