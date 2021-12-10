@@ -95,10 +95,10 @@ To use the latest version of the JD Atina REST WS API you will need:
 
 * Following folder inside JDE Deployment Server:
 
-    * `//Deplo/E920/MISC`
-    * `//Deplo/E920/system/Classes`
-    * `//Deplo/E920/system/JAS/webclient.ear/webclient.war/WEB-INF/lib`
-	* `//Deplo/E920/DV920/java/sbfjars`
+    * //Deplo/E920/MISC
+    * //Deplo/E920/system/Classes
+    * //Deplo/E920/system/JAS/webclient.ear/webclient.war/WEB-INF/lib
+	* //Deplo/E920/DV920/java/sbfjars
 
 * [Docker](https://docs.docker.com/get-docker/ "Docker"). JD Atina Web Service Microserver run under Docker container.
 
@@ -150,6 +150,10 @@ Download <a href="http://157.245.236.175:8081/artifactory/libs-release-local/com
 
 > curl http://157.245.236.175:8081/artifactory/libs-release-local/com/atina/jd-create-ini-files/1.0.0/jd-create-ini-files-1.0.0-jar-with-dependencies.jar \
 > --output jd-create-ini-files-1.0.0-jar-with-dependencies.jar
+
+
+`curl http://157.245.236.175:8081/artifactory/libs-release-local/com/atina/jd-create-ini-files/1.0.0/jd-create-ini-files-1.0.0-jar-with-dependencies.jar \`
+`--output jd-create-ini-files-1.0.0-jar-with-dependencies.jar \`
 
 ```
 curl http://157.245.236.175:8081/artifactory/libs-release-local/com/atina/jd-create-ini-files/1.0.0/jd-create-ini-files-1.0.0-jar-with-dependencies.jar \
