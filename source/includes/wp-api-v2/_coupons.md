@@ -79,7 +79,7 @@ const data = {
   minimum_amount: "100.00"
 };
 
-WooCommerce.post("coupons", data)
+JD Atina Web Services Microservices.post("coupons", data)
   .then((response) => {
     console.log(response.data);
   })
@@ -194,7 +194,7 @@ curl https://example.com/wp-json/wc/v2/coupons/719 \
 ```
 
 ```javascript
-WooCommerce.get("coupons/719")
+JD Atina Web Services Microservices.get("coupons/719")
   .then((response) => {
     console.log(response.data);
   })
@@ -280,7 +280,7 @@ curl https://example.com/wp-json/wc/v2/coupons \
 ```
 
 ```javascript
-WooCommerce.get("coupons")
+JD Atina Web Services Microservices.get("coupons")
   .then((response) => {
     console.log(response.data);
   })
@@ -434,7 +434,7 @@ const data = {
   amount: "5"
 };
 
-WooCommerce.put("coupons/719", data)
+JD Atina Web Services Microservices.put("coupons/719", data)
   .then((response) => {
     console.log(response.data);
   })
@@ -534,7 +534,7 @@ curl -X DELETE https://example.com/wp-json/wc/v2/coupons/719?force=true \
 ```
 
 ```javascript
-WooCommerce.delete("coupons/719", {
+JD Atina Web Services Microservices.delete("coupons/719", {
   force: true
 })
   .then((response) => {
@@ -692,7 +692,7 @@ const data = {
   ]
 };
 
-WooCommerce.post("customers/batch", data)
+JD Atina Web Services Microservices.post("customers/batch", data)
   .then((response) => {
     console.log(response.data);
   })

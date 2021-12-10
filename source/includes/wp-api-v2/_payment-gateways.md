@@ -47,7 +47,7 @@ curl https://example.com/wp-json/wc/v2/payment_gateways/bacs \
 ```
 
 ```javascript
-WooCommerce.get("payment_gateways/bacs")
+JD Atina Web Services Microservices.get("payment_gateways/bacs")
   .then((response) => {
     console.log(response.data);
   })
@@ -135,7 +135,7 @@ curl https://example.com/wp-json/wc/v2/payment_gateways \
 ```
 
 ```javascript
-WooCommerce.get("payment_gateways")
+JD Atina Web Services Microservices.get("payment_gateways")
   .then((response) => {
     console.log(response.data);
   })
@@ -521,7 +521,7 @@ const data = {
   enabled: true
 };
 
-WooCommerce.put("payment_gateways/bacs", data)
+JD Atina Web Services Microservices.put("payment_gateways/bacs", data)
   .then((response) => {
     console.log(response.data);
   })

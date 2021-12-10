@@ -1,6 +1,6 @@
 # Authentication #
 
-WooCommerce includes two ways to authenticate with the JD Atina REST WS API. It is also possible to authenticate using any [JD Atina REST WS API authentication](http://v3.wp-api.org/guide/authentication/) plugin or method.
+JD Atina Web Services Microservices 1.0.0 includes two ways to authenticate with the JD Atina REST WS API. It is also possible to authenticate using any [JD Atina REST WS API authentication](http://v3.wp-api.org/guide/authentication/) plugin or method.
 
 ## REST API keys ##
 
@@ -8,15 +8,15 @@ Pre-generated keys can be used to authenticate use of the REST API endpoints. Ne
 
 ### Generating API keys in the WordPress admin interface ###
 
-To create or manage keys for a specific WordPress user, go to WooCommerce > Settings > Advanced > REST API.
+To create or manage keys for a specific WordPress user, go to JD Atina Web Services Microservices > Settings > Advanced > REST API.
 
-*Note: Keys/Apps was found at WooCommerce > Settings > API > Key/Apps prior to WooCommerce 3.4.*
+*Note: Keys/Apps was found at JD Atina Web Services Microservices > Settings > API > Key/Apps prior to JD Atina Web Services Microservices 3.4.*
 
 ![JD Atina REST Web Services API keys settings](images/woocommerce-api-keys-settings.png)
 
 Click the "Add Key" button. In the next screen, add a description and select the WordPress user you would like to generate the key for. Use of the REST API with the generated keys will conform to that user's WordPress roles and capabilities.
 
-Choose the level of access for this REST API key, which can be _Read_ access, _Write_ access or _Read/Write_ access. Then click the "Generate API Key" button and WooCommerce will generate REST API keys for the selected user.
+Choose the level of access for this REST API key, which can be _Read_ access, _Write_ access or _Read/Write_ access. Then click the "Generate API Key" button and JD Atina Web Services Microservices will generate REST API keys for the selected user.
 
 ![Creating a new REST API key](images/woocommerce-creating-api-keys.png)
 
@@ -28,7 +28,7 @@ If the WordPress user associated with an API key is deleted, the API key will ce
 
 ### Auto generating API keys using our Application Authentication Endpoint ###
 
-This endpoint can be used by any APP to *allow users to generate API keys* for your APP. This makes integration with WooCommerce API easier because the user only needs to grant access to your APP via a URL. After being redirected back to your APP, the API keys will be sent back in a separate POST request.
+This endpoint can be used by any APP to *allow users to generate API keys* for your APP. This makes integration with JD Atina Web Services Microservices API easier because the user only needs to grant access to your APP via a URL. After being redirected back to your APP, the API keys will be sent back in a separate POST request.
 
 The following image illustrates how this works:
 
@@ -169,10 +169,10 @@ curl https://www.example.com/wp-json/wc/v3/orders \
 ```
 
 ```javascript
-const WooCommerceRestApi = require("@woocommerce/woocommerce-rest-api").default;
-// import WooCommerceRestApi from "@woocommerce/woocommerce-rest-api"; // Supports ESM
+const JD Atina Web Services MicroservicesRestApi = require("@woocommerce/woocommerce-rest-api").default;
+// import JD Atina Web Services MicroservicesRestApi from "@woocommerce/woocommerce-rest-api"; // Supports ESM
 
-const WooCommerce = new WooCommerceRestApi({
+const JD Atina Web Services Microservices = new JD Atina Web Services MicroservicesRestApi({
   url: 'https://example.com',
   consumerKey: 'consumer_key',
   consumerSecret: 'consumer_secret',
@@ -184,7 +184,7 @@ const WooCommerce = new WooCommerceRestApi({
 <?php
 require __DIR__ . '/vendor/autoload.php';
 
-use Automattic\WooCommerce\Client;
+use Automattic\JD Atina Web Services Microservices\Client;
 
 $woocommerce = new Client(
     'https://example.com',
@@ -213,7 +213,7 @@ wcapi = API(
 ```ruby
 require "woocommerce_api"
 
-woocommerce = WooCommerce::API.new(
+woocommerce = JD Atina Web Services Microservices::API.new(
   "https://example.com",
   "consumer_key",
   "consumer_secret",
@@ -233,10 +233,10 @@ curl https://www.example.com/wp-json/wc/v3/orders?consumer_key=123&consumer_secr
 ```
 
 ```javascript
-const WooCommerceRestApi = require("@woocommerce/woocommerce-rest-api").default;
-// import WooCommerceRestApi from "@woocommerce/woocommerce-rest-api"; // Supports ESM
+const JD Atina Web Services MicroservicesRestApi = require("@woocommerce/woocommerce-rest-api").default;
+// import JD Atina Web Services MicroservicesRestApi from "@woocommerce/woocommerce-rest-api"; // Supports ESM
 
-const WooCommerce = new WooCommerceRestApi({
+const JD Atina Web Services Microservices = new JD Atina Web Services MicroservicesRestApi({
   url: 'https://example.com',
   consumerKey: 'consumer_key',
   consumerSecret: 'consumer_secret',
@@ -249,7 +249,7 @@ const WooCommerce = new WooCommerceRestApi({
 <?php
 require __DIR__ . '/vendor/autoload.php';
 
-use Automattic\WooCommerce\Client;
+use Automattic\JD Atina Web Services Microservices\Client;
 
 $woocommerce = new Client(
     'https://example.com',
@@ -280,7 +280,7 @@ wcapi = API(
 ```ruby
 require "woocommerce_api"
 
-woocommerce = WooCommerce::API.new(
+woocommerce = JD Atina Web Services Microservices::API.new(
   "https://example.com",
   "consumer_key",
   "consumer_secret",
@@ -368,4 +368,4 @@ If you are having trouble generating a correct signature, you'll want to review 
 * You must use the store URL provided by the index when forming the base string used for the signature, as this is what the server will use. (e.g. if the store URL includes a `www` sub-domain, you should use it for requests)
 * Note that the request body is *not* signed as per the OAuth spec.
 * If including parameters in your request, it saves a lot of trouble if you can order your items alphabetically.
-* Authorization header is supported starting WooCommerce 3.0.
+* Authorization header is supported starting JD Atina Web Services Microservices 3.0.

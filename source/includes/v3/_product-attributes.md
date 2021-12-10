@@ -52,7 +52,7 @@ var data = {
   }
 };
 
-WooCommerce.post('products/attributes', data, function(err, data, res) {
+JD Atina Web Services Microservices.post('products/attributes', data, function(err, data, res) {
   console.log(res);
 });
 ```
@@ -133,7 +133,7 @@ curl https://example.com/wc-api/v3/products/attributes/1 \
 ```
 
 ```javascript
-WooCommerce.get('products/attributes/1', function(err, data, res) {
+JD Atina Web Services Microservices.get('products/attributes/1', function(err, data, res) {
   console.log(res);
 });
 ```
@@ -184,7 +184,7 @@ curl https://example.com/wc-api/v3/products/attributes \
 ```
 
 ```javascript
-WooCommerce.get('products/attributes', function(err, data, res) {
+JD Atina Web Services Microservices.get('products/attributes', function(err, data, res) {
   console.log(res);
 });
 ```
@@ -257,7 +257,7 @@ var data = {
   }
 };
 
-WooCommerce.put('products/attributes/1', data, function(err, data, res) {
+JD Atina Web Services Microservices.put('products/attributes/1', data, function(err, data, res) {
   console.log(res);
 });
 ```
@@ -328,7 +328,7 @@ curl -X DELETE https://example.com/wc-api/v3/products/attributes/1 \
 ```
 
 ```javascript
-WooCommerce.delete('products/attributes/1', function(err, data, res) {
+JD Atina Web Services Microservices.delete('products/attributes/1', function(err, data, res) {
   console.log(res);
 });
 ```

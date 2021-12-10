@@ -31,7 +31,7 @@ curl https://example.com/wc-api/v2/reports \
 ```
 
 ```javascript
-WooCommerce.get('reports', function(err, data, res) {
+JD Atina Web Services Microservices.get('reports', function(err, data, res) {
   console.log(res);
 });
 ```
@@ -78,7 +78,7 @@ curl https://example.com/wc-api/v2/reports/sales?filter[date_min]=2015-01-18&fil
 ```
 
 ```javascript
-WooCommerce.get('reports/sales?filter[date_min]=2015-01-18&filter[date_max]=2015-01-21', function(err, data, res) {
+JD Atina Web Services Microservices.get('reports/sales?filter[date_min]=2015-01-18&filter[date_max]=2015-01-21', function(err, data, res) {
   console.log(res);
 });
 ```
@@ -179,7 +179,7 @@ curl https://example.com/wc-api/v2/reports/sales/top_sellers?filter[period]=last
 ```
 
 ```javascript
-WooCommerce.get('reports/sales/top_sellers?filter[period]=last_month', function(err, data, res) {
+JD Atina Web Services Microservices.get('reports/sales/top_sellers?filter[period]=last_month', function(err, data, res) {
   console.log(res);
 });
 ```

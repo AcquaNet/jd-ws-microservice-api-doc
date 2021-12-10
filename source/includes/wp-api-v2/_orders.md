@@ -11,7 +11,7 @@ The orders API allows you to create, view, update, and delete individual, or a b
 | `number`               | string    | Order number. <i class="label label-info">read-only</i>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | `order_key`            | string    | Order key. <i class="label label-info">read-only</i>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | `created_via`          | string    | Shows where the order was created. <i class="label label-info">read-only</i>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| `version`              | string    | Version of WooCommerce which last updated the order. <i class="label label-info">read-only</i>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| `version`              | string    | Version of JD Atina Web Services Microservices which last updated the order. <i class="label label-info">read-only</i>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | `status`               | string    | Order status. Options: `pending`, `processing`, `on-hold`, `completed`, `cancelled`, `refunded`, `failed` and `trash`. Default is `pending`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | `currency`             | string    | Currency the order was created with, in ISO format. Options: `AED`, `AFN`, `ALL`, `AMD`, `ANG`, `AOA`, `ARS`, `AUD`, `AWG`, `AZN`, `BAM`, `BBD`, `BDT`, `BGN`, `BHD`, `BIF`, `BMD`, `BND`, `BOB`, `BRL`, `BSD`, `BTC`, `BTN`, `BWP`, `BYR`, `BZD`, `CAD`, `CDF`, `CHF`, `CLP`, `CNY`, `COP`, `CRC`, `CUC`, `CUP`, `CVE`, `CZK`, `DJF`, `DKK`, `DOP`, `DZD`, `EGP`, `ERN`, `ETB`, `EUR`, `FJD`, `FKP`, `GBP`, `GEL`, `GGP`, `GHS`, `GIP`, `GMD`, `GNF`, `GTQ`, `GYD`, `HKD`, `HNL`, `HRK`, `HTG`, `HUF`, `IDR`, `ILS`, `IMP`, `INR`, `IQD`, `IRR`, `IRT`, `ISK`, `JEP`, `JMD`, `JOD`, `JPY`, `KES`, `KGS`, `KHR`, `KMF`, `KPW`, `KRW`, `KWD`, `KYD`, `KZT`, `LAK`, `LBP`, `LKR`, `LRD`, `LSL`, `LYD`, `MAD`, `MDL`, `MGA`, `MKD`, `MMK`, `MNT`, `MOP`, `MRO`, `MUR`, `MVR`, `MWK`, `MXN`, `MYR`, `MZN`, `NAD`, `NGN`, `NIO`, `NOK`, `NPR`, `NZD`, `OMR`, `PAB`, `PEN`, `PGK`, `PHP`, `PKR`, `PLN`, `PRB`, `PYG`, `QAR`, `RON`, `RSD`, `RUB`, `RWF`, `SAR`, `SBD`, `SCR`, `SDG`, `SEK`, `SGD`, `SHP`, `SLL`, `SOS`, `SRD`, `SSP`, `STD`, `SYP`, `SZL`, `THB`, `TJS`, `TMT`, `TND`, `TOP`, `TRY`, `TTD`, `TWD`, `TZS`, `UAH`, `UGX`, `USD`, `UYU`, `UZS`, `VEF`, `VND`, `VUV`, `WST`, `XAF`, `XCD`, `XOF`, `XPF`, `YER`, `ZAR` and `ZMW`. Default is `USD`. |
 | `date_created`         | date-time | The date the order was created, in the site's timezone. <i class="label label-info">read-only</i>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
@@ -288,7 +288,7 @@ const data = {
   ]
 };
 
-WooCommerce.post("orders", data)
+JD Atina Web Services Microservices.post("orders", data)
   .then((response) => {
     console.log(response.data);
   })
@@ -633,7 +633,7 @@ curl https://example.com/wp-json/wc/v2/orders/727 \
 ```
 
 ```javascript
-WooCommerce.get("orders/727")
+JD Atina Web Services Microservices.get("orders/727")
   .then((response) => {
     console.log(response.data);
   })
@@ -844,7 +844,7 @@ curl https://example.com/wp-json/wc/v2/orders \
 ```
 
 ```javascript
-WooCommerce.get("orders")
+JD Atina Web Services Microservices.get("orders")
   .then((response) => {
     console.log(response.data);
   })
@@ -1234,7 +1234,7 @@ const data = {
   status: "completed"
 };
 
-WooCommerce.put("orders/727", data)
+JD Atina Web Services Microservices.put("orders/727", data)
   .then((response) => {
     console.log(response.data);
   })
@@ -1458,7 +1458,7 @@ curl -X DELETE https://example.com/wp-json/wc/v2/orders/727?force=true \
 ```
 
 ```javascript
-WooCommerce.delete("orders/727", {
+JD Atina Web Services Microservices.delete("orders/727", {
   force: true
 })
   .then((response) => {
@@ -1896,7 +1896,7 @@ const data = {
   ]
 };
 
-WooCommerce.post("orders/batch", data)
+JD Atina Web Services Microservices.post("orders/batch", data)
   .then((response) => {
     console.log(response.data);
   })

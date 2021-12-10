@@ -36,7 +36,7 @@ const data = {
   name: "Zero Rate"
 };
 
-WooCommerce.post("taxes/classes", data)
+JD Atina Web Services Microservices.post("taxes/classes", data)
   .then((response) => {
     console.log(response.data);
   })
@@ -106,7 +106,7 @@ curl https://example.com/wp-json/wc/v3/taxes/classes \
 ```
 
 ```javascript
-WooCommerce.get("taxes/classes")
+JD Atina Web Services Microservices.get("taxes/classes")
   .then((response) => {
     console.log(response.data);
   })
@@ -190,7 +190,7 @@ curl -X DELETE https://example.com/wp-json/wc/v3/taxes/classes/zero-rate?force=t
 ```
 
 ```javascript
-WooCommerce.delete("taxes/classes/zero-rate", {
+JD Atina Web Services Microservices.delete("taxes/classes/zero-rate", {
   force: true
 })
   .then((response) => {

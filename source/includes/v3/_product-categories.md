@@ -48,7 +48,7 @@ var data = {
   }
 };
 
-WooCommerce.post('products/categories', data, function(err, data, res) {
+JD Atina Web Services Microservices.post('products/categories', data, function(err, data, res) {
   console.log(res);
 });
 ```
@@ -103,7 +103,7 @@ woocommerce.post("products/categories", data).parsed_response
 ```
 
 <aside class="notice">
-	Endpoint introduced since WooCommerce 2.5.
+	Endpoint introduced since JD Atina Web Services Microservices 2.5.
 </aside>
 
 ## View a Product Category ##
@@ -123,7 +123,7 @@ curl https://example.com/wc-api/v3/products/categories/9 \
 ```
 
 ```javascript
-WooCommerce.get('products/categories/9', function(err, data, res) {
+JD Atina Web Services Microservices.get('products/categories/9', function(err, data, res) {
   console.log(res);
 });
 ```
@@ -174,7 +174,7 @@ curl https://example.com/wc-api/v3/products/categories \
 ```
 
 ```javascript
-WooCommerce.get('products/categories', function(err, data, res) {
+JD Atina Web Services Microservices.get('products/categories', function(err, data, res) {
   console.log(res);
 });
 ```
@@ -301,7 +301,7 @@ var data = {
   }
 };
 
-WooCommerce.put('products/categories/9', data, function(err, data, res) {
+JD Atina Web Services Microservices.put('products/categories/9', data, function(err, data, res) {
   console.log(res);
 });
 ```
@@ -356,7 +356,7 @@ woocommerce.put("products/categories/9", data).parsed_response
 ```
 
 <aside class="notice">
-	Endpoint introduced since WooCommerce 2.5.
+	Endpoint introduced since JD Atina Web Services Microservices 2.5.
 </aside>
 
 ## Delete a Product Category ##
@@ -378,7 +378,7 @@ curl -X DELETE https://example.com/wc-api/v3/products/categories/9 \
 ```
 
 ```javascript
-WooCommerce.delete('products/categories/9', function(err, data, res) {
+JD Atina Web Services Microservices.delete('products/categories/9', function(err, data, res) {
   console.log(res);
 });
 ```
@@ -404,5 +404,5 @@ woocommerce.delete("products/categories/9").parsed_response
 ```
 
 <aside class="notice">
-	Endpoint introduced since WooCommerce 2.5.
+	Endpoint introduced since JD Atina Web Services Microservices 2.5.
 </aside>

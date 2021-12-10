@@ -21,7 +21,7 @@ curl https://example.com/wp-json/wc/v3/data \
 ```
 
 ```javascript
-WooCommerce.get("data")
+JD Atina Web Services Microservices.get("data")
   .then((response) => {
     console.log(response.data);
   })
@@ -123,7 +123,7 @@ curl https://example.com/wp-json/wc/v3/data/continents \
 ```
 
 ```javascript
-WooCommerce.get("data/continents")
+JD Atina Web Services Microservices.get("data/continents")
   .then((response) => {
     console.log(response.data);
   })
@@ -308,7 +308,7 @@ curl https://example.com/wp-json/wc/v3/data/continents/eu \
 ```
 
 ```javascript
-WooCommerce.get("data/continents/eu")
+JD Atina Web Services Microservices.get("data/continents/eu")
   .then((response) => {
     console.log(response.data);
   })
@@ -532,7 +532,7 @@ curl https://example.com/wp-json/wc/v3/data/countries \
 ```
 
 ```javascript
-WooCommerce.get("data/countries")
+JD Atina Web Services Microservices.get("data/countries")
   .then((response) => {
     console.log(response.data);
   })
@@ -830,7 +830,7 @@ curl https://example.com/wp-json/wc/v3/data/countries/br \
 ```
 
 ```javascript
-WooCommerce.get("data/countries/br")
+JD Atina Web Services Microservices.get("data/countries/br")
   .then((response) => {
     console.log(response.data);
   })
@@ -1007,7 +1007,7 @@ curl https://example.com/wp-json/wc/v3/data/currencies \
 ```
 
 ```javascript
-WooCommerce.get("data/currencies")
+JD Atina Web Services Microservices.get("data/currencies")
   .then((response) => {
     console.log(response.data);
   })
@@ -1115,7 +1115,7 @@ curl https://example.com/wp-json/wc/v3/data/currencies/brl \
 ```
 
 ```javascript
-WooCommerce.get("data/currencies/brl")
+JD Atina Web Services Microservices.get("data/currencies/brl")
   .then((response) => {
     console.log(response.data);
   })
@@ -1183,7 +1183,7 @@ curl https://example.com/wp-json/wc/v3/data/currencies/current \
 ```
 
 ```javascript
-WooCommerce.get("data/currencies/current")
+JD Atina Web Services Microservices.get("data/currencies/current")
   .then((response) => {
     console.log(response.data);
   })

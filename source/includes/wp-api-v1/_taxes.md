@@ -54,7 +54,7 @@ const data = {
   shipping: false
 };
 
-WooCommerce.post("taxes", data)
+JD Atina Web Services Microservices.post("taxes", data)
   .then((response) => {
     console.log(response.data);
   })
@@ -149,7 +149,7 @@ curl https://example.com/wp-json/wc/v1/taxes/72 \
 ```
 
 ```javascript
-WooCommerce.get("taxes/72")
+JD Atina Web Services Microservices.get("taxes/72")
   .then((response) => {
     console.log(response.data);
   })
@@ -220,7 +220,7 @@ curl https://example.com/wp-json/wc/v1/taxes \
 ```
 
 ```javascript
-WooCommerce.get("taxes")
+JD Atina Web Services Microservices.get("taxes")
   .then((response) => {
     console.log(response.data);
   })
@@ -547,7 +547,7 @@ const data = {
   name: "US Tax"
 };
 
-WooCommerce.put("taxes/72", data)
+JD Atina Web Services Microservices.put("taxes/72", data)
   .then((response) => {
     console.log(response.data);
   })
@@ -632,7 +632,7 @@ curl -X DELETE https://example.com/wp-json/wc/v1/taxes/72?force=true \
 ```
 
 ```javascript
-WooCommerce.delete("taxes/72", {
+JD Atina Web Services Microservices.delete("taxes/72", {
   force: true
 })
   .then((response) => {
@@ -1495,7 +1495,7 @@ const data = {
   ]
 };
 
-WooCommerce.post("taxes/batch", data)
+JD Atina Web Services Microservices.post("taxes/batch", data)
   .then((response) => {
     console.log(response.data);
   })

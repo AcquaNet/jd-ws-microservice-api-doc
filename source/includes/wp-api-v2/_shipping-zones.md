@@ -39,7 +39,7 @@ const data = {
   name: "Brazil"
 };
 
-WooCommerce.post("shipping/zones", data)
+JD Atina Web Services Microservices.post("shipping/zones", data)
   .then((response) => {
     console.log(response.data);
   })
@@ -120,7 +120,7 @@ curl https://example.com/wp-json/wc/v2/shipping/zones/5 \
 ```
 
 ```javascript
-WooCommerce.get("shipping/zones/5")
+JD Atina Web Services Microservices.get("shipping/zones/5")
   .then((response) => {
     console.log(response.data);
   })
@@ -187,7 +187,7 @@ curl https://example.com/wp-json/wc/v2/shipping/zones \
 ```
 
 ```javascript
-WooCommerce.get("shipping/zones")
+JD Atina Web Services Microservices.get("shipping/zones")
   .then((response) => {
     console.log(response.data);
   })
@@ -286,7 +286,7 @@ const data = {
   order: 1
 };
 
-WooCommerce.put("shipping/zones/5", data)
+JD Atina Web Services Microservices.put("shipping/zones/5", data)
   .then((response) => {
     console.log(response.data);
   })
@@ -367,7 +367,7 @@ curl -X DELETE https://example.com/wp-json/wc/v2/shipping/zones/5?force=true \
 ```
 
 ```javascript
-WooCommerce.delete("shipping/zones/5", {
+JD Atina Web Services Microservices.delete("shipping/zones/5", {
   force: true
 })
   .then((response) => {

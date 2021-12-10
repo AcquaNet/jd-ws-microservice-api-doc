@@ -12,7 +12,7 @@ The system status API allows you to view all system status items.
 | `theme`          | object | Theme. See [System status - Theme properties](#system-status-theme-properties) <i class="label label-info">read-only</i>                   |
 | `settings`       | object | Settings. See [System status - Settings properties](#system-status-settings-properties) <i class="label label-info">read-only</i>          |
 | `security`       | object | Security. See [System status - Security properties](#system-status-security-properties) <i class="label label-info">read-only</i>          |
-| `pages`          | array  | WooCommerce pages. <i class="label label-info">read-only</i>                                                                               |
+| `pages`          | array  | JD Atina Web Services Microservices pages. <i class="label label-info">read-only</i>                                                                               |
 
 ### System status - Environment properties ###
 
@@ -20,7 +20,7 @@ The system status API allows you to view all system status items.
 | --------------------------- | ------- | -------------------------------------------------------------------------- |
 | `home_url`                  | string  | Home URL. <i class="label label-info">read-only</i>                        |
 | `site_url`                  | string  | Site URL. <i class="label label-info">read-only</i>                        |
-| `wc_version`                | string  | WooCommerce version. <i class="label label-info">read-only</i>             |
+| `wc_version`                | string  | JD Atina Web Services Microservices version. <i class="label label-info">read-only</i>             |
 | `log_directory`             | string  | Log directory. <i class="label label-info">read-only</i>                   |
 | `log_directory_writable`    | boolean | Is log directory writable? <i class="label label-info">read-only</i>       |
 | `wp_version`                | string  | WordPress version. <i class="label label-info">read-only</i>               |
@@ -67,7 +67,7 @@ The system status API allows you to view all system status items.
 | `version_latest`          | string  | Latest version of theme. <i class="label label-info">read-only</i>                    |
 | `author_url`              | string  | Theme author URL. <i class="label label-info">read-only</i>                           |
 | `is_child_theme`          | boolean | Is this theme a child theme? <i class="label label-info">read-only</i>                |
-| `has_woocommerce_support` | boolean | Does the theme declare WooCommerce support? <i class="label label-info">read-only</i> |
+| `has_woocommerce_support` | boolean | Does the theme declare JD Atina Web Services Microservices support? <i class="label label-info">read-only</i> |
 | `has_woocommerce_file`    | boolean | Does the theme have a woocommerce.php file? <i class="label label-info">read-only</i> |
 | `has_outdated_templates`  | boolean | Does this theme have outdated templates? <i class="label label-info">read-only</i>    |
 | `overrides`               | array   | Template overrides. <i class="label label-info">read-only</i>                         |
@@ -116,7 +116,7 @@ curl https://example.com/wp-json/wc/v2/system_status \
 ```
 
 ```javascript
-WooCommerce.get("system_status")
+JD Atina Web Services Microservices.get("system_status")
   .then((response) => {
     console.log(response.data);
   })
@@ -196,7 +196,7 @@ woocommerce.get("system_status").parsed_response
   "active_plugins": [
     {
       "plugin": "woocommerce/woocommerce.php",
-      "name": "WooCommerce",
+      "name": "JD Atina Web Services Microservices",
       "version": "3.0.0-rc.1",
       "version_latest": "2.6.14",
       "url": "https://woocommerce.com/",

@@ -29,7 +29,7 @@ curl https://example.com/wp-json/wc/v2/shipping_methods/flat_rate \
 ```
 
 ```javascript
-WooCommerce.get("shipping_methods/flat_rate")
+JD Atina Web Services Microservices.get("shipping_methods/flat_rate")
   .then((response) => {
     console.log(response.data);
   })
@@ -91,7 +91,7 @@ curl https://example.com/wp-json/wc/v2/shipping_methods \
 ```
 
 ```javascript
-WooCommerce.get("shipping_methods")
+JD Atina Web Services Microservices.get("shipping_methods")
   .then((response) => {
     console.log(response.data);
   })

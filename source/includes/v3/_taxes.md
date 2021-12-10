@@ -58,7 +58,7 @@ var data = {
   }
 };
 
-WooCommerce.post('taxes', data, function(err, data, res) {
+JD Atina Web Services Microservices.post('taxes', data, function(err, data, res) {
   console.log(res);
 });
 ```
@@ -129,7 +129,7 @@ woocommerce.post("taxes", data).parsed_response
 ```
 
 <aside class="notice">
-	Endpoint introduced since WooCommerce 2.5.
+	Endpoint introduced since JD Atina Web Services Microservices 2.5.
 </aside>
 
 ## View a Tax Rate ##
@@ -149,7 +149,7 @@ curl https://example.com/wc-api/v3/taxes/53 \
 ```
 
 ```javascript
-WooCommerce.get('taxes/53', function(err, data, res) {
+JD Atina Web Services Microservices.get('taxes/53', function(err, data, res) {
   console.log(res);
 });
 ```
@@ -188,7 +188,7 @@ woocommerce.get("taxes/53").parsed_response
 ```
 
 <aside class="notice">
-	Endpoint introduced since WooCommerce 2.5.
+	Endpoint introduced since JD Atina Web Services Microservices 2.5.
 </aside>
 
 ## View List of Tax Rates ##
@@ -210,7 +210,7 @@ curl https://example.com/wc-api/v3/taxes \
 ```
 
 ```javascript
-WooCommerce.get('taxes', function(err, data, res) {
+JD Atina Web Services Microservices.get('taxes', function(err, data, res) {
   console.log(res);
 });
 ```
@@ -411,7 +411,7 @@ woocommerce.get("taxes").parsed_response
 | `tax_rate_class` | string | Tax rates by class. eg: `standard`, `reduced-rate` or `zero-rate` |
 
 <aside class="notice">
-	Endpoint introduced since WooCommerce 2.5.
+	Endpoint introduced since JD Atina Web Services Microservices 2.5.
 </aside>
 
 ## Update a Tax Rate ##
@@ -445,7 +445,7 @@ var data = {
   }
 };
 
-WooCommerce.put('taxes/53', data, function(err, data, res) {
+JD Atina Web Services Microservices.put('taxes/53', data, function(err, data, res) {
   console.log(res);
 });
 ```
@@ -504,7 +504,7 @@ woocommerce.put("taxes/53", data).parsed_response
 ```
 
 <aside class="notice">
-	Endpoint introduced since WooCommerce 2.5.
+	Endpoint introduced since JD Atina Web Services Microservices 2.5.
 </aside>
 
 ## Create/Update Multiple Tax Rates ##
@@ -1308,7 +1308,7 @@ var data = {
   ]
 };
 
-WooCommerce.post('taxes/bulk', data, function(err, data, res) {
+JD Atina Web Services Microservices.post('taxes/bulk', data, function(err, data, res) {
   console.log(res);
 });
 ```
@@ -3176,7 +3176,7 @@ woocommerce.post("taxes/bulk", data).parsed_response
 ```
 
 <aside class="notice">
-	Endpoint introduced since WooCommerce 2.5.
+	Endpoint introduced since JD Atina Web Services Microservices 2.5.
 </aside>
 
 ## Delete a Tax Rate ##
@@ -3198,7 +3198,7 @@ curl -X DELETE https://example.com/wc-api/v3/taxes/53 \
 ```
 
 ```javascript
-WooCommerce.delete('taxes/53', function(err, data, res) {
+JD Atina Web Services Microservices.delete('taxes/53', function(err, data, res) {
   console.log(res);
 });
 ```
@@ -3224,7 +3224,7 @@ woocommerce.delete("taxes/53").parsed_response
 ```
 
 <aside class="notice">
-	Endpoint introduced since WooCommerce 2.5.
+	Endpoint introduced since JD Atina Web Services Microservices 2.5.
 </aside>
 
 ## View Tax Rate Count ##
@@ -3246,7 +3246,7 @@ curl https://example.com/wc-api/v3/taxes/count \
 ```
 
 ```javascript
-WooCommerce.get('taxes/count', function(err, data, res) {
+JD Atina Web Services Microservices.get('taxes/count', function(err, data, res) {
   console.log(res);
 });
 ```
@@ -3278,5 +3278,5 @@ woocommerce.get("taxes/count").parsed_response
 | `tax_rate_class` | string | Tax rates by class. eg: `standard`, `reduced-rate` or `zero-rate` |
 
 <aside class="notice">
-	Endpoint introduced since WooCommerce 2.5.
+	Endpoint introduced since JD Atina Web Services Microservices 2.5.
 </aside>

@@ -57,7 +57,7 @@ const data = {
   method_id: "flat_rate"
 };
 
-WooCommerce.post("shipping/zones/5/methods", data)
+JD Atina Web Services Microservices.post("shipping/zones/5/methods", data)
   .then((response) => {
     console.log(response.data);
   })
@@ -232,7 +232,7 @@ curl https://example.com/wp-json/wc/v3/shipping/zones/5/methods/26 \
 ```
 
 ```javascript
-WooCommerce.get("shipping/zones/5/methods/26")
+JD Atina Web Services Microservices.get("shipping/zones/5/methods/26")
   .then((response) => {
     console.log(response.data);
   })
@@ -393,7 +393,7 @@ curl https://example.com/wp-json/wc/v3/shipping/zones/5/methods \
 ```
 
 ```javascript
-WooCommerce.get("shipping/zones/5/methods")
+JD Atina Web Services Microservices.get("shipping/zones/5/methods")
   .then((response) => {
     console.log(response.data);
   })
@@ -633,7 +633,7 @@ const data = {
   }
 };
 
-WooCommerce.put("shipping/zones/5/methods/26", data)
+JD Atina Web Services Microservices.put("shipping/zones/5/methods/26", data)
   .then((response) => {
     console.log(response.data);
   })
@@ -814,7 +814,7 @@ curl -X DELETE https://example.com/wp-json/wc/v3/shipping/zones/5/methods/26?for
 ```
 
 ```javascript
-WooCommerce.delete("shipping/zones/5/methods/26", {
+JD Atina Web Services Microservices.delete("shipping/zones/5/methods/26", {
   force: true
 })
   .then((response) => {

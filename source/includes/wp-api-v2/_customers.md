@@ -144,7 +144,7 @@ const data = {
   }
 };
 
-WooCommerce.post("customers", data)
+JD Atina Web Services Microservices.post("customers", data)
   .then((response) => {
     console.log(response.data);
   })
@@ -337,7 +337,7 @@ curl https://example.com/wp-json/wc/v2/customers/25 \
 ```
 
 ```javascript
-WooCommerce.get("customers/25")
+JD Atina Web Services Microservices.get("customers/25")
   .then((response) => {
     console.log(response.data);
   })
@@ -435,7 +435,7 @@ curl https://example.com/wp-json/wc/v2/customers \
 ```
 
 ```javascript
-WooCommerce.get("customers")
+JD Atina Web Services Microservices.get("customers")
   .then((response) => {
     console.log(response.data);
   })
@@ -624,7 +624,7 @@ const data = {
   }
 };
 
-WooCommerce.put("customers/25", data)
+JD Atina Web Services Microservices.put("customers/25", data)
   .then((response) => {
     console.log(response.data);
   })
@@ -754,7 +754,7 @@ curl -X DELETE https://example.com/wp-json/wc/v2/customers/25?force=true \
 ```
 
 ```javascript
-WooCommerce.delete("customers/25", {
+JD Atina Web Services Microservices.delete("customers/25", {
   force: true
 })
   .then((response) => {
@@ -1017,7 +1017,7 @@ const data = {
   ]
 };
 
-WooCommerce.post("customers/batch", data)
+JD Atina Web Services Microservices.post("customers/batch", data)
   .then((response) => {
     console.log(response.data);
   })
@@ -1512,7 +1512,7 @@ curl https://example.com/wp-json/wc/v2/customers/26/downloads \
 ```
 
 ```javascript
-WooCommerce.get("customers/26/downloads")
+JD Atina Web Services Microservices.get("customers/26/downloads")
   .then((response) => {
     console.log(response.data);
   })

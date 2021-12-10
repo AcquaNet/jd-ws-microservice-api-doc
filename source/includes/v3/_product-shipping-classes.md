@@ -46,7 +46,7 @@ var data = {
   }
 };
 
-WooCommerce.post('products/shipping_classes', data, function(err, data, res) {
+JD Atina Web Services Microservices.post('products/shipping_classes', data, function(err, data, res) {
   console.log(res);
 });
 ```
@@ -99,7 +99,7 @@ woocommerce.post("products/shipping_classes", data).parsed_response
 ```
 
 <aside class="notice">
-	Endpoint introduced since WooCommerce 2.5.
+	Endpoint introduced since JD Atina Web Services Microservices 2.5.
 </aside>
 
 ## View a Product Shipping Class ##
@@ -119,7 +119,7 @@ curl https://example.com/wc-api/v3/products/shipping_classes/35 \
 ```
 
 ```javascript
-WooCommerce.get('products/shipping_classes/35', function(err, data, res) {
+JD Atina Web Services Microservices.get('products/shipping_classes/35', function(err, data, res) {
   console.log(res);
 });
 ```
@@ -152,7 +152,7 @@ woocommerce.get("products/shipping_classes/35").parsed_response
 ```
 
 <aside class="notice">
-	Endpoint introduced since WooCommerce 2.5.
+	Endpoint introduced since JD Atina Web Services Microservices 2.5.
 </aside>
 
 ## View List of Product Shipping Classes ##
@@ -172,7 +172,7 @@ curl https://example.com/wc-api/v3/products/shipping_classes \
 ```
 
 ```javascript
-WooCommerce.get('products/shipping_classes', function(err, data, res) {
+JD Atina Web Services Microservices.get('products/shipping_classes', function(err, data, res) {
   console.log(res);
 });
 ```
@@ -215,7 +215,7 @@ woocommerce.get("products/shipping_classes").parsed_response
 ```
 
 <aside class="notice">
-	Endpoint introduced since WooCommerce 2.5.
+	Endpoint introduced since JD Atina Web Services Microservices 2.5.
 </aside>
 
 ## Update a Product Shipping Class ##
@@ -249,7 +249,7 @@ var data = {
   }
 };
 
-WooCommerce.put('products/shipping_classes/35', data, function(err, data, res) {
+JD Atina Web Services Microservices.put('products/shipping_classes/35', data, function(err, data, res) {
   console.log(res);
 });
 ```
@@ -302,7 +302,7 @@ woocommerce.put("products/shipping_classes/35", data).parsed_response
 ```
 
 <aside class="notice">
-	Endpoint introduced since WooCommerce 2.5.
+	Endpoint introduced since JD Atina Web Services Microservices 2.5.
 </aside>
 
 ## Delete a Product Shipping Class ##
@@ -324,7 +324,7 @@ curl -X DELETE https://example.com/wc-api/v3/products/shipping_classes/35 \
 ```
 
 ```javascript
-WooCommerce.delete('products/shipping_classes/35', function(err, data, res) {
+JD Atina Web Services Microservices.delete('products/shipping_classes/35', function(err, data, res) {
   console.log(res);
 });
 ```
@@ -350,5 +350,5 @@ woocommerce.delete("products/shipping_classes/35").parsed_response
 ```
 
 <aside class="notice">
-	Endpoint introduced since WooCommerce 2.5.
+	Endpoint introduced since JD Atina Web Services Microservices 2.5.
 </aside>

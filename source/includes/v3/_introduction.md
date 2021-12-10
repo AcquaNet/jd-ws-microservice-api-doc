@@ -1,24 +1,24 @@
 # Introduction #
 
-Introduced in WooCommerce 2.1, the REST API allows WooCommerce data to be created, read, updated, and deleted using JSON format.
+Introduced in JD Atina WS Microservices, the REST API allows JD Atina Web Services Microservices invoke JDE Web Services using JSON format.
 
 ## Requirements ##
 
-You must be using WooCommerce 2.1 or newer and the REST API must be enabled under `WooCommerce > Settings`. You must enable pretty permalinks in `Settings > Permalinks` (default permalinks will not work).
+You must be using JD Atina WS Microservices 1.0.0 or newer and the REST API.
 
 <aside class="notice">
-	Endpoints may be improved with each release of WooCommerce, so we always recommend keeping WooCommerce up to date to reflect this documentation.
+	Endpoints may be improved with each release of JD Atina Web Services Microservices, so we always recommend keeping JD Atina Web Services Microservices up to date to reflect this documentation.
 </aside>
 
 ## Version ##
 
-The current API version is `v3` which takes a first-order position in endpoints. The following table shows API versions present in each major version of WooCommerce:
+The current API version is `v3` which takes a first-order position in endpoints. The following table shows API versions present in each major version of JD Atina Web Services Microservices:
 
-| API Version |          WooCommerce          |
+| API Version |          JD Atina Web Services Microservices          |
 | ----------- | ----------------------------- |
-| `v1`        | 2.1.x, 2.2.x, 2.3.x and 2.4.x |
-| `v2`        | 2.2.x, 2.3.x and 2.4.x        |
-| `v3`        | 2.4.x, 2.5.x                  |
+| `v1`        | 1.0.0                         |
+| `v2`        | 1.0.0                         |
+| `v3`        | 1.0.0                         |
 
 The `v1` and `v2` APIs will be removed in future versions.
 
@@ -43,7 +43,7 @@ The `v1` and `v2` APIs will be removed in future versions.
 * v1 includes an endpoint for listing notes for an order, v2 includes full create/read/update/delete endpoints.
 * v1 does not include any endpoints for listing product categories, v2 includes two endpoints for product categories (`GET /products/categories` and `GET /products/categories/{id}`).
 * v1 does not include any endpoints for getting valid order statuses, v2 includes an endpoint for listing valid order statuses (`GET /orders/statuses`).
-* v2 supports the core features added in WooCommerce 2.2, primarily order refunds (via the `/orders/refunds` endpoint) and Webhooks (via the `/webhooks`).
+* v2 supports the core features added in JD Atina Web Services Microservices 2.2, primarily order refunds (via the `/orders/refunds` endpoint) and Webhooks (via the `/webhooks`).
 
 ### API Docs for past versions ###
 
@@ -54,7 +54,7 @@ The `v1` and `v2` APIs will be removed in future versions.
 
 The API is accessible via this endpoint:
 
-`https://www.your-store.com/wc-api/v3`
+`https://rest-api-server/api/v1`
 
 *Pretty permalinks must be enabled*. You may access the API over either HTTP or HTTPS. *HTTPS is recommended where possible*, since authentication is simpler. The API index will declare if the site supports SSL or not.
 
@@ -145,7 +145,7 @@ If you are having trouble generating a correct signature, you'll want to review 
 * You must use the store URL provided by the index when forming the base string used for the signature, as this is what the server will use. (e.g. if the store URL includes a `www` sub-domain, you should use it for requests)
 * Note that the request body is *not* signed as per the OAuth spec.
 * If including parameters in your request, it saves a lot of trouble if you can order your items alphabetically.
-* Authorization header is supported starting WooCommerce 3.0.
+* Authorization header is supported starting JD Atina Web Services Microservices 3.0.
 
 ## Parameters ##
 
@@ -363,7 +363,7 @@ curl https://example.com/wc-api/v3/orders/count?_jsonp=ordersCount \
 
 ## Webhooks ##
 
-Webhooks can be managed via the WooCommerce settings screen or by using the REST API endpoints. The `WC_Webhook` class manages all data storage and retrieval of the custom post type, as well as enqueuing webhook actions and processing/delivering/logging the webhook. On `woocommerce_init`, active webhooks are loaded and their associated hooks are added.
+Webhooks can be managed via the JD Atina Web Services Microservices settings screen or by using the REST API endpoints. The `WC_Webhook` class manages all data storage and retrieval of the custom post type, as well as enqueuing webhook actions and processing/delivering/logging the webhook. On `woocommerce_init`, active webhooks are loaded and their associated hooks are added.
 
 Each webhook has:
 
@@ -419,7 +419,7 @@ Delivery logs can be fetched through the REST API endpoint or in code using `WC_
 
 ### Visual Interface ###
 
-You can find the Webhooks interface going to "WooCommerce" > "Settings" > "API" > "Webhooks", see our [Visual Webhooks docs](https://docs.woocommerce.com/document/webhooks/) for more details.
+You can find the Webhooks interface going to "JD Atina Web Services Microservices" > "Settings" > "API" > "Webhooks", see our [Visual Webhooks docs](https://docs.woocommerce.com/document/webhooks/) for more details.
 
 ## Troubleshooting ##
 
@@ -430,7 +430,7 @@ You can find the Webhooks interface going to "WooCommerce" > "Settings" > "API" 
 
 - [Node.js](https://www.npmjs.com/package/woocommerce-api)
 - [PHP](https://packagist.org/packages/automattic/woocommerce)
-- [Python](https://pypi.python.org/pypi/WooCommerce)
+- [Python](https://pypi.python.org/pypi/JD Atina Web Services Microservices)
 - [Ruby](https://rubygems.org/gems/woocommerce_api)
 
 ```javascript
@@ -438,13 +438,13 @@ You can find the Webhooks interface going to "WooCommerce" > "Settings" > "API" 
 // npm install --save woocommerce-api
 
 // Setup:
-var WooCommerceAPI = require('woocommerce-api');
+var JD Atina Web Services MicroservicesAPI = require('woocommerce-api');
 
-var WooCommerce = new WooCommerceAPI({
+var JD Atina Web Services Microservices = new JD Atina Web Services MicroservicesAPI({
   url: 'http://example.com', // Your store URL
   consumerKey: 'consumer_key', // Your consumer key
   consumerSecret: 'consumer_secret', // Your consumer secret
-  version: 'v3' // WooCommerce API version
+  version: 'v3' // JD Atina Web Services Microservices API version
 });
 ```
 
@@ -456,14 +456,14 @@ var WooCommerce = new WooCommerceAPI({
 // Setup:
 require __DIR__ . '/vendor/autoload.php';
 
-use Automattic\WooCommerce\Client;
+use Automattic\JD Atina Web Services Microservices\Client;
 
 $woocommerce = new Client(
     'http://example.com', // Your store URL
     'consumer_key', // Your consumer key
     'consumer_secret', // Your consumer secret
     [
-        'version' => 'v3' // WooCommerce API version
+        'version' => 'v3' // JD Atina Web Services Microservices API version
     ]
 );
 ?>
@@ -480,7 +480,7 @@ wcapi = API(
     url="http://example.com", # Your store URL
     consumer_key="consumer_key", # Your consumer key
     consumer_secret="consumer_secret", # Your consumer secret
-    version="v3" # WooCommerce API version
+    version="v3" # JD Atina Web Services Microservices API version
 )
 ```
 
@@ -491,12 +491,12 @@ wcapi = API(
 # Setup:
 require "woocommerce_api"
 
-woocommerce = WooCommerce::API.new(
+woocommerce = JD Atina Web Services Microservices::API.new(
   "http://example.com", # Your store URL
   "consumer_key", # Your consumer key
   "consumer_secret", # Your consumer secret
   {
-    version: "v3" # WooCommerce API version
+    version: "v3" # JD Atina Web Services Microservices API version
   }
 )
 ```

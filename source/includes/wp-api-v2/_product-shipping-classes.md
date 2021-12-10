@@ -41,7 +41,7 @@ const data = {
   name: "Priority"
 };
 
-WooCommerce.post("products/shipping_classes", data)
+JD Atina Web Services Microservices.post("products/shipping_classes", data)
   .then((response) => {
     console.log(response.data);
   })
@@ -117,7 +117,7 @@ curl https://example.com/wp-json/wc/v2/products/shipping_classes/32 \
 ```
 
 ```javascript
-WooCommerce.get("products/shipping_classes/32")
+JD Atina Web Services Microservices.get("products/shipping_classes/32")
   .then((response) => {
     console.log(response.data);
   })
@@ -179,7 +179,7 @@ curl https://example.com/wp-json/wc/v2/products/shipping_classes \
 ```
 
 ```javascript
-WooCommerce.get("products/shipping_classes")
+JD Atina Web Services Microservices.get("products/shipping_classes")
   .then((response) => {
     console.log(response.data);
   })
@@ -289,7 +289,7 @@ const data = {
   description: "Priority mail."
 };
 
-WooCommerce.put("products/shipping_classes/32", data)
+JD Atina Web Services Microservices.put("products/shipping_classes/32", data)
   .then((response) => {
     console.log(response.data);
   })
@@ -367,7 +367,7 @@ curl -X DELETE https://example.com/wp-json/wc/v2/products/shipping_classes/32?fo
 ```
 
 ```javascript
-WooCommerce.delete("products/shipping_classes/32", {
+JD Atina Web Services Microservices.delete("products/shipping_classes/32", {
   force: true
 })
   .then((response) => {
@@ -483,7 +483,7 @@ const data = {
   ]
 };
 
-WooCommerce.post("products/shipping_classes/batch", data)
+JD Atina Web Services Microservices.post("products/shipping_classes/batch", data)
   .then((response) => {
     console.log(response.data);
   })

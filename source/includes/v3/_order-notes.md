@@ -42,7 +42,7 @@ var data = {
   }
 };
 
-WooCommerce.post('orders/645/notes', data, function(err, data, res) {
+JD Atina Web Services Microservices.post('orders/645/notes', data, function(err, data, res) {
   console.log(res);
 });
 ```
@@ -111,7 +111,7 @@ curl https://example.com/wc-api/v3/orders/645/notes/416 \
 ```
 
 ```javascript
-WooCommerce.get('orders/645/notes/416', function(err, data, res) {
+JD Atina Web Services Microservices.get('orders/645/notes/416', function(err, data, res) {
   console.log(res);
 });
 ```
@@ -160,7 +160,7 @@ curl https://example.com/wc-api/v3/orders/645/notes \
 ```
 
 ```javascript
-WooCommerce.get('orders/645/notes', function(err, data, res) {
+JD Atina Web Services Microservices.get('orders/645/notes', function(err, data, res) {
   console.log(res);
 });
 ```
@@ -241,7 +241,7 @@ var data = {
   }
 };
 
-WooCommerce.put('orders/645/notes/416', data, function(err, data, res) {
+JD Atina Web Services Microservices.put('orders/645/notes/416', data, function(err, data, res) {
   console.log(res);
 });
 ```
@@ -310,7 +310,7 @@ curl -X DELETE https://example.com/wc-api/v3/orders/645/notes/416 \
 ```
 
 ```javascript
-WooCommerce.delete('orders/645/notes/416', function(err, data, res) {
+JD Atina Web Services Microservices.delete('orders/645/notes/416', function(err, data, res) {
   console.log(res);
 });
 ```

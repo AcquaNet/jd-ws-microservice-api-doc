@@ -10,7 +10,7 @@ This section lists all API that can be used to create, edit or otherwise manipul
 | `id`                            | integer | Product ID (post ID) <i class="label label-info">read-only</i>                                                                                                                                                                                                   |
 | `created_at`                    | string  | UTC DateTime when the product was created <i class="label label-info">read-only</i>                                                                                                                                                                              |
 | `updated_at`                    | string  | UTC DateTime when the product was last updated <i class="label label-info">read-only</i>                                                                                                                                                                         |
-| `type`                          | string  | Product type. By default in WooCommerce the following types are available: `simple`, `grouped`, `external`, `variable`. Default is `simple`                                                                                                                      |
+| `type`                          | string  | Product type. By default in JD Atina Web Services Microservices the following types are available: `simple`, `grouped`, `external`, `variable`. Default is `simple`                                                                                                                      |
 | `status`                        | string  | Product status (post status). Default is `publish`                                                                                                                                                                                                               |
 | `downloadable`                  | boolean | If the product is downloadable or not. Downloadable products give access to a file upon purchase                                                                                                                                                                 |
 | `virtual`                       | boolean | If the product is virtual or not. Virtual products are intangible and aren't shipped                                                                                                                                                                             |
@@ -58,7 +58,7 @@ This section lists all API that can be used to create, edit or otherwise manipul
 | `tags`                          | array   | List of product tags names (`string`). In write-mode need to pass a array of tags IDs (`integer`) ([uses wp_set_object_terms()](http://codex.wordpress.org/Function_Reference/wp_set_object_terms))                                                              |
 | `images`                        | array   | List of products images. See [Images Properties](#images-properties)                                                                                                                                                                                             |
 | `featured_src`                  | string  | Featured image URL <i class="label label-info">read-only</i>                                                                                                                                                                                                     |
-| `attributes`                    | array   | List of product attributes. See [Attributes Properties](#attributes-properties). Note: the attribute must be registered in WooCommerce before.                                                                                                                   |
+| `attributes`                    | array   | List of product attributes. See [Attributes Properties](#attributes-properties). Note: the attribute must be registered in JD Atina Web Services Microservices before.                                                                                                                   |
 | `default_attributes`            | array   | Defaults variation attributes. These are the attributes that will be pre-selected on the frontend. See [Default Attributes Properties](#default-attributes-properties) <i class="label label-info">write-only</i>                                                |
 | `downloads`                     | array   | List of downloadable files. See [Downloads Properties](#downloads-properties)                                                                                                                                                                                    |
 | `download_limit`                | integer | Amount of times the product can be downloaded. In write-mode you can sent a blank string for unlimited re-downloads. e.g `''`                                                                                                                                    |
@@ -224,7 +224,7 @@ var data = {
   }
 };
 
-WooCommerce.post('products', data, function(err, data, res) {
+JD Atina Web Services Microservices.post('products', data, function(err, data, res) {
   console.log(res);
 });
 ```
@@ -591,7 +591,7 @@ var data = {
   }
 };
 
-WooCommerce.post('products', data, function(err, data, res) {
+JD Atina Web Services Microservices.post('products', data, function(err, data, res) {
   console.log(res);
 });
 ```
@@ -1124,7 +1124,7 @@ curl https://example.com/wc-api/v2/products/546 \
 ```
 
 ```javascript
-WooCommerce.get('products/546', function(err, data, res) {
+JD Atina Web Services Microservices.get('products/546', function(err, data, res) {
   console.log(res);
 });
 ```
@@ -1258,7 +1258,7 @@ curl https://example.com/wc-api/v2/products \
 ```
 
 ```javascript
-WooCommerce.get('products', function(err, data, res) {
+JD Atina Web Services Microservices.get('products', function(err, data, res) {
   console.log(res);
 });
 ```
@@ -1640,7 +1640,7 @@ var data = {
   }
 };
 
-WooCommerce.put('products/546', data, function(err, data, res) {
+JD Atina Web Services Microservices.put('products/546', data, function(err, data, res) {
   console.log(res);
 });
 ```
@@ -1794,7 +1794,7 @@ curl -X DELETE https://example.com/wc-api/v2/products/546/?force=true \
 ```
 
 ```javascript
-WooCommerce.delete('products/546/?force=true', function(err, data, res) {
+JD Atina Web Services Microservices.delete('products/546/?force=true', function(err, data, res) {
   console.log(res);
 });
 ```
@@ -1844,7 +1844,7 @@ curl https://example.com/wc-api/v2/products/count \
 ```
 
 ```javascript
-WooCommerce.get('products/count', function(err, data, res) {
+JD Atina Web Services Microservices.get('products/count', function(err, data, res) {
   console.log(res);
 });
 ```
@@ -1891,7 +1891,7 @@ curl https://example.com/wc-api/v2/products/546/reviews \
 ```
 
 ```javascript
-WooCommerce.get('products/546/reviews', function(err, data, res) {
+JD Atina Web Services Microservices.get('products/546/reviews', function(err, data, res) {
   console.log(res);
 });
 ```
@@ -1961,7 +1961,7 @@ curl https://example.com/wc-api/v2/products/categories/9 \
 ```
 
 ```javascript
-WooCommerce.get('products/categories/9', function(err, data, res) {
+JD Atina Web Services Microservices.get('products/categories/9', function(err, data, res) {
   console.log(res);
 });
 ```
@@ -2023,7 +2023,7 @@ curl https://example.com/wc-api/v3/products/categories \
 ```
 
 ```javascript
-WooCommerce.get('products/categories', function(err, data, res) {
+JD Atina Web Services Microservices.get('products/categories', function(err, data, res) {
   console.log(res);
 });
 ```

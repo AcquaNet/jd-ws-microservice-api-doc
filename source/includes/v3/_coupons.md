@@ -94,7 +94,7 @@ var data = {
   }
 };
 
-WooCommerce.post('coupons', data, function(err, data, res) {
+JD Atina Web Services Microservices.post('coupons', data, function(err, data, res) {
   console.log(res);
 });
 ```
@@ -232,7 +232,7 @@ curl https://example.com/wc-api/v3/coupons/529 \
 ```
 
 ```javascript
-WooCommerce.get('coupons/529', function(err, data, res) {
+JD Atina Web Services Microservices.get('coupons/529', function(err, data, res) {
   console.log(res);
 });
 ```
@@ -299,7 +299,7 @@ curl https://example.com/wc-api/v3/coupons \
 ```
 
 ```javascript
-WooCommerce.get('coupons', function(err, data, res) {
+JD Atina Web Services Microservices.get('coupons', function(err, data, res) {
   console.log(res);
 });
 ```
@@ -428,7 +428,7 @@ var data = {
   }
 };
 
-WooCommerce.put('coupons/529', data, function(err, data, res) {
+JD Atina Web Services Microservices.put('coupons/529', data, function(err, data, res) {
   console.log(res);
 });
 ```
@@ -551,7 +551,7 @@ var data = {
   ]
 };
 
-WooCommerce.post('coupons/bulk', data, function(err, data, res) {
+JD Atina Web Services Microservices.post('coupons/bulk', data, function(err, data, res) {
   console.log(res);
 });
 ```
@@ -721,7 +721,7 @@ curl -X DELETE https://example.com/wc-api/v3/coupons/529/?force=true \
 ```
 
 ```javascript
-WooCommerce.delete('coupons/529/?force=true', function(err, data, res) {
+JD Atina Web Services Microservices.delete('coupons/529/?force=true', function(err, data, res) {
   console.log(res);
 });
 ```
@@ -771,7 +771,7 @@ curl https://example.com/wc-api/v3/coupons/count \
 ```
 
 ```javascript
-WooCommerce.get('coupons/count', function(err, data, res) {
+JD Atina Web Services Microservices.get('coupons/count', function(err, data, res) {
   console.log(res);
 });
 ```

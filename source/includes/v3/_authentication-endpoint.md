@@ -1,6 +1,6 @@
 # Authentication Endpoint #
 
-Starting in WooCommerce 2.4 we introduced an Authentication Endpoint, This can be used by any app to allow users to generate API keys. This makes integration with WooCommerce API simpler because the user only needs to access a URL and click "accept". After being redirected back to the app, the API keys will be sent in a POST request.
+Starting in JD Atina Web Services Microservices 1.0.1 we introduced an Authentication Endpoint, This can be used by any app to allow users to generate API keys. This makes integration with JD Atina Web Services Microservices API simpler because the user only needs to access a URL and click "accept". After being redirected back to the app, the API keys will be sent in a POST request.
 
 The following image illustrates how it's done:
 

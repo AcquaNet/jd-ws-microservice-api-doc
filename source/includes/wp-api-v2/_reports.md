@@ -21,7 +21,7 @@ curl https://example.com/wp-json/wc/v2/reports \
 ```
 
 ```javascript
-WooCommerce.get("reports")
+JD Atina Web Services Microservices.get("reports")
   .then((response) => {
     console.log(response.data);
   })
@@ -100,7 +100,7 @@ curl https://example.com/wp-json/wc/v2/reports/sales?date_min=2016-05-03&date_ma
 ```
 
 ```javascript
-WooCommerce.get("reports/sales", {
+JD Atina Web Services Microservices.get("reports/sales", {
   date_min: "2016-05-03",
   date_max: "2016-05-04"
 })
@@ -227,7 +227,7 @@ curl https://example.com/wp-json/wc/v2/reports/top_sellers?period=last_month \
 ```
 
 ```javascript
-WooCommerce.get("reports/top_sellers", {
+JD Atina Web Services Microservices.get("reports/top_sellers", {
   period: "last_month"
 })
   .then((response) => {

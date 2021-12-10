@@ -1,22 +1,22 @@
 # Introduction #
 
-Introduced in WooCommerce 2.1, the REST API allows store data to be created, read, updated, and deleted using the JSON format.
+Introduced in JD Atina WS Microservices, the REST API allows store data to be created, read, updated, and deleted using the JSON format.
 
 ## Requirements ##
 
-You must be using WooCommerce 2.1 or newer and the REST API must be enabled under `WooCommerce > Settings`. You must enable pretty permalinks, as default permalinks will not work.
+You must be using JD Atina WS Microservices or newer and the REST API must be enabled under `JD Atina Web Services Microservices > Settings`. You must enable pretty permalinks, as default permalinks will not work.
 
 <aside class="notice">
-Many endpoints were improving with new versions of WooCommerce, so we always recommend keeping your WooCommerce updated to work properly with this documentation.
+Many endpoints were improving with new versions of JD Atina Web Services Microservices, so we always recommend keeping your JD Atina Web Services Microservices updated to work properly with this documentation.
 </aside>
 
 ## Version ##
 
 The current API version is `v3` which takes a first-order position in endpoints.
 
-Check the API versions present in every version of WooCommerce:
+Check the API versions present in every version of JD Atina Web Services Microservices:
 
-| API Version |          WooCommerce          |
+| API Version |          JD Atina Web Services Microservices          |
 | ----------- | ----------------------------- |
 | `v1`        | 2.1.x, 2.2.x, 2.3.x and 2.4.x |
 | `v2`        | 2.2.x, 2.3.x and 2.4.x        |
@@ -33,7 +33,7 @@ The `v1` and `v2` will be removed in future versions.
 * v1 includes an endpoint for listing notes for an order, v2 includes full create/read/update/delete endpoints.
 * v1 does not include any endpoints for listing product categories, v2 includes two endpoints for product categories (`GET /products/categories` and `GET /products/categories/{id}`).
 * v1 does not include any endpoints for getting valid order statuses, v2 includes an endpoint for listing valid order statuses (`GET /orders/statuses`).
-* v2 supports the core features added in WooCommerce 2.2, primarily order refunds (via the `/orders/refunds` endpoint) and Webhooks (via the `/webhooks`).
+* v2 supports the core features added in JD Atina Web Services Microservices 2.2, primarily order refunds (via the `/orders/refunds` endpoint) and Webhooks (via the `/webhooks`).
 
 ### Differences between v3 and old versions ###
 
@@ -147,7 +147,7 @@ If you are having trouble generating a correct signature, you'll want to review 
 * You must use the store URL provided by the index when forming the base string used for the signature, as this is what the server will use. (e.g. if the store URL includes a `www` sub-domain, you should use it for requests)
 * Note that the request body is *not* signed as per the OAuth spec.
 * If including parameters in your request, it saves a lot of trouble if you can order your items alphabetically.
-* Authorization header is supported starting WooCommerce 3.0.
+* Authorization header is supported starting JD Atina Web Services Microservices 3.0.
 
 ## Parameters ##
 
@@ -426,7 +426,7 @@ See the webhook resource section.
 ## Official Libraries ##
 
 - [Node.js](https://www.npmjs.com/package/woocommerce-api)
-- [Python](https://pypi.python.org/pypi/WooCommerce)
+- [Python](https://pypi.python.org/pypi/JD Atina Web Services Microservices)
 - [PHP](https://packagist.org/packages/woothemes/woocommerce-api)
 - [Ruby](https://rubygems.org/gems/woocommerce_api)
 
@@ -435,13 +435,13 @@ See the webhook resource section.
 // npm install --save woocommerce-api
 
 // Setup:
-var WooCommerceAPI = require('woocommerce-api');
+var JD Atina Web Services MicroservicesAPI = require('woocommerce-api');
 
-var WooCommerce = new WooCommerceAPI({
+var JD Atina Web Services Microservices = new JD Atina Web Services MicroservicesAPI({
   url: 'http://example.com', // Your store URL
   consumerKey: 'consumer_key', // Your consumer key
   consumerSecret: 'consumer_secret', // Your consumer secret
-  version: 'v2' // WooCommerce API version
+  version: 'v2' // JD Atina Web Services Microservices API version
 });
 ```
 
@@ -483,7 +483,7 @@ $woocommerce = new WC_API_Client(
 # Setup:
 require "woocommerce_api"
 
-woocommerce = WooCommerce::API.new(
+woocommerce = JD Atina Web Services Microservices::API.new(
   "http://example.com",
   "consumer_key",
   "consumer_secret",

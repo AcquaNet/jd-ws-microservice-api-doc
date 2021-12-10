@@ -45,7 +45,7 @@ var data = {
   }
 };
 
-WooCommerce.post('products/tags', data, function(err, data, res) {
+JD Atina Web Services Microservices.post('products/tags', data, function(err, data, res) {
   console.log(res);
 });
 ```
@@ -97,7 +97,7 @@ woocommerce.post("products/tags", data).parsed_response
 ```
 
 <aside class="notice">
-	Endpoint introduced since WooCommerce 2.5.
+	Endpoint introduced since JD Atina Web Services Microservices 2.5.
 </aside>
 
 ## View a Product Tag ##
@@ -117,7 +117,7 @@ curl https://example.com/wc-api/v3/products/tags/37 \
 ```
 
 ```javascript
-WooCommerce.get('products/tags/37', function(err, data, res) {
+JD Atina Web Services Microservices.get('products/tags/37', function(err, data, res) {
   console.log(res);
 });
 ```
@@ -149,7 +149,7 @@ woocommerce.get("products/tags/37").parsed_response
 ```
 
 <aside class="notice">
-	Endpoint introduced since WooCommerce 2.5.
+	Endpoint introduced since JD Atina Web Services Microservices 2.5.
 </aside>
 
 ## View List of Product Tags ##
@@ -169,7 +169,7 @@ curl https://example.com/wc-api/v3/products/tags \
 ```
 
 ```javascript
-WooCommerce.get('products/tags', function(err, data, res) {
+JD Atina Web Services Microservices.get('products/tags', function(err, data, res) {
   console.log(res);
 });
 ```
@@ -210,7 +210,7 @@ woocommerce.get("products/tags").parsed_response
 ```
 
 <aside class="notice">
-	Endpoint introduced since WooCommerce 2.5.
+	Endpoint introduced since JD Atina Web Services Microservices 2.5.
 </aside>
 
 ## Update a Product Tag ##
@@ -244,7 +244,7 @@ var data = {
   }
 };
 
-WooCommerce.put('products/tags/37', data, function(err, data, res) {
+JD Atina Web Services Microservices.put('products/tags/37', data, function(err, data, res) {
   console.log(res);
 });
 ```
@@ -296,7 +296,7 @@ woocommerce.put("products/tags/37", data).parsed_response
 ```
 
 <aside class="notice">
-	Endpoint introduced since WooCommerce 2.5.
+	Endpoint introduced since JD Atina Web Services Microservices 2.5.
 </aside>
 
 ## Delete a Product Tag ##
@@ -318,7 +318,7 @@ curl -X DELETE https://example.com/wc-api/v3/products/tags/37 \
 ```
 
 ```javascript
-WooCommerce.delete('products/tags/37', function(err, data, res) {
+JD Atina Web Services Microservices.delete('products/tags/37', function(err, data, res) {
   console.log(res);
 });
 ```
@@ -344,5 +344,5 @@ woocommerce.delete("products/tags/37").parsed_response
 ```
 
 <aside class="notice">
-	Endpoint introduced since WooCommerce 2.5.
+	Endpoint introduced since JD Atina Web Services Microservices 2.5.
 </aside>

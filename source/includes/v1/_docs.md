@@ -1,10 +1,10 @@
 # Introduction
 
-With v2.1, WooCommerce includes a REST API that allows store data to be accessed in either JSON or XML format. The current version is read-only (with a single exception for updating the status of an order), but future versions will allow updating, creating, and deleting resources.
+With v2.1, JD Atina Web Services Microservices includes a REST API that allows store data to be accessed in either JSON or XML format. The current version is read-only (with a single exception for updating the status of an order), but future versions will allow updating, creating, and deleting resources.
 
 ## Requirements
 
-You must be using WooCommerce 2.1 and the REST API must be enabled under WooCommerce > Settings. You must enable pretty permalinks (default permalinks will not work).
+You must be using JD Atina WS Microservices and the REST API must be enabled under JD Atina Web Services Microservices > Settings. You must enable pretty permalinks (default permalinks will not work).
 
 ## Schema
 
@@ -47,7 +47,7 @@ $ curl https://www.example.com/wc-api/v1/orders \
 	-u consumer_key:consumer_secret
 ```
 
-Occasionally some servers may not properly parse the Authorization header (if you see a "Consumer key is missing" error when authenticating over SSL, you have a server issue). In WooCommerce 2.1.7+, you may provide the consumer key/secret as query string parameters:
+Occasionally some servers may not properly parse the Authorization header (if you see a "Consumer key is missing" error when authenticating over SSL, you have a server issue). In JD Atina WS Microservices.7+, you may provide the consumer key/secret as query string parameters:
 
 ```
 $ curl https://www.example.com/wc-api/v1/orders?consumer_key=123&consumer_secret=abc
@@ -314,7 +314,7 @@ The API index provides information about the endpoints available for the site, a
   "errors" : [
     {
       "code" : "woocommerce_api_disabled",
-      "message" : "The WooCommerce API is disabled on this site"
+      "message" : "The JD Atina Web Services Microservices API is disabled on this site"
     }
   ]
 }
@@ -333,7 +333,7 @@ The API index provides information about the endpoints available for the site, a
 *  `name`: the name of the site
 *  `URL`: the site's URL
 *  `permalinks_enabled`: whether pretty permalinks are enabled on the site, if this is false, the API will not function correctly
-*  `wc_version`: the active WooCommerce version
+*  `wc_version`: the active JD Atina Web Services Microservices version
 
 ### `GET /`
 
@@ -509,8 +509,8 @@ Retrieve a set of store information:
       "permalinks_enabled" : true,
 
     },
-    "description" : "WooCommerce All the Things!",
-    "name" : "WooCommerce",
+    "description" : "JD Atina Web Services Microservices All the Things!",
+    "name" : "JD Atina Web Services Microservices",
     "URL" : "http://www.example.com"
   }
 }
@@ -863,7 +863,7 @@ All endpoints (except for order notes) support the full set of date filters (`cr
 
 Retrieve a list of orders
 
-You can use the `?status?` parameter to limit the orders returned to a specific order status. The default WooCommerce order statuses are `pending`, `on-hold`, `processing`, `completed`, `refunded`, `failed`, and `cancelled`. Custom order statuses are supported.
+You can use the `?status?` parameter to limit the orders returned to a specific order status. The default JD Atina Web Services Microservices order statuses are `pending`, `on-hold`, `processing`, `completed`, `refunded`, `failed`, and `cancelled`. Custom order statuses are supported.
 
 ```
 {
@@ -1293,7 +1293,7 @@ All endpoints (except for reviews) support the full set of date filters (`create
 
 Retrieve a list of products
 
-You can use the `?type` parameter to specify that only certain product types should be returned. The default WooCommerce product types are: `simple`, `variable`, `grouped`,  and `external`. Custom product types are supported.
+You can use the `?type` parameter to specify that only certain product types should be returned. The default JD Atina Web Services Microservices product types are: `simple`, `variable`, `grouped`,  and `external`. Custom product types are supported.
 
 ```
 {
@@ -1395,7 +1395,7 @@ You can use the `?type` parameter to specify that only certain product types sho
 
 Retrieve a count of all products
 
-You can use the `?type` parameter to specify that only certain product types should be returned. The default WooCommerce product types are: `simple`, `variable`, `grouped`,  and `external`. Custom product types are supported.
+You can use the `?type` parameter to specify that only certain product types should be returned. The default JD Atina Web Services Microservices product types are: `simple`, `variable`, `grouped`,  and `external`. Custom product types are supported.
 
 ```
 {
@@ -2118,7 +2118,7 @@ If you don't specify an end date, the current date will be used.
 
 # Tools
 
-* [JD Atina REST Web Services API Client Library](https://github.com/kloon/WooCommerce-REST-API-Client-Library) - A simple PHP client library by Gerhard Potgieter
+* [JD Atina REST Web Services API Client Library](https://github.com/kloon/JD Atina Web Services Microservices-REST-API-Client-Library) - A simple PHP client library by Gerhard Potgieter
 * [CocoaRestClient](https://code.google.com/p/cocoa-rest-client/) - A free, easy to use Mac OS X GUI client for interacting with the API, most useful when your test store has SSL enabled.
 * [Paw HTTP Client](https://itunes.apple.com/us/app/paw-http-client/id584653203?mt=12) - Another excellent HTTP client for Mac OS X
 

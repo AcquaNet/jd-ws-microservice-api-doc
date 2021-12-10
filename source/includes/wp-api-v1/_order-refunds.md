@@ -58,7 +58,7 @@ const data = {
   amount: "10"
 };
 
-WooCommerce.post("orders/116/refunds", data)
+JD Atina Web Services Microservices.post("orders/116/refunds", data)
   .then((response) => {
     console.log(response.data);
   })
@@ -141,7 +141,7 @@ curl https://example.com/wp-json/wc/v1/orders/116/refunds/150 \
 ```
 
 ```javascript
-WooCommerce.get("orders/116/refunds/150")
+JD Atina Web Services Microservices.get("orders/116/refunds/150")
   .then((response) => {
     console.log(response.data);
   })
@@ -216,7 +216,7 @@ curl https://example.com/wp-json/wc/v1/orders/116/refunds \
 ```
 
 ```javascript
-WooCommerce.get("orders/116/refunds")
+JD Atina Web Services Microservices.get("orders/116/refunds")
   .then((response) => {
     console.log(response.data);
   })
@@ -345,7 +345,7 @@ curl -X DELETE https://example.com/wp-json/wc/v1/orders/116/refunds/150?force=tr
 ```
 
 ```javascript
-WooCommerce.delete("orders/116/refunds/150", {
+JD Atina Web Services Microservices.delete("orders/116/refunds/150", {
   force: true
 })
   .then((response) => {

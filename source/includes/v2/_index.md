@@ -9,7 +9,7 @@ The API index provides information about the endpoints available for the site, a
   "errors" : [
     {
       "code" : "woocommerce_api_disabled",
-      "message" : "The WooCommerce API is disabled on this site"
+      "message" : "The JD Atina Web Services Microservices API is disabled on this site"
     }
   ]
 }
@@ -22,9 +22,9 @@ The API index provides information about the endpoints available for the site, a
 | `name`        | string | The name of the site - `get_option( 'blogname' )`                                                                                                 |
 | `description` | string | The site's description - `get_option( 'blogdescription' )`                                                                                        |
 | `URL`         | string | The site's URL - `get_option( 'siteurl' )`                                                                                                        |
-| `wc_version`  | string | The active WooCommerce version                                                                                                                    |
+| `wc_version`  | string | The active JD Atina Web Services Microservices version                                                                                                                    |
 | `routes`      | array  | A list of available endpoints for the site keyed by relative URL. Each endpoint specifies the HTTP methods supported as well as the canonical URL |
-| `meta`        | array  | A list of WooCommerce settings used in the API. See [Meta Properties](#meta-properties)                                                           |
+| `meta`        | array  | A list of JD Atina Web Services Microservices settings used in the API. See [Meta Properties](#meta-properties)                                                           |
 
 ### Meta Properties ###
 
@@ -64,7 +64,7 @@ curl https://example.com/wc-api/v2 \
 ```
 
 ```javascript
-WooCommerce.get('', function(err, data, res) {
+JD Atina Web Services Microservices.get('', function(err, data, res) {
   console.log(res);
 });
 ```
@@ -106,7 +106,7 @@ woocommerce.get("").parsed_response
             "timezone": "America/Sao_Paulo",
             "weight_unit": "lbs"
         },
-        "name": "WooCommerce Dev",
+        "name": "JD Atina Web Services Microservices Dev",
         "routes": {
             "/": {
                 "meta": {

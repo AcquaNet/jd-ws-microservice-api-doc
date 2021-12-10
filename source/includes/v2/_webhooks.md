@@ -12,7 +12,7 @@ This section lists all API that can be used to create, edit or otherwise manipul
 | `topic`        | string  | Webhook topic, e.g. `coupon.updated`. [See the complete list](#topics)                                                                                                               |
 | `resource`     | string  | Webhook resource, e.g. `coupon` <i class="label label-info">read-only</i>                                                                                                            |
 | `event`        | string  | Webhook event, e.g. `updated` <i class="label label-info">read-only</i>                                                                                                              |
-| `hooks`        | array   | WooCommerce action names associated with the webhook <i class="label label-info">read-only</i>                                                                                       |
+| `hooks`        | array   | JD Atina Web Services Microservices action names associated with the webhook <i class="label label-info">read-only</i>                                                                                       |
 | `delivery_url` | string  | The URL where the webhook payload is delivered                                                                                                                                       |
 | `secret`       | string  | Secret key used to generate a hash of the delivered webhook and provided in the request headers. <i class="label label-info">required</i> <i class="label label-info">write-only</i> |
 | `created_at`   | string  | UTC DateTime when the webhook was created <i class="label label-info">read-only</i>                                                                                                  |
@@ -39,7 +39,7 @@ This section lists all API that can be used to create, edit or otherwise manipul
 
 |         Attribute          |   Type  |                                        Description                                         |
 | -------------------------- | ------- | ------------------------------------------------------------------------------------------ |
-| `User-Agent`               | string  | The request user agent, defaults to "WooCommerce/{version} Hookshot (WordPress/{version})" |
+| `User-Agent`               | string  | The request user agent, defaults to "JD Atina Web Services Microservices/{version} Hookshot (WordPress/{version})" |
 | `Content-Type`             | string  | The request content-type, defaults to "application/json"                                   |
 | `X-WC-Webhook-Topic`       | string  | The webhook topic                                                                          |
 | `X-WC-Webhook-Resource`    | string  | The webhook resource                                                                       |
@@ -85,7 +85,7 @@ var data = {
   }
 };
 
-WooCommerce.post('webhooks', data, function(err, data, res) {
+JD Atina Web Services Microservices.post('webhooks', data, function(err, data, res) {
   console.log(res);
 });
 ```
@@ -171,7 +171,7 @@ curl https://example.com/wc-api/v2/webhooks/535 \
 ```
 
 ```javascript
-WooCommerce.get('webhooks/535', function(err, data, res) {
+JD Atina Web Services Microservices.get('webhooks/535', function(err, data, res) {
   console.log(res);
 });
 ```
@@ -228,7 +228,7 @@ curl https://example.com/wc-api/v2/webhooks \
 ```
 
 ```javascript
-WooCommerce.get('webhooks', function(err, data, res) {
+JD Atina Web Services Microservices.get('webhooks', function(err, data, res) {
   console.log(res);
 });
 ```
@@ -321,7 +321,7 @@ var data = {
   }
 }
 
-WooCommerce.put('webhooks/535', data, function(err, data, res) {
+JD Atina Web Services Microservices.put('webhooks/535', data, function(err, data, res) {
   console.log(res);
 });
 ```
@@ -398,7 +398,7 @@ curl -X DELETE https://example.com/wc-api/v2/webhooks/535 \
 ```
 
 ```javascript
-WooCommerce.delete('webhooks/535', function(err, data, res) {
+JD Atina Web Services Microservices.delete('webhooks/535', function(err, data, res) {
   console.log(res);
 });
 ```
@@ -442,7 +442,7 @@ curl https://example.com/wc-api/v2/webhooks/count \
 ```
 
 ```javascript
-WooCommerce.get('webhooks/count', function(err, data, res) {
+JD Atina Web Services Microservices.get('webhooks/count', function(err, data, res) {
   console.log(res);
 });
 ```
@@ -492,7 +492,7 @@ curl https://example.com/wc-api/v2/webhooks/535/deliveries/378 \
 ```
 
 ```javascript
-WooCommerce.get('webhooks/535/deliveries/378', function(err, data, res) {
+JD Atina Web Services Microservices.get('webhooks/535/deliveries/378', function(err, data, res) {
   console.log(res);
 });
 ```
@@ -520,7 +520,7 @@ woocommerce.get("webhooks/535/deliveries/378").parsed_response
     "request_method": "POST",
     "request_url": "http://requestb.in/125q7ns1",
     "request_headers": {
-      "User-Agent": "WooCommerce/2.3.0 Hookshot (WordPress/4.1)",
+      "User-Agent": "JD Atina Web Services Microservices/2.3.0 Hookshot (WordPress/4.1)",
       "Content-Type": "application/json",
       "X-WC-Webhook-Topic": "action.woocommerce_add_to_cart",
       "X-WC-Webhook-Resource": "action",
@@ -570,7 +570,7 @@ curl https://example.com/wc-api/v2/webhooks/535/deliveries \
 ```
 
 ```javascript
-WooCommerce.get('webhooks/535/deliveries', function(err, data, res) {
+JD Atina Web Services Microservices.get('webhooks/535/deliveries', function(err, data, res) {
   console.log(res);
 });
 ```
@@ -599,7 +599,7 @@ woocommerce.get("webhooks/535/deliveries").parsed_response
       "request_method": "POST",
       "request_url": "http://requestb.in/125q7ns1",
       "request_headers": {
-        "User-Agent": "WooCommerce/2.3.0 Hookshot (WordPress/4.1)",
+        "User-Agent": "JD Atina Web Services Microservices/2.3.0 Hookshot (WordPress/4.1)",
         "Content-Type": "application/json",
         "X-WC-Webhook-Topic": "action.woocommerce_add_to_cart",
         "X-WC-Webhook-Resource": "action",
@@ -630,7 +630,7 @@ woocommerce.get("webhooks/535/deliveries").parsed_response
       "request_method": "POST",
       "request_url": "http://requestb.in/125q7ns1",
       "request_headers": {
-        "User-Agent": "WooCommerce/2.3.0 Hookshot (WordPress/4.1)",
+        "User-Agent": "JD Atina Web Services Microservices/2.3.0 Hookshot (WordPress/4.1)",
         "Content-Type": "application/json",
         "X-WC-Webhook-Topic": "action.woocommerce_add_to_cart",
         "X-WC-Webhook-Resource": "action",

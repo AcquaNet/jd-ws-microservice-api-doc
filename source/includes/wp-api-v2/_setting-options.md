@@ -33,7 +33,7 @@ curl https://example.com/wp-json/wc/v2/settings/general/woocommerce_allowed_coun
 ```
 
 ```javascript
-WooCommerce.get("settings/general/woocommerce_allowed_countries")
+JD Atina Web Services Microservices.get("settings/general/woocommerce_allowed_countries")
   .then((response) => {
     console.log(response.data);
   })
@@ -104,7 +104,7 @@ curl https://example.com/wp-json/wc/v2/settings/general \
 ```
 
 ```javascript
-WooCommerce.get("settings/general")
+JD Atina Web Services Microservices.get("settings/general")
   .then((response) => {
     console.log(response.data);
   })
@@ -1386,7 +1386,7 @@ const data = {
   value: "all_except"
 };
 
-WooCommerce.put("settings/general/woocommerce_allowed_countries", data)
+JD Atina Web Services Microservices.put("settings/general/woocommerce_allowed_countries", data)
   .then((response) => {
     console.log(response.data);
   })
@@ -1524,7 +1524,7 @@ const data = {
   ]
 };
 
-WooCommerce.post("products/22/settings/general/batch", data)
+JD Atina Web Services Microservices.post("products/22/settings/general/batch", data)
   .then((response) => {
     console.log(response.data);
   })

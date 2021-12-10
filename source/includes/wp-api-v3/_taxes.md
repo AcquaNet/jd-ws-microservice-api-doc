@@ -9,10 +9,10 @@ The taxes API allows you to create, view, update, and delete individual tax rate
 | `id`       | integer | Unique identifier for the resource. <i class="label label-info">read-only</i>                                                                                                   |
 | `country`  | string  | Country ISO 3166 code. See [ISO 3166 Codes (Countries)](http://www.chemie.fu-berlin.de/diverse/doc/ISO_3166.html) for more details                                              |
 | `state`    | string  | State code.                                                                                                                                                                     |
-| `postcode` | string  | Postcode/ZIP, it doesn't support multiple values. Deprecated as of WooCommerce 5.3, `postcodes` should be used instead.                                                         |
-| `city`     | string  | City name, it doesn't support multiple values. Deprecated as of WooCommerce 5.3, `postcodes` should be used instead.                                                            |
-| `postcodes`| string[]  | Postcodes/ZIPs. Introduced in WooCommerce 5.3.                                                                                                                                |
-| `cities`   | string[]  | City names. Introduced in WooCommerce 5.3.                                                                                                                                    |
+| `postcode` | string  | Postcode/ZIP, it doesn't support multiple values. Deprecated as of JD Atina Web Services Microservices 5.3, `postcodes` should be used instead.                                                         |
+| `city`     | string  | City name, it doesn't support multiple values. Deprecated as of JD Atina Web Services Microservices 5.3, `postcodes` should be used instead.                                                            |
+| `postcodes`| string[]  | Postcodes/ZIPs. Introduced in JD Atina Web Services Microservices 5.3.                                                                                                                                |
+| `cities`   | string[]  | City names. Introduced in JD Atina Web Services Microservices 5.3.                                                                                                                                    |
 | `rate`     | string  | Tax rate.                                                                                                                                                                       |
 | `name`     | string  | Tax rate name.                                                                                                                                                                  |
 | `priority` | integer | Tax priority. Only 1 matching rate per priority will be used. To define multiple tax rates for a single area you need to specify a different priority per rate. Default is `1`. |
@@ -60,7 +60,7 @@ const data = {
   shipping: false
 };
 
-WooCommerce.post("taxes", data)
+JD Atina Web Services Microservices.post("taxes", data)
   .then((response) => {
     console.log(response.data);
   })
@@ -171,7 +171,7 @@ curl https://example.com/wp-json/wc/v3/taxes/72 \
 ```
 
 ```javascript
-WooCommerce.get("taxes/72")
+JD Atina Web Services Microservices.get("taxes/72")
   .then((response) => {
     console.log(response.data);
   })
@@ -252,7 +252,7 @@ curl https://example.com/wp-json/wc/v3/taxes \
 ```
 
 ```javascript
-WooCommerce.get("taxes")
+JD Atina Web Services Microservices.get("taxes")
   .then((response) => {
     console.log(response.data);
   })
@@ -607,7 +607,7 @@ const data = {
   name: "US Tax"
 };
 
-WooCommerce.put("taxes/72", data)
+JD Atina Web Services Microservices.put("taxes/72", data)
   .then((response) => {
     console.log(response.data);
   })
@@ -702,7 +702,7 @@ curl -X DELETE https://example.com/wp-json/wc/v3/taxes/72?force=true \
 ```
 
 ```javascript
-WooCommerce.delete("taxes/72", {
+JD Atina Web Services Microservices.delete("taxes/72", {
   force: true
 })
   .then((response) => {
@@ -1575,7 +1575,7 @@ const data = {
   ]
 };
 
-WooCommerce.post("taxes/batch", data)
+JD Atina Web Services Microservices.post("taxes/batch", data)
   .then((response) => {
     console.log(response.data);
   })

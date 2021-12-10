@@ -42,7 +42,7 @@ var data = {
   }
 };
 
-WooCommerce.post('products/attributes/1/terms', data, function(err, data, res) {
+JD Atina Web Services Microservices.post('products/attributes/1/terms', data, function(err, data, res) {
   console.log(res);
 });
 ```
@@ -93,7 +93,7 @@ woocommerce.post("products/attributes/1/terms", data).parsed_response
 ```
 
 <aside class="notice">
-	Endpoint introduced since WooCommerce 2.5.
+	Endpoint introduced since JD Atina Web Services Microservices 2.5.
 </aside>
 
 ## View a Product Attribute Term ##
@@ -113,7 +113,7 @@ curl https://example.com/wc-api/v3/products/attributes/1/terms/18 \
 ```
 
 ```javascript
-WooCommerce.get('products/attributes/1/terms/18', function(err, data, res) {
+JD Atina Web Services Microservices.get('products/attributes/1/terms/18', function(err, data, res) {
   console.log(res);
 });
 ```
@@ -144,7 +144,7 @@ woocommerce.get("products/attributes/1/terms/18").parsed_response
 ```
 
 <aside class="notice">
-	Endpoint introduced since WooCommerce 2.5.
+	Endpoint introduced since JD Atina Web Services Microservices 2.5.
 </aside>
 
 ## View List of Product Attribute Terms ##
@@ -164,7 +164,7 @@ curl https://example.com/wc-api/v3/products/attributes/1/terms \
 ```
 
 ```javascript
-WooCommerce.get('products/attributes/1/terms', function(err, data, res) {
+JD Atina Web Services Microservices.get('products/attributes/1/terms', function(err, data, res) {
   console.log(res);
 });
 ```
@@ -233,7 +233,7 @@ woocommerce.get("products/attributes/1/terms").parsed_response
 ```
 
 <aside class="notice">
-	Endpoint introduced since WooCommerce 2.5.
+	Endpoint introduced since JD Atina Web Services Microservices 2.5.
 </aside>
 
 ## Update a Product Attribute Term ##
@@ -267,7 +267,7 @@ var data = {
   }
 };
 
-WooCommerce.put('products/attributes/1/terms/18', data, function(err, data, res) {
+JD Atina Web Services Microservices.put('products/attributes/1/terms/18', data, function(err, data, res) {
   console.log(res);
 });
 ```
@@ -318,7 +318,7 @@ woocommerce.put("products/attributes/1/terms/18", data).parsed_response
 ```
 
 <aside class="notice">
-	Endpoint introduced since WooCommerce 2.5.
+	Endpoint introduced since JD Atina Web Services Microservices 2.5.
 </aside>
 
 ## Delete a Product Attribute Term ##
@@ -340,7 +340,7 @@ curl -X DELETE https://example.com/wc-api/v3/products/attributes/1/terms/18 \
 ```
 
 ```javascript
-WooCommerce.delete('products/attributes/1/terms/18', function(err, data, res) {
+JD Atina Web Services Microservices.delete('products/attributes/1/terms/18', function(err, data, res) {
   console.log(res);
 });
 ```
@@ -366,5 +366,5 @@ woocommerce.delete("products/attributes/1/terms/18").parsed_response
 ```
 
 <aside class="notice">
-	Endpoint introduced since WooCommerce 2.5.
+	Endpoint introduced since JD Atina Web Services Microservices 2.5.
 </aside>

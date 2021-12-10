@@ -12,7 +12,7 @@ The orders API allows you to create, view, update, and delete individual, or a b
 | `order_key`            | string    | Order key. <i class="label label-info">read-only</i>                                                                                                                 |
 | `number`               | string    | Order number. <i class="label label-info">read-only</i>                                                                                                              |
 | `currency`             | string    | Currency the order was created with, in ISO format, e.g `USD`. Default is the current store currency.                                                                |
-| `version`              | string    | Version of WooCommerce when the order was made. <i class="label label-info">read-only</i>                                                                            |
+| `version`              | string    | Version of JD Atina Web Services Microservices when the order was made. <i class="label label-info">read-only</i>                                                                            |
 | `prices_include_tax`   | boolean   | Shows if the prices included tax during checkout. <i class="label label-info">read-only</i>                                                                          |
 | `date_created`         | date-time | The date the order was created, in the site's timezone. <i class="label label-info">read-only</i>                                                                    |
 | `date_modified`        | date-time | The date the order was last modified, in the site's timezone. <i class="label label-info">read-only</i>                                                              |
@@ -228,7 +228,7 @@ const data = {
   ]
 };
 
-WooCommerce.post("orders", data)
+JD Atina Web Services Microservices.post("orders", data)
   .then((response) => {
     console.log(response.data);
   })
@@ -555,7 +555,7 @@ curl https://example.com/wp-json/wc/v1/orders/154 \
 ```
 
 ```javascript
-WooCommerce.get("orders/154")
+JD Atina Web Services Microservices.get("orders/154")
   .then((response) => {
     console.log(response.data);
   })
@@ -748,7 +748,7 @@ curl https://example.com/wp-json/wc/v1/orders \
 ```
 
 ```javascript
-WooCommerce.get("orders")
+JD Atina Web Services Microservices.get("orders")
   .then((response) => {
     console.log(response.data);
   })
@@ -1068,7 +1068,7 @@ const data = {
   status: "completed"
 };
 
-WooCommerce.put("orders/154", data)
+JD Atina Web Services Microservices.put("orders/154", data)
   .then((response) => {
     console.log(response.data);
   })
@@ -1269,7 +1269,7 @@ curl -X DELETE https://example.com/wp-json/wc/v1/orders/154?force=true \
 ```
 
 ```javascript
-WooCommerce.delete("orders/154", {
+JD Atina Web Services Microservices.delete("orders/154", {
   force: true
 })
   .then((response) => {
@@ -1684,7 +1684,7 @@ const data = {
   ]
 };
 
-WooCommerce.post("orders/batch", data)
+JD Atina Web Services Microservices.post("orders/batch", data)
   .then((response) => {
     console.log(response.data);
   })

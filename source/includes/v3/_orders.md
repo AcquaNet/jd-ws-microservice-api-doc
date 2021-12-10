@@ -238,7 +238,7 @@ var data = {
   }
 };
 
-WooCommerce.post('orders', data, function(err, data, res) {
+JD Atina Web Services Microservices.post('orders', data, function(err, data, res) {
   console.log(res);
 });
 ```
@@ -595,7 +595,7 @@ curl https://example.com/wc-api/v3/orders/645 \
 ```
 
 ```javascript
-WooCommerce.get('orders/645', function(err, data, res) {
+JD Atina Web Services Microservices.get('orders/645', function(err, data, res) {
   console.log(res);
 });
 ```
@@ -779,7 +779,7 @@ woocommerce.get("orders/645").parsed_response
 | `expand` | string | Expand `coupons`, `products` and `taxes` objects, eg: `filter[expand]=coupons,products,taxes` |
 
 <aside class="notice">
-	<code>expand</code> filter is available starting from WooCommerce 2.5.
+	<code>expand</code> filter is available starting from JD Atina Web Services Microservices 2.5.
 </aside>
 
 ## View List of Orders ##
@@ -801,7 +801,7 @@ curl https://example.com/wc-api/v3/orders \
 ```
 
 ```javascript
-WooCommerce.get('orders', function(err, data, res) {
+JD Atina Web Services Microservices.get('orders', function(err, data, res) {
   console.log(res);
 });
 ```
@@ -1135,7 +1135,7 @@ woocommerce.get("orders").parsed_response
 | `expand` | string | Expand `coupons`, `products` and `taxes` objects, eg: `filter[expand]=coupons,products,taxes` |
 
 <aside class="notice">
-	<code>expand</code> filter is available starting from WooCommerce 2.5.
+	<code>expand</code> filter is available starting from JD Atina Web Services Microservices 2.5.
 </aside>
 
 ## Update an Order ##
@@ -1171,7 +1171,7 @@ var data = {
   }
 };
 
-WooCommerce.put('orders/645', data, function(err, data, res) {
+JD Atina Web Services Microservices.put('orders/645', data, function(err, data, res) {
   console.log(res);
 });
 ```
@@ -1415,7 +1415,7 @@ var data = {
   ]
 };
 
-WooCommerce.post('orders/bulk', data, function(err, data, res) {
+JD Atina Web Services Microservices.post('orders/bulk', data, function(err, data, res) {
   console.log(res);
 });
 ```
@@ -1801,7 +1801,7 @@ curl -X DELETE https://example.com/wc-api/v3/orders/645/?force=true \
 ```
 
 ```javascript
-WooCommerce.delete('orders/645/?force=true', function(err, data, res) {
+JD Atina Web Services Microservices.delete('orders/645/?force=true', function(err, data, res) {
   console.log(res);
 });
 ```
@@ -1852,7 +1852,7 @@ curl https://example.com/wc-api/v3/orders/count \
 ```
 
 ```javascript
-WooCommerce.get('orders/count', function(err, data, res) {
+JD Atina Web Services Microservices.get('orders/count', function(err, data, res) {
   console.log(res);
 });
 ```
@@ -1902,7 +1902,7 @@ curl https://example.com/wc-api/v3/orders/statuses \
 ```
 
 ```javascript
-WooCommerce.get('orders/statuses', function(err, data, res) {
+JD Atina Web Services Microservices.get('orders/statuses', function(err, data, res) {
   console.log(res);
 });
 ```

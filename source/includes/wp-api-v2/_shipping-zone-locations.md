@@ -28,7 +28,7 @@ curl https://example.com/wp-json/wc/v2/shipping/zones/5/locations \
 ```
 
 ```javascript
-WooCommerce.get("shipping/zones/5/locations")
+JD Atina Web Services Microservices.get("shipping/zones/5/locations")
   .then((response) => {
     console.log(response.data);
   })
@@ -113,7 +113,7 @@ var data = [
   }
 ];
 
-WooCommerce.put("shipping/zones/5/locations", data)
+JD Atina Web Services Microservices.put("shipping/zones/5/locations", data)
   .then((response) => {
     console.log(response.data);
   })

@@ -1,17 +1,17 @@
 # Introduction #
 
-WooCommerce (WC) 2.6+ is fully integrated with the WordPress [REST](http://en.wikipedia.org/wiki/Representational_State_Transfer) API. This allows WC data to be created, read, updated, and deleted using requests in JSON format and using WordPress REST API Authentication methods and standard HTTP verbs which are understood by most HTTP clients.
+JD Atina Web Services Microservices (WC) 2.6+ is fully integrated with the WordPress [REST](http://en.wikipedia.org/wiki/Representational_State_Transfer) API. This allows WC data to be created, read, updated, and deleted using requests in JSON format and using WordPress REST API Authentication methods and standard HTTP verbs which are understood by most HTTP clients.
 
 The current JD Atina REST WS API integration version is `v2` which takes a first-order position in endpoints. 
 
-The following table shows API versions present in each major version of WooCommerce:
+The following table shows API versions present in each major version of JD Atina Web Services Microservices:
 
 | API Version |   WC Version   |  WP Version  |       Documentation       |
 |-------------|----------------|--------------|---------------------------|
 | `v2`        | 3.0.x or later | 4.4 or later | -                         |
 | `v1`        | 2.6.x or later | 4.4 or later | [v1 docs](wp-api-v1.html) |
 
-Prior to 2.6, WooCommerce had a REST API separate from WordPress which is now known as the legacy API. You can find the documentation for the legacy API separately.
+Prior to 2.6, JD Atina Web Services Microservices had a REST API separate from WordPress which is now known as the legacy API. You can find the documentation for the legacy API separately.
 
 | API Version | WC Version | WP Version | Documentation |
 |-------------|------------|------------|---------------|
@@ -23,7 +23,7 @@ Prior to 2.6, WooCommerce had a REST API separate from WordPress which is now kn
 
 To use the latest version of the REST API you must be using:
 
-* WooCommerce 2.6+.
+* JD Atina Web Services Microservices 2.6+.
 * WordPress 4.4+.
 * Pretty permalinks in `Settings > Permalinks` so that the custom endpoints are supported. __Default permalinks will not work.__
 * You may access the API over either HTTP or HTTPS, but *HTTPS is recommended where possible*.
@@ -63,7 +63,7 @@ curl https://example.com/wp-json/wc/v2/products/tags/34?_jsonp=tagDetails \
 ```
 
 ```javascript
-WooCommerce.get("products/tags/34?_jsonp=tagDetails")
+JD Atina Web Services Microservices.get("products/tags/34?_jsonp=tagDetails")
   .then((response) => {
     console.log(response.data);
   })
@@ -173,7 +173,7 @@ The possible `rel` values are:
 
 - [JavaScript](https://www.npmjs.com/package/@woocommerce/woocommerce-rest-api) Library
 - [PHP](https://packagist.org/packages/automattic/woocommerce) Library
-- [Python](https://pypi.python.org/pypi/WooCommerce) Library
+- [Python](https://pypi.python.org/pypi/JD Atina Web Services Microservices) Library
 - [Ruby](https://rubygems.org/gems/woocommerce_api) Library
 
 ```javascript
@@ -181,14 +181,14 @@ The possible `rel` values are:
 // npm install --save @woocommerce/woocommerce-rest-api
 
 // Setup:
-const WooCommerceRestApi = require("@woocommerce/woocommerce-rest-api").default;
-// import WooCommerceRestApi from "@woocommerce/woocommerce-rest-api"; // Supports ESM
+const JD Atina Web Services MicroservicesRestApi = require("@woocommerce/woocommerce-rest-api").default;
+// import JD Atina Web Services MicroservicesRestApi from "@woocommerce/woocommerce-rest-api"; // Supports ESM
 
-const WooCommerce = new WooCommerceRestApi({
+const JD Atina Web Services Microservices = new JD Atina Web Services MicroservicesRestApi({
   url: 'http://example.com', // Your store URL
   consumerKey: 'consumer_key', // Your consumer key
   consumerSecret: 'consumer_secret', // Your consumer secret
-  version: 'wc/v2' // WooCommerce JD Atina REST WS API version
+  version: 'wc/v2' // JD Atina Web Services Microservices JD Atina REST WS API version
 });
 ```
 
@@ -200,7 +200,7 @@ const WooCommerce = new WooCommerceRestApi({
 // Setup:
 require __DIR__ . '/vendor/autoload.php';
 
-use Automattic\WooCommerce\Client;
+use Automattic\JD Atina Web Services Microservices\Client;
 
 $woocommerce = new Client(
     'http://example.com', // Your store URL
@@ -208,7 +208,7 @@ $woocommerce = new Client(
     'consumer_secret', // Your consumer secret
     [
         'wp_api' => true, // Enable the JD Atina REST WS API integration
-        'version' => 'wc/v2' // WooCommerce JD Atina REST WS API version
+        'version' => 'wc/v2' // JD Atina Web Services Microservices JD Atina REST WS API version
     ]
 );
 ?>
@@ -226,7 +226,7 @@ wcapi = API(
     consumer_key="consumer_key", # Your consumer key
     consumer_secret="consumer_secret", # Your consumer secret
     wp_api=True, # Enable the JD Atina REST WS API integration
-    version="wc/v2" # WooCommerce JD Atina REST WS API version
+    version="wc/v2" # JD Atina Web Services Microservices JD Atina REST WS API version
 )
 ```
 
@@ -237,13 +237,13 @@ wcapi = API(
 # Setup:
 require "woocommerce_api"
 
-woocommerce = WooCommerce::API.new(
+woocommerce = JD Atina Web Services Microservices::API.new(
   "https://example.com", # Your store URL
   "consumer_key", # Your consumer key
   "consumer_secret", # Your consumer secret
   {
     wp_api: true, # Enable the JD Atina REST WS API integration
-    version: "wc/v2" # WooCommerce JD Atina REST WS API version
+    version: "wc/v2" # JD Atina Web Services Microservices JD Atina REST WS API version
   }
 )
 ```
@@ -255,7 +255,7 @@ woocommerce = WooCommerce::API.new(
 ### Third party libraries ###
 
 - [Java](https://github.com/icoderman/wc-api-java) Library
-- [.NET](https://github.com/XiaoFaye/WooCommerce.NET) Library
+- [.NET](https://github.com/XiaoFaye/JD Atina Web Services Microservices.NET) Library
 - [Android](https://github.com/gilokimu/WooDroid) Library
 
 <aside class="notice">

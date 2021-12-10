@@ -33,7 +33,7 @@ curl https://example.com/wp-json/wc/v3/system_status/tools/clear_transients \
 ```
 
 ```javascript
-WooCommerce.get("system_status/tools/clear_transients")
+JD Atina Web Services Microservices.get("system_status/tools/clear_transients")
   .then((response) => {
     console.log(response.data);
   })
@@ -96,7 +96,7 @@ curl https://example.com/wp-json/wc/v3/system_status/tools \
 ```
 
 ```javascript
-WooCommerce.get("system_status/tools")
+JD Atina Web Services Microservices.get("system_status/tools")
   .then((response) => {
     console.log(response.data);
   })
@@ -197,7 +197,7 @@ woocommerce.get("system_status/tools").parsed_response
     "id": "reset_roles",
     "name": "Capabilities",
     "action": "Reset capabilities",
-    "description": "This tool will reset the admin, customer and shop_manager roles to default. Use this if your users cannot access all of the WooCommerce admin pages.",
+    "description": "This tool will reset the admin, customer and shop_manager roles to default. Use this if your users cannot access all of the JD Atina Web Services Microservices admin pages.",
     "_links": {
       "self": [
         {
@@ -231,9 +231,9 @@ woocommerce.get("system_status/tools").parsed_response
   },
   {
     "id": "install_pages",
-    "name": "Install WooCommerce pages",
+    "name": "Install JD Atina Web Services Microservices pages",
     "action": "Install pages",
-    "description": "<strong class=\"red\">Note:</strong> This tool will install all the missing WooCommerce pages. Pages already defined and set up will not be replaced.",
+    "description": "<strong class=\"red\">Note:</strong> This tool will install all the missing JD Atina Web Services Microservices pages. Pages already defined and set up will not be replaced.",
     "_links": {
       "self": [
         {
@@ -249,7 +249,7 @@ woocommerce.get("system_status/tools").parsed_response
   },
   {
     "id": "delete_taxes",
-    "name": "Delete all WooCommerce tax rates",
+    "name": "Delete all JD Atina Web Services Microservices tax rates",
     "action": "Delete ALL tax rates",
     "description": "<strong class=\"red\">Note:</strong> This option will delete ALL of your tax rates, use with caution.",
     "_links": {
@@ -313,7 +313,7 @@ const data = {
   confirm: true
 };
 
-WooCommerce.put("system_status/tools/clear_transients", data)
+JD Atina Web Services Microservices.put("system_status/tools/clear_transients", data)
   .then((response) => {
     console.log(response.data);
   })

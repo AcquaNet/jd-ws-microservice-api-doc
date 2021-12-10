@@ -2,7 +2,7 @@
 
 The webhooks API allows you to create, view, update, and delete individual, or a batch, of webhooks.
 
-Webhooks can be managed via the WooCommerce settings screen or by using the REST API endpoints. The `WC_Webhook` class manages all data storage and retrieval of the webhook custom post type, as well as enqueuing webhook actions and processing/delivering/logging webhooks. On `woocommerce_init`, active webhooks are loaded.
+Webhooks can be managed via the JD Atina Web Services Microservices settings screen or by using the REST API endpoints. The `WC_Webhook` class manages all data storage and retrieval of the webhook custom post type, as well as enqueuing webhook actions and processing/delivering/logging webhooks. On `woocommerce_init`, active webhooks are loaded.
 
 Each webhook has:
 
@@ -41,7 +41,7 @@ The payload is JSON encoded and for API resources (coupons, customers, orders, p
 
 ### Logging ###
 
-Requests/responses are logged using the WooCommerce logging system. Each delivery log includes:
+Requests/responses are logged using the JD Atina Web Services Microservices logging system. Each delivery log includes:
 
 * Request duration.
 * Request URL, method, headers, and body.
@@ -49,11 +49,11 @@ Requests/responses are logged using the WooCommerce logging system. Each deliver
 
 After 5 consecutive failed deliveries (as defined by a non HTTP 2xx response code), the webhook is disabled and must be edited via the REST API to re-enable.
 
-Delivery logs can be accessed in "WooCommerce" > "Status" > "Logs".
+Delivery logs can be accessed in "JD Atina Web Services Microservices" > "Status" > "Logs".
 
 ### Visual interface ###
 
-You can find the Webhooks interface going to "WooCommerce" > "Settings" > "Advanced" > "Webhooks", see our [Visual Webhooks docs](https://docs.woocommerce.com/document/webhooks/) for more details.
+You can find the Webhooks interface going to "JD Atina Web Services Microservices" > "Settings" > "Advanced" > "Webhooks", see our [Visual Webhooks docs](https://docs.woocommerce.com/document/webhooks/) for more details.
 
 ## Webhook properties ##
 
@@ -65,7 +65,7 @@ You can find the Webhooks interface going to "WooCommerce" > "Settings" > "Advan
 | `topic`             | string    | Webhook topic. <i class="label label-info">mandatory</i>                                                                                                                                                                                                                   |
 | `resource`          | string    | Webhook resource. <i class="label label-info">read-only</i>                                                                                                                                                                                                                |
 | `event`             | string    | Webhook event. <i class="label label-info">read-only</i>                                                                                                                                                                                                                   |
-| `hooks`             | array     | WooCommerce action names associated with the webhook. <i class="label label-info">read-only</i>                                                                                                                                                                            |
+| `hooks`             | array     | JD Atina Web Services Microservices action names associated with the webhook. <i class="label label-info">read-only</i>                                                                                                                                                                            |
 | `delivery_url`      | string    | The URL where the webhook payload is delivered. <i class="label label-info">read-only</i> <i class="label label-info">mandatory</i>                                                                                                                                        |
 | `secret`            | string    | Secret key used to generate a hash of the delivered webhook and provided in the request headers. This will default is a MD5 hash from the current user's ID|username if not provided. <i class="label label-info">write-only</i> <i class="label label-info">mandatory</i> |
 | `date_created`      | date-time | The date the webhook was created, in the site's timezone. <i class="label label-info">read-only</i>                                                                                                                                                                        |
@@ -103,7 +103,7 @@ const data = {
   delivery_url: "http://requestb.in/1g0sxmo1"
 };
 
-WooCommerce.post("webhooks", data)
+JD Atina Web Services Microservices.post("webhooks", data)
   .then((response) => {
     console.log(response.data);
   })
@@ -199,7 +199,7 @@ curl https://example.com/wp-json/wc/v3/webhooks/142 \
 ```
 
 ```javascript
-WooCommerce.get("webhooks/142")
+JD Atina Web Services Microservices.get("webhooks/142")
   .then((response) => {
     console.log(response.data);
   })
@@ -275,7 +275,7 @@ curl https://example.com/wp-json/wc/v3/webhooks \
 ```
 
 ```javascript
-WooCommerce.get("webhooks")
+JD Atina Web Services Microservices.get("webhooks")
   .then((response) => {
     console.log(response.data);
   })
@@ -408,7 +408,7 @@ const data = {
   status: "paused"
 }
 
-WooCommerce.put("webhooks/142", data)
+JD Atina Web Services Microservices.put("webhooks/142", data)
   .then((response) => {
     console.log(response.data);
   })
@@ -498,7 +498,7 @@ curl -X DELETE https://example.com/wp-json/wc/v3/webhooks/142 \
 ```
 
 ```javascript
-WooCommerce.delete("webhooks/142")
+JD Atina Web Services Microservices.delete("webhooks/142")
   .then((response) => {
     console.log(response.data);
   })
@@ -620,7 +620,7 @@ const data = {
   ]
 };
 
-WooCommerce.post("webhooks/batch", data)
+JD Atina Web Services Microservices.post("webhooks/batch", data)
   .then((response) => {
     console.log(response.data);
   })

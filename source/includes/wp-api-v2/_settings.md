@@ -31,7 +31,7 @@ curl https://example.com/wp-json/wc/v2/settings \
 ```
 
 ```javascript
-WooCommerce.get("settings")
+JD Atina Web Services Microservices.get("settings")
   .then((response) => {
     console.log(response.data);
   })

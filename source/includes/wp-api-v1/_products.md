@@ -249,7 +249,7 @@ const data = {
   ]
 };
 
-WooCommerce.post("products", data)
+JD Atina Web Services Microservices.post("products", data)
   .then((response) => {
     console.log(response.data);
   })
@@ -682,7 +682,7 @@ const data = {
   ]
 };
 
-WooCommerce.post("products", data)
+JD Atina Web Services Microservices.post("products", data)
   .then((response) => {
     console.log(response.data);
   })
@@ -1328,7 +1328,7 @@ curl https://example.com/wp-json/wc/v1/products/162 \
 ```
 
 ```javascript
-WooCommerce.get("products/162")
+JD Atina Web Services Microservices.get("products/162")
   .then((response) => {
     console.log(response.data);
   })
@@ -1482,7 +1482,7 @@ curl https://example.com/wp-json/wc/v1/products \
 ```
 
 ```javascript
-WooCommerce.get("products")
+JD Atina Web Services Microservices.get("products")
   .then((response) => {
     console.log(response.data);
   })
@@ -1955,7 +1955,7 @@ const data = {
   regular_price: "24.54"
 };
 
-WooCommerce.put("products/162", data)
+JD Atina Web Services Microservices.put("products/162", data)
   .then((response) => {
     console.log(response.data);
   })
@@ -2123,7 +2123,7 @@ curl -X DELETE https://example.com/wp-json/wc/v1/products/162?force=true \
 ```
 
 ```javascript
-WooCommerce.delete("products/162", {
+JD Atina Web Services Microservices.delete("products/162", {
   force: true
 })
   .then((response) => {
@@ -2439,7 +2439,7 @@ const data = {
   ]
 };
 
-WooCommerce.post("products/batch", data)
+JD Atina Web Services Microservices.post("products/batch", data)
   .then((response) => {
     console.log(response.data);
   })
@@ -3327,7 +3327,7 @@ curl https://example.com/wp-json/wc/v1/products/162/reviews/9 \
 ```
 
 ```javascript
-WooCommerce.get("products/162/reviews/9")
+JD Atina Web Services Microservices.get("products/162/reviews/9")
   .then((response) => {
     console.log(response.data);
   })
@@ -3407,7 +3407,7 @@ curl https://example.com/wp-json/wc/v1/products/162/reviews \
 ```
 
 ```javascript
-WooCommerce.get("products/162/reviews")
+JD Atina Web Services Microservices.get("products/162/reviews")
   .then((response) => {
     console.log(response.data);
   })

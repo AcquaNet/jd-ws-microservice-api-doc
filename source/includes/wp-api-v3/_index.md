@@ -16,7 +16,7 @@ curl https://example.com/wp-json/wc/v3
 ```
 
 ```javascript
-WooCommerce.get("")
+JD Atina Web Services Microservices.get("")
   .then((response) => {
     console.log(response.data);
   })

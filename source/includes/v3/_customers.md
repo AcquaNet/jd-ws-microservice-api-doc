@@ -136,7 +136,7 @@ var data = {
   }
 };
 
-WooCommerce.post('customers', data, function(err, data, res) {
+JD Atina Web Services Microservices.post('customers', data, function(err, data, res) {
   console.log(res);
 });
 ```
@@ -324,7 +324,7 @@ curl https://example.com/wc-api/v3/customers/2 \
 ```
 
 ```javascript
-WooCommerce.get('customers/2', function(err, data, res) {
+JD Atina Web Services Microservices.get('customers/2', function(err, data, res) {
   console.log(res);
 });
 ```
@@ -404,7 +404,7 @@ curl https://example.com/wc-api/v3/customers \
 ```
 
 ```javascript
-WooCommerce.get('customers', function(err, data, res) {
+JD Atina Web Services Microservices.get('customers', function(err, data, res) {
   console.log(res);
 });
 ```
@@ -553,7 +553,7 @@ var data = {
   }
 };
 
-WooCommerce.put('customers/2', data, function(err, data, res) {
+JD Atina Web Services Microservices.put('customers/2', data, function(err, data, res) {
   console.log(res);
 });
 ```
@@ -803,7 +803,7 @@ var data = {
   ]
 };
 
-WooCommerce.post('customers/bulk', data, function(err, data, res) {
+JD Atina Web Services Microservices.post('customers/bulk', data, function(err, data, res) {
   console.log(res);
 });
 ```
@@ -1119,7 +1119,7 @@ curl -X DELETE https://example.com/wc-api/v3/customers/2 \
 ```
 
 ```javascript
-WooCommerce.delete('customers/2', function(err, data, res) {
+JD Atina Web Services Microservices.delete('customers/2', function(err, data, res) {
   console.log(res);
 });
 ```
@@ -1163,7 +1163,7 @@ curl https://example.com/wc-api/v3/customers/2/orders \
 ```
 
 ```javascript
-WooCommerce.get('customers/2/orders', function(err, data, res) {
+JD Atina Web Services Microservices.get('customers/2/orders', function(err, data, res) {
   console.log(res);
 });
 ```
@@ -1328,7 +1328,7 @@ curl https://example.com/wc-api/v3/customers/2/downloads \
 ```
 
 ```javascript
-WooCommerce.get('customers/2/downloads', function(err, data, res) {
+JD Atina Web Services Microservices.get('customers/2/downloads', function(err, data, res) {
   console.log(res);
 });
 ```
@@ -1401,7 +1401,7 @@ curl https://example.com/wc-api/v3/customers/count \
 ```
 
 ```javascript
-WooCommerce.get('customers/count', function(err, data, res) {
+JD Atina Web Services Microservices.get('customers/count', function(err, data, res) {
   console.log(res);
 });
 ```

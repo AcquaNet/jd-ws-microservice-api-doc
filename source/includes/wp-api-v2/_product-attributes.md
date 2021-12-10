@@ -48,7 +48,7 @@ const data = {
   has_archives: true
 };
 
-WooCommerce.post("products/attributes", data)
+JD Atina Web Services Microservices.post("products/attributes", data)
   .then((response) => {
     console.log(response.data);
   })
@@ -137,7 +137,7 @@ curl https://example.com/wp-json/wc/v2/products/attributes/1 \
 ```
 
 ```javascript
-WooCommerce.get("products/attributes/1")
+JD Atina Web Services Microservices.get("products/attributes/1")
   .then((response) => {
     console.log(response.data);
   })
@@ -202,7 +202,7 @@ curl https://example.com/wp-json/wc/v2/products/attributes \
 ```
 
 ```javascript
-WooCommerce.get("products/attributes")
+JD Atina Web Services Microservices.get("products/attributes")
   .then((response) => {
     console.log(response.data);
   })
@@ -303,7 +303,7 @@ const data = {
   order_by: "name"
 };
 
-WooCommerce.put("products/attributes/1", data)
+JD Atina Web Services Microservices.put("products/attributes/1", data)
   .then((response) => {
     console.log(response.data);
   })
@@ -386,7 +386,7 @@ curl -X DELETE https://example.com/wp-json/wc/v2/products/attributes/1?force=tru
 ```
 
 ```javascript
-WooCommerce.delete("products/attributes/1", {
+JD Atina Web Services Microservices.delete("products/attributes/1", {
   force: true
 })
   .then((response) => {
@@ -503,7 +503,7 @@ const data = {
   ]
 };
 
-WooCommerce.post("products/attributes/batch", data)
+JD Atina Web Services Microservices.post("products/attributes/batch", data)
   .then((response) => {
     console.log(response.data);
   })

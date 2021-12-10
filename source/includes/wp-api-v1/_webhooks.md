@@ -2,7 +2,7 @@
 
 The webhooks API allows you to create, view, update, and delete individual, or a batch, of webhooks.
 
-Webhooks can be managed via the WooCommerce settings screen or by using the REST API endpoints. The `WC_Webhook` class manages all data storage and retrieval of the webhook custom post type, as well as enqueuing webhook actions and processing/delivering/logging webhooks. On `woocommerce_init`, active webhooks are loaded.
+Webhooks can be managed via the JD Atina Web Services Microservices settings screen or by using the REST API endpoints. The `WC_Webhook` class manages all data storage and retrieval of the webhook custom post type, as well as enqueuing webhook actions and processing/delivering/logging webhooks. On `woocommerce_init`, active webhooks are loaded.
 
 Each webhook has:
 
@@ -54,7 +54,7 @@ Delivery logs can be fetched through the REST API endpoint or in code using `WC_
 
 ### Visual interface ###
 
-You can find the Webhooks interface going to "WooCommerce" > "Settings" > "API" > "Webhooks", see our [Visual Webhooks docs](https://docs.woocommerce.com/document/webhooks/) for more details.
+You can find the Webhooks interface going to "JD Atina Web Services Microservices" > "Settings" > "API" > "Webhooks", see our [Visual Webhooks docs](https://docs.woocommerce.com/document/webhooks/) for more details.
 
 ## Webhook properties ##
 
@@ -66,7 +66,7 @@ You can find the Webhooks interface going to "WooCommerce" > "Settings" > "API" 
 | `topic`         | string    | Webhook topic, e.g. `coupon.updated`. [See the complete list](#topics). <i class="label label-info">required</i>                                                                     |
 | `resource`      | string    | Webhook resource, e.g. `coupon` <i class="label label-info">read-only</i>                                                                                                            |
 | `event`         | string    | Webhook event, e.g. `updated` <i class="label label-info">read-only</i>                                                                                                              |
-| `hooks`         | array     | WooCommerce action names associated with the webhook. <i class="label label-info">read-only</i>                                                                                      |
+| `hooks`         | array     | JD Atina Web Services Microservices action names associated with the webhook. <i class="label label-info">read-only</i>                                                                                      |
 | `delivery_url`  | string    | The URL where the webhook payload is delivered. <i class="label label-info">required</i>                                                                                             |
 | `secret`        | string    | Secret key used to generate a hash of the delivered webhook and provided in the request headers. <i class="label label-info">required</i> <i class="label label-info">write-only</i> |
 | `date_created`  | date-time | UTC DateTime when the webhook was created <i class="label label-info">read-only</i>                                                                                                  |
@@ -92,7 +92,7 @@ You can find the Webhooks interface going to "WooCommerce" > "Settings" > "API" 
 
 |         Attribute          |   Type  |                                                              Description                                                              |
 |----------------------------|---------|---------------------------------------------------------------------------------------------------------------------------------------|
-| `User-Agent`               | string  | The request user agent, default is "WooCommerce/{version} Hookshot (WordPress/{version})". <i class="label label-info">read-only</i>  |
+| `User-Agent`               | string  | The request user agent, default is "JD Atina Web Services Microservices/{version} Hookshot (WordPress/{version})". <i class="label label-info">read-only</i>  |
 | `Content-Type`             | string  | The request content-type, default is "application/json". <i class="label label-info">read-only</i>                                    |
 | `X-WC-Webhook-Topic`       | string  | The webhook topic. <i class="label label-info">read-only</i>                                                                          |
 | `X-WC-Webhook-Resource`    | string  | The webhook resource. <i class="label label-info">read-only</i>                                                                       |
@@ -132,7 +132,7 @@ const data = {
   delivery_url: "http://requestb.in/1g0sxmo1"
 };
 
-WooCommerce.post("webhooks", data)
+JD Atina Web Services Microservices.post("webhooks", data)
   .then((response) => {
     console.log(response.data);
   })
@@ -226,7 +226,7 @@ curl https://example.com/wp-json/wc/v1/webhooks/142 \
 ```
 
 ```javascript
-WooCommerce.get("webhooks/142")
+JD Atina Web Services Microservices.get("webhooks/142")
   .then((response) => {
     console.log(response.data);
   })
@@ -300,7 +300,7 @@ curl https://example.com/wp-json/wc/v1/webhooks \
 ```
 
 ```javascript
-WooCommerce.get("webhooks")
+JD Atina Web Services Microservices.get("webhooks")
   .then((response) => {
     console.log(response.data);
   })
@@ -430,7 +430,7 @@ const data = {
   status: "paused"
 }
 
-WooCommerce.put("webhooks/142", data)
+JD Atina Web Services Microservices.put("webhooks/142", data)
   .then((response) => {
     console.log(response.data);
   })
@@ -518,7 +518,7 @@ curl -X DELETE https://example.com/wp-json/wc/v1/webhooks/142 \
 ```
 
 ```javascript
-WooCommerce.delete("webhooks/142")
+JD Atina Web Services Microservices.delete("webhooks/142")
   .then((response) => {
     console.log(response.data);
   })
@@ -638,7 +638,7 @@ const data = {
   ]
 };
 
-WooCommerce.post("webhooks/batch", data)
+JD Atina Web Services Microservices.post("webhooks/batch", data)
   .then((response) => {
     console.log(response.data);
   })
@@ -826,7 +826,7 @@ curl https://example.com/wp-json/wc/v1/webhooks/142/deliveries/54 \
 ```
 
 ```javascript
-WooCommerce.get("webhooks/142/deliveries/54")
+JD Atina Web Services Microservices.get("webhooks/142/deliveries/54")
   .then((response) => {
     console.log(response.data);
   })
@@ -857,7 +857,7 @@ woocommerce.get("webhooks/142/deliveries/54").parsed_response
   "request_method": "POST",
   "request_url": "http://requestb.in/1g0sxmo1",
   "request_headers": {
-    "User-Agent": "WooCommerce/2.6.0 Hookshot (WordPress/4.5.2)",
+    "User-Agent": "JD Atina Web Services Microservices/2.6.0 Hookshot (WordPress/4.5.2)",
     "Content-Type": "application/json",
     "X-WC-Webhook-Source": "http://example.com/",
     "X-WC-Webhook-Topic": "order.updated",
@@ -924,7 +924,7 @@ curl https://example.com/wp-json/wc/v1/webhooks/142/deliveries \
 ```
 
 ```javascript
-WooCommerce.get("webhooks/142/deliveries")
+JD Atina Web Services Microservices.get("webhooks/142/deliveries")
   .then((response) => {
     console.log(response.data);
   })
@@ -956,7 +956,7 @@ woocommerce.get("webhooks/142/deliveries").parsed_response
     "request_method": "POST",
     "request_url": "http://requestb.in/1g0sxmo1",
     "request_headers": {
-      "User-Agent": "WooCommerce/2.6.0 Hookshot (WordPress/4.5.2)",
+      "User-Agent": "JD Atina Web Services Microservices/2.6.0 Hookshot (WordPress/4.5.2)",
       "Content-Type": "application/json",
       "X-WC-Webhook-Source": "http://example.com/",
       "X-WC-Webhook-Topic": "order.updated",
@@ -1005,7 +1005,7 @@ woocommerce.get("webhooks/142/deliveries").parsed_response
     "request_method": "POST",
     "request_url": "http://requestb.in/1g0sxmo1",
     "request_headers": {
-      "User-Agent": "WooCommerce/2.6.0 Hookshot (WordPress/4.5.2)",
+      "User-Agent": "JD Atina Web Services Microservices/2.6.0 Hookshot (WordPress/4.5.2)",
       "Content-Type": "application/json",
       "X-WC-Webhook-Source": "http://example.com/",
       "X-WC-Webhook-Topic": "order.updated",

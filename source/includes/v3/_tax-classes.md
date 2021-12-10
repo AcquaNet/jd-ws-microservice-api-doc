@@ -40,7 +40,7 @@ var data = {
   }
 };
 
-WooCommerce.post('taxes/classes', data, function(err, data, res) {
+JD Atina Web Services Microservices.post('taxes/classes', data, function(err, data, res) {
   console.log(res);
 });
 ```
@@ -89,7 +89,7 @@ woocommerce.post("taxes/classes", data).parsed_response
 ```
 
 <aside class="notice">
-	Endpoint introduced since WooCommerce 2.5.
+	Endpoint introduced since JD Atina Web Services Microservices 2.5.
 </aside>
 
 ## View List of Tax Classes ##
@@ -111,7 +111,7 @@ curl https://example.com/wc-api/v3/taxes/classes \
 ```
 
 ```javascript
-WooCommerce.get('taxes/classes', function(err, data, res) {
+JD Atina Web Services Microservices.get('taxes/classes', function(err, data, res) {
   console.log(res);
 });
 ```
@@ -150,7 +150,7 @@ woocommerce.get("taxes/classes").parsed_response
 ```
 
 <aside class="notice">
-	Endpoint introduced since WooCommerce 2.5.
+	Endpoint introduced since JD Atina Web Services Microservices 2.5.
 </aside>
 
 ## Delete a Tax Class ##
@@ -176,7 +176,7 @@ curl -X DELETE https://example.com/wc-api/v3/taxes/classes/zero-rate \
 ```
 
 ```javascript
-WooCommerce.delete('taxes/classes/zero-rate', function(err, data, res) {
+JD Atina Web Services Microservices.delete('taxes/classes/zero-rate', function(err, data, res) {
   console.log(res);
 });
 ```
@@ -202,7 +202,7 @@ woocommerce.delete("taxes/classes/zero-rate").parsed_response
 ```
 
 <aside class="notice">
-	Endpoint introduced since WooCommerce 2.5.
+	Endpoint introduced since JD Atina Web Services Microservices 2.5.
 </aside>
 
 ## View Tax Rate Count ##
@@ -224,7 +224,7 @@ curl https://example.com/wc-api/v3/taxes/classes/count \
 ```
 
 ```javascript
-WooCommerce.get('taxes/classes/count', function(err, data, res) {
+JD Atina Web Services Microservices.get('taxes/classes/count', function(err, data, res) {
   console.log(res);
 });
 ```
@@ -250,5 +250,5 @@ woocommerce.get("taxes/classes/count").parsed_response
 ```
 
 <aside class="notice">
-	Endpoint introduced since WooCommerce 2.5.
+	Endpoint introduced since JD Atina Web Services Microservices 2.5.
 </aside>

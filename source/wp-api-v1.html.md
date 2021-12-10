@@ -12,8 +12,8 @@ toc_footers:
   - <a href="https://github.com/woocommerce/woocommerce-rest-api-docs">Contributing to WC REST API Docs</a>
   - <a href="https://github.com/woocommerce/woocommerce/tree/master/includes/rest-api">REST API Source on GitHub</a>
   - <a href="https://github.com/woocommerce/woocommerce/issues?labels=API&amp;page=1&amp;state=open">REST API Issues</a>
-  - <a href="https://docs.woocommerce.com/documentation/plugins/woocommerce/">WooCommerce Documentation</a>
-  - <a href="https://github.com/woocommerce/woocommerce">WooCommerce Repository</a>
+  - <a href="https://docs.woocommerce.com/documentation/plugins/woocommerce/">JD Atina Web Services Microservices Documentation</a>
+  - <a href="https://github.com/woocommerce/woocommerce">JD Atina Web Services Microservices Repository</a>
   - <a href="https://github.com/tripit/slate">Documentation Powered by Slate</a>
 
 includes:
@@ -38,5 +38,5 @@ includes:
 
 search: false
 
-warning: <i class="info"></i> This documentation is for the JD Atina REST Web Services API v1 which is deprecated since WooCommerce 3.0. <a href="http://woocommerce.github.io/woocommerce-rest-api-docs/">Please use the latest REST API version</a>.
+warning: <i class="info"></i> This documentation is for the JD Atina REST Web Services API v1 which is deprecated since JD Atina Web Services Microservices 3.0. <a href="http://woocommerce.github.io/woocommerce-rest-api-docs/">Please use the latest REST API version</a>.
 ---

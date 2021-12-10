@@ -39,7 +39,7 @@ const data = {
   note: "Order ok!!!"
 };
 
-WooCommerce.post("orders/645/notes", data)
+JD Atina Web Services Microservices.post("orders/645/notes", data)
   .then((response) => {
     console.log(response.data);
   })
@@ -121,7 +121,7 @@ curl https://example.com/wp-json/wc/v1/orders/645/notes/51 \
 ```
 
 ```javascript
-WooCommerce.get("orders/645/notes/51")
+JD Atina Web Services Microservices.get("orders/645/notes/51")
   .then((response) => {
     console.log(response.data);
   })
@@ -189,7 +189,7 @@ curl https://example.com/wp-json/wc/v1/orders/645/notes \
 ```
 
 ```javascript
-WooCommerce.get("orders/645/notes")
+JD Atina Web Services Microservices.get("orders/645/notes")
   .then((response) => {
     console.log(response.data);
   })
@@ -282,7 +282,7 @@ curl -X DELETE https://example.com/wp-json/wc/v1/orders/645/notes/51?force=true 
 ```
 
 ```javascript
-WooCommerce.delete("orders/645/notes/51", {
+JD Atina Web Services Microservices.delete("orders/645/notes/51", {
   force: true
 })
   .then((response) => {

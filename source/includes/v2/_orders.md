@@ -238,7 +238,7 @@ var data = {
   }
 };
 
-WooCommerce.post('orders', data, function(err, data, res) {
+JD Atina Web Services Microservices.post('orders', data, function(err, data, res) {
   console.log(res);
 });
 ```
@@ -595,7 +595,7 @@ curl https://example.com/wc-api/v2/orders/645 \
 ```
 
 ```javascript
-WooCommerce.get('orders/645', function(err, data, res) {
+JD Atina Web Services Microservices.get('orders/645', function(err, data, res) {
   console.log(res);
 });
 ```
@@ -791,7 +791,7 @@ curl https://example.com/wc-api/v2/orders \
 ```
 
 ```javascript
-WooCommerce.get('orders', function(err, data, res) {
+JD Atina Web Services Microservices.get('orders', function(err, data, res) {
   console.log(res);
 });
 ```
@@ -1154,7 +1154,7 @@ var data = {
   }
 };
 
-WooCommerce.put('orders/645', data, function(err, data, res) {
+JD Atina Web Services Microservices.put('orders/645', data, function(err, data, res) {
   console.log(res);
 });
 ```
@@ -1370,7 +1370,7 @@ curl -X DELETE https://example.com/wc-api/v2/orders/645/?force=true \
 ```
 
 ```javascript
-WooCommerce.delete('orders/645/?force=true', function(err, data, res) {
+JD Atina Web Services Microservices.delete('orders/645/?force=true', function(err, data, res) {
   console.log(res);
 });
 ```
@@ -1420,7 +1420,7 @@ curl https://example.com/wc-api/v2/orders/count \
 ```
 
 ```javascript
-WooCommerce.get('orders/count', function(err, data, res) {
+JD Atina Web Services Microservices.get('orders/count', function(err, data, res) {
   console.log(res);
 });
 ```
@@ -1470,7 +1470,7 @@ curl https://example.com/wc-api/v2/orders/statuses \
 ```
 
 ```javascript
-WooCommerce.get('orders/statuses', function(err, data, res) {
+JD Atina Web Services Microservices.get('orders/statuses', function(err, data, res) {
   console.log(res);
 });
 ```
@@ -1534,7 +1534,7 @@ var data = {
   }
 };
 
-WooCommerce.post('orders/645/notes', data, function(err, data, res) {
+JD Atina Web Services Microservices.post('orders/645/notes', data, function(err, data, res) {
   console.log(res);
 });
 ```
@@ -1612,7 +1612,7 @@ curl https://example.com/wc-api/v2/orders/645/notes/416 \
 ```
 
 ```javascript
-WooCommerce.get('orders/645/notes/416', function(err, data, res) {
+JD Atina Web Services Microservices.get('orders/645/notes/416', function(err, data, res) {
   console.log(res);
 });
 ```
@@ -1665,7 +1665,7 @@ curl https://example.com/wc-api/v2/orders/645/notes \
 ```
 
 ```javascript
-WooCommerce.get('orders/645/notes', function(err, data, res) {
+JD Atina Web Services Microservices.get('orders/645/notes', function(err, data, res) {
   console.log(res);
 });
 ```
@@ -1750,7 +1750,7 @@ var data = {
   }
 };
 
-WooCommerce.put('orders/645/notes/416', data, function(err, data, res) {
+JD Atina Web Services Microservices.put('orders/645/notes/416', data, function(err, data, res) {
   console.log(res);
 });
 ```
@@ -1823,7 +1823,7 @@ curl -X DELETE https://example.com/wc-api/v2/orders/645/notes/416 \
 ```
 
 ```javascript
-WooCommerce.delete('orders/645/notes/416', function(err, data, res) {
+JD Atina Web Services Microservices.delete('orders/645/notes/416', function(err, data, res) {
   console.log(res);
 });
 ```
@@ -1879,7 +1879,7 @@ var data = {
   }
 };
 
-WooCommerce.post('orders/645/refunds', data, function(err, data, res) {
+JD Atina Web Services Microservices.post('orders/645/refunds', data, function(err, data, res) {
   console.log(res);
 });
 ```
@@ -1959,7 +1959,7 @@ curl https://example.com/wc-api/v2/orders/645/refunds/649 \
 ```
 
 ```javascript
-WooCommerce.get('orders/645/refunds/649', function(err, data, res) {
+JD Atina Web Services Microservices.get('orders/645/refunds/649', function(err, data, res) {
   console.log(res);
 });
 ```
@@ -2013,7 +2013,7 @@ curl https://example.com/wc-api/v2/orders/645/refunds \
 ```
 
 ```javascript
-WooCommerce.get('orders/645/refunds', function(err, data, res) {
+JD Atina Web Services Microservices.get('orders/645/refunds', function(err, data, res) {
   console.log(res);
 });
 ```
@@ -2117,7 +2117,7 @@ var data = {
   }
 };
 
-WooCommerce.put('orders/645/refunds/649', data, function(err, data, res) {
+JD Atina Web Services Microservices.put('orders/645/refunds/649', data, function(err, data, res) {
   console.log(res);
 });
 ```
@@ -2191,7 +2191,7 @@ curl -X DELETE https://example.com/wc-api/v2/orders/645/refunds/649 \
 ```
 
 ```javascript
-WooCommerce.delete('orders/645/refunds/649', function(err, data, res) {
+JD Atina Web Services Microservices.delete('orders/645/refunds/649', function(err, data, res) {
   console.log(res);
 });
 ```

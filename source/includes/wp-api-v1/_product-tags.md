@@ -41,7 +41,7 @@ const data = {
   name: "Leather Shoes"
 };
 
-WooCommerce.post("products/tags", data)
+JD Atina Web Services Microservices.post("products/tags", data)
   .then((response) => {
     console.log(response.data);
   })
@@ -117,7 +117,7 @@ curl https://example.com/wp-json/wc/v1/products/tags/34 \
 ```
 
 ```javascript
-WooCommerce.get("products/tags/34")
+JD Atina Web Services Microservices.get("products/tags/34")
   .then((response) => {
     console.log(response.data);
   })
@@ -179,7 +179,7 @@ curl https://example.com/wp-json/wc/v1/products/tags \
 ```
 
 ```javascript
-WooCommerce.get("products/tags")
+JD Atina Web Services Microservices.get("products/tags")
   .then((response) => {
     console.log(response.data);
   })
@@ -288,7 +288,7 @@ const data = {
   description: "Genuine leather."
 };
 
-WooCommerce.put("products/tags/34", data)
+JD Atina Web Services Microservices.put("products/tags/34", data)
   .then((response) => {
     console.log(response.data);
   })
@@ -366,7 +366,7 @@ curl -X DELETE https://example.com/wp-json/wc/v1/products/tags/34?force=true \
 ```
 
 ```javascript
-WooCommerce.delete("products/tags/34", {
+JD Atina Web Services Microservices.delete("products/tags/34", {
   force: true
 })
   .then((response) => {
@@ -482,7 +482,7 @@ const data = {
   ]
 };
 
-WooCommerce.post("products/tags/batch", data)
+JD Atina Web Services Microservices.post("products/tags/batch", data)
   .then((response) => {
     console.log(response.data);
   })
