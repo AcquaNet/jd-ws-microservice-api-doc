@@ -2,38 +2,91 @@
 
 JD Atina Web Services Microservices 1.0.0 is fully integrated with the WordPress [REST](http://en.wikipedia.org/wiki/Representational_State_Transfer) API. This allows WC data to be created, read, updated, and deleted using requests in JSON format and using WordPress REST API Authentication methods and standard HTTP verbs which are understood by most HTTP clients.
 
-The current JD Atina REST WS API integration version is `v3` which takes a first-order position in endpoints. 
+JD ATINA Microservices is made up of a series of the following services:
+
+* JD Atina Web Service Microservice
+* JD Atina Rest-API Microservice 
+
+We included additional connectors to allow third-party software to connect to JD Atina Web Service Microservice directly
+
+* JD Atina Mule 3 CE Connector
+
+For other third-party software the user can use a simple https connectors.
+
+![JD Atina Services(images/atina_main.png)
+
+We provide additional tools to allow:
+
+* JD Atina Generate Configuration Files.
+* Generate Jars Files Tools.
+* Test Connections Tool.
+
+![JD Atina settings](images/atina_tools.png)
+
+
+The current JD Atina REST WS API integration version is `v1`
 
 The following table shows API versions present in each major version of JD Atina Web Services Microservices:
 
-| API Version | WC Version     | WP Version   | Documentation             |
-|-------------|----------------|--------------|---------------------------|
-| `v3`        | 3.5.x or later | 4.4 or later | -                         |
-| `v2`        | 3.0.x or later | 4.4 or later | [v2 docs](wp-api-v2.html) |
-| `v1`        | 2.6.x or later | 4.4 or later | [v1 docs](wp-api-v1.html) |
+| API Version | JD Atina WS Microservices Version     | Documentation             |
+|-------------|---------------------------------------|---------------------------|
+| `v1`        | 1.0.0                                 | -                         |
 
-Prior to 2.6, JD Atina Web Services Microservices had a REST API separate from WordPress which is now known as the legacy API. You can find the documentation for the legacy API separately.
 
-| API Version | WC Version     | WP Version   | Documentation             |
-|-------------|----------------|--------------|---------------------------|
-| `Legacy v3` | 2.4.x or later | 4.1 or later | [Legacy v3 docs](v3.html) |
-| `Legacy v2` | 2.2.x or later | 4.1 or later | [Legacy v2 docs](v2.html) |
-| `Legacy v1` | 2.1.x or later | 4.1 or later | [Legacy v1 docs](v1.html) |
+## JD ATINA Web Service Microservice ##
+
+It's a simple Microservice used to consume JDE Web Services directly to Enterprise Service Logic instead use JDE Applications Server.
+
+It allows third party sofware to connect to JDE Web Services to share logic and data.
+
+It provides:
+
+* Access to JDE Web Services.
+* Session management.
+* Connection pooling.
+* Metadata introspection
+
+
+![JD Atina WS Microservices](images/atina_ws_microservices.png)
+
+JD ATINA Web Service Microservice is deployed with dockers.
+
+![JD Atina WS Microservices Arquitecture](images/atina_ws_aquitecture.png)
+
+## JD ATINA Rest API Microservice ##
+
+It's a simple Microservice used to epose JDE Web Services as Rest API.
+
+Any third party sofware with HTTP Connector can consume JDE Web Services with json data.
+
+![JD Atina Rest Api Microservices](images/atina_rest-api.png)
+
+## JD Atina Mule 3 CE Connector ##
+
+It's a Mule CE connector to consume Web Service from Mulesoft Applications.
+
+![JD Atina Rest Api Microservices](images/atina_mule_3_connector.png)
+
+Mule 4 is in development.
+
+## Implementations ##
+
+The following implementation steps need to be performed before working with JD Web Service Microservice:
+
+* Set up a configuration
+
+* Start JD Web Services Microservice / JDE Rest API Microservice
+
+* Install Mulesoft JDE WS Community Edition Connector 3.
+
 
 ## Requirements ##
 
-To use the latest version of the REST API you must be using:
+To use the latest version of the JD Atina REST WS API you must be using:
 
-* JD Atina Web Services Microservices 3.5+.
-* WordPress 4.4+.
-* Pretty permalinks in `Settings > Permalinks` so that the custom endpoints are supported. __Default permalinks will not work.__
+* JD Atina Web Services Microservices 1.0.0+.
 * You may access the API over either HTTP or HTTPS, but *HTTPS is recommended where possible*.
 
-If you use ModSecurity and see `501 Method Not Implemented` errors, see [this issue](https://github.com/woocommerce/woocommerce/issues/9838) for details.
-
-<aside class="notice">
-	Please note that you are <strong>not</strong> required to install the <a href="https://wordpress.org/plugins/rest-api/" target="_blank">JD Atina REST WS API (WP API)</a> plugin.
-</aside>
 
 ## Request/Response Format ##
 
