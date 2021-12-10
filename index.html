@@ -506,16 +506,15 @@
 <h2 id='requirements-to-install-jd-atina-ws-microservices'>Requirements to install JD Atina WS Microservices</h2>
 <ul>
 <li><p>Oracle JD Edwards EnterpriseOne Server Manager credential: jde admin user, Pasword and url for Server Manager Ex. http://server:8999/manage/</p></li>
+<li><p><a href="https://docs.docker.com/get-docker/" title="Docker">Docker</a>. JD Atina Web Service Microserver run under Docker container.</p></li>
 <li><p>Following folder inside JDE Deployment Server:</p>
 
 <ul>
 <li><code>//Deplo/E920/MISC</code></li>
 <li><code>//Deplo/E920/system/Classes</code></li>
 <li><code>//Deplo/E920/system/JAS/webclient.ear/webclient.war/WEB-INF/lib</code></li>
-<li><code>//Deplo/E920/DV920/java/sbfjars</code>
-<br></li>
+<li><code>//Deplo/E920/DV920/java/sbfjars</code></li>
 </ul></li>
-<li><p><a href="https://docs.docker.com/get-docker/" title="Docker">Docker</a>. JD Atina Web Service Microserver run under Docker container.</p></li>
 </ul>
 <h2 id='addionals-prerequisites-to-use-jd-generate-configuration-files-and-jd-generate-jars-files-tools'>Addionals Prerequisites to use JD Generate Configuration Files and JD Generate Jars Files Tools</h2>
 <ul>
@@ -556,20 +555,49 @@ Web Service Microservice using this guide: <a href="https://docs.oracle.com/cd/E
 <p>Download <a href="http://157.245.236.175:8081/artifactory/libs-release-local/com/atina/jd-create-ini-files/1.0.0/jd-create-ini-files-1.0.0-jar-with-dependencies.jar">JD Atina Generate Configuration Files</a> - latest release:</p>
 
 <pre class="center-column">
-curl http://157.245.236.175:8081/artifactory/libs-release-local/com/atina/jd-create-ini-files/1.0.0/jd-create-ini-files-1.0.0-jar-with-dependencies.jar /
-    --output jd-create-ini-files-1.0.0-jar-with-dependencies.jar
+curl http://157.245.236.175:8081/artifactory/libs-release-local/com/atina/jd-create-ini-files/1.0.0/jd-create-ini-files-1.0.0-jar-with-dependencies.jar \
+--output jd-create-ini-files-1.0.0-jar-with-dependencies.jar
 </pre>
+
+<p>Run jd-create-ini-files command:</p>
+
+<pre class="center-column">
+  java -jar jd-create-ini-files-1.0.0-jar-with-dependencies.jar [OPTIONS]
+
+  OPTIONS:                                                                       
+Options category 'startup':
+  --debug [-d] (a string; default: "N")
+    Debug Option
+  --environment [-e] (a string; default: "")
+    JDE Environment
+  --password [-p] (a string; default: "")
+    JDE Password for Enterprise Server Manager
+  --server [-s] (a string; default: "")
+    JDE URL of Server Manager
+  --user [-u] (a string; default: "")
+    JDE User for Enterprise Server Manager
+</pre>
+
+<p>Usage Exampes</p>
+
+<pre class="center-column">
+java -jar jd-create-ini-files-1.0.0-jar-with-dependencies.jar \
+-u jde_admin \
+-p XXXXXXX \
+-s http://server-manager:8999/manage \
+-e JDV920
+</pre>
+ 
 <h3 id='jd-atina-generate-configuration-files-tool-using-docker-instead-of-java-app'>JD Atina Generate Configuration Files Tool - Using Docker instead of Java App</h3>
 <p>Usage Example:</p>
 
-<div class="api-endpoint">
-    <div class="endpoint-data"> 
-        <h6>docker run --rm -v /tmp/build_jde_libs:/tmp/build_jde_libs/[OPTIONS]<br>
-        -i<br>
-        --name jd-create-ini-files<br>
-        jde_admin jde_password JPS920 http://servermanager.com:8999/manage</h6> 
-    </div>
-</div> 
+<pre class="center-column">
+docker run --rm -v /tmp/build_jde_libs:/tmp/build_jde_libs/ \
+-i \
+--name jd-create-ini-files 92455890/jd-create-ini-files:1.0.0 \
+jde_admin jde_password JPS920 http://servermanager.com:8999/manage
+</pre>
+ 
 <h4 id='reviewing-output'>Reviewing Output</h4><div class="highlight"><pre class="highlight shell tab-shell"><code>Folder : /tmp/build_jde_libs/JPS920 has been created
 
 Authenticating : http://server-manager:8999/manage
