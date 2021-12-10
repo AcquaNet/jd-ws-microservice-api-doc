@@ -80,7 +80,9 @@ The following implementation steps need to be performed before working with JD W
 * Install Mulesoft JDE WS Community Edition Connector 3.
 
 
-## Requirements to consume Web Services using JD Atina WS Microservices ##
+## Requirements ##
+
+### Requirements to consume Web Services using JD Atina WS Microservices ###
 
 To use the latest version of the JD Atina REST WS API you will need:
 
@@ -89,7 +91,7 @@ To use the latest version of the JD Atina REST WS API you will need:
 * You may access the API over either HTTP or HTTPS, but *HTTPS is recommended where possible*.
 
 
-## Requirements to install JD Atina WS Microservices ##
+### Requirements to install JD Atina WS Microservices ###
 
 * Oracle JD Edwards EnterpriseOne Server Manager credential: jde admin user, Pasword and url for Server Manager Ex. http://server:8999/manage/
 
@@ -103,8 +105,7 @@ To use the latest version of the JD Atina REST WS API you will need:
     * `//Deplo/E920/DV920/java/sbfjars`
 
 
-
-## Addionals Prerequisites to use JD Generate Configuration Files and JD Generate Jars Files Tools ##
+### Addionals Requirements to use JD Generate Configuration Files and JD Generate Jars Files Tools ###
 
 * JDK 8 installed with JAVA_HOME configured appropriately (It not requires for docker version)
 
@@ -114,11 +115,15 @@ To use the latest version of the JD Atina REST WS API you will need:
 If you have multiple JDK’s installed it is not certain Maven will pick up the expected java and you could end up with unexpected results. 
 You can verify which JDK Maven uses by running mvn --version.
   
+  
 ## JD Atina Additional Tools ##
 
 Use the following tools to start the configuration process.
+
+* JD Atina Generate Configuration Files Tool
+* JD Atina Generate Jars Files Tool
  
-### JD Atina Generate Configuration Files Tool ###
+## JD Atina Generate Configuration Files Tool ##
   
 JD WS Microservice needs the following ini files according to your environment:
 
@@ -260,14 +265,14 @@ JDE-SQL=1.1.1.1
 <p>&nbsp;<br></p>
 
 
-### JD Atina Generate Jars Files Tool ###
+## JD Atina Generate Jars Files Tool ##
 
 This tool will generate all jars files need it by JD Web Service Microservice.
 
 ![JD Atina Generate Jars Files](images/atina_jar_tool.png)
  
 
-* Preparing folders
+**Preparing folders**
 
 Create folder with the following structure under **/tmp/build_jde_libs**:
 
@@ -676,8 +681,7 @@ Usage: java -jar jd-check-microservice OPTIONS
     JDE Environment
   --role [-r] (a string; default: "")
     JDE Role
-  --serverName [-s] (a string; default: "")
-    JD Micreserver Name or IP
+  --serverName [-s] (a string; default: "")JD Micreserver Name or IP
   --serverPort [-p] (a string; default: "")
     JD Micreserver Port
   --addressbookno [-a] (a string; default: "")
@@ -710,6 +714,34 @@ User User: JDE in environment JDV920 with *ALL disconnected. Current session ID 
 ------------------------------------------------------------------------
 </pre>
 <p>&nbsp;<br></p>
+
+## Install Mulesoft JD Atiba WS CE Connector Mule 3 ##
+
+The Atina JDE Web Service Connector CE provides interoperability with Oracle’s JD Edwards EnterpriseOne™ it allow consume all JDE Web Services published
+
+### Download
+
+Download [JD Atina Web Service Connector CE](http://157.245.236.175:8081/artifactory/libs-release/com/atina/jd-atina-connector/1.0.0/jd-atina-connector-1.0.0.zip) - latest release:
+
+<pre class="center-column">
+curl  http://157.245.236.175:8081/artifactory/libs-release/com/atina/jd-atina-connector/1.0.0/jd-atina-connector-1.0.0.zip -o jd-atina-connector-1.0.0.zip
+</pre>
+<p>&nbsp;<br></p>
+
+
+### Installation
+
+Install From the Studio Help Menu:
+
+* Click Help > Install New Software.
+
+* Click Add > Then, click Archive.. and select jd-atina-connector-1.0.0.zip downloaded
+
+* Expand a Community Category and click the checkbox for the connector to install.
+
+* Click Next, Next, I accept the terms of the license agreement, Finish, and restart Studio when prompted.
+
+* From a Mule Project in Studio, search for the connector and drag it to the Canvas.
 
 
 ## Request/Response Format ##
