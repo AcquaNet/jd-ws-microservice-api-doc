@@ -48,9 +48,9 @@ The `v1` and `v2` will be removed in future versions.
 
 ### API Docs for each version ###
 
-* [WooCommerce REST API v1 docs](v1.html)
-* [WooCommerce REST API v2 docs](v2.html)
-* [WooCommerce REST API v3 docs](index.html)
+* [JD Atina REST Web Services API v1 docs](v1.html)
+* [JD Atina REST Web Services API v2 docs](v2.html)
+* [JD Atina REST Web Services API v3 docs](index.html)
 
 ## Schema ##
 

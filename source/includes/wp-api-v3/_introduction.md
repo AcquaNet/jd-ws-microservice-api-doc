@@ -2,7 +2,7 @@
 
 WooCommerce (WC) 2.6+ is fully integrated with the WordPress [REST](http://en.wikipedia.org/wiki/Representational_State_Transfer) API. This allows WC data to be created, read, updated, and deleted using requests in JSON format and using WordPress REST API Authentication methods and standard HTTP verbs which are understood by most HTTP clients.
 
-The current WP REST API integration version is `v3` which takes a first-order position in endpoints. 
+The current JD Atina REST WS API integration version is `v3` which takes a first-order position in endpoints. 
 
 The following table shows API versions present in each major version of WooCommerce:
 
@@ -32,7 +32,7 @@ To use the latest version of the REST API you must be using:
 If you use ModSecurity and see `501 Method Not Implemented` errors, see [this issue](https://github.com/woocommerce/woocommerce/issues/9838) for details.
 
 <aside class="notice">
-	Please note that you are <strong>not</strong> required to install the <a href="https://wordpress.org/plugins/rest-api/" target="_blank">WP REST API (WP API)</a> plugin.
+	Please note that you are <strong>not</strong> required to install the <a href="https://wordpress.org/plugins/rest-api/" target="_blank">JD Atina REST WS API (WP API)</a> plugin.
 </aside>
 
 ## Request/Response Format ##
@@ -49,7 +49,7 @@ Some general information about responses:
 
 ### JSONP Support ###
 
-The WP REST API supports JSONP by default. JSONP responses use the `application/javascript` content-type. You can specify the callback using the `?_jsonp` parameter for `GET` requests to have the response wrapped in a JSON function:
+The JD Atina REST WS API supports JSONP by default. JSONP responses use the `application/javascript` content-type. You can specify the callback using the `?_jsonp` parameter for `GET` requests to have the response wrapped in a JSON function:
 
 <div class="api-endpoint">
 	<div class="endpoint-data">
@@ -102,7 +102,7 @@ Occasionally you might encounter errors when accessing the REST API. There are f
 | `404 Not Found`             | Requests to resources that don't exist or are missing       |
 | `500 Internal Server Error` | Server error                                                |
 
-> WP REST API error example:
+> JD Atina REST WS API error example:
 
 ```json
 {
@@ -114,7 +114,7 @@ Occasionally you might encounter errors when accessing the REST API. There are f
 }
 ```
 
-> WooCommerce REST API error example:
+> JD Atina REST Web Services API error example:
 
 ```json
 {
@@ -189,7 +189,7 @@ const WooCommerce = new WooCommerceRestApi({
   url: 'http://example.com', // Your store URL
   consumerKey: 'consumer_key', // Your consumer key
   consumerSecret: 'consumer_secret', // Your consumer secret
-  version: 'wc/v3' // WooCommerce WP REST API version
+  version: 'wc/v3' // WooCommerce JD Atina REST WS API version
 });
 ```
 
@@ -208,8 +208,8 @@ $woocommerce = new Client(
     'consumer_key', // Your consumer key
     'consumer_secret', // Your consumer secret
     [
-        'wp_api' => true, // Enable the WP REST API integration
-        'version' => 'wc/v3' // WooCommerce WP REST API version
+        'wp_api' => true, // Enable the JD Atina REST WS API integration
+        'version' => 'wc/v3' // WooCommerce JD Atina REST WS API version
     ]
 );
 ?>
@@ -226,8 +226,8 @@ wcapi = API(
     url="http://example.com", # Your store URL
     consumer_key="consumer_key", # Your consumer key
     consumer_secret="consumer_secret", # Your consumer secret
-    wp_api=True, # Enable the WP REST API integration
-    version="wc/v3" # WooCommerce WP REST API version
+    wp_api=True, # Enable the JD Atina REST WS API integration
+    version="wc/v3" # WooCommerce JD Atina REST WS API version
 )
 ```
 
@@ -243,8 +243,8 @@ woocommerce = WooCommerce::API.new(
   "consumer_key", # Your consumer key
   "consumer_secret", # Your consumer secret
   {
-    wp_api: true, # Enable the WP REST API integration
-    version: "wc/v3" # WooCommerce WP REST API version
+    wp_api: true, # Enable the JD Atina REST WS API integration
+    version: "wc/v3" # WooCommerce JD Atina REST WS API version
   }
 )
 ```

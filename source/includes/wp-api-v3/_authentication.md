@@ -1,6 +1,6 @@
 # Authentication #
 
-WooCommerce includes two ways to authenticate with the WP REST API. It is also possible to authenticate using any [WP REST API authentication](http://v3.wp-api.org/guide/authentication/) plugin or method.
+WooCommerce includes two ways to authenticate with the JD Atina REST WS API. It is also possible to authenticate using any [JD Atina REST WS API authentication](http://v3.wp-api.org/guide/authentication/) plugin or method.
 
 ## REST API keys ##
 
@@ -12,7 +12,7 @@ To create or manage keys for a specific WordPress user, go to WooCommerce > Sett
 
 *Note: Keys/Apps was found at WooCommerce > Settings > API > Key/Apps prior to WooCommerce 3.4.*
 
-![WooCommerce REST API keys settings](images/woocommerce-api-keys-settings.png)
+![JD Atina REST Web Services API keys settings](images/woocommerce-api-keys-settings.png)
 
 Click the "Add Key" button. In the next screen, add a description and select the WordPress user you would like to generate the key for. Use of the REST API with the generated keys will conform to that user's WordPress roles and capabilities.
 
@@ -35,7 +35,7 @@ The following image illustrates how this works:
 ![Authentication Endpoint flow](images/woocommerce-auth-endpoint-flow.png)
 
 <aside class="warning">
-	This endpoint works exclusively for users to generate API keys and facilitate integration between the WooCommerce REST API and an application. In no way is this endpoint intended to be used as login method for customers.
+	This endpoint works exclusively for users to generate API keys and facilitate integration between the JD Atina REST Web Services API and an application. In no way is this endpoint intended to be used as login method for customers.
 </aside>
 
 #### URL parameters ####

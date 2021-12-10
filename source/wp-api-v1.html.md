@@ -1,5 +1,5 @@
 ---
-title: WooCommerce REST API Documentation - WP REST API v1
+title: JD Atina REST Web Services API Documentation - JD Atina REST WS API v1
 
 language_tabs:
   - shell: cURL
@@ -38,5 +38,5 @@ includes:
 
 search: false
 
-warning: <i class="info"></i> This documentation is for the WooCommerce REST API v1 which is deprecated since WooCommerce 3.0. <a href="http://woocommerce.github.io/woocommerce-rest-api-docs/">Please use the latest REST API version</a>.
+warning: <i class="info"></i> This documentation is for the JD Atina REST Web Services API v1 which is deprecated since WooCommerce 3.0. <a href="http://woocommerce.github.io/woocommerce-rest-api-docs/">Please use the latest REST API version</a>.
 ---

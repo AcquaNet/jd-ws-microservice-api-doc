@@ -1,5 +1,5 @@
 ---
-title: WooCommerce REST API Documentation - WP REST API v3
+title: JD Atina REST Web Services API Documentation - JD Atina REST WS API v3
 
 language_tabs:
   - shell: cURL
