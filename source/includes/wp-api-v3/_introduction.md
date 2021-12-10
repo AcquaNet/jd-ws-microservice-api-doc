@@ -152,7 +152,7 @@ Download [JD Atina Generate Configuration Files](http://157.245.236.175:8081/art
 curl http://157.245.236.175:8081/artifactory/libs-release-local/com/atina/jd-create-ini-files/1.0.0/jd-create-ini-files-1.0.0-jar-with-dependencies.jar \
 --output jd-create-ini-files-1.0.0-jar-with-dependencies.jar
 </pre>
-<p>AAAAAAAAA<br></p>
+<p>&nbsp;<br></p>
  
 Run jd-create-ini-files command:
 
@@ -172,7 +172,7 @@ Options category 'startup':
   --user [-u] (a string; default: "")
     JDE User for Enterprise Server Manager
 </pre>
-<p><br> <br></p>
+<p>&nbsp;<br></p>
  
 Usage Exampes
 
@@ -194,7 +194,7 @@ docker run --rm -v /tmp/build_jde_libs:/tmp/build_jde_libs/ -i \
 --name jd-create-ini-files 92455890/jd-create-ini-files:1.0.0 \
 jde_admin jde_password JPS920 http://servermanager.com:8999/manage
 </pre>
-<p><br> <br></p>
+<p>&nbsp;<br></p>
 
 
 #### Reviewing Output ####
@@ -234,7 +234,7 @@ GENERATION SUCESSS
  File: \tmp\build_jde_libs\settings.xml generated
 ------------------------------------------------------------------------
 </pre>
-<p><br> <br></p>
+<p>&nbsp;<br></p>
 
 It will create the following files:
 
@@ -246,7 +246,7 @@ build_jde_libs
       ├─────├─ jdeinterop.ini
       └─────└─ jdelog.properties            
 </pre>
-<p><br> <br></p>
+<p>&nbsp;<br></p>
 
 
 Adding manually "tnsnames.ora" for Oracle RDBMS based installations only.
@@ -258,15 +258,14 @@ Edit jdeinterop.ini to set correct server IP's:
 JDE-ENT=2.2.2.2
 JDE-SQL=1.1.1.1           
 </pre>
-<p><br> <br></p>
+<p>&nbsp;<br></p>
 
 
 ### JD Atina Generate Jars Files Tool ###
 
 This tool will generate all jars files need it by JD Web Service Microservice.
 
-
-![JD Atina Services(images/atina_main.png)
+![JD Atina Services(images/atina_jar_tool.png)
 
 
 
