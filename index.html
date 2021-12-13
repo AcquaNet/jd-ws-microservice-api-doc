@@ -332,6 +332,9 @@
                   <li>
                     <a href="#login-with-jd-atina-token" class="toc-h2 toc-link" data-title="Login with JD Atina Token">Login with JD Atina Token</a>
                   </li>
+                  <li>
+                    <a href="#errors" class="toc-h2 toc-link" data-title="Errors">Errors</a>
+                  </li>
               </ul>
           </li>
           <li>
@@ -1373,6 +1376,8 @@ curl  http://157.245.236.175:8081/artifactory/libs-release/com/atina/jd-atina-co
 <p>The HTTP method will be POST.</p>
 
 <p>You must use the /login endpoint and pass the above parameters as a header and body.</p>
+
+<p><img src="images/atina_login_jde_cred-eb1ca319.png" alt="JD Atina settings" /></p>
 <h4 id='header-parameters'>Header parameters</h4>
 <table><thead>
 <tr>
@@ -1481,6 +1486,8 @@ curl  http://157.245.236.175:8081/artifactory/libs-release/com/atina/jd-atina-co
 <p>The HTTP method will be POST.</p>
 
 <p>You must use the /token/create endpoint and pass the above parameters as a header and body.</p>
+
+<p><img src="images/atina_create_token-65c772ac.png" alt="JD Atina settings" /></p>
 <h4 id='header-parameters-2'>Header parameters</h4>
 <table><thead>
 <tr>
@@ -1578,6 +1585,8 @@ curl  http://157.245.236.175:8081/artifactory/libs-release/com/atina/jd-atina-co
 <p>The HTTP method will be POST.</p>
 
 <p>You must use the /login endpoint and pass the above parameters as a header and body.</p>
+
+<p><img src="images/atina_login_token-71b4a025.png" alt="JD Atina settings" /></p>
 <h4 id='header-parameters-3'>Header parameters</h4>
 <table><thead>
 <tr>
@@ -1643,6 +1652,39 @@ curl  http://157.245.236.175:8081/artifactory/libs-release/com/atina/jd-atina-co
 <td>Connection Id between Rest API and WS Microservice.</td>
 </tr>
 </tbody></table>
+<h2 id='errors'>Errors</h2>
+<p>Occasionally you might encounter errors when accessing the REST API. There are four possible types:</p>
+
+<table><thead>
+<tr>
+<th>Error Code</th>
+<th>Error Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>400 Bad Request</code></td>
+<td>Invalid request, e.g. using an unsupported HTTP method</td>
+</tr>
+<tr>
+<td><code>401 Unauthorized</code></td>
+<td>Authentication or permission error, e.g. incorrect API keys</td>
+</tr>
+<tr>
+<td><code>404 Not Found</code></td>
+<td>Requests to resources that don&#39;t exist or are missing</td>
+</tr>
+<tr>
+<td><code>500 Internal Server Error</code></td>
+<td>Server error</td>
+</tr>
+</tbody></table>
+
+<p>|</p>
+
+<p>{
+    &quot;errorMessage&quot;: &quot;INTERNAL: Error Creating Connection&quot;,
+    &quot;errorDetail&quot;: &quot;JDE Conexion Error Exception: null source&quot;
+}</p>
 <h1 id='index'>Index</h1>
 <p>By default, the API provides information about all available endpoints on the site. Authentication is not required to access the API index.</p>
 <h3 id='http-request'>HTTP request</h3>
