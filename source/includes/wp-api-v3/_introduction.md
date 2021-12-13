@@ -189,6 +189,8 @@ java -jar jd-create-ini-files-1.0.0-jar-with-dependencies.jar \
 -e JDV920
 </pre>
 <p><br> <br></p>
+
+
  
 ### JD Atina Generate Configuration Files Tool - Using Docker instead of Java Application ###
  
@@ -200,7 +202,7 @@ docker run --rm -v /tmp/build_jde_libs:/tmp/build_jde_libs/ -i \
 jde_admin jde_password JPS920 http://servermanager.com:8999/manage
 </pre>
 <p>&nbsp;<br></p>
-<p>&nbsp;<br></p>
+
 
 ### Reviewing Output ###
 
@@ -287,7 +289,7 @@ tmp
 </pre>
 <p>&nbsp;<br></p>
 
-* Copy files from JDE Deploment Server to the corresponding folders
+**Copy files from JDE Deploment Server to the corresponding folders**
 
 | Destination              | Source                                                                       |
 | ------------------------ | ---------------------------------------------------------------------------- |
@@ -298,7 +300,7 @@ tmp
 |   ->/system/JAS          | //Deployment Server/E920/system/JAS/webclient.ear/webclient.war/WEB-INF/lib/*|
 |   ->/system/WS           | //Deployment Server/E920\DV920/java/sbfjars/*                                |
 
-* Define local Repository (localRepo option).
+**Define local Repository (localRepo option)**
 
 This option is required to run this tool using JAVA apps locally.
 
