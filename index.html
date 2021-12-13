@@ -332,18 +332,6 @@
                   <li>
                     <a href="#login-with-jd-atina-token" class="toc-h2 toc-link" data-title="Login with JD Atina Token">Login with JD Atina Token</a>
                   </li>
-                  <li>
-                    <a href="#rest-api-keys" class="toc-h2 toc-link" data-title="REST API keys">REST API keys</a>
-                  </li>
-                  <li>
-                    <a href="#rest-api-keys-2" class="toc-h2 toc-link" data-title="REST API keys">REST API keys</a>
-                  </li>
-                  <li>
-                    <a href="#authentication-over-https" class="toc-h2 toc-link" data-title="Authentication over HTTPS">Authentication over HTTPS</a>
-                  </li>
-                  <li>
-                    <a href="#authentication-over-http" class="toc-h2 toc-link" data-title="Authentication over HTTP">Authentication over HTTP</a>
-                  </li>
               </ul>
           </li>
           <li>
@@ -1396,7 +1384,7 @@ curl  http://157.245.236.175:8081/artifactory/libs-release/com/atina/jd-atina-co
 <tr>
 <td><code>Token</code></td>
 <td>string</td>
-<td>Empty token value yo user login with JDE User Credential. <i class="label label-info">mandatory</i></td>
+<td>Set an empty token to login using JDE User Credential. <i class="label label-info">mandatory</i></td>
 </tr>
 <tr>
 <td><code>TransactionId</code></td>
@@ -1435,7 +1423,7 @@ curl  http://157.245.236.175:8081/artifactory/libs-release/com/atina/jd-atina-co
 <td>JDE Role <i class="label label-info">mandatory</i></td>
 </tr>
 </tbody></table>
-<div class="highlight"><pre class="highlight plaintext"><code>   curl --location --request POST 'https://192.168.99.100/login' \
+<div class="highlight"><pre class="highlight plaintext"><code>curl --location --request POST 'https://192.168.99.100/login' \
 --header 'Token;' \
 --header 'Accept: application/json' \
 --header 'Content-Type: application/json' \
@@ -1443,7 +1431,7 @@ curl  http://157.245.236.175:8081/artifactory/libs-release/com/atina/jd-atina-co
 --data-raw '{
    "user": "JDE",
    "environment": "JDV920",
-   "password": "modus2020!",
+   "password": "xxxxxxx",
    "role": "*ALL"
 }
 '
@@ -1456,39 +1444,7 @@ curl  http://157.245.236.175:8081/artifactory/libs-release/com/atina/jd-atina-co
 }
 </code></pre></div>
 <p>Address Book Number setup for the user.</p>
-<h2 id='login-with-jd-atina-token'>Login with JD Atina Token</h2><h2 id='rest-api-keys'>REST API keys</h2>
-<p>the JD Atina REST WS API. It is also possible to authenticate using any <a href="http://v3.wp-api.org/guide/authentication/">JD Atina REST WS API authentication</a> plugin or method.</p>
-<h2 id='rest-api-keys-2'>REST API keys</h2>
-<p>Pre-generated keys can be used to authenticate use of the REST API endpoints. New keys can be generated either through the WordPress admin interface or they can be auto-generated through an endpoint.</p>
-<h3 id='generating-api-keys-in-the-wordpress-admin-interface'>Generating API keys in the WordPress admin interface</h3>
-<p>To create or manage keys for a specific WordPress user, go to JD Atina Web Services Microservices &gt; Settings &gt; Advanced &gt; REST API.</p>
-
-<p><em>Note: Keys/Apps was found at JD Atina Web Services Microservices &gt; Settings &gt; API &gt; Key/Apps prior to JD Atina Web Services Microservices 3.4.</em></p>
-
-<p><img src="images/woocommerce-api-keys-settings-02dfb1f9.png" alt="JD Atina REST Web Services API keys settings" /></p>
-
-<p>Click the &quot;Add Key&quot; button. In the next screen, add a description and select the WordPress user you would like to generate the key for. Use of the REST API with the generated keys will conform to that user&#39;s WordPress roles and capabilities.</p>
-
-<p>Choose the level of access for this REST API key, which can be <em>Read</em> access, <em>Write</em> access or <em>Read/Write</em> access. Then click the &quot;Generate API Key&quot; button and JD Atina Web Services Microservices will generate REST API keys for the selected user.</p>
-
-<p><img src="images/woocommerce-creating-api-keys-0f78883a.png" alt="Creating a new REST API key" /></p>
-
-<p>Now that keys have been generated, you should see two new keys, a QRCode, and a Revoke API Key button. These two keys are your Consumer Key and Consumer Secret.</p>
-
-<p><img src="images/woocommerce-api-key-generated-9004dc03.png" alt="Generated REST API key" /></p>
-
-<p>If the WordPress user associated with an API key is deleted, the API key will cease to function. API keys are not transferred to other users.</p>
-<h3 id='auto-generating-api-keys-using-our-application-authentication-endpoint'>Auto generating API keys using our Application Authentication Endpoint</h3>
-<p>This endpoint can be used by any APP to <em>allow users to generate API keys</em> for your APP. This makes integration with JD Atina Web Services Microservices API easier because the user only needs to grant access to your APP via a URL. After being redirected back to your APP, the API keys will be sent back in a separate POST request.</p>
-
-<p>The following image illustrates how this works:</p>
-
-<p><img src="images/woocommerce-auth-endpoint-flow-f04049df.png" alt="Authentication Endpoint flow" /></p>
-
-<aside class="warning">
-    This endpoint works exclusively for users to generate API keys and facilitate integration between the JD Atina REST Web Services API and an application. In no way is this endpoint intended to be used as login method for customers.
-</aside>
-<h4 id='url-parameters'>URL parameters</h4>
+<h4 id='header-parameters-returned'>Header parameters returned</h4>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1497,302 +1453,196 @@ curl  http://157.245.236.175:8081/artifactory/libs-release/com/atina/jd-atina-co
 </tr>
 </thead><tbody>
 <tr>
-<td><code>app_name</code></td>
+<td><code>Token</code></td>
 <td>string</td>
-<td>Your APP name <i class="label label-info">mandatory</i></td>
+<td>Token created</td>
 </tr>
 <tr>
-<td><code>scope</code></td>
-<td>string</td>
-<td>Level of access. Available: <code>read</code>, <code>write</code> and <code>read_write</code> <i class="label label-info">mandatory</i></td>
+<td><code>TransactionId</code></td>
+<td>integer</td>
+<td>Transaction Id</td>
 </tr>
 <tr>
-<td><code>user_id</code></td>
-<td>string</td>
-<td>User ID in your APP. For your internal reference, used when the user is redirected back to your APP. NOT THE USER ID IN WOOCOMMERCE <i class="label label-info">mandatory</i></td>
+<td><code>SessionId</code></td>
+<td>integer</td>
+<td>JDE Id connection.</td>
 </tr>
 <tr>
-<td><code>return_url</code></td>
-<td>string</td>
-<td>URL the user will be redirected to after authentication <i class="label label-info">mandatory</i></td>
-</tr>
-<tr>
-<td><code>callback_url</code></td>
-<td>string</td>
-<td>URL that will receive the generated API key. Note: this URL should be over <strong>HTTPS</strong> <i class="label label-info">mandatory</i></td>
+<td><code>ChannelId</code></td>
+<td>integer</td>
+<td>Connection Id between Rest API and WS Microservice.</td>
 </tr>
 </tbody></table>
-<h4 id='creating-an-authentication-endpoint-url'>Creating an authentication endpoint URL</h4>
-<p>You must use the <code>/wc-auth/v1/authorize</code> endpoint and pass the above parameters as a query string.</p>
+<h2 id='login-with-jd-atina-token'>Login with JD Atina Token</h2>
+<p>To login using token will require generate a token before invoke login API.</p>
 
-<blockquote>
-<p>Example of how to build an authentication URL:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># Bash example</span>
-<span class="nv">STORE_URL</span><span class="o">=</span><span class="s1">'http://example.com'</span>
-<span class="nv">ENDPOINT</span><span class="o">=</span><span class="s1">'/wc-auth/v1/authorize'</span>
-<span class="nv">PARAMS</span><span class="o">=</span><span class="s2">"app_name=My App Name&amp;scope=read_write&amp;user_id=123&amp;return_url=http://app.com/return-page&amp;callback_url=https://app.com/callback-endpoint"</span>
-<span class="nv">QUERY_STRING</span><span class="o">=</span><span class="s2">"</span><span class="si">$(</span>perl <span class="nt">-MURI</span>::Escape <span class="nt">-e</span> <span class="s1">'print uri_escape($ARGV[0]);'</span> <span class="s2">"</span><span class="nv">$PARAMS</span><span class="s2">"</span><span class="si">)</span><span class="s2">"</span>
-<span class="nv">QUERY_STRING</span><span class="o">=</span><span class="si">$(</span><span class="nb">echo</span> <span class="nv">$QUERY_STRING</span> | <span class="nb">sed</span> <span class="nt">-e</span> <span class="s2">"s/%20/</span><span class="se">\+</span><span class="s2">/g"</span> <span class="nt">-e</span> <span class="s2">"s/%3D/</span><span class="se">\=</span><span class="s2">/g"</span> <span class="nt">-e</span> <span class="s2">"s/%26/</span><span class="se">\&amp;</span><span class="s2">/g"</span><span class="si">)</span>
+<p>The administrator will need to generate a token using the following API.</p>
 
-<span class="nb">echo</span> <span class="s2">"</span><span class="nv">$STORE_URL$ENDPOINT</span><span class="s2">?</span><span class="nv">$QUERY_STRING</span><span class="s2">"</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">querystring</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">querystring</span><span class="dl">'</span><span class="p">);</span>
+<p>The HTTP method will be POST.</p>
 
-<span class="kd">const</span> <span class="nx">store_url</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">http://example.com</span><span class="dl">'</span><span class="p">;</span>
-<span class="kd">const</span> <span class="nx">endpoint</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">/wc-auth/v1/authorize</span><span class="dl">'</span><span class="p">;</span>
-<span class="kd">const</span> <span class="nx">params</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="na">app_name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">My App Name</span><span class="dl">'</span><span class="p">,</span>
-  <span class="na">scope</span><span class="p">:</span> <span class="dl">'</span><span class="s1">read_write</span><span class="dl">'</span><span class="p">,</span>
-  <span class="na">user_id</span><span class="p">:</span> <span class="mi">123</span><span class="p">,</span>
-  <span class="na">return_url</span><span class="p">:</span> <span class="dl">'</span><span class="s1">http://app.com/return-page</span><span class="dl">'</span><span class="p">,</span>
-  <span class="na">callback_url</span><span class="p">:</span> <span class="dl">'</span><span class="s1">https://app.com/callback-endpoint</span><span class="dl">'</span>
-<span class="p">};</span>
-<span class="kd">const</span> <span class="nx">query_string</span> <span class="o">=</span> <span class="nx">querystring</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">params</span><span class="p">).</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/%20/g</span><span class="p">,</span> <span class="dl">'</span><span class="s1">+</span><span class="dl">'</span><span class="p">);</span>
+<p>You must use the /token/create endpoint and pass the above parameters as a header and body.</p>
+<h4 id='header-parameters-2'>Header parameters</h4>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>TransactionId</code></td>
+<td>integer</td>
+<td>Id used to get log inside JD Atina WS Microservices. <i class="label label-info">optional</i>. Use 0 to generate a transsaction ID inside JDE Atina Microservices</td>
+</tr>
+</tbody></table>
+<h4 id='body-parameters-2'>Body parameters</h4>
+<p>JDE HTML Client Credentials.</p>
 
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">store_url</span> <span class="o">+</span> <span class="nx">endpoint</span> <span class="o">+</span> <span class="dl">'</span><span class="s1">?</span><span class="dl">'</span> <span class="o">+</span> <span class="nx">query_string</span><span class="p">);</span>
-</code></pre></div><div class="highlight"><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
-<span class="nv">$store_url</span> <span class="o">=</span> <span class="s1">'http://example.com'</span><span class="p">;</span>
-<span class="nv">$endpoint</span> <span class="o">=</span> <span class="s1">'/wc-auth/v1/authorize'</span><span class="p">;</span>
-<span class="nv">$params</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="s1">'app_name'</span> <span class="o">=&gt;</span> <span class="s1">'My App Name'</span><span class="p">,</span>
-    <span class="s1">'scope'</span> <span class="o">=&gt;</span> <span class="s1">'write'</span><span class="p">,</span>
-    <span class="s1">'user_id'</span> <span class="o">=&gt;</span> <span class="mi">123</span><span class="p">,</span>
-    <span class="s1">'return_url'</span> <span class="o">=&gt;</span> <span class="s1">'http://app.com'</span><span class="p">,</span>
-    <span class="s1">'callback_url'</span> <span class="o">=&gt;</span> <span class="s1">'https://app.com'</span>
-<span class="p">];</span>
-<span class="nv">$query_string</span> <span class="o">=</span> <span class="nb">http_build_query</span><span class="p">(</span> <span class="nv">$params</span> <span class="p">);</span>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>user</code></td>
+<td>string</td>
+<td>JDE User <i class="label label-info">mandatory</i></td>
+</tr>
+<tr>
+<td><code>password</code></td>
+<td>string</td>
+<td>JDE Password <i class="label label-info">mandatory</i></td>
+</tr>
+<tr>
+<td><code>environment</code></td>
+<td>string</td>
+<td>JDE Environment <i class="label label-info">mandatory</i></td>
+</tr>
+<tr>
+<td><code>role</code></td>
+<td>string</td>
+<td>JDE Role <i class="label label-info">mandatory</i></td>
+</tr>
+<tr>
+<td><code>tokenExpiration</code></td>
+<td>integer</td>
+<td>Token expiration in milliseconds <i class="label label-info">mandatory</i></td>
+</tr>
+</tbody></table>
+<div class="highlight"><pre class="highlight plaintext"><code>curl --location --request POST 'https://192.168.99.100/token/create' \
+--header 'TransactionId: 0' \
+--header 'Accept: application/json' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+   "user": "JDE",
+   "environment": "JDV920",
+   "password": "xxxxxxx",
+   "role": "*ALL",
+   "tokenExpiration": 480000
+}
+'
+</code></pre></div><h4 id='header-parameters-returned-2'>Header parameters returned</h4>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>Token</code></td>
+<td>string</td>
+<td>Token created</td>
+</tr>
+<tr>
+<td><code>TransactionId</code></td>
+<td>integer</td>
+<td>Transaction Id</td>
+</tr>
+<tr>
+<td><code>SessionId</code></td>
+<td>integer</td>
+<td>0. There is not a JDE connection yet.</td>
+</tr>
+<tr>
+<td><code>ChannelId</code></td>
+<td>integer</td>
+<td>Connection Id between Rest API and WS Microservice.</td>
+</tr>
+</tbody></table>
 
-<span class="k">echo</span> <span class="nv">$store_url</span> <span class="mf">.</span> <span class="nv">$endpoint</span> <span class="mf">.</span> <span class="s1">'?'</span> <span class="mf">.</span> <span class="nv">$query_string</span><span class="p">;</span>
-<span class="cp">?&gt;</span>
-</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">urllib.parse</span> <span class="kn">import</span> <span class="n">urlencode</span>
+<p>The next step is use this token created to login.</p>
 
-<span class="n">store_url</span> <span class="o">=</span> <span class="s">'http://example.com'</span>
-<span class="n">endpoint</span> <span class="o">=</span> <span class="s">'/wc-auth/v1/authorize'</span>
-<span class="n">params</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s">"app_name"</span><span class="p">:</span> <span class="s">"My App Name"</span><span class="p">,</span>
-    <span class="s">"scope"</span><span class="p">:</span> <span class="s">"read_write"</span><span class="p">,</span>
-    <span class="s">"user_id"</span><span class="p">:</span> <span class="mi">123</span><span class="p">,</span>
-    <span class="s">"return_url"</span><span class="p">:</span> <span class="s">"http://app.com/return-page"</span><span class="p">,</span>
-    <span class="s">"callback_url"</span><span class="p">:</span> <span class="s">"https://app.com/callback-endpoint"</span>
-<span class="p">}</span>
-<span class="n">query_string</span> <span class="o">=</span> <span class="n">urlencode</span><span class="p">(</span><span class="n">params</span><span class="p">)</span>
+<p>The HTTP method will be POST.</p>
 
-<span class="k">print</span><span class="p">(</span><span class="s">"%s%s?%s"</span> <span class="o">%</span> <span class="p">(</span><span class="n">store_url</span><span class="p">,</span> <span class="n">endpoint</span><span class="p">,</span> <span class="n">query_string</span><span class="p">))</span>
-</code></pre></div><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s2">"uri"</span>
-
-<span class="n">store_url</span> <span class="o">=</span> <span class="s1">'http://example.com'</span>
-<span class="n">endpoint</span> <span class="o">=</span> <span class="s1">'/wc-auth/v1/authorize'</span>
-<span class="n">params</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="ss">app_name: </span><span class="s2">"My App Name"</span><span class="p">,</span>
-  <span class="ss">scope: </span><span class="s2">"read_write"</span><span class="p">,</span>
-  <span class="ss">user_id: </span><span class="mi">123</span><span class="p">,</span>
-  <span class="ss">return_url: </span><span class="s2">"http://app.com/return-page"</span><span class="p">,</span>
-  <span class="ss">callback_url: </span><span class="s2">"https://app.com/callback-endpoint"</span>
-<span class="p">}</span>
-<span class="n">query_string</span> <span class="o">=</span> <span class="no">URI</span><span class="p">.</span><span class="nf">encode_www_form</span><span class="p">(</span><span class="n">params</span><span class="p">)</span>
-
-<span class="nb">puts</span> <span class="s2">"</span><span class="si">#{</span><span class="n">store_url</span><span class="si">}#{</span><span class="n">endpoint</span><span class="si">}</span><span class="s2">?</span><span class="si">#{</span><span class="n">query_string</span><span class="si">}</span><span class="s2">"</span>
+<p>You must use the /login endpoint and pass the above parameters as a header and body.</p>
+<h4 id='header-parameters-3'>Header parameters</h4>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>Token</code></td>
+<td>string</td>
+<td>Set token created. <i class="label label-info">mandatory</i></td>
+</tr>
+<tr>
+<td><code>TransactionId</code></td>
+<td>integer</td>
+<td>Id used to get log inside JD Atina WS Microservices. <i class="label label-info">optional</i>. Use 0 to generate a transsaction ID inside JDE Atina Microservices</td>
+</tr>
+</tbody></table>
+<h4 id='body-parameters-3'>Body parameters</h4>
+<p>Use an empty body</p>
+<div class="highlight"><pre class="highlight plaintext"><code>curl --location --request POST 'https://192.168.99.100/login' \
+--header 'Token: eyJhbGciOiJIUzI1NiJ9.exsdsIiOiJTdWJqZWN0IiwiaXNzIjoiSXNzdWUiLCJ1c2VyIjoiSkRdW52aXJvbm1lbnQiOiJKRFY5MjAiLCJyb2xlIjdlc3Npb25JZCI6MTkwOTg5MDEzOSwiZXhwIjoxNjM5NDA3ODczfQ.YuUXk1R60YIicZjfFp9W3px_4bIpIrHSvUIYqChSxOc' \
+--header 'Accept: application/json' \
+--header 'Content-Type: application/json' \
+--header 'TransactionId: 0' \
+--data-raw '{}
 </code></pre></div>
 <blockquote>
-<p>Example of JSON posted with the API Keys</p>
+<p>Example of JSON received with the API Keys</p>
 </blockquote>
 <div class="highlight"><pre class="highlight plaintext"><code>{
-    "key_id": 1,
-    "user_id": 123,
-    "consumer_key": "ck_xxxxxxxxxxxxxxxx",
-    "consumer_secret": "cs_xxxxxxxxxxxxxxxx",
-    "key_permissions": "read_write"
+    "addressBookNo": "1"
 }
 </code></pre></div>
-<p>Example of the screen that the user will see:</p>
-
-<p><img src="images/woocommerce-auth-endpoint-example-3cbc0bfa.png" alt="Authentication Endpoint example" /></p>
-<h4 id='notes'>Notes</h4>
-<ul>
-<li>While redirecting the user using <code>return_url</code>, you are also sent <code>success</code> and <code>user_id</code> parameters as query strings.</li>
-<li><code>success</code> sends <code>0</code> if the user denied, or <code>1</code> if authenticated successfully.</li>
-<li>Use <code>user_id</code> to identify the user when redirected back to the (<code>return_url</code>) and also remember to save the API Keys when your <code>callback_url</code> is posted to after auth.</li>
-<li>The auth endpoint will send the API Keys in JSON format to the <code>callback_url</code>, so it&#39;s important to remember that some languages such as PHP will not display it inside the <code>$_POST</code> global variable, in PHP you can access it using <code>$HTTP_RAW_POST_DATA</code> (for old PHP versions) or <code>file_get_contents(&#39;php://input&#39;);</code>.</li>
-<li>The URL generated must have all query string values encoded.</li>
-</ul>
-<h2 id='authentication-over-https'>Authentication over HTTPS</h2>
-<p>You may use <a href="http://en.wikipedia.org/wiki/Basic_access_authentication">HTTP Basic Auth</a> by providing the REST API Consumer Key as the username and the REST API Consumer Secret as the password.</p>
-
-<blockquote>
-<p>HTTP Basic Auth example</p>
-</blockquote>
-<div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://www.example.com/wp-json/wc/v3/orders <span class="se">\</span>
-    <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">MicroservicesRestApi</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">@woocommerce/woocommerce-rest-api</span><span class="dl">"</span><span class="p">).</span><span class="k">default</span><span class="p">;</span>
-<span class="c1">// import JD Atina Web Services MicroservicesRestApi from "@woocommerce/woocommerce-rest-api"; // Supports ESM</span>
-
-<span class="kd">const</span> <span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">MicroservicesRestApi</span><span class="p">({</span>
-  <span class="na">url</span><span class="p">:</span> <span class="dl">'</span><span class="s1">https://example.com</span><span class="dl">'</span><span class="p">,</span>
-  <span class="na">consumerKey</span><span class="p">:</span> <span class="dl">'</span><span class="s1">consumer_key</span><span class="dl">'</span><span class="p">,</span>
-  <span class="na">consumerSecret</span><span class="p">:</span> <span class="dl">'</span><span class="s1">consumer_secret</span><span class="dl">'</span><span class="p">,</span>
-  <span class="na">version</span><span class="p">:</span> <span class="dl">'</span><span class="s1">wc/v3</span><span class="dl">'</span>
-<span class="p">});</span>
-</code></pre></div><div class="highlight"><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
-<span class="k">require</span> <span class="k">__DIR__</span> <span class="mf">.</span> <span class="s1">'/vendor/autoload.php'</span><span class="p">;</span>
-
-<span class="kn">use</span> <span class="no">Automattic\JD</span> <span class="nc">Atina</span> <span class="nc">Web</span> <span class="nc">Services</span> <span class="nc">Microservices\Client</span><span class="p">;</span>
-
-<span class="nv">$woocommerce</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Client</span><span class="p">(</span>
-    <span class="s1">'https://example.com'</span><span class="p">,</span>
-    <span class="s1">'consumer_key'</span><span class="p">,</span>
-    <span class="s1">'consumer_secret'</span><span class="p">,</span>
-    <span class="p">[</span>
-        <span class="s1">'wp_api'</span> <span class="o">=&gt;</span> <span class="kc">true</span><span class="p">,</span>
-        <span class="s1">'version'</span> <span class="o">=&gt;</span> <span class="s1">'wc/v3'</span>
-    <span class="p">]</span>
-<span class="p">);</span>
-<span class="cp">?&gt;</span>
-</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">woocommerce</span> <span class="kn">import</span> <span class="n">API</span>
-
-<span class="n">wcapi</span> <span class="o">=</span> <span class="n">API</span><span class="p">(</span>
-    <span class="n">url</span><span class="o">=</span><span class="s">"https://example.com"</span><span class="p">,</span>
-    <span class="n">consumer_key</span><span class="o">=</span><span class="s">"consumer_key"</span><span class="p">,</span>
-    <span class="n">consumer_secret</span><span class="o">=</span><span class="s">"consumer_secret"</span><span class="p">,</span>
-    <span class="n">wp_api</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
-    <span class="n">version</span><span class="o">=</span><span class="s">"wc/v3"</span>
-<span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s2">"woocommerce_api"</span>
-
-<span class="n">woocommerce</span> <span class="o">=</span> <span class="no">JD</span> <span class="no">Atina</span> <span class="no">Web</span> <span class="no">Services</span> <span class="no">Microservices</span><span class="o">::</span><span class="no">API</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span>
-  <span class="s2">"https://example.com"</span><span class="p">,</span>
-  <span class="s2">"consumer_key"</span><span class="p">,</span>
-  <span class="s2">"consumer_secret"</span><span class="p">,</span>
-  <span class="p">{</span>
-    <span class="ss">wp_json: </span><span class="kp">true</span><span class="p">,</span>
-    <span class="ss">version: </span><span class="s2">"wc/v3"</span>
-  <span class="p">}</span>
-<span class="p">)</span>
-</code></pre></div>
-<p>Occasionally some servers may not parse the Authorization header correctly (if you see a &quot;Consumer key is missing&quot; error when authenticating over SSL, you have a server issue). In this case, you may provide the consumer key/secret as query string parameters instead.</p>
-
-<blockquote>
-<p>Example for servers that not properly parse the Authorization header:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://www.example.com/wp-json/wc/v3/orders?consumer_key<span class="o">=</span>123&amp;consumer_secret<span class="o">=</span>abc
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">MicroservicesRestApi</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">@woocommerce/woocommerce-rest-api</span><span class="dl">"</span><span class="p">).</span><span class="k">default</span><span class="p">;</span>
-<span class="c1">// import JD Atina Web Services MicroservicesRestApi from "@woocommerce/woocommerce-rest-api"; // Supports ESM</span>
-
-<span class="kd">const</span> <span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">MicroservicesRestApi</span><span class="p">({</span>
-  <span class="na">url</span><span class="p">:</span> <span class="dl">'</span><span class="s1">https://example.com</span><span class="dl">'</span><span class="p">,</span>
-  <span class="na">consumerKey</span><span class="p">:</span> <span class="dl">'</span><span class="s1">consumer_key</span><span class="dl">'</span><span class="p">,</span>
-  <span class="na">consumerSecret</span><span class="p">:</span> <span class="dl">'</span><span class="s1">consumer_secret</span><span class="dl">'</span><span class="p">,</span>
-  <span class="na">version</span><span class="p">:</span> <span class="dl">'</span><span class="s1">wc/v3</span><span class="dl">'</span><span class="p">,</span>
-  <span class="na">queryStringAuth</span><span class="p">:</span> <span class="kc">true</span> <span class="c1">// Force Basic Authentication as query string true and using under HTTPS</span>
-<span class="p">});</span>
-</code></pre></div><div class="highlight"><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
-<span class="k">require</span> <span class="k">__DIR__</span> <span class="mf">.</span> <span class="s1">'/vendor/autoload.php'</span><span class="p">;</span>
-
-<span class="kn">use</span> <span class="no">Automattic\JD</span> <span class="nc">Atina</span> <span class="nc">Web</span> <span class="nc">Services</span> <span class="nc">Microservices\Client</span><span class="p">;</span>
-
-<span class="nv">$woocommerce</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Client</span><span class="p">(</span>
-    <span class="s1">'https://example.com'</span><span class="p">,</span>
-    <span class="s1">'consumer_key'</span><span class="p">,</span>
-    <span class="s1">'consumer_secret'</span><span class="p">,</span>
-    <span class="p">[</span>
-        <span class="s1">'wp_api'</span> <span class="o">=&gt;</span> <span class="kc">true</span><span class="p">,</span>
-        <span class="s1">'version'</span> <span class="o">=&gt;</span> <span class="s1">'wc/v3'</span><span class="p">,</span>
-        <span class="s1">'query_string_auth'</span> <span class="o">=&gt;</span> <span class="kc">true</span> <span class="c1">// Force Basic Authentication as query string true and using under HTTPS</span>
-    <span class="p">]</span>
-<span class="p">);</span>
-<span class="cp">?&gt;</span>
-</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">woocommerce</span> <span class="kn">import</span> <span class="n">API</span>
-
-<span class="n">wcapi</span> <span class="o">=</span> <span class="n">API</span><span class="p">(</span>
-    <span class="n">url</span><span class="o">=</span><span class="s">"https://example.com"</span><span class="p">,</span>
-    <span class="n">consumer_key</span><span class="o">=</span><span class="s">"consumer_key"</span><span class="p">,</span>
-    <span class="n">consumer_secret</span><span class="o">=</span><span class="s">"consumer_secret"</span><span class="p">,</span>
-    <span class="n">wp_api</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
-    <span class="n">version</span><span class="o">=</span><span class="s">"wc/v3"</span><span class="p">,</span>
-    <span class="n">query_string_auth</span><span class="o">=</span><span class="bp">True</span> <span class="o">//</span> <span class="n">Force</span> <span class="n">Basic</span> <span class="n">Authentication</span> <span class="k">as</span> <span class="n">query</span> <span class="n">string</span> <span class="n">true</span> <span class="ow">and</span> <span class="n">using</span> <span class="n">under</span> <span class="n">HTTPS</span>
-<span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s2">"woocommerce_api"</span>
-
-<span class="n">woocommerce</span> <span class="o">=</span> <span class="no">JD</span> <span class="no">Atina</span> <span class="no">Web</span> <span class="no">Services</span> <span class="no">Microservices</span><span class="o">::</span><span class="no">API</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span>
-  <span class="s2">"https://example.com"</span><span class="p">,</span>
-  <span class="s2">"consumer_key"</span><span class="p">,</span>
-  <span class="s2">"consumer_secret"</span><span class="p">,</span>
-  <span class="p">{</span>
-    <span class="ss">wp_json: </span><span class="kp">true</span><span class="p">,</span>
-    <span class="ss">version: </span><span class="s2">"wc/v3"</span><span class="p">,</span>
-    <span class="ss">query_string_auth: </span><span class="kp">true</span> <span class="sr">//</span> <span class="no">Force</span> <span class="no">Basic</span> <span class="no">Authentication</span> <span class="n">as</span> <span class="n">query</span> <span class="n">string</span> <span class="kp">true</span> <span class="n">and</span> <span class="n">using</span> <span class="n">under</span> <span class="no">HTTPS</span>
-  <span class="p">}</span>
-<span class="p">)</span>
-</code></pre></div><h2 id='authentication-over-http'>Authentication over HTTP</h2>
-<p>You must use <a href="http://tools.ietf.org/html/rfc5849">OAuth 1.0a &quot;one-legged&quot; authentication</a> to ensure REST API credentials cannot be intercepted by an attacker. Typically you will use any standard OAuth 1.0a library in the language of your choice to handle the authentication, or generate the necessary parameters by following the following instructions.</p>
-<h3 id='creating-a-signature'>Creating a signature</h3><h4 id='collect-the-request-method-and-url'>Collect the request method and URL</h4>
-<p>First you need to determine the HTTP method you will be using for the request, and the URL of the request.</p>
-
-<p>The <strong>HTTP method</strong> will be <code>GET</code> in our case.</p>
-
-<p>The <strong>Request URL</strong> will be the endpoint you are posting to, e.g. <code>http://www.example.com/wp-json/wc/v3/orders</code>.</p>
-<h4 id='collect-parameters'>Collect parameters</h4>
-<p>Collect and normalize your parameters. This includes all <code>oauth_*</code> parameters except for the <code>oauth_signature</code> itself.</p>
-
-<p>These values need to be encoded into a single string which will be used later on. The process to build the string is very specific:</p>
-
-<ol>
-<li><a href="https://dev.twitter.com/oauth/overview/percent-encoding-parameters">Percent encode</a> every key and value that will be signed.</li>
-<li>Sort the list of parameters alphabetically by encoded key.</li>
-<li>For each key/value pair:
-
-<ul>
-<li>Append the encoded key to the output string.</li>
-<li>Append the <code>=</code> character to the output string.</li>
-<li>Append the encoded value to the output string.</li>
-<li>If there are more key/value pairs remaining, append a <code>&amp;</code> character to the output string.</li>
-</ul></li>
-</ol>
-
-<p>When percent encoding in PHP for example, you would use <code>rawurlencode()</code>.</p>
-
-<p>When sorting parameters in PHP for example, you would use <code>uksort( $params, &#39;strcmp&#39; )</code>.</p>
-
-<blockquote>
-<p>Parameters example:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight plaintext"><code>oauth_consumer_key=abc123&amp;oauth_signature_method=HMAC-SHA1
-</code></pre></div><h4 id='create-the-signature-base-string'>Create the signature base string</h4>
-<p>The above values collected so far must be joined to make a single string, from which the signature will be generated. This is called the signature base string in the OAuth specification.</p>
-
-<p>To encode the HTTP method, request URL, and parameter string into a single string:</p>
-
-<ol>
-<li>Set the output string equal to the uppercase <strong>HTTP Method</strong>.</li>
-<li>Append the <code>&amp;</code> character to the output string.</li>
-<li><a href="https://dev.twitter.com/oauth/overview/percent-encoding-parameters">Percent encode</a> the URL and append it to the output string.</li>
-<li>Append the <code>&amp;</code> character to the output string.</li>
-<li><a href="https://dev.twitter.com/oauth/overview/percent-encoding-parameters">Percent encode</a> the parameter string and append it to the output string.</li>
-</ol>
-
-<blockquote>
-<p>Example signature base string:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight plaintext"><code>GET&amp;http%3A%2F%2Fwww.example.com%2Fwp-json%2Fwc%2Fv3%2Forders&amp;oauth_consumer_key%3Dabc123%26oauth_signature_method%3DHMAC-SHA1
-</code></pre></div><h4 id='generate-the-signature'>Generate the signature</h4>
-<p>Generate the signature using the <em>signature base string</em> and your consumer secret key with a <code>&amp;</code> character with the HMAC-SHA1 hashing algorithm.</p>
-
-<p>In PHP you can use the <a href="http://php.net/manual/en/function.hash-hmac.php">hash_hmac</a> function.</p>
-
-<p>HMAC-SHA1 or HMAC-SHA256 are the only accepted hash algorithms.</p>
-
-<p>If you are having trouble generating a correct signature, you&#39;ll want to review the string you are signing for encoding errors. The <a href="https://github.com/woocommerce/woocommerce/blob/master/includes/class-wc-rest-authentication.php#L185">authentication source</a> can also be helpful in understanding how to properly generate the signature.</p>
-<h3 id='oauth-tips'>OAuth tips</h3>
-<ul>
-<li>The OAuth parameters may be added as query string parameters or included in the Authorization header.</li>
-<li>Note there is no reliable cross-platform way to get the raw request headers in WordPress, so query string should be more reliable in some cases.</li>
-<li>The required parameters are: <code>oauth_consumer_key</code>, <code>oauth_timestamp</code>, <code>oauth_nonce</code>, <code>oauth_signature</code>, and <code>oauth_signature_method</code>. <code>oauth_version</code> is not required and should be omitted.</li>
-<li>The OAuth nonce can be any randomly generated 32 character (recommended) string that is unique to the consumer key.</li>
-<li>The OAuth timestamp should be the unix timestamp at the time of the request. The REST API will deny any requests that include a timestamp outside of a 15 minute window to prevent replay attacks.</li>
-<li>You must use the store URL provided by the index when forming the base string used for the signature, as this is what the server will use. (e.g. if the store URL includes a <code>www</code> sub-domain, you should use it for requests)</li>
-<li>Note that the request body is <em>not</em> signed as per the OAuth spec.</li>
-<li>If including parameters in your request, it saves a lot of trouble if you can order your items alphabetically.</li>
-<li>Authorization header is supported starting JD Atina Web Services Microservices 3.0.</li>
-</ul>
+<p>Address Book Number setup for the user.</p>
+<h4 id='header-parameters-returned-3'>Header parameters returned</h4>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>Token</code></td>
+<td>string</td>
+<td>New Token created. It will be next token to use.</td>
+</tr>
+<tr>
+<td><code>TransactionId</code></td>
+<td>integer</td>
+<td>Transaction Id</td>
+</tr>
+<tr>
+<td><code>SessionId</code></td>
+<td>integer</td>
+<td>JDE Id connection.</td>
+</tr>
+<tr>
+<td><code>ChannelId</code></td>
+<td>integer</td>
+<td>Connection Id between Rest API and WS Microservice.</td>
+</tr>
+</tbody></table>
 <h1 id='index'>Index</h1>
 <p>By default, the API provides information about all available endpoints on the site. Authentication is not required to access the API index.</p>
 <h3 id='http-request'>HTTP request</h3>
