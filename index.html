@@ -1160,9 +1160,7 @@ JDE_MICROSERVER_ENTERPRISE_DB_IP=2.2.2.2
 
 <p>&nbsp;<br></p>
 <h3 id='create-and-run-jd-microservices'>Create and Run JD Microservices</h3>
-<ul>
-<li>Run following docker commands:</li>
-</ul>
+<p><strong>Run following docker commands:</strong></p>
 
 <pre class="center-column"> 
 docker-compose -f docker-compose-dist.yml up --no-start
@@ -1170,9 +1168,7 @@ docker-compose -f docker-compose-dist.yml up --no-start
 
 <p>&nbsp;<br></p>
 
-<ul>
-<li>Copy files Configuration files and jars files into Container</li>
-</ul>
+<p><strong>Copy files Configuration files and jars files into Container</strong></p>
 
 <pre class="center-column"> 
 docker cp /tmp/build_jde_libs/JPS920 jd-atina-microserver:/tmp/jde/config
@@ -1182,9 +1178,7 @@ docker cp /tmp/build_jde_libs/StdWebService-1.0.0.jar jd-atina-microserver:/tmp/
 
 <p>&nbsp;<br></p>
 
-<ul>
-<li>Run Containers</li>
-</ul>
+<p><strong>Run Containers</strong></p>
 
 <pre class="center-column"> 
 docker-compose -f docker-compose-dist.yml start
@@ -1192,9 +1186,7 @@ docker-compose -f docker-compose-dist.yml start
 
 <p>&nbsp;<br></p>
 
-<ul>
-<li>Check JD WS Microservice startup</li>
-</ul>
+<p><em>**Check JD WS Microservice startup</em>*</p>
 
 <p>Check starting process for JD Atina WS Microservice</p>
 
@@ -1266,9 +1258,7 @@ docker exec -it jd-atina-microserver cat /tmp/jde/JDEConnectorServerLog/jde_atin
 
 <p>&nbsp;<br></p>
 
-<ul>
-<li>Check JD Rest API Microservice startup</li>
-</ul>
+<p><strong>Check JD Rest API Microservice startup</strong></p>
 
 <pre class="center-column"> 
 docker logs jd-atina-rest-server
@@ -1298,9 +1288,7 @@ Yb,_,dP       `8b,,d88b,_,88,_,dP   8I   Yb,,d8,   ,d8b,
 
 <p>&nbsp;<br></p>
 
-<ul>
-<li>Go to API defintions:</li>
-</ul>
+<p><strong>Go to API defintions:</strong></p>
 
 <p><a href="https://localhost/swagger/">https://localhost/swagger/</a></p>
 <h1 id='jde-check-jd-microservice-executing-a-web-service'>JDE Check JD Microservice executing a Web Service</h1>
