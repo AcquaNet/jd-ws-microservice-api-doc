@@ -171,5 +171,25 @@ Address Book Number setup for the user.
 | `SessionId`    | integer| JDE Id connection.
 | `ChannelId`    | integer| Connection Id between Rest API and WS Microservice.
 
+
+## Errors ##
+
+Occasionally you might encounter errors when accessing the REST API. There are four possible types:
+
+| Error Code                  | Error Type                                                  |
+|-----------------------------|-------------------------------------------------------------|
+| `400 Bad Request`           | Invalid request, e.g. using an unsupported HTTP method      |
+| `401 Unauthorized`          | Authentication or permission error, e.g. incorrect API keys |
+| `404 Not Found`             | Requests to resources that don't exist or are missing       |
+| `500 Internal Server Error` | Server error       
+
+
+                                         |
+ 
+{
+    "errorMessage": "INTERNAL: Error Creating Connection",
+    "errorDetail": "JDE Conexion Error Exception: null source"
+}
+
  
  
