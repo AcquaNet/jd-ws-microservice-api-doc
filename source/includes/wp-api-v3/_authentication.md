@@ -4,9 +4,53 @@ JD Atina Web Services Microservices 1.0.0 includes two ways to authenticate.
 
 ## Login with JDE User Credentials ##
 
+The HTTP method will be POST.
+
+You must use the /login endpoint and pass the above parameters as a header and body.
+
+#### Header parameters ####
+
+|   Parameter    |  Type  |                                                                                  Description                                                                                  |
+|----------------|--------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `Token`        | string | Empty token value yo user login with JDE User Credential. <i class="label label-info">mandatory</i>                                                                                                                       |
+| `TransactionId`| integer| Id used to get log inside JD Atina WS Microservices. <i class="label label-info">optional</i>. Use 0 to generate a transsaction ID inside JDE Atina Microservices                                                                       |
+
+#### Body parameters ####
+
+JDE HTML Client Credentials.
+
+|   Parameter    |  Type  |                                                                                  Description                                                                                  |
+|----------------|--------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `user`         | string  | JDE User <i class="label label-info">mandatory</i>                                                                                                                       |
+| `password`     | string  | JDE Password <i class="label label-info">mandatory</i>               
+| `environment`  | string  | JDE Environment <i class="label label-info">mandatory</i>               
+| `role`		 | string  | JDE Role <i class="label label-info">mandatory</i>            
 
 
+```cURL  
+   curl --location --request POST 'https://192.168.99.100/login' \
+--header 'Token;' \
+--header 'Accept: application/json' \
+--header 'Content-Type: application/json' \
+--header 'TransactionId: 0' \
+--data-raw '{
+   "user": "JDE",
+   "environment": "JDV920",
+   "password": "modus2020!",
+   "role": "*ALL"
+}
+'
+``` 
+   
+> Example of JSON received with the API Keys
 
+```
+{
+    "addressBookNo": "1"
+}
+```
+
+Address Book Number setup for the user.
 
 
 ## Login with JD Atina Token ##
