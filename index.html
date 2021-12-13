@@ -318,7 +318,24 @@
                     <a href="#login-with-jd-atina-token" class="toc-h2 toc-link" data-title="Login with JD Atina Token">Login with JD Atina Token</a>
                   </li>
                   <li>
-                    <a href="#errors" class="toc-h2 toc-link" data-title="Errors">Errors</a>
+                    <a href="#authentication-errors" class="toc-h2 toc-link" data-title="Authentication Errors">Authentication Errors</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#get-started" class="toc-h1 toc-link" data-title="Get Started">Get Started</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#create-token" class="toc-h2 toc-link" data-title="Create Token">Create Token</a>
+                  </li>
+                  <li>
+                    <a href="#login-with-token" class="toc-h2 toc-link" data-title="Login with Token">Login with Token</a>
+                  </li>
+                  <li>
+                    <a href="#select-ws-to-invoke" class="toc-h2 toc-link" data-title="Select WS to invoke">Select WS to invoke</a>
+                  </li>
+                  <li>
+                    <a href="#get-input-payload" class="toc-h2 toc-link" data-title="Get Input Payload">Get Input Payload</a>
                   </li>
               </ul>
           </li>
@@ -1427,7 +1444,7 @@ curl  http://157.245.236.175:8081/artifactory/libs-release/com/atina/jd-atina-co
 <td>Connection Id between Rest API and WS Microservice.</td>
 </tr>
 </tbody></table>
-<h2 id='errors'>Errors</h2>
+<h2 id='authentication-errors'>Authentication Errors</h2>
 <p>Occasionally you might encounter errors when accessing the REST API:</p>
 
 <table><thead>
@@ -1481,7 +1498,41 @@ curl  http://157.245.236.175:8081/artifactory/libs-release/com/atina/jd-atina-co
     </span><span class="nl">"errorMessage"</span><span class="p">:</span><span class="w"> </span><span class="s2">"INTERNAL: Error Creating Connection"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"errorDetail"</span><span class="p">:</span><span class="w"> </span><span class="s2">"JDE Conexion ErrorFile '/tmp/jde/config/JDV920/jdeinterop.ini' does not exist"</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h1 id='index'>Index</h1>
+</span></code></pre></div><h1 id='get-started'>Get Started</h1>
+<p>How get a item price.</p>
+<h2 id='create-token'>Create Token</h2>
+<p><img src="images/atina_login_jde_cred-eb1ca319.png" alt="JD Atina settings" /></p>
+<div class="highlight"><pre class="highlight plaintext"><code>curl --location --request POST 'https://192.168.99.100/login' \
+--header 'Token: eyJhbGciOiJIUzI1NiJ9.exsdsIiOiJTdWJqZWN0IiwiaXNzIjoiSXNzdWUiLCJ1c2VyIjoiSkRdW52aXJvbm1lbnQiOiJKRFY5MjAiLCJyb2xlIjdlc3Npb25JZCI6MTkwOTg5MDEzOSwiZXhwIjoxNjM5NDA3ODczfQ.YuUXk1R60YIicZjfFp9W3px_4bIpIrHSvUIYqChSxOc' \
+--header 'Accept: application/json' \
+--header 'Content-Type: application/json' \
+--header 'TransactionId: 0' \
+--data-raw '{}
+</code></pre></div><h2 id='login-with-token'>Login with Token</h2>
+<p><img src="images/atina_login_jde_cred-eb1ca319.png" alt="JD Atina settings" /></p>
+<div class="highlight"><pre class="highlight plaintext"><code>curl --location --request POST 'https://192.168.99.100/login' \
+--header 'Token: eyJhbGciOiJIUzI1NiJ9.exsdsIiOiJTdWJqZWN0IiwiaXNzIjoiSXNzdWUiLCJ1c2VyIjoiSkRdW52aXJvbm1lbnQiOiJKRFY5MjAiLCJyb2xlIjdlc3Npb25JZCI6MTkwOTg5MDEzOSwiZXhwIjoxNjM5NDA3ODczfQ.YuUXk1R60YIicZjfFp9W3px_4bIpIrHSvUIYqChSxOc' \
+--header 'Accept: application/json' \
+--header 'Content-Type: application/json' \
+--header 'TransactionId: 0' \
+--data-raw '{}
+</code></pre></div><h2 id='select-ws-to-invoke'>Select WS to invoke</h2>
+<p><img src="images/atina_login_jde_cred-eb1ca319.png" alt="JD Atina settings" /></p>
+<div class="highlight"><pre class="highlight plaintext"><code>curl --location --request POST 'https://192.168.99.100/login' \
+--header 'Token: eyJhbGciOiJIUzI1NiJ9.exsdsIiOiJTdWJqZWN0IiwiaXNzIjoiSXNzdWUiLCJ1c2VyIjoiSkRdW52aXJvbm1lbnQiOiJKRFY5MjAiLCJyb2xlIjdlc3Npb25JZCI6MTkwOTg5MDEzOSwiZXhwIjoxNjM5NDA3ODczfQ.YuUXk1R60YIicZjfFp9W3px_4bIpIrHSvUIYqChSxOc' \
+--header 'Accept: application/json' \
+--header 'Content-Type: application/json' \
+--header 'TransactionId: 0' \
+--data-raw '{}
+</code></pre></div><h2 id='get-input-payload'>Get Input Payload</h2>
+<p><img src="images/atina_login_jde_cred-eb1ca319.png" alt="JD Atina settings" /></p>
+<div class="highlight"><pre class="highlight plaintext"><code>curl --location --request POST 'https://192.168.99.100/login' \
+--header 'Token: eyJhbGciOiJIUzI1NiJ9.exsdsIiOiJTdWJqZWN0IiwiaXNzIjoiSXNzdWUiLCJ1c2VyIjoiSkRdW52aXJvbm1lbnQiOiJKRFY5MjAiLCJyb2xlIjdlc3Npb25JZCI6MTkwOTg5MDEzOSwiZXhwIjoxNjM5NDA3ODczfQ.YuUXk1R60YIicZjfFp9W3px_4bIpIrHSvUIYqChSxOc' \
+--header 'Accept: application/json' \
+--header 'Content-Type: application/json' \
+--header 'TransactionId: 0' \
+--data-raw '{}
+</code></pre></div><h1 id='index'>Index</h1>
 <p>By default, the API provides information about all available endpoints on the site. Authentication is not required to access the API index.</p>
 <h3 id='http-request'>HTTP request</h3>
 <div class="api-endpoint">
