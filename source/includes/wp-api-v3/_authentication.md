@@ -8,6 +8,9 @@ The HTTP method will be POST.
 
 You must use the /login endpoint and pass the above parameters as a header and body.
 
+![JD Atina settings](images/atina_login_jde_cred.png)
+
+
 #### Header parameters ####
 
 |   Parameter    |  Type  |                                                                                  Description                                                                                  |
@@ -72,6 +75,9 @@ The HTTP method will be POST.
 
 You must use the /token/create endpoint and pass the above parameters as a header and body.
 
+![JD Atina settings](images/atina_create_token.png)
+
+
 #### Header parameters ####
 
 |   Parameter    |  Type  |                                                                                  Description                                                                                  |
@@ -122,6 +128,8 @@ The next step is use this token created to login.
 The HTTP method will be POST.
 
 You must use the /login endpoint and pass the above parameters as a header and body.
+
+![JD Atina settings](images/atina_login_token.png)
 
 #### Header parameters ####
 
