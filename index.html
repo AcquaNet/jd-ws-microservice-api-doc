@@ -264,21 +264,6 @@
                   <li>
                     <a href="#request-response-format" class="toc-h2 toc-link" data-title="Request/Response Format">Request/Response Format</a>
                   </li>
-                  <li>
-                    <a href="#errors" class="toc-h2 toc-link" data-title="Errors">Errors</a>
-                  </li>
-                  <li>
-                    <a href="#parameters" class="toc-h2 toc-link" data-title="Parameters">Parameters</a>
-                  </li>
-                  <li>
-                    <a href="#pagination" class="toc-h2 toc-link" data-title="Pagination">Pagination</a>
-                  </li>
-                  <li>
-                    <a href="#libraries-and-tools" class="toc-h2 toc-link" data-title="Libraries and Tools">Libraries and Tools</a>
-                  </li>
-                  <li>
-                    <a href="#learn-more" class="toc-h2 toc-link" data-title="Learn more">Learn more</a>
-                  </li>
               </ul>
           </li>
           <li>
@@ -538,222 +523,12 @@ JD Atina Web Services Microservices 1.0.0 is fully integrated with the WordPress
 <li>Other amounts, such as item counts, are returned as integers.</li>
 <li>Blank fields are generally included as <code>null</code> or emtpy string instead of being omitted.</li>
 </ul>
-<h3 id='jsonp-support'>JSONP Support</h3>
-<p>The JD Atina REST WS API supports JSONP by default. JSONP responses use the <code>application/javascript</code> content-type. You can specify the callback using the <code>?_jsonp</code> parameter for <code>GET</code> requests to have the response wrapped in a JSON function:</p>
-
-<div class="api-endpoint">
-    <div class="endpoint-data">
-        <i class="label label-get">GET</i>
-        <h6>/wp-json/wc/v3?_jsonp=callback</h6>
-    </div>
-</div>
-<div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://example.com/wp-json/wc/v3/products/tags/34?_jsonp<span class="o">=</span>tagDetails <span class="se">\</span>
-    <span class="nt">-u</span> consumer_key:consumer_secret
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">products/tags/34?_jsonp=tagDetails</span><span class="dl">"</span><span class="p">)</span>
-  <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
-  <span class="p">})</span>
-  <span class="p">.</span><span class="k">catch</span><span class="p">((</span><span class="nx">error</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">error</span><span class="p">.</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
-  <span class="p">});</span>
-</code></pre></div><div class="highlight"><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span> <span class="nb">print_r</span><span class="p">(</span><span class="nv">$woocommerce</span><span class="o">-&gt;</span><span class="nf">get</span><span class="p">(</span><span class="s1">'products/tags/34'</span><span class="p">,</span> <span class="p">[</span><span class="s1">'_jsonp'</span> <span class="o">=&gt;</span> <span class="s1">'tagDetails'</span><span class="p">]));</span> <span class="cp">?&gt;</span>
-</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="k">print</span><span class="p">(</span><span class="n">wcapi</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">"products/tags/34?_jsonp=tagDetails"</span><span class="p">).</span><span class="n">json</span><span class="p">())</span>
-</code></pre></div><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="n">woocommerce</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="s2">"products/tags/34"</span><span class="p">,</span> <span class="ss">_jsonp: </span><span class="s2">"tagDetails"</span><span class="p">).</span><span class="nf">parsed_response</span>
-</code></pre></div>
-<blockquote>
-<p>Response:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight plaintext"><code>/**/tagDetails({"id":34,"name":"Leather Shoes","slug":"leather-shoes","description":"","count":0,"_links":{"self":[{"href":"https://example.com/wp-json/wc/v3/products/tags/34"}],"collection":[{"href":"https://example.com/wp-json/wc/v3/products/tags"}]}})%
-</code></pre></div><h2 id='errors'>Errors</h2>
-<p>Occasionally you might encounter errors when accessing the REST API. There are four possible types:</p>
-
-<table><thead>
-<tr>
-<th>Error Code</th>
-<th>Error Type</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>400 Bad Request</code></td>
-<td>Invalid request, e.g. using an unsupported HTTP method</td>
-</tr>
-<tr>
-<td><code>401 Unauthorized</code></td>
-<td>Authentication or permission error, e.g. incorrect API keys</td>
-</tr>
-<tr>
-<td><code>404 Not Found</code></td>
-<td>Requests to resources that don&#39;t exist or are missing</td>
-</tr>
-<tr>
-<td><code>500 Internal Server Error</code></td>
-<td>Server error</td>
-</tr>
-</tbody></table>
-
-<blockquote>
-<p>JD Atina REST WS API error example:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rest_no_route"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"No route was found matching the URL and request method"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">404</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div>
-<blockquote>
-<p>JD Atina REST Web Services API error example:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"woocommerce_rest_term_invalid"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Resource doesn't exist."</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">404</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div>
-<p>Errors return both an appropriate HTTP status code and response object which contains a <code>code</code>, <code>message</code> and <code>data</code> attribute.</p>
-<h2 id='parameters'>Parameters</h2>
-<p>Almost all endpoints accept optional parameters which can be passed as a HTTP query string parameter, e.g. <code>GET /orders?status=completed</code>. All parameters are documented along each endpoint.</p>
-<h2 id='pagination'>Pagination</h2>
-<p>Requests that return multiple items will be paginated to 10 items by default. This default can be changed by the site administrator by changing the <code>posts_per_page</code> option. Alternatively the items per page can be specified with the <code>?per_page</code> parameter:</p>
-
-<p><code>GET /orders?per_page=15</code></p>
-
-<p>You can specify further pages with the <code>?page</code> parameter:</p>
-
-<p><code>GET /orders?page=2</code></p>
-
-<p>You may also specify the offset from the first resource using the <code>?offset</code> parameter:</p>
-
-<p><code>GET /orders?offset=5</code></p>
-
-<p>Page number is 1-based and omitting the <code>?page</code> parameter will return the first page.</p>
-
-<p>The total number of resources and pages are always included in the <code>X-WP-Total</code> and <code>X-WP-TotalPages</code> HTTP headers.</p>
-<h3 id='link-header'>Link Header</h3>
-<p>Pagination info is included in the <a href="http://tools.ietf.org/html/rfc5988">Link Header</a>. It&#39;s recommended that you follow these values instead of building your own URLs where possible.</p>
-<div class="highlight"><pre class="highlight plaintext"><code>Link: &lt;https://www.example.com/wp-json/wc/v3/products?page=2&gt;; rel="next",
-&lt;https://www.example.com/wp-json/wc/v3/products?page=3&gt;; rel="last"`
-</code></pre></div>
-<p>The possible <code>rel</code> values are:</p>
-
-<table><thead>
-<tr>
-<th>Value</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>next</code></td>
-<td>Shows the URL of the immediate next page of results.</td>
-</tr>
-<tr>
-<td><code>last</code></td>
-<td>Shows the URL of the last page of results.</td>
-</tr>
-<tr>
-<td><code>first</code></td>
-<td>Shows the URL of the first page of results.</td>
-</tr>
-<tr>
-<td><code>prev</code></td>
-<td>Shows the URL of the immediate previous page of results.</td>
-</tr>
-</tbody></table>
-<h2 id='libraries-and-tools'>Libraries and Tools</h2><h3 id='official-libraries'>Official libraries</h3>
-<ul>
-<li><a href="https://www.npmjs.com/package/@woocommerce/woocommerce-rest-api">JavaScript</a> Library</li>
-<li><a href="https://packagist.org/packages/automattic/woocommerce">PHP</a> Library</li>
-<li><a href="https://pypi.python.org/pypi/JD%20Atina%20Web%20Services%20Microservices">Python</a> Library</li>
-<li><a href="https://rubygems.org/gems/woocommerce_api">Ruby</a> Library</li>
-</ul>
-<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="c1">// Install:</span>
-<span class="c1">// npm install --save @woocommerce/woocommerce-rest-api</span>
-
-<span class="c1">// Setup:</span>
-<span class="kd">const</span> <span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">MicroservicesRestApi</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">@woocommerce/woocommerce-rest-api</span><span class="dl">"</span><span class="p">).</span><span class="k">default</span><span class="p">;</span>
-<span class="c1">// import JD Atina Web Services MicroservicesRestApi from "@woocommerce/woocommerce-rest-api"; // Supports ESM</span>
-
-<span class="kd">const</span> <span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">Microservices</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">JD</span> <span class="nx">Atina</span> <span class="nx">Web</span> <span class="nx">Services</span> <span class="nx">MicroservicesRestApi</span><span class="p">({</span>
-  <span class="na">url</span><span class="p">:</span> <span class="dl">'</span><span class="s1">http://example.com</span><span class="dl">'</span><span class="p">,</span> <span class="c1">// Your store URL</span>
-  <span class="na">consumerKey</span><span class="p">:</span> <span class="dl">'</span><span class="s1">consumer_key</span><span class="dl">'</span><span class="p">,</span> <span class="c1">// Your consumer key</span>
-  <span class="na">consumerSecret</span><span class="p">:</span> <span class="dl">'</span><span class="s1">consumer_secret</span><span class="dl">'</span><span class="p">,</span> <span class="c1">// Your consumer secret</span>
-  <span class="na">version</span><span class="p">:</span> <span class="dl">'</span><span class="s1">wc/v3</span><span class="dl">'</span> <span class="c1">// JD Atina Web Services Microservices JD Atina REST WS API version</span>
-<span class="p">});</span>
-</code></pre></div><div class="highlight"><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
-<span class="c1">// Install:</span>
-<span class="c1">// composer require automattic/woocommerce</span>
-
-<span class="c1">// Setup:</span>
-<span class="k">require</span> <span class="k">__DIR__</span> <span class="mf">.</span> <span class="s1">'/vendor/autoload.php'</span><span class="p">;</span>
-
-<span class="kn">use</span> <span class="no">Automattic\JD</span> <span class="nc">Atina</span> <span class="nc">Web</span> <span class="nc">Services</span> <span class="nc">Microservices\Client</span><span class="p">;</span>
-
-<span class="nv">$woocommerce</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Client</span><span class="p">(</span>
-    <span class="s1">'http://example.com'</span><span class="p">,</span> <span class="c1">// Your store URL</span>
-    <span class="s1">'consumer_key'</span><span class="p">,</span> <span class="c1">// Your consumer key</span>
-    <span class="s1">'consumer_secret'</span><span class="p">,</span> <span class="c1">// Your consumer secret</span>
-    <span class="p">[</span>
-        <span class="s1">'wp_api'</span> <span class="o">=&gt;</span> <span class="kc">true</span><span class="p">,</span> <span class="c1">// Enable the JD Atina REST WS API integration</span>
-        <span class="s1">'version'</span> <span class="o">=&gt;</span> <span class="s1">'wc/v3'</span> <span class="c1">// JD Atina Web Services Microservices JD Atina REST WS API version</span>
-    <span class="p">]</span>
-<span class="p">);</span>
-<span class="cp">?&gt;</span>
-</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="c1"># Install:
-# pip install woocommerce
-</span>
-<span class="c1"># Setup:
-</span><span class="kn">from</span> <span class="nn">woocommerce</span> <span class="kn">import</span> <span class="n">API</span>
-
-<span class="n">wcapi</span> <span class="o">=</span> <span class="n">API</span><span class="p">(</span>
-    <span class="n">url</span><span class="o">=</span><span class="s">"http://example.com"</span><span class="p">,</span> <span class="c1"># Your store URL
-</span>    <span class="n">consumer_key</span><span class="o">=</span><span class="s">"consumer_key"</span><span class="p">,</span> <span class="c1"># Your consumer key
-</span>    <span class="n">consumer_secret</span><span class="o">=</span><span class="s">"consumer_secret"</span><span class="p">,</span> <span class="c1"># Your consumer secret
-</span>    <span class="n">wp_api</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="c1"># Enable the JD Atina REST WS API integration
-</span>    <span class="n">version</span><span class="o">=</span><span class="s">"wc/v3"</span> <span class="c1"># JD Atina Web Services Microservices JD Atina REST WS API version
-</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="c1"># Install:</span>
-<span class="c1"># gem install woocommerce_api</span>
-
-<span class="c1"># Setup:</span>
-<span class="nb">require</span> <span class="s2">"woocommerce_api"</span>
-
-<span class="n">woocommerce</span> <span class="o">=</span> <span class="no">JD</span> <span class="no">Atina</span> <span class="no">Web</span> <span class="no">Services</span> <span class="no">Microservices</span><span class="o">::</span><span class="no">API</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span>
-  <span class="s2">"https://example.com"</span><span class="p">,</span> <span class="c1"># Your store URL</span>
-  <span class="s2">"consumer_key"</span><span class="p">,</span> <span class="c1"># Your consumer key</span>
-  <span class="s2">"consumer_secret"</span><span class="p">,</span> <span class="c1"># Your consumer secret</span>
-  <span class="p">{</span>
-    <span class="ss">wp_api: </span><span class="kp">true</span><span class="p">,</span> <span class="c1"># Enable the JD Atina REST WS API integration</span>
-    <span class="ss">version: </span><span class="s2">"wc/v3"</span> <span class="c1"># JD Atina Web Services Microservices JD Atina REST WS API version</span>
-  <span class="p">}</span>
-<span class="p">)</span>
-</code></pre></div>
-<aside class="notice">
-    Use the tabs in the top-right corner of this page to see how to install and use each library.
-</aside>
-<h3 id='third-party-libraries'>Third party libraries</h3>
-<ul>
-<li><a href="https://github.com/icoderman/wc-api-java">Java</a> Library</li>
-<li><a href="https://github.com/XiaoFaye/JD%20Atina%20Web%20Services%20Microservices.NET">.NET</a> Library</li>
-<li><a href="https://github.com/gilokimu/WooDroid">Android</a> Library</li>
-</ul>
-
-<aside class="notice">
-    Note that we don't offer support for third party libraries, so if you have questions about how use any of this libraries you should contact the respective authors.
-</aside>
 <h3 id='tools'>Tools</h3>
 <p>Some useful tools you can use to access the API include:</p>
 
 <ul>
-<li><a href="https://insomnia.rest">Insomnia</a> - Cross-platform GraphQL and REST client, available for Mac, Windows, and Linux.</li>
-<li><a href="https://www.getpostman.com/">Postman</a> - Cross-platform REST client, available for Mac, Windows, and Linux.</li>
-<li><a href="https://requestbin.com">RequestBin</a> - Allows you test webhooks.</li>
-<li><a href="https://hookbin.com/">Hookbin</a> - Another tool to test webhooks.</li>
+<li><a href="https://www.getpostman.com/">Postman</a> - Cross-platform REST client, available for Mac, Windows, and Linux. </li>
 </ul>
-<h2 id='learn-more'>Learn more</h2>
-<p>Learn more about the REST API checking the <a href="https://developer.wordpress.org/rest-api/">official WordPress REST API documentation</a>.</p>
 <h1 id='configuration'>Configuration</h1><h2 id='requirements'>Requirements</h2><h3 id='requirements-to-consume-web-services-using-jd-atina-ws-microservices'>Requirements to consume Web Services using JD Atina WS Microservices</h3>
 <p>To use the latest version of the JD Atina REST WS API you will need:</p>
 
@@ -1684,29 +1459,29 @@ curl  http://157.245.236.175:8081/artifactory/libs-release/com/atina/jd-atina-co
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div>
 <blockquote>
-<p>JDE WS Microservice not installed correctly:</p>
+<p>JDE WS Microservice not installed correctly. Check Microservice logs: docker exec -it jd-atina-microserver cat /tmp/jde/JDEConnectorServerLog/jde_atina_server_2021-12-13.0.log (Set the correct date)</p>
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="nl">"errorMessage"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UNKNOWN"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"errorDetail"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Login"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div>
-<p>Check the logs:</p>
-
-<p>docker exec -it jd-atina-microserver cat /tmp/jde/JDEConnectorServerLog/jde_atina_server_2021-12-13.0.log</p>
-
-<p>Set the correct date.</p>
-
 <blockquote>
-<p>JDE WS Microservice not configured correctly:</p>
+<p>JDE WS Microservice not configured correctly. Please review section DNS inside .env file. </p>
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="nl">"errorMessage"</span><span class="p">:</span><span class="w"> </span><span class="s2">"INTERNAL: Error Creating Connection"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"errorDetail"</span><span class="p">:</span><span class="w"> </span><span class="s2">"JDE Conexion Error Exception: null source"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div>
-<p>Please review .env variables. </p>
-<h1 id='index'>Index</h1>
+<blockquote>
+<p>JDE WS Microservice not configured correctly. You are trting to login in a environment not configured.</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"errorMessage"</span><span class="p">:</span><span class="w"> </span><span class="s2">"INTERNAL: Error Creating Connection"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"errorDetail"</span><span class="p">:</span><span class="w"> </span><span class="s2">"JDE Conexion ErrorFile '/tmp/jde/config/JDV920/jdeinterop.ini' does not exist"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div><h1 id='index'>Index</h1>
 <p>By default, the API provides information about all available endpoints on the site. Authentication is not required to access the API index.</p>
 <h3 id='http-request'>HTTP request</h3>
 <div class="api-endpoint">
