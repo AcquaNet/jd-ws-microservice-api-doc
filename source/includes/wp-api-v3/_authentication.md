@@ -172,7 +172,7 @@ Address Book Number setup for the user.
 | `ChannelId`    | integer| Connection Id between Rest API and WS Microservice.
 
 
-## Errors ##
+## Authentication Errors ##
 
 Occasionally you might encounter errors when accessing the REST API:
 

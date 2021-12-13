@@ -16,6 +16,7 @@ includes:
   - wp-api-v3/checkinstallation
   - wp-api-v3/installmuleconnector  
   - wp-api-v3/authentication
+  - wp-api-v3/getstarted  
   - wp-api-v3/index
   - wp-api-v3/coupons
   - wp-api-v3/customers
