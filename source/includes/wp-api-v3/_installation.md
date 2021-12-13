@@ -63,7 +63,7 @@ docker-compose -f docker-compose-dist.yml start
 </pre>
 <p>&nbsp;<br></p>
 
-***Check JD WS Microservice startup**
+**Check JD WS Microservice startup**
 
 Check starting process for JD Atina WS Microservice
 

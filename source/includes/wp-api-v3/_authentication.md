@@ -1,6 +1,24 @@
 # Authentication #
 
-JD Atina Web Services Microservices 1.0.0 includes two ways to authenticate with the JD Atina REST WS API. It is also possible to authenticate using any [JD Atina REST WS API authentication](http://v3.wp-api.org/guide/authentication/) plugin or method.
+JD Atina Web Services Microservices 1.0.0 includes two ways to authenticate.
+
+## Login with JDE User Credentials ##
+
+
+
+
+
+
+## Login with JD Atina Token ##
+
+
+
+
+
+## REST API keys ##
+
+
+ the JD Atina REST WS API. It is also possible to authenticate using any [JD Atina REST WS API authentication](http://v3.wp-api.org/guide/authentication/) plugin or method.
 
 ## REST API keys ##
 
