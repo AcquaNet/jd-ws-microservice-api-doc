@@ -1653,7 +1653,7 @@ curl  http://157.245.236.175:8081/artifactory/libs-release/com/atina/jd-atina-co
 </tr>
 </tbody></table>
 <h2 id='errors'>Errors</h2>
-<p>Occasionally you might encounter errors when accessing the REST API. There are four possible types:</p>
+<p>Occasionally you might encounter errors when accessing the REST API:</p>
 
 <table><thead>
 <tr>
@@ -1662,29 +1662,50 @@ curl  http://157.245.236.175:8081/artifactory/libs-release/com/atina/jd-atina-co
 </tr>
 </thead><tbody>
 <tr>
-<td><code>400 Bad Request</code></td>
-<td>Invalid request, e.g. using an unsupported HTTP method</td>
-</tr>
-<tr>
-<td><code>401 Unauthorized</code></td>
-<td>Authentication or permission error, e.g. incorrect API keys</td>
-</tr>
-<tr>
-<td><code>404 Not Found</code></td>
-<td>Requests to resources that don&#39;t exist or are missing</td>
-</tr>
-<tr>
 <td><code>500 Internal Server Error</code></td>
 <td>Server error</td>
 </tr>
 </tbody></table>
 
-<p>|</p>
+<blockquote>
+<p>Invalidad JDE Credentials values:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"errorMessage"</span><span class="p">:</span><span class="w"> </span><span class="s2">"INTERNAL: Error Creating Connection"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"errorDetail"</span><span class="p">:</span><span class="w"> </span><span class="s2">"JDE Conexion Error InvalidLoginException: Invalid UserName and/or Password"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<blockquote>
+<p>JDE WS Microservice stopped:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"errorMessage"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UNAVAILABLE: io exception"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"errorDetail"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Login"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<blockquote>
+<p>JDE WS Microservice not installed correctly:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"errorMessage"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UNKNOWN"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"errorDetail"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Login"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>Check the logs:</p>
 
-<p>{
-    &quot;errorMessage&quot;: &quot;INTERNAL: Error Creating Connection&quot;,
-    &quot;errorDetail&quot;: &quot;JDE Conexion Error Exception: null source&quot;
-}</p>
+<p>docker exec -it jd-atina-microserver cat /tmp/jde/JDEConnectorServerLog/jde_atina_server_2021-12-13.0.log</p>
+
+<p>Set the correct date.</p>
+
+<blockquote>
+<p>JDE WS Microservice not configured correctly:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"errorMessage"</span><span class="p">:</span><span class="w"> </span><span class="s2">"INTERNAL: Error Creating Connection"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"errorDetail"</span><span class="p">:</span><span class="w"> </span><span class="s2">"JDE Conexion Error Exception: null source"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>Please review .env variables. </p>
 <h1 id='index'>Index</h1>
 <p>By default, the API provides information about all available endpoints on the site. Authentication is not required to access the API index.</p>
 <h3 id='http-request'>HTTP request</h3>
