@@ -1381,7 +1381,82 @@ curl  http://157.245.236.175:8081/artifactory/libs-release/com/atina/jd-atina-co
 </ul>
 <h1 id='authentication'>Authentication</h1>
 <p>JD Atina Web Services Microservices 1.0.0 includes two ways to authenticate.</p>
-<h2 id='login-with-jde-user-credentials'>Login with JDE User Credentials</h2><h2 id='login-with-jd-atina-token'>Login with JD Atina Token</h2><h2 id='rest-api-keys'>REST API keys</h2>
+<h2 id='login-with-jde-user-credentials'>Login with JDE User Credentials</h2>
+<p>The HTTP method will be POST.</p>
+
+<p>You must use the /login endpoint and pass the above parameters as a header and body.</p>
+<h4 id='header-parameters'>Header parameters</h4>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>Token</code></td>
+<td>string</td>
+<td>Empty token value yo user login with JDE User Credential. <i class="label label-info">mandatory</i></td>
+</tr>
+<tr>
+<td><code>TransactionId</code></td>
+<td>integer</td>
+<td>Id used to get log inside JD Atina WS Microservices. <i class="label label-info">optional</i>. Use 0 to generate a transsaction ID inside JDE Atina Microservices</td>
+</tr>
+</tbody></table>
+<h4 id='body-parameters'>Body parameters</h4>
+<p>JDE HTML Client Credentials.</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>user</code></td>
+<td>string</td>
+<td>JDE User <i class="label label-info">mandatory</i></td>
+</tr>
+<tr>
+<td><code>password</code></td>
+<td>string</td>
+<td>JDE Password <i class="label label-info">mandatory</i></td>
+</tr>
+<tr>
+<td><code>environment</code></td>
+<td>string</td>
+<td>JDE Environment <i class="label label-info">mandatory</i></td>
+</tr>
+<tr>
+<td><code>role</code></td>
+<td>string</td>
+<td>JDE Role <i class="label label-info">mandatory</i></td>
+</tr>
+</tbody></table>
+<div class="highlight"><pre class="highlight plaintext"><code>   curl --location --request POST 'https://192.168.99.100/login' \
+--header 'Token;' \
+--header 'Accept: application/json' \
+--header 'Content-Type: application/json' \
+--header 'TransactionId: 0' \
+--data-raw '{
+   "user": "JDE",
+   "environment": "JDV920",
+   "password": "modus2020!",
+   "role": "*ALL"
+}
+'
+</code></pre></div>
+<blockquote>
+<p>Example of JSON received with the API Keys</p>
+</blockquote>
+<div class="highlight"><pre class="highlight plaintext"><code>{
+    "addressBookNo": "1"
+}
+</code></pre></div>
+<p>Address Book Number setup for the user.</p>
+<h2 id='login-with-jd-atina-token'>Login with JD Atina Token</h2><h2 id='rest-api-keys'>REST API keys</h2>
 <p>the JD Atina REST WS API. It is also possible to authenticate using any <a href="http://v3.wp-api.org/guide/authentication/">JD Atina REST WS API authentication</a> plugin or method.</p>
 <h2 id='rest-api-keys-2'>REST API keys</h2>
 <p>Pre-generated keys can be used to authenticate use of the REST API endpoints. New keys can be generated either through the WordPress admin interface or they can be auto-generated through an endpoint.</p>
