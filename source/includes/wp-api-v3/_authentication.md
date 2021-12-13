@@ -201,7 +201,7 @@ Occasionally you might encounter errors when accessing the REST API:
 ```
 
 
-> JDE WS Microservice not installed correctly:
+> JDE WS Microservice not installed correctly. Check Microservice logs: docker exec -it jd-atina-microserver cat /tmp/jde/JDEConnectorServerLog/jde_atina_server_2021-12-13.0.log (Set the correct date)
 
 ```json
 {
@@ -209,15 +209,8 @@ Occasionally you might encounter errors when accessing the REST API:
     "errorDetail": "Login"
 }
 ```
-
-Check the logs:
-
-docker exec -it jd-atina-microserver cat /tmp/jde/JDEConnectorServerLog/jde_atina_server_2021-12-13.0.log
-
-Set the correct date.
-
     
-> JDE WS Microservice not configured correctly:
+> JDE WS Microservice not configured correctly. Please review section DNS inside .env file. 
 
 ```json
 {
@@ -226,9 +219,18 @@ Set the correct date.
 }
 ```
 
-Please review .env variables. 
+> JDE WS Microservice not configured correctly. You are trting to login in a environment not configured.
 
- 
+```json
+{
+    "errorMessage": "INTERNAL: Error Creating Connection",
+    "errorDetail": "JDE Conexion ErrorFile '/tmp/jde/config/JDV920/jdeinterop.ini' does not exist"
+}
+```
+
+
+
+
 
 
  
