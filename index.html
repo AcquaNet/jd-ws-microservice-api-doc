@@ -327,7 +327,16 @@
             <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
               <ul class="toc-list-h2">
                   <li>
+                    <a href="#login-with-jde-user-credentials" class="toc-h2 toc-link" data-title="Login with JDE User Credentials">Login with JDE User Credentials</a>
+                  </li>
+                  <li>
+                    <a href="#login-with-jd-atina-token" class="toc-h2 toc-link" data-title="Login with JD Atina Token">Login with JD Atina Token</a>
+                  </li>
+                  <li>
                     <a href="#rest-api-keys" class="toc-h2 toc-link" data-title="REST API keys">REST API keys</a>
+                  </li>
+                  <li>
+                    <a href="#rest-api-keys-2" class="toc-h2 toc-link" data-title="REST API keys">REST API keys</a>
                   </li>
                   <li>
                     <a href="#authentication-over-https" class="toc-h2 toc-link" data-title="Authentication over HTTPS">Authentication over HTTPS</a>
@@ -1186,7 +1195,7 @@ docker-compose -f docker-compose-dist.yml start
 
 <p>&nbsp;<br></p>
 
-<p><em>**Check JD WS Microservice startup</em>*</p>
+<p><strong>Check JD WS Microservice startup</strong></p>
 
 <p>Check starting process for JD Atina WS Microservice</p>
 
@@ -1371,8 +1380,10 @@ curl  http://157.245.236.175:8081/artifactory/libs-release/com/atina/jd-atina-co
 <li><p>From a Mule Project in Studio, search for the connector and drag it to the Canvas.</p></li>
 </ul>
 <h1 id='authentication'>Authentication</h1>
-<p>JD Atina Web Services Microservices 1.0.0 includes two ways to authenticate with the JD Atina REST WS API. It is also possible to authenticate using any <a href="http://v3.wp-api.org/guide/authentication/">JD Atina REST WS API authentication</a> plugin or method.</p>
-<h2 id='rest-api-keys'>REST API keys</h2>
+<p>JD Atina Web Services Microservices 1.0.0 includes two ways to authenticate.</p>
+<h2 id='login-with-jde-user-credentials'>Login with JDE User Credentials</h2><h2 id='login-with-jd-atina-token'>Login with JD Atina Token</h2><h2 id='rest-api-keys'>REST API keys</h2>
+<p>the JD Atina REST WS API. It is also possible to authenticate using any <a href="http://v3.wp-api.org/guide/authentication/">JD Atina REST WS API authentication</a> plugin or method.</p>
+<h2 id='rest-api-keys-2'>REST API keys</h2>
 <p>Pre-generated keys can be used to authenticate use of the REST API endpoints. New keys can be generated either through the WordPress admin interface or they can be auto-generated through an endpoint.</p>
 <h3 id='generating-api-keys-in-the-wordpress-admin-interface'>Generating API keys in the WordPress admin interface</h3>
 <p>To create or manage keys for a specific WordPress user, go to JD Atina Web Services Microservices &gt; Settings &gt; Advanced &gt; REST API.</p>
