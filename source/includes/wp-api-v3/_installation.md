@@ -40,14 +40,14 @@ JDE_MICROSERVER_ENTERPRISE_DB_IP=2.2.2.2
 
 ### Create and Run JD Microservices ###
 
-* Run following docker commands:
+**Run following docker commands:**
 
 <pre class="center-column"> 
 docker-compose -f docker-compose-dist.yml up --no-start
 </pre>
 <p>&nbsp;<br></p>
 
-* Copy files Configuration files and jars files into Container
+**Copy files Configuration files and jars files into Container**
 
 <pre class="center-column"> 
 docker cp /tmp/build_jde_libs/JPS920 jd-atina-microserver:/tmp/jde/config
@@ -56,14 +56,14 @@ docker cp /tmp/build_jde_libs/StdWebService-1.0.0.jar jd-atina-microserver:/tmp/
 </pre>
 <p>&nbsp;<br></p>
 
-* Run Containers
+**Run Containers**
 
 <pre class="center-column"> 
 docker-compose -f docker-compose-dist.yml start
 </pre>
 <p>&nbsp;<br></p>
 
-* Check JD WS Microservice startup
+***Check JD WS Microservice startup**
 
 Check starting process for JD Atina WS Microservice
 
@@ -130,7 +130,7 @@ docker logs jd-atina-microserver
 </pre>
 <p>&nbsp;<br></p>
 
-* Check JD Rest API Microservice startup
+**Check JD Rest API Microservice startup**
 
 <pre class="center-column"> 
 docker logs jd-atina-rest-server
@@ -158,7 +158,7 @@ Yb,_,dP       `8b,,d88b,_,88,_,dP   8I   Yb,,d8,   ,d8b,
 </pre>
 <p>&nbsp;<br></p>
 
-* Go to API defintions:
+**Go to API defintions:**
 
 [https://localhost/swagger/](https://localhost/swagger/)
 
