@@ -174,22 +174,62 @@ Address Book Number setup for the user.
 
 ## Errors ##
 
-Occasionally you might encounter errors when accessing the REST API. There are four possible types:
+Occasionally you might encounter errors when accessing the REST API:
 
 | Error Code                  | Error Type                                                  |
 |-----------------------------|-------------------------------------------------------------|
-| `400 Bad Request`           | Invalid request, e.g. using an unsupported HTTP method      |
-| `401 Unauthorized`          | Authentication or permission error, e.g. incorrect API keys |
-| `404 Not Found`             | Requests to resources that don't exist or are missing       |
-| `500 Internal Server Error` | Server error       
+| `500 Internal Server Error` | Server error                                                |
 
 
-                                         |
- 
+> Invalidad JDE Credentials values:
+
+```json
+{
+    "errorMessage": "INTERNAL: Error Creating Connection",
+    "errorDetail": "JDE Conexion Error InvalidLoginException: Invalid UserName and/or Password"
+}
+```
+
+
+> JDE WS Microservice stopped:
+
+```json
+{
+    "errorMessage": "UNAVAILABLE: io exception",
+    "errorDetail": "Login"
+}
+```
+
+
+> JDE WS Microservice not installed correctly:
+
+```json
+{
+    "errorMessage": "UNKNOWN",
+    "errorDetail": "Login"
+}
+```
+
+Check the logs:
+
+docker exec -it jd-atina-microserver cat /tmp/jde/JDEConnectorServerLog/jde_atina_server_2021-12-13.0.log
+
+Set the correct date.
+
+    
+> JDE WS Microservice not configured correctly:
+
+```json
 {
     "errorMessage": "INTERNAL: Error Creating Connection",
     "errorDetail": "JDE Conexion Error Exception: null source"
 }
+```
+
+Please review .env variables. 
+
+ 
+
 
  
  
