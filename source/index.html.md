@@ -11,6 +11,10 @@ toc_footers:
 
 includes:
   - wp-api-v3/introduction
+  - wp-api-v3/configuration    
+  - wp-api-v3/installation 
+  - wp-api-v3/checkinstallation
+  - wp-api-v3/installmuleconnector  
   - wp-api-v3/authentication
   - wp-api-v3/index
   - wp-api-v3/coupons
