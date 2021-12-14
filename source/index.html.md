@@ -1,5 +1,5 @@
 ---
-title: JD Atina REST Web Services API Documentation - JD Atina REST WS API v3
+title: JD Atina REST Web Services API Documentation - JD Atina REST WS API v1
 
 language_tabs:
   - shell: cURL

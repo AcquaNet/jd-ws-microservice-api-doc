@@ -24,7 +24,7 @@ Use this API to invoke available web services endpoints.
 
 #### Body parameters ####
 
-Web Service Payload. Use [Get Payload Input for a Web Service](#Get Payload Input for a Web Service)
+Web Service Payload. Use [Get Payload Input for a Web Service](#get-payload-input-for-a-web-service)
 
 
 ```cURL
