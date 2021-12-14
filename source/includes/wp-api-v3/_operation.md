@@ -11,7 +11,7 @@ Use this API to invoke available web services endpoints.
 <div class="api-endpoint">
 	<div class="endpoint-data">
 		<i class="label label-get">POST</i>
-		<h6>/operation/invoke/<web-service></h6>
+		<h6>/operation/invoke/[web-service]</h6>
 	</div>
 </div>
 
