@@ -8,7 +8,7 @@
 	<meta http-equiv='cache-control' content='no-cache'> 
 	<meta http-equiv='expires' content='0'> 
 	<meta http-equiv='pragma' content='no-cache'>
-    <title>JD Atina REST Web Services API Documentation - JD Atina REST WS API v3</title>
+    <title>JD Atina REST Web Services API Documentation - JD Atina REST WS API v1</title>
 
     <link rel="icon" href="images/favicon-32x32-9f4fe00f.png" sizes="32x32" />
     <link rel="icon" href="images/favicon-192x192-8eba7e37.png" sizes="192x192" />
@@ -409,8 +409,7 @@
       <div class="dark-box"></div>
       <div class="content">
         <h1 id='introduction'>Introduction</h1>
-<p>10:11 AM 12/13/2021
-JD Atina Web Services Microservices 1.0.0 is fully integrated with the WordPress <a href="http://en.wikipedia.org/wiki/Representational_State_Transfer">REST</a> API. This allows WC data to be created, read, updated, and deleted using requests in JSON format and using WordPress REST API Authentication methods and standard HTTP verbs which are understood by most HTTP clients.</p>
+<p>JD Atina Web Services Microservices 1.0.0 is fully integrated with the WordPress <a href="http://en.wikipedia.org/wiki/Representational_State_Transfer">REST</a> API. This allows WC data to be created, read, updated, and deleted using requests in JSON format and using WordPress REST API Authentication methods and standard HTTP verbs which are understood by most HTTP clients.</p>
 
 <p>JD ATINA Microservices is made up of a series of the following services:</p>
 
@@ -2109,7 +2108,7 @@ The administrator can use this API to generate a token.</p>
 </tr>
 </tbody></table>
 <h4 id='body-parameters'>Body parameters</h4>
-<p>Web Service Payload. Use <a href="#Get%20Payload%20Input%20for%20a%20Web%20Service">Get Payload Input for a Web Service</a></p>
+<p>Web Service Payload. Use <a href="#get-payload-input-for-a-web-service">Get Payload Input for a Web Service</a></p>
 <div class="highlight"><pre class="highlight plaintext"><code>curl --location --request POST 'https://192.168.99.100/operation/invoke/oracle.e1.bssv.JP410000.InventoryManager.getItemPrice' \
 --header 'Token: eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIxMjMxMjMxIiwiaWF0IjoxNjM5NTA3Mzk0LCJzdWIiOiJTdWJqZWN0IiwiaXNzIjoiSXNzdWUiLCJ1c2VyIjoiSkRFIiwicGFzc3dvcmQiOiJtb2R1czIwMjAhIiwiZW52aXJvbm1lbnQiOiJKRFY5MjAiLCJyb2xlIjoiKkFMTCIsInNlc3Npb25JZCI6MCwiZXhwIjoxNjM5NTA3ODc0fQ.Ogs48EupSc2VMFfYp10lvbdtEjE5Qk6pte9x3KKZPio' \
 --header 'Accept: application/json' \
