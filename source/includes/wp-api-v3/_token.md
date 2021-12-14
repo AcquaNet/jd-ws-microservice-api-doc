@@ -83,7 +83,7 @@ This API allows to see token detail.
 
 |   Parameter    |  Type  |                                                                                  Description                                                                                  |
 |----------------|--------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|                                                                                                                      |
-| `Token`        | string | Token to parse.     
+| `Token`        | string | Token to parse. <i class="label label-info">mandatory</i>          
 | `TransactionId`| integer| Id used to get log inside JD Atina WS Microservices. <i class="label label-info">optional</i>. Use 0 to generate a transsaction ID inside JDE Atina Microservices                                                                       |
 
 
