@@ -1,10 +1,10 @@
 # Operation #
 
-APIs to create and view tokens.
+APIs to invoke Web Services
 
 ## Invoke Web Service ##
  
-Use this API to invoke Web Services.
+Use this API to invoke available web services endpoints.
 
 ### HTTP request ###
 
@@ -24,14 +24,7 @@ Use this API to invoke Web Services.
 
 #### Body parameters ####
 
-Web Service Payload. Use API 
-
-<div class="api-endpoint">
-	<div class="endpoint-data">
-		<i class="label label-get">GET</i>
-		<h6>/metadata/payload-input/<web-service></h6>
-	</div>
-</div>
+Web Service Payload. Use [Get Payload Input for a Web Service](#Get Payload Input for a Web Service)
 
 
 ```cURL

@@ -39,7 +39,7 @@ curl --location --request GET 'https://192.168.99.100/metadata/operations' \
 ]
 ```
 
-## Get Input Parameters for a Web Service##
+## Get Input Parameters for a Web Service ##
  
 This API lets you retrieve parameters required by the web services including the type.
 
@@ -168,7 +168,7 @@ curl --location --request GET 'https://192.168.99.100/metadata/parameters-output
 ]
 ```
 
-## Get Payload Input for a Web Service##
+##Get Payload Input for a Web Service##
  
 This API lets you retrieve a template to use as a payload to invoke a web service.
 
@@ -247,7 +247,7 @@ curl --location --request GET 'https://192.168.99.100/metadata/payload-input/ora
 }
 ```
 
-## Get Payload Output for a Web Service##
+## Get Payload Output for a Web Service ##
  
 This API lets you retrieve a sample response returned by a web service.
 
