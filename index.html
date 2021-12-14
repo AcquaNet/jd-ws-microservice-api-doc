@@ -390,6 +390,14 @@
                   </li>
               </ul>
           </li>
+          <li>
+            <a href="#operation" class="toc-h1 toc-link" data-title="Operation">Operation</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#invoke-web-service" class="toc-h2 toc-link" data-title="Invoke Web Service">Invoke Web Service</a>
+                  </li>
+              </ul>
+          </li>
       </ul>
         <ul class="toc-footer">
             <li><a href="https://github.com/AcquaNet/jd-ws-microservice-api-doc/issues?labels=bug&amp;page=1&amp;state=open">REST API Issues</a></li>
@@ -2070,6 +2078,98 @@ The administrator can use this API to generate a token.</p>
     </span><span class="nl">"tokenExpiration"</span><span class="p">:</span><span class="w"> </span><span class="s2">"14/12/2021 13:13:44"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"sessionId"</span><span class="p">:</span><span class="w"> </span><span class="mi">248951487</span><span class="w">
 </span><span class="p">}</span><span class="w">
+</span></code></pre></div><h1 id='operation'>Operation</h1>
+<p>APIs to create and view tokens.</p>
+<h2 id='invoke-web-service'>Invoke Web Service</h2>
+<p>Use this API to invoke Web Services.</p>
+<h3 id='http-request'>HTTP request</h3>
+<div class="api-endpoint">
+    <div class="endpoint-data">
+        <i class="label label-get">POST</i>
+        <h6>/operation/invoke/<web-service></h6>
+    </div>
+</div>
+<h4 id='header-parameters'>Header parameters</h4>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>Token</code></td>
+<td>string</td>
+<td>Last Token returned last API invoked <i class="label label-info">mandatory</i></td>
+</tr>
+<tr>
+<td><code>TransactionId</code></td>
+<td>integer</td>
+<td>Id used to get log inside JD Atina WS Microservices. <i class="label label-info">optional</i>. Use 0 to generate a transsaction ID inside JDE Atina Microservices</td>
+</tr>
+</tbody></table>
+<h4 id='body-parameters'>Body parameters</h4>
+<p>Web Service Payload. Use API </p>
+
+<div class="api-endpoint">
+    <div class="endpoint-data">
+        <i class="label label-get">GET</i>
+        <h6>/metadata/payload-input/<web-service></h6>
+    </div>
+</div>
+<div class="highlight"><pre class="highlight plaintext"><code>curl --location --request POST 'https://192.168.99.100/operation/invoke/oracle.e1.bssv.JP410000.InventoryManager.getItemPrice' \
+--header 'Token: eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIxMjMxMjMxIiwiaWF0IjoxNjM5NTA3Mzk0LCJzdWIiOiJTdWJqZWN0IiwiaXNzIjoiSXNzdWUiLCJ1c2VyIjoiSkRFIiwicGFzc3dvcmQiOiJtb2R1czIwMjAhIiwiZW52aXJvbm1lbnQiOiJKRFY5MjAiLCJyb2xlIjoiKkFMTCIsInNlc3Npb25JZCI6MCwiZXhwIjoxNjM5NTA3ODc0fQ.Ogs48EupSc2VMFfYp10lvbdtEjE5Qk6pte9x3KKZPio' \
+--header 'Accept: application/json' \
+--header 'Content-Type: application/json' \
+--header 'Accept-Encoding: gzip, deflate, br' \
+--header 'TransactionId: 0' \
+--data-raw '{
+    "item": {
+        "itemId": 60003,
+        "itemUOMSecondary": "",
+        "itemProduct": "",
+        "itemCustomer": "",
+        "itemCatalog": "",
+        "itemDescription": "",
+        "itemFreeForm": "",
+        "itemUOMPrimary": ""
+    },
+    "branchPlantList": "          10"
+    }'
+</code></pre></div><h4 id='header-parameters-returned'>Header parameters returned</h4>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>Token</code></td>
+<td>string</td>
+<td>Token renewed to use for next request.</td>
+</tr>
+<tr>
+<td><code>TransactionId</code></td>
+<td>integer</td>
+<td>Transaction Id</td>
+</tr>
+<tr>
+<td><code>SessionId</code></td>
+<td>integer</td>
+<td>JDE connection Id.</td>
+</tr>
+<tr>
+<td><code>ChannelId</code></td>
+<td>integer</td>
+<td>Connection Id between Rest API and WS Microservice.</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>JSON response will be related to Web Service invoked:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{}</span><span class="w">
 </span></code></pre></div>
       </div>
       <div class="dark-box">
