@@ -318,6 +318,9 @@
                     <a href="#login-with-jd-atina-token" class="toc-h2 toc-link" data-title="Login with JD Atina Token">Login with JD Atina Token</a>
                   </li>
                   <li>
+                    <a href="#logout-with-jd-atina-token" class="toc-h2 toc-link" data-title="Logout with JD Atina Token">Logout with JD Atina Token</a>
+                  </li>
+                  <li>
                     <a href="#authentication-errors" class="toc-h2 toc-link" data-title="Authentication Errors">Authentication Errors</a>
                   </li>
               </ul>
@@ -342,6 +345,26 @@
                   </li>
                   <li>
                     <a href="#logout" class="toc-h2 toc-link" data-title="Logout">Logout</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#metadata" class="toc-h1 toc-link" data-title="Metadata">Metadata</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#operations" class="toc-h2 toc-link" data-title="Operations">Operations</a>
+                  </li>
+                  <li>
+                    <a href="#get-input-parameters-for-a-web-service" class="toc-h2 toc-link" data-title="Get Input Parameters for a Web Service">Get Input Parameters for a Web Service</a>
+                  </li>
+                  <li>
+                    <a href="#get-output-parameters-for-a-web-service" class="toc-h2 toc-link" data-title="Get Output Parameters for a Web Service">Get Output Parameters for a Web Service</a>
+                  </li>
+                  <li>
+                    <a href="#get-payload-input-for-a-web-service" class="toc-h2 toc-link" data-title="Get Payload Input for a Web Service">Get Payload Input for a Web Service</a>
+                  </li>
+                  <li>
+                    <a href="#get-payload-output-for-a-web-service" class="toc-h2 toc-link" data-title="Get Payload Output for a Web Service">Get Payload Output for a Web Service</a>
                   </li>
               </ul>
           </li>
@@ -1470,6 +1493,33 @@ curl  http://157.245.236.175:8081/artifactory/libs-release/com/atina/jd-atina-co
 <td>Connection Id between Rest API and WS Microservice.</td>
 </tr>
 </tbody></table>
+<h2 id='logout-with-jd-atina-token'>Logout with JD Atina Token</h2>
+<p>To logout will require use the last token used. </p>
+
+<p>The HTTP method will be POST.</p>
+
+<p>You must use the /token/logout endpoint and pass the above parameters as a header and body.</p>
+
+<p><img src="images/atina_logout_token-0ba4bd3d.png" alt="JD Atina settings" /></p>
+<h4 id='header-parameters-4'>Header parameters</h4>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>Token</code></td>
+<td>string</td>
+<td>Last Token used or created.</td>
+</tr>
+<tr>
+<td><code>TransactionId</code></td>
+<td>integer</td>
+<td>Id used to get log inside JD Atina WS Microservices. <i class="label label-info">optional</i>. Use 0 to generate a transsaction ID inside JDE Atina Microservices</td>
+</tr>
+</tbody></table>
 <h2 id='authentication-errors'>Authentication Errors</h2>
 <p>Occasionally you might encounter errors when accessing the REST API:</p>
 
@@ -1594,6 +1644,274 @@ curl  http://157.245.236.175:8081/artifactory/libs-release/com/atina/jd-atina-co
 --data-raw '{}
 '
 </code></pre></div><h1 id='metadata'>Metadata</h1>
+<p>Metadata APIs provide information about all available web services on the microservice.</p>
+<h2 id='operations'>Operations</h2>
+<p>This API lets you retrieve and view a simple list of available web services endpoints.</p>
+<h3 id='http-request'>HTTP request</h3>
+<div class="api-endpoint">
+    <div class="endpoint-data">
+        <i class="label label-get">GET</i>
+        <h6>/metadata/operations</h6>
+    </div>
+</div>
+<div class="highlight"><pre class="highlight plaintext"><code>curl --location --request GET 'https://192.168.99.100/metadata/operations' \
+--header 'Token: eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIxMjMxMjMxIiwiaWF0IjoxNjM5NDkyOTM1LCJzdWIiOiJTdWJqZWN0IiwiaXNzIjoiSXNzdWUiLCJ1c2VyIjoiSkRFIiwicGFzc3dvcmQiOiJtb2R1czIwMjAhIiwiZW52aXJvbm1lbnQiOiJKRFY5MjAiLCJyb2xlIjoiKkFMTCIsInNlc3Npb25JZCI6MjQ4OTUxNDg3LCJleHAiOjE2Mzk0OTU5MzV9.Wt2G9jT4L9ut5gZUc3FlHrXohVW5abNvCpvx3pDqQPs' \
+--header 'Accept: application/json' \
+--header 'Content-Type: application/json' \
+--header 'Accept-Encoding: gzip, deflate, br' \
+--header 'TransactionId: 0' \
+--data-raw '{}
+'
+</code></pre></div>
+<blockquote>
+<p>JSON response example:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+    </span><span class="s2">"oracle.e1.bssv.JPR01020.RI_CustomerManager.getCustomerCreditInfo"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"oracle.e1.bssv.JP000040.FinancialComplianceManager.getAgingCompanyConstants"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"oracle.e1.bssv.JP420000.SalesOrderManager.getSalesOrder"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"oracle.e1.bssv.JP410000.InventoryManager.getCalculatedAvailability"</span><span class="p">,</span><span class="w">
+</span><span class="err">...</span><span class="w">
+    </span><span class="s2">"oracle.e1.bssv.JP080020.EmployeeManager.processPendingEmployee"</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div><h2 id='get-input-parameters-for-a-web-service'>Get Input Parameters for a Web Service</h2>
+<p>This API lets you retrieve parameters required by the web services including the type.</p>
+<h3 id='http-request-2'>HTTP request</h3>
+<div class="api-endpoint">
+    <div class="endpoint-data">
+        <i class="label label-get">GET</i>
+        <h6>/metadata/parameters-input/<web-service></h6>
+    </div>
+</div>
+<div class="highlight"><pre class="highlight plaintext"><code>curl --location --request GET 'https://192.168.99.100/metadata/parameters-input/oracle.e1.bssv.JP010000.AddressBookManager.getAddressBook' \
+--header 'Token: eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIxMjMxMjMxIiwiaWF0IjoxNjM5NDkzMjc2LCJzdWIiOiJTdWJqZWN0IiwiaXNzIjoiSXNzdWUiLCJ1c2VyIjoiSkRFIiwicGFzc3dvcmQiOiJtb2R1czIwMjAhIiwiZW52aXJvbm1lbnQiOiJKRFY5MjAiLCJyb2xlIjoiKkFMTCIsInNlc3Npb25JZCI6MjQ4OTUxNDg3LCJleHAiOjE2Mzk0OTYyNzZ9.aWmIwz0S3jtcOna_YawvUSKNjT1ZRg6-cB40iymiCF8' \
+--header 'Accept: application/json' \
+--header 'Content-Type: application/json' \
+--header 'Accept-Encoding: gzip, deflate, br' \
+--header 'TransactionId: 0' \
+--data-raw '{}
+'
+</code></pre></div>
+<blockquote>
+<p>JSON response example:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+    </span><span class="s2">"businessUnit: &lt;java.lang.String&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"address: &lt;oracle.e1.bssv.JP010000.valueobject.GetAddress&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">".countyCode: &lt;java.lang.String&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">".countryCode: &lt;java.lang.String&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">".postalCode: &lt;java.lang.String&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">".stateCode: &lt;java.lang.String&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"categoryCodesAddressBook: &lt;oracle.e1.bssv.JP010000.valueobject.CategoryCodesAddressBook&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">".categoryCode013: &lt;java.lang.String&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">".categoryCode012: &lt;java.lang.String&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">".categoryCode011: &lt;java.lang.String&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">".categoryCode010: &lt;java.lang.String&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">".categoryCode030: &lt;java.lang.String&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">".categoryCode019: &lt;java.lang.String&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">".categoryCode018: &lt;java.lang.String&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">".categoryCode017: &lt;java.lang.String&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">".categoryCode016: &lt;java.lang.String&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">".categoryCode015: &lt;java.lang.String&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">".categoryCode014: &lt;java.lang.String&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">".categoryCode002: &lt;java.lang.String&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">".categoryCode024: &lt;java.lang.String&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">".categoryCode001: &lt;java.lang.String&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">".categoryCode023: &lt;java.lang.String&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">".categoryCode022: &lt;java.lang.String&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">".categoryCode021: &lt;java.lang.String&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">".categoryCode020: &lt;java.lang.String&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">".categoryCode009: &lt;java.lang.String&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">".categoryCode008: &lt;java.lang.String&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">".categoryCode007: &lt;java.lang.String&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">".categoryCode029: &lt;java.lang.String&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">".categoryCode006: &lt;java.lang.String&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">".categoryCode028: &lt;java.lang.String&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">".categoryCode005: &lt;java.lang.String&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">".categoryCode027: &lt;java.lang.String&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">".categoryCode004: &lt;java.lang.String&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">".categoryCode026: &lt;java.lang.String&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">".categoryCode003: &lt;java.lang.String&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">".categoryCode025: &lt;java.lang.String&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"entityName: &lt;java.lang.String&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"entityTypeCode: &lt;java.lang.String&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"languageCode: &lt;java.lang.String&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"industryClassificationCode: &lt;java.lang.String&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"entity: &lt;oracle.e1.bssv.util.J0100010.valueobject.Entity&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">".entityTaxId: &lt;java.lang.String&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">".entityLongId: &lt;java.lang.String&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">".entityId: &lt;java.lang.Integer&gt;"</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div><h2 id='get-output-parameters-for-a-web-service'>Get Output Parameters for a Web Service</h2>
+<p>This API lets you retrieve parameters required by the web services including the type.</p>
+<h3 id='http-request-3'>HTTP request</h3>
+<div class="api-endpoint">
+    <div class="endpoint-data">
+        <i class="label label-get">GET</i>
+        <h6>/metadata/parameters-output/<web-service></h6>
+    </div>
+</div>
+<div class="highlight"><pre class="highlight plaintext"><code>curl --location --request GET 'https://192.168.99.100/metadata/parameters-output/oracle.e1.bssv.JP420000.SalesOrderManager.getItemListPrice' \
+--header 'Token: eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIxMjMxMjMxIiwiaWF0IjoxNjM5NDkzNjE4LCJzdWIiOiJTdWJqZWN0IiwiaXNzIjoiSXNzdWUiLCJ1c2VyIjoiSkRFIiwicGFzc3dvcmQiOiJtb2R1czIwMjAhIiwiZW52aXJvbm1lbnQiOiJKRFY5MjAiLCJyb2xlIjoiKkFMTCIsInNlc3Npb25JZCI6MjQ4OTUxNDg3LCJleHAiOjE2Mzk0OTY2MTh9.2i1lLAPWarArD3oU5WINydpMMGkeRorOBhI-URJkw8c' \
+--header 'Accept: application/json' \
+--header 'Content-Type: application/json' \
+--header 'Accept-Encoding: gzip, deflate, br' \
+--header 'TransactionId: 0' \
+--data-raw '{}
+'
+</code></pre></div>
+<blockquote>
+<p>JSON response example:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+    </span><span class="s2">"e1MessageList: &lt;oracle.e1.bssvfoundation.util.E1MessageList&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">".messagesAsString: &lt;java.lang.String&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">".E1Messages: List &lt;oracle.e1.bssvfoundation.util.E1Message&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"..messageType: &lt;java.lang.Integer&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"..callObjError: &lt;com.jdedwards.system.kernel.CallObjectErrorItem&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"...fileName: &lt;java.lang.String&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"...dditem: &lt;java.lang.String&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"...alphaDescription: &lt;java.lang.String&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"...errorId: &lt;java.lang.Integer&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"...errorID: &lt;java.lang.Integer&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"...lineNumber: &lt;java.lang.Integer&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"...glossaryText: &lt;java.lang.String&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"...subText: &lt;java.lang.String&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"...errorLevel: &lt;java.lang.Integer&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"..messagePrefix: &lt;java.lang.String&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"..message: &lt;java.lang.String&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"showItemListPrice: List &lt;oracle.e1.bssv.JP420000.valueobject.ItemListPriceRecord&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">".lotGrade: &lt;java.lang.String&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">".location: &lt;java.lang.String&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">".lotNumber: &lt;java.lang.String&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">".lotPotency: &lt;java.math.BigDecimal&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">".priceList: &lt;java.math.BigDecimal&gt;"</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div><h2 id='get-payload-input-for-a-web-service'>Get Payload Input for a Web Service</h2>
+<p>This API lets you retrieve a template to use as a payload to invoke a web service.</p>
+<h3 id='http-request-4'>HTTP request</h3>
+<div class="api-endpoint">
+    <div class="endpoint-data">
+        <i class="label label-get">GET</i>
+        <h6>/metadata/payload-input/<web-service></h6>
+    </div>
+</div>
+<div class="highlight"><pre class="highlight plaintext"><code>curl --location --request GET 'https://192.168.99.100/metadata/payload-input/oracle.e1.bssv.JP010000.AddressBookManager.getAddressBook' \
+--header 'Token: eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIxMjMxMjMxIiwiaWF0IjoxNjM5NDkzNjE4LCJzdWIiOiJTdWJqZWN0IiwiaXNzIjoiSXNzdWUiLCJ1c2VyIjoiSkRFIiwicGFzc3dvcmQiOiJtb2R1czIwMjAhIiwiZW52aXJvbm1lbnQiOiJKRFY5MjAiLCJyb2xlIjoiKkFMTCIsInNlc3Npb25JZCI6MjQ4OTUxNDg3LCJleHAiOjE2Mzk0OTY2MTh9.2i1lLAPWarArD3oU5WINydpMMGkeRorOBhI-URJkw8c' \
+--header 'Accept: application/json' \
+--header 'Content-Type: application/json' \
+--header 'Accept-Encoding: gzip, deflate, br' \
+--header 'TransactionId: 0' \
+--data-raw '{}
+'
+</code></pre></div>
+<blockquote>
+<p>JSON response example:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"businessUnit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"java.lang.String"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"address"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"countyCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"java.lang.String"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"countryCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"java.lang.String"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"postalCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"java.lang.String"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"stateCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"java.lang.String"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"categoryCodesAddressBook"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"categoryCode013"</span><span class="p">:</span><span class="w"> </span><span class="s2">"java.lang.String"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"categoryCode012"</span><span class="p">:</span><span class="w"> </span><span class="s2">"java.lang.String"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"categoryCode011"</span><span class="p">:</span><span class="w"> </span><span class="s2">"java.lang.String"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"categoryCode010"</span><span class="p">:</span><span class="w"> </span><span class="s2">"java.lang.String"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"categoryCode030"</span><span class="p">:</span><span class="w"> </span><span class="s2">"java.lang.String"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"categoryCode019"</span><span class="p">:</span><span class="w"> </span><span class="s2">"java.lang.String"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"categoryCode018"</span><span class="p">:</span><span class="w"> </span><span class="s2">"java.lang.String"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"categoryCode017"</span><span class="p">:</span><span class="w"> </span><span class="s2">"java.lang.String"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"categoryCode016"</span><span class="p">:</span><span class="w"> </span><span class="s2">"java.lang.String"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"categoryCode015"</span><span class="p">:</span><span class="w"> </span><span class="s2">"java.lang.String"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"categoryCode014"</span><span class="p">:</span><span class="w"> </span><span class="s2">"java.lang.String"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"categoryCode002"</span><span class="p">:</span><span class="w"> </span><span class="s2">"java.lang.String"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"categoryCode024"</span><span class="p">:</span><span class="w"> </span><span class="s2">"java.lang.String"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"categoryCode001"</span><span class="p">:</span><span class="w"> </span><span class="s2">"java.lang.String"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"categoryCode023"</span><span class="p">:</span><span class="w"> </span><span class="s2">"java.lang.String"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"categoryCode022"</span><span class="p">:</span><span class="w"> </span><span class="s2">"java.lang.String"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"categoryCode021"</span><span class="p">:</span><span class="w"> </span><span class="s2">"java.lang.String"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"categoryCode020"</span><span class="p">:</span><span class="w"> </span><span class="s2">"java.lang.String"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"categoryCode009"</span><span class="p">:</span><span class="w"> </span><span class="s2">"java.lang.String"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"categoryCode008"</span><span class="p">:</span><span class="w"> </span><span class="s2">"java.lang.String"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"categoryCode007"</span><span class="p">:</span><span class="w"> </span><span class="s2">"java.lang.String"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"categoryCode029"</span><span class="p">:</span><span class="w"> </span><span class="s2">"java.lang.String"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"categoryCode006"</span><span class="p">:</span><span class="w"> </span><span class="s2">"java.lang.String"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"categoryCode028"</span><span class="p">:</span><span class="w"> </span><span class="s2">"java.lang.String"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"categoryCode005"</span><span class="p">:</span><span class="w"> </span><span class="s2">"java.lang.String"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"categoryCode027"</span><span class="p">:</span><span class="w"> </span><span class="s2">"java.lang.String"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"categoryCode004"</span><span class="p">:</span><span class="w"> </span><span class="s2">"java.lang.String"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"categoryCode026"</span><span class="p">:</span><span class="w"> </span><span class="s2">"java.lang.String"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"categoryCode003"</span><span class="p">:</span><span class="w"> </span><span class="s2">"java.lang.String"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"categoryCode025"</span><span class="p">:</span><span class="w"> </span><span class="s2">"java.lang.String"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"entityName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"java.lang.String"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"entityTypeCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"java.lang.String"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"languageCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"java.lang.String"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"industryClassificationCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"java.lang.String"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"entity"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"entityTaxId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"java.lang.String"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"entityLongId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"java.lang.String"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"entityId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"java.lang.Integer"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div><h2 id='get-payload-output-for-a-web-service'>Get Payload Output for a Web Service</h2>
+<p>This API lets you retrieve a sample response returned by a web service.</p>
+<h3 id='http-request-5'>HTTP request</h3>
+<div class="api-endpoint">
+    <div class="endpoint-data">
+        <i class="label label-get">GET</i>
+        <h6>/metadata/payload-output/<web-service></h6>
+    </div>
+</div>
+<div class="highlight"><pre class="highlight plaintext"><code>curl --location --request GET 'https://192.168.99.100/metadata/payload-output/oracle.e1.bssv.JP420000.SalesOrderManager.getItemListPrice' \
+--header 'Token: eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIxMjMxMjMxIiwiaWF0IjoxNjM5NDkzOTA0LCJzdWIiOiJTdWJqZWN0IiwiaXNzIjoiSXNzdWUiLCJ1c2VyIjoiSkRFIiwicGFzc3dvcmQiOiJtb2R1czIwMjAhIiwiZW52aXJvbm1lbnQiOiJKRFY5MjAiLCJyb2xlIjoiKkFMTCIsInNlc3Npb25JZCI6MjQ4OTUxNDg3LCJleHAiOjE2Mzk0OTY5MDR9.yiih3zb2CbPZyg42VP8BE5oEhZbz43tm6CqxGw3vhiM' \
+--header 'Accept: application/json' \
+--header 'Content-Type: application/json' \
+--header 'Accept-Encoding: gzip, deflate, br' \
+--header 'TransactionId: 0' \
+--data-raw '{}
+'
+</code></pre></div>
+<blockquote>
+<p>JSON response example:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"e1MessageList"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"messagesAsString"</span><span class="p">:</span><span class="w"> </span><span class="s2">"java.lang.String"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"E1Messages"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"messageType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"java.lang.Integer"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"callObjError"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"fileName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"java.lang.String"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"dditem"</span><span class="p">:</span><span class="w"> </span><span class="s2">"java.lang.String"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"alphaDescription"</span><span class="p">:</span><span class="w"> </span><span class="s2">"java.lang.String"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"errorId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"java.lang.Integer"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"errorID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"java.lang.Integer"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"lineNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"java.lang.Integer"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"glossaryText"</span><span class="p">:</span><span class="w"> </span><span class="s2">"java.lang.String"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"subText"</span><span class="p">:</span><span class="w"> </span><span class="s2">"java.lang.String"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"errorLevel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"java.lang.Integer"</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="nl">"messagePrefix"</span><span class="p">:</span><span class="w"> </span><span class="s2">"java.lang.String"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"java.lang.String"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"showItemListPrice"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"lotGrade"</span><span class="p">:</span><span class="w"> </span><span class="s2">"java.lang.String"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"location"</span><span class="p">:</span><span class="w"> </span><span class="s2">"java.lang.String"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"lotNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"java.lang.String"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"lotPotency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"java.math.BigDecimal"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"priceList"</span><span class="p">:</span><span class="w"> </span><span class="s2">"java.math.BigDecimal"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div><h1 id='metadata'>Metadata</h1>
 <p>Metadata APIs provide information about all available web services on the microservice.</p>
 <h2 id='operations'>Operations</h2>
 <p>This API lets you retrieve and view a simple list of available web services endpoints.</p>
