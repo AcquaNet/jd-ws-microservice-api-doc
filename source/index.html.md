@@ -20,6 +20,7 @@ includes:
   - wp-api-v3/metadata
   - wp-api-v3/monitoring
   - wp-api-v3/token
+  - wp-api-v3/operation  
 
 search: false
 ---
