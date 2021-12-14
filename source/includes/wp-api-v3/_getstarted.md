@@ -75,7 +75,7 @@ curl --location --request GET 'https://192.168.99.100/metadata/payload-input/ora
 ## Get Item Price ##
 
 
-![JD Atina settings](images/atina-gs-get-payload.png)
+![JD Atina settings](images/atina-gs-invoke.png)
 
 ```cURL  
 curl --location --request GET 'https://192.168.99.100/metadata/payload-input/oracle.e1.bssv.JP410000.InventoryManager.getItemPrice' \
@@ -91,7 +91,7 @@ curl --location --request GET 'https://192.168.99.100/metadata/payload-input/ora
 ## Logout ##
 
 
-![JD Atina settings](images/atina-gs-get-payload.png)
+![JD Atina settings](images/atina-gs-logout.png)
 
 ```cURL  
 curl --location --request GET 'https://192.168.99.100/metadata/payload-input/oracle.e1.bssv.JP410000.InventoryManager.getItemPrice' \
