@@ -124,7 +124,7 @@ This API lets you retrieve parameters required by the web services including the
 <div class="api-endpoint">
 	<div class="endpoint-data">
 		<i class="label label-get">GET</i>
-		<h6>/metadata/parameters-output/<web-service></h6>
+		<h6>/metadata/parameters-output/[web-service]</h6>
 	</div>
 </div>
 
@@ -177,7 +177,7 @@ This API lets you retrieve a template to use as a payload to invoke a web servic
 <div class="api-endpoint">
 	<div class="endpoint-data">
 		<i class="label label-get">GET</i>
-		<h6>/metadata/payload-input/<web-service></h6>
+		<h6>/metadata/payload-input/[web-service]</h6>
 	</div>
 </div>
 
@@ -256,7 +256,7 @@ This API lets you retrieve a sample response returned by a web service.
 <div class="api-endpoint">
 	<div class="endpoint-data">
 		<i class="label label-get">GET</i>
-		<h6>/metadata/payload-output/<web-service></h6>
+		<h6>/metadata/payload-output/[web-service]</h6>
 	</div>
 </div>
 
