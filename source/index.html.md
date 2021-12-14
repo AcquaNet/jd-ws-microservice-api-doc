@@ -19,10 +19,7 @@ includes:
   - wp-api-v3/getstarted  
   - wp-api-v3/metadata
   - wp-api-v3/monitoring
-  - wp-api-v3/index
-  - wp-api-v3/coupons
-  - wp-api-v3/customers
-  - wp-api-v3/data
+  - wp-api-v3/token
 
 search: false
 ---
