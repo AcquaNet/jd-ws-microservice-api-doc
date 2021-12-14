@@ -15,7 +15,7 @@ To use the latest version of the JD Atina REST WS API you will need:
 
 * Oracle JD Edwards EnterpriseOne Server Manager credential: jde admin user, Pasword and url for Server Manager Ex. http://server:8999/manage/
 
-* [Docker](https://docs.docker.com/get-docker/ "Docker"). JD Atina Web Service Microserver run under Docker container.
+* All microserives are dockerised. Make sure you have git and [Docker](https://docs.docker.com/get-docker/ "Docker") installed because microservices run under Docker container.
 
 * Following folder inside JDE Deployment Server:
 

@@ -1,6 +1,8 @@
 # Introduction #
 
-JD Atina Web Services Microservices 1.0.0 is fully integrated with the WordPress [REST](http://en.wikipedia.org/wiki/Representational_State_Transfer) API. This allows WC data to be created, read, updated, and deleted using requests in JSON format and using WordPress REST API Authentication methods and standard HTTP verbs which are understood by most HTTP clients.
+JD Atina Web Services Microservices 1.0.0 is fully integrated microservices to allow consume JDE Web Services in a simpe way.
+
+Easy to install and easy to use.
 
 JD ATINA Microservices is made up of a series of the following services:
 
@@ -42,6 +44,7 @@ It allows third party sofware to connect to JDE Web Services to share logic and 
 It provides:
 
 * Access to JDE Web Services.
+* Credentials management.
 * Session management.
 * Connection pooling.
 * Metadata introspection
