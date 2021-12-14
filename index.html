@@ -2079,9 +2079,9 @@ The administrator can use this API to generate a token.</p>
     </span><span class="nl">"sessionId"</span><span class="p">:</span><span class="w"> </span><span class="mi">248951487</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div><h1 id='operation'>Operation</h1>
-<p>APIs to create and view tokens.</p>
+<p>APIs to invoke Web Services</p>
 <h2 id='invoke-web-service'>Invoke Web Service</h2>
-<p>Use this API to invoke Web Services.</p>
+<p>Use this API to invoke available web services endpoints.</p>
 <h3 id='http-request'>HTTP request</h3>
 <div class="api-endpoint">
     <div class="endpoint-data">
@@ -2109,14 +2109,7 @@ The administrator can use this API to generate a token.</p>
 </tr>
 </tbody></table>
 <h4 id='body-parameters'>Body parameters</h4>
-<p>Web Service Payload. Use API </p>
-
-<div class="api-endpoint">
-    <div class="endpoint-data">
-        <i class="label label-get">GET</i>
-        <h6>/metadata/payload-input/<web-service></h6>
-    </div>
-</div>
+<p>Web Service Payload. Use <a href="#Get%20Payload%20Input%20for%20a%20Web%20Service">Get Payload Input for a Web Service</a></p>
 <div class="highlight"><pre class="highlight plaintext"><code>curl --location --request POST 'https://192.168.99.100/operation/invoke/oracle.e1.bssv.JP410000.InventoryManager.getItemPrice' \
 --header 'Token: eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIxMjMxMjMxIiwiaWF0IjoxNjM5NTA3Mzk0LCJzdWIiOiJTdWJqZWN0IiwiaXNzIjoiSXNzdWUiLCJ1c2VyIjoiSkRFIiwicGFzc3dvcmQiOiJtb2R1czIwMjAhIiwiZW52aXJvbm1lbnQiOiJKRFY5MjAiLCJyb2xlIjoiKkFMTCIsInNlc3Npb25JZCI6MCwiZXhwIjoxNjM5NTA3ODc0fQ.Ogs48EupSc2VMFfYp10lvbdtEjE5Qk6pte9x3KKZPio' \
 --header 'Accept: application/json' \
