@@ -172,6 +172,26 @@ Address Book Number setup for the user.
 | `ChannelId`    | integer| Connection Id between Rest API and WS Microservice.
 
 
+## Logout with JD Atina Token ##
+
+To logout will require use the last token used. 
+ 
+The HTTP method will be POST.
+
+You must use the /token/logout endpoint and pass the above parameters as a header and body.
+
+![JD Atina settings](images/atina_logout_token.png)
+
+
+#### Header parameters ####
+
+|   Parameter    |  Type  |                                                                                  Description                                                                                  |
+|----------------|--------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|                                                                                                                      |
+| `Token`        | string | Last Token used or created.               
+| `TransactionId`| integer| Id used to get log inside JD Atina WS Microservices. <i class="label label-info">optional</i>. Use 0 to generate a transsaction ID inside JDE Atina Microservices                                                                       |
+
+
+
 ## Authentication Errors ##
 
 Occasionally you might encounter errors when accessing the REST API:
